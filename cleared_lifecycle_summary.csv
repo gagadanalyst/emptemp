@@ -1,0 +1,301 @@
+application_year,permit_type,measure,eligible_date_pairs,negative_interval_count,publishable_duration_count,median_days,p90_days,max_days,negative_interval_rate_pct
+2020,Building Additions/Alterations,Application to completion,2909,0,2909,399.0,1674.0000000000014,2433,0.0
+2020,Building Additions/Alterations,Application to issue,2909,0,2909,33.0,115.0,1909,0.0
+2020,Building Additions/Alterations,Issue to completion,2909,0,2909,342.0,1560.8000000000025,2359,0.0
+2020,Conditional Permit,Application to completion,105,0,105,267.0,617.2,2169,0.0
+2020,Conditional Permit,Application to issue,102,0,102,35.5,168.0,517,0.0
+2020,Conditional Permit,Issue to completion,102,0,102,215.0,526.0000000000001,2144,0.0
+2020,Demolition Folder (DM),Application to completion,844,0,844,651.0,1880.4,2293,0.0
+2020,Demolition Folder (DM),Application to issue,844,0,844,56.0,197.0,1835,0.0
+2020,Demolition Folder (DM),Issue to completion,844,0,844,540.0,1734.1000000000001,2220,0.0
+2020,Designated Structures,Application to completion,696,0,696,242.0,781.0,2268,0.0
+2020,Designated Structures,Application to issue,696,0,696,34.0,163.0,1163,0.0
+2020,Designated Structures,Issue to completion,696,0,696,175.0,682.5,2228,0.0
+2020,Drain and Site Service,Application to completion,4270,0,4270,187.5,1624.5999999999995,2430,0.0
+2020,Drain and Site Service,Application to issue,4270,0,4270,6.0,122.0,1785,0.0
+2020,Drain and Site Service,Issue to completion,4270,0,4270,163.5,1468.1999999999998,2423,0.0
+2020,Fire/Security Upgrade,Application to completion,579,0,579,268.0,1139.2000000000012,2367,0.0
+2020,Fire/Security Upgrade,Application to issue,541,0,541,29.0,76.0,1308,0.0
+2020,Fire/Security Upgrade,Issue to completion,541,0,541,223.0,1066.0,2360,0.0
+2020,Mechanical(MS),Application to completion,5501,0,5501,478.0,1773.0,2453,0.0
+2020,Mechanical(MS),Application to issue,5501,0,5501,31.0,146.0,1588,0.0
+2020,Mechanical(MS),Issue to completion,5501,0,5501,423.0,1675.0,2416,0.0
+2020,New Building,Application to completion,127,0,127,1230.0,2060.0,2329,0.0
+2020,New Building,Application to issue,127,0,127,148.0,1045.0,1953,0.0
+2020,New Building,Issue to completion,127,0,127,734.0,1487.0000000000005,2282,0.0
+2020,New Houses,Application to completion,1365,0,1365,869.0,1968.0,2422,0.0
+2020,New Houses,Application to issue,1365,0,1365,61.0,222.40000000000055,1786,0.0
+2020,New Houses,Issue to completion,1365,0,1365,782.0,1849.0,2350,0.0
+2020,Partial Permit,Application to completion,81,0,81,330.0,797.0,1659,0.0
+2020,Partial Permit,Application to issue,80,0,80,138.5,598.9000000000002,1368,0.0
+2020,Partial Permit,Issue to completion,80,0,80,81.0,360.3000000000003,1016,0.0
+2020,Plumbing(PS),Application to completion,5971,0,5971,471.0,1749.0,2433,0.0
+2020,Plumbing(PS),Application to issue,5971,0,5971,32.0,140.0,1805,0.0
+2020,Plumbing(PS),Issue to completion,5971,0,5971,417.0,1644.0,2423,0.0
+2020,Portable Classrooms,Application to completion,19,0,19,234.0,299.79999999999995,754,0.0
+2020,Portable Classrooms,Application to issue,19,0,19,30.0,83.6,694,0.0
+2020,Portable Classrooms,Issue to completion,19,0,19,179.0,263.4,302,0.0
+2020,Small Residential Projects,Application to completion,6219,0,6219,381.0,1744.1999999999998,2441,0.0
+2020,Small Residential Projects,Application to issue,5669,0,5669,22.0,121.19999999999982,2224,0.0
+2020,Small Residential Projects,Issue to completion,5669,0,5669,373.0,1722.0,2424,0.0
+2020,Temporary Structures,Application to completion,94,0,94,1680.5,1967.4,2014,0.0
+2020,Temporary Structures,Application to issue,94,0,94,15.0,41.0,137,0.0
+2020,Temporary Structures,Issue to completion,94,0,94,1653.0,1934.4,1995,0.0
+2021,Building Additions/Alterations,Application to completion,3028,0,3028,411.5,1488.6000000000004,2065,0.0
+2021,Building Additions/Alterations,Application to issue,3026,0,3026,33.0,106.5,1820,0.0
+2021,Building Additions/Alterations,Issue to completion,3026,0,3026,353.0,1427.0,2036,0.0
+2021,Conditional Permit,Application to completion,97,0,97,295.0,953.8000000000003,1875,0.0
+2021,Conditional Permit,Application to issue,96,0,96,52.0,135.5,461,0.0
+2021,Conditional Permit,Issue to completion,96,0,96,245.0,893.5,1849,0.0
+2021,Demolition Folder (DM),Application to completion,1088,0,1088,605.5,1577.0,2027,0.0
+2021,Demolition Folder (DM),Application to issue,1088,0,1088,56.0,184.30000000000007,1324,0.0
+2021,Demolition Folder (DM),Issue to completion,1088,0,1088,534.5,1476.0,2023,0.0
+2021,Designated Structures,Application to completion,802,0,802,239.5,1030.0,1955,0.0
+2021,Designated Structures,Application to issue,802,0,802,30.0,161.89999999999998,1016,0.0
+2021,Designated Structures,Issue to completion,802,0,802,181.0,905.4999999999997,1919,0.0
+2021,Drain and Site Service,Application to completion,4545,0,4545,284.0,1469.0,2092,0.0
+2021,Drain and Site Service,Application to issue,4545,0,4545,11.0,190.19999999999982,1773,0.0
+2021,Drain and Site Service,Issue to completion,4545,0,4545,217.0,1293.0,2092,0.0
+2021,Fire/Security Upgrade,Application to completion,541,0,541,292.0,1283.0,1995,0.0
+2021,Fire/Security Upgrade,Application to issue,494,0,494,26.5,71.69999999999999,872,0.0
+2021,Fire/Security Upgrade,Issue to completion,494,0,494,244.5,1286.0999999999997,1964,0.0
+2021,Mechanical(MS),Application to completion,6027,0,6027,511.0,1521.4000000000005,2090,0.0
+2021,Mechanical(MS),Application to issue,6027,0,6027,32.0,182.0,1691,0.0
+2021,Mechanical(MS),Issue to completion,6027,0,6027,458.0,1407.0,2072,0.0
+2021,New Building,Application to completion,165,0,165,1114.0,1699.0,1921,0.0
+2021,New Building,Application to issue,164,0,164,117.5,847.7,1548,0.0
+2021,New Building,Issue to completion,164,0,164,744.5,1543.0000000000005,1787,0.0
+2021,New Houses,Application to completion,1455,0,1455,944.0,1695.2000000000003,2092,0.0
+2021,New Houses,Application to issue,1455,0,1455,56.0,350.6000000000015,1269,0.0
+2021,New Houses,Issue to completion,1455,0,1455,764.0,1595.0,2050,0.0
+2021,Partial Permit,Application to completion,93,0,93,492.0,868.0,1321,0.0
+2021,Partial Permit,Application to issue,93,0,93,195.0,731.5999999999999,1321,0.0
+2021,Partial Permit,Issue to completion,93,0,93,115.0,522.0,1144,0.0
+2021,Plumbing(PS),Application to completion,6770,0,6770,535.0,1565.0,2095,0.0
+2021,Plumbing(PS),Application to issue,6770,0,6770,34.0,179.0,1691,0.0
+2021,Plumbing(PS),Issue to completion,6770,0,6770,466.0,1470.0,2095,0.0
+2021,Portable Classrooms,Application to completion,14,0,14,341.0,1338.000000000001,1707,0.0
+2021,Portable Classrooms,Application to issue,14,0,14,49.5,66.70000000000002,110,0.0
+2021,Portable Classrooms,Issue to completion,14,0,14,279.5,1298.6000000000008,1662,0.0
+2021,Small Residential Projects,Application to completion,6778,0,6778,491.0,1524.0,2101,0.0
+2021,Small Residential Projects,Application to issue,6513,0,6513,26.0,139.0,1910,0.0
+2021,Small Residential Projects,Issue to completion,6513,1,6512,445.5,1476.0,2093,0.02
+2021,Temporary Structures,Application to completion,91,0,91,1375.0,1638.0,2065,0.0
+2021,Temporary Structures,Application to issue,91,0,91,15.0,53.0,804,0.0
+2021,Temporary Structures,Issue to completion,91,0,91,1351.0,1597.0,1672,0.0
+2022,Building Additions/Alterations,Application to completion,3093,0,3093,377.0,1199.0,1702,0.0
+2022,Building Additions/Alterations,Application to issue,3093,0,3093,36.0,129.0,1013,0.0
+2022,Building Additions/Alterations,Issue to completion,3093,0,3093,317.0,1107.8000000000002,1673,0.0
+2022,Conditional Permit,Application to completion,196,0,196,197.0,644.0,1296,0.0
+2022,Conditional Permit,Application to issue,114,0,114,49.0,193.10000000000002,512,0.0
+2022,Conditional Permit,Issue to completion,114,0,114,274.5,767.0000000000001,1272,0.0
+2022,Demolition Folder (DM),Application to completion,1039,0,1039,685.0,1366.4,1684,0.0
+2022,Demolition Folder (DM),Application to issue,1039,0,1039,69.0,279.20000000000005,1489,0.0
+2022,Demolition Folder (DM),Issue to completion,1039,0,1039,577.0,1229.0,1641,0.0
+2022,Designated Structures,Application to completion,715,0,715,298.0,1079.0,1663,0.0
+2022,Designated Structures,Application to issue,714,0,714,29.5,153.0,1111,0.0
+2022,Designated Structures,Issue to completion,714,0,714,236.0,979.7,1651,0.0
+2022,Drain and Site Service,Application to completion,3787,0,3787,260.0,1168.0,1698,0.0
+2022,Drain and Site Service,Application to issue,3786,0,3786,10.5,137.0,1281,0.0
+2022,Drain and Site Service,Issue to completion,3786,0,3786,219.5,1073.0,1661,0.0
+2022,Fire/Security Upgrade,Application to completion,512,0,512,326.5,1128.8000000000015,1710,0.0
+2022,Fire/Security Upgrade,Application to issue,471,0,471,29.0,97.0,1252,0.0
+2022,Fire/Security Upgrade,Issue to completion,471,0,471,275.0,1065.0,1674,0.0
+2022,Mechanical(MS),Application to completion,5468,0,5468,455.0,1193.6000000000004,1719,0.0
+2022,Mechanical(MS),Application to issue,5468,0,5468,33.0,132.0,1420,0.0
+2022,Mechanical(MS),Issue to completion,5468,0,5468,396.0,1111.3000000000002,1716,0.0
+2022,New Building,Application to completion,93,0,93,873.0,1462.6,1714,0.0
+2022,New Building,Application to issue,93,0,93,214.0,1275.0,1295,0.0
+2022,New Building,Issue to completion,93,0,93,520.0,1010.3999999999999,1555,0.0
+2022,New Houses,Application to completion,1051,0,1051,808.0,1362.0,1708,0.0
+2022,New Houses,Application to issue,1051,0,1051,64.0,277.0,728,0.0
+2022,New Houses,Issue to completion,1051,0,1051,686.0,1225.0,1646,0.0
+2022,Partial Permit,Application to completion,71,0,71,512.0,888.0,1225,0.0
+2022,Partial Permit,Application to issue,67,0,67,419.0,872.3999999999999,1225,0.0
+2022,Partial Permit,Issue to completion,67,0,67,27.0,270.59999999999997,376,0.0
+2022,Plumbing(PS),Application to completion,6433,0,6433,461.0,1301.8000000000002,1711,0.0
+2022,Plumbing(PS),Application to issue,6433,0,6433,35.0,139.80000000000018,1226,0.0
+2022,Plumbing(PS),Issue to completion,6433,0,6433,398.0,1218.8000000000002,1700,0.0
+2022,Portable Classrooms,Application to completion,7,0,7,164.0,665.4000000000003,1176,0.0
+2022,Portable Classrooms,Application to issue,7,0,7,33.0,104.40000000000005,189,0.0
+2022,Portable Classrooms,Issue to completion,7,0,7,99.0,632.4000000000003,1143,0.0
+2022,Small Residential Projects,Application to completion,5937,0,5937,456.0,1225.4000000000005,1737,0.0
+2022,Small Residential Projects,Application to issue,5937,0,5937,31.0,139.40000000000055,1469,0.0
+2022,Small Residential Projects,Issue to completion,5937,0,5937,391.0,1169.4000000000005,1714,0.0
+2022,Temporary Structures,Application to completion,211,0,211,1060.0,1231.0,1406,0.0
+2022,Temporary Structures,Application to issue,211,0,211,17.0,36.0,701,0.0
+2022,Temporary Structures,Issue to completion,211,0,211,1037.0,1213.0,1380,0.0
+2023,Building Additions/Alterations,Application to completion,2882,0,2882,312.0,866.0,1339,0.0
+2023,Building Additions/Alterations,Application to issue,2881,0,2881,33.0,97.0,1251,0.0
+2023,Building Additions/Alterations,Issue to completion,2881,0,2881,265.0,804.0,1302,0.0
+2023,Conditional Permit,Application to completion,405,0,405,308.0,457.4000000000002,1022,0.0
+2023,Conditional Permit,Application to issue,405,0,405,95.0,225.0,524,0.0
+2023,Conditional Permit,Issue to completion,405,0,405,189.0,345.4000000000001,994,0.0
+2023,Demolition Folder (DM),Application to completion,784,0,784,591.0,1078.0,1350,0.0
+2023,Demolition Folder (DM),Application to issue,784,0,784,63.0,274.30000000000086,766,0.0
+2023,Demolition Folder (DM),Issue to completion,784,0,784,455.0,1017.4000000000001,1311,0.0
+2023,Designated Structures,Application to completion,583,0,583,256.0,797.6000000000001,1287,0.0
+2023,Designated Structures,Application to issue,583,0,583,21.0,94.60000000000014,748,0.0
+2023,Designated Structures,Issue to completion,583,0,583,207.0,734.2000000000006,1247,0.0
+2023,Drain and Site Service,Application to completion,2966,0,2966,203.0,875.0,1309,0.0
+2023,Drain and Site Service,Application to issue,2966,0,2966,8.0,117.0,861,0.0
+2023,Drain and Site Service,Issue to completion,2966,0,2966,139.0,776.5,1284,0.0
+2023,Fire/Security Upgrade,Application to completion,485,0,485,332.0,833.2,1300,0.0
+2023,Fire/Security Upgrade,Application to issue,453,0,453,23.0,91.60000000000002,974,0.0
+2023,Fire/Security Upgrade,Issue to completion,453,0,453,280.0,765.4000000000001,1291,0.0
+2023,Mechanical(MS),Application to completion,4995,0,4995,385.0,919.0,1369,0.0
+2023,Mechanical(MS),Application to issue,4994,0,4994,33.0,119.0,960,0.0
+2023,Mechanical(MS),Issue to completion,4994,0,4994,328.0,842.0,1362,0.0
+2023,New Building,Application to completion,94,0,94,486.0,1147.0,1313,0.0
+2023,New Building,Application to issue,94,0,94,45.0,262.9,837,0.0
+2023,New Building,Issue to completion,94,0,94,329.0,975.9000000000001,1172,0.0
+2023,New Houses,Application to completion,845,0,845,714.0,1138.0,1374,0.0
+2023,New Houses,Application to issue,845,0,845,54.0,343.6,1123,0.0
+2023,New Houses,Issue to completion,845,0,845,589.0,929.0,1322,0.0
+2023,Partial Permit,Application to completion,71,0,71,371.0,850.0,1142,0.0
+2023,Partial Permit,Application to issue,56,0,56,226.0,675.5,1022,0.0
+2023,Partial Permit,Issue to completion,56,0,56,56.0,350.5,553,0.0
+2023,Plumbing(PS),Application to completion,5288,0,5288,366.5,925.0,1381,0.0
+2023,Plumbing(PS),Application to issue,5287,0,5287,33.0,120.0,1005,0.0
+2023,Plumbing(PS),Issue to completion,5287,0,5287,309.0,844.4000000000005,1315,0.0
+2023,Portable Classrooms,Application to completion,17,0,17,103.0,237.79999999999998,1019,0.0
+2023,Portable Classrooms,Application to issue,17,0,17,37.0,75.40000000000002,151,0.0
+2023,Portable Classrooms,Issue to completion,17,0,17,78.0,201.39999999999998,997,0.0
+2023,Small Residential Projects,Application to completion,4734,0,4734,357.0,910.0,1350,0.0
+2023,Small Residential Projects,Application to issue,4732,0,4732,21.0,106.0,1044,0.0
+2023,Small Residential Projects,Issue to completion,4732,0,4732,309.5,839.0,1348,0.0
+2023,Temporary Structures,Application to completion,195,0,195,745.0,923.0,1101,0.0
+2023,Temporary Structures,Application to issue,195,0,195,13.0,39.39999999999998,442,0.0
+2023,Temporary Structures,Issue to completion,195,0,195,733.0,913.4,1072,0.0
+2024,Building Additions/Alterations,Application to completion,2990,0,2990,275.0,623.0999999999999,979,0.0
+2024,Building Additions/Alterations,Application to issue,2990,0,2990,31.0,83.0,677,0.0
+2024,Building Additions/Alterations,Issue to completion,2990,0,2990,236.0,568.0,978,0.0
+2024,Conditional Permit,Application to completion,167,0,167,270.0,524.0,809,0.0
+2024,Conditional Permit,Application to issue,164,0,164,51.5,184.20000000000044,707,0.0
+2024,Conditional Permit,Issue to completion,164,0,164,209.5,443.70000000000005,748,0.0
+2024,DCs DeferredFees,Application to completion,2,0,2,87.0,107.8,113,0.0
+2024,DCs DeferredFees,Application to issue,0,0,0,,,,
+2024,DCs DeferredFees,Issue to completion,0,0,0,,,,
+2024,Demolition Folder (DM),Application to completion,658,0,658,412.0,763.0,967,0.0
+2024,Demolition Folder (DM),Application to issue,658,0,658,56.0,182.50000000000034,923,0.0
+2024,Demolition Folder (DM),Issue to completion,658,0,658,315.5,688.0,908,0.0
+2024,Designated Structures,Application to completion,673,0,673,212.0,524.8000000000001,951,0.0
+2024,Designated Structures,Application to issue,673,0,673,7.0,53.600000000000136,506,0.0
+2024,Designated Structures,Issue to completion,673,0,673,192.0,486.80000000000007,923,0.0
+2024,Drain and Site Service,Application to completion,3100,1,3099,94.0,657.0,975,0.03
+2024,Drain and Site Service,Application to issue,3100,0,3100,5.0,92.0,815,0.0
+2024,Drain and Site Service,Issue to completion,3100,1,3099,78.0,557.0,938,0.03
+2024,Fire/Security Upgrade,Application to completion,492,0,492,262.0,606.7,931,0.0
+2024,Fire/Security Upgrade,Application to issue,451,0,451,25.0,92.0,877,0.0
+2024,Fire/Security Upgrade,Issue to completion,451,0,451,215.0,560.0,921,0.0
+2024,Mechanical(MS),Application to completion,4950,0,4950,310.0,671.1000000000004,1015,0.0
+2024,Mechanical(MS),Application to issue,4950,0,4950,32.0,107.0,818,0.0
+2024,Mechanical(MS),Issue to completion,4950,0,4950,260.0,593.1000000000004,977,0.0
+2024,New Building,Application to completion,69,0,69,521.0,773.2000000000002,952,0.0
+2024,New Building,Application to issue,69,0,69,51.0,222.20000000000005,686,0.0
+2024,New Building,Issue to completion,69,0,69,396.0,659.4,853,0.0
+2024,New Houses,Application to completion,682,0,682,481.5,794.0,987,0.0
+2024,New Houses,Application to issue,682,0,682,41.0,142.19999999999982,875,0.0
+2024,New Houses,Issue to completion,682,0,682,427.0,709.0,952,0.0
+2024,Partial Permit,Application to completion,83,0,83,260.0,613.8,924,0.0
+2024,Partial Permit,Application to issue,80,0,80,201.5,520.1000000000001,801,0.0
+2024,Partial Permit,Issue to completion,80,0,80,43.5,234.70000000000005,694,0.0
+2024,Plumbing(PS),Application to completion,5011,0,5011,302.0,670.0,985,0.0
+2024,Plumbing(PS),Application to issue,5011,0,5011,28.0,105.0,764,0.0
+2024,Plumbing(PS),Issue to completion,5011,0,5011,257.0,588.0,970,0.0
+2024,Portable Classrooms,Application to completion,9,0,9,110.0,777.4,983,0.0
+2024,Portable Classrooms,Application to issue,9,0,9,46.0,64.8,76,0.0
+2024,Portable Classrooms,Issue to completion,9,0,9,70.0,741.2,970,0.0
+2024,Small Residential Projects,Application to completion,4481,0,4481,282.0,631.0,1007,0.0
+2024,Small Residential Projects,Application to issue,4481,0,4481,11.0,89.0,699,0.0
+2024,Small Residential Projects,Issue to completion,4481,0,4481,250.0,585.0,994,0.0
+2024,Temporary Structures,Application to completion,185,0,185,347.0,657.5999999999999,960,0.0
+2024,Temporary Structures,Application to issue,185,0,185,8.0,33.599999999999994,140,0.0
+2024,Temporary Structures,Issue to completion,185,0,185,330.0,643.8,955,0.0
+2025,Building Additions/Alterations,Application to completion,2384,0,2384,214.0,394.0,625,0.0
+2025,Building Additions/Alterations,Application to issue,2384,0,2384,29.0,68.0,361,0.0
+2025,Building Additions/Alterations,Issue to completion,2384,0,2384,180.0,357.0,599,0.0
+2025,Conditional Permit,Application to completion,255,0,255,193.0,366.99999999999994,562,0.0
+2025,Conditional Permit,Application to issue,245,0,245,51.0,114.0,282,0.0
+2025,Conditional Permit,Issue to completion,245,0,245,155.0,289.6,482,0.0
+2025,DCs DeferredFees,Application to completion,1,0,1,202.0,202.0,202,0.0
+2025,DCs DeferredFees,Application to issue,0,0,0,,,,
+2025,DCs DeferredFees,Issue to completion,0,0,0,,,,
+2025,Demolition Folder (DM),Application to completion,489,0,489,278.0,504.4,641,0.0
+2025,Demolition Folder (DM),Application to issue,489,0,489,53.0,169.2,501,0.0
+2025,Demolition Folder (DM),Issue to completion,489,0,489,187.0,417.59999999999997,597,0.0
+2025,Designated Structures,Application to completion,681,0,681,157.0,365.0,580,0.0
+2025,Designated Structures,Application to issue,680,0,680,9.0,34.0,343,0.0
+2025,Designated Structures,Issue to completion,680,0,680,140.0,347.20000000000005,564,0.0
+2025,Drain and Site Service,Application to completion,2430,0,2430,62.0,391.0,643,0.0
+2025,Drain and Site Service,Application to issue,2429,0,2429,4.0,60.0,451,0.0
+2025,Drain and Site Service,Issue to completion,2429,0,2429,49.0,332.0,643,0.0
+2025,Fire/Security Upgrade,Application to completion,452,0,452,186.0,406.80000000000007,603,0.0
+2025,Fire/Security Upgrade,Application to issue,420,0,420,21.5,65.0,573,0.0
+2025,Fire/Security Upgrade,Issue to completion,420,0,420,148.5,377.1,578,0.0
+2025,Mechanical(MS),Application to completion,3433,0,3433,228.0,425.0,625,0.0
+2025,Mechanical(MS),Application to issue,3433,0,3433,26.0,71.0,376,0.0
+2025,Mechanical(MS),Issue to completion,3433,0,3433,193.0,384.8000000000002,603,0.0
+2025,New Building,Application to completion,39,0,39,240.0,511.4000000000001,570,0.0
+2025,New Building,Application to issue,39,0,39,33.0,154.40000000000003,225,0.0
+2025,New Building,Issue to completion,39,0,39,196.0,444.4000000000001,528,0.0
+2025,New Houses,Application to completion,272,0,272,307.0,512.0,623,0.0
+2025,New Houses,Application to issue,272,0,272,29.0,142.30000000000004,344,0.0
+2025,New Houses,Issue to completion,272,0,272,250.0,463.8,597,0.0
+2025,Partial Permit,Application to completion,59,0,59,191.0,383.8000000000001,535,0.0
+2025,Partial Permit,Application to issue,58,0,58,128.0,301.6,430,0.0
+2025,Partial Permit,Issue to completion,58,0,58,2.0,218.6,356,0.0
+2025,Plumbing(PS),Application to completion,4087,0,4087,219.0,412.0,632,0.0
+2025,Plumbing(PS),Application to issue,4086,0,4086,21.0,68.0,346,0.0
+2025,Plumbing(PS),Issue to completion,4086,0,4086,189.5,378.0,612,0.0
+2025,Portable Classrooms,Application to completion,14,0,14,179.5,239.10000000000002,257,0.0
+2025,Portable Classrooms,Application to issue,14,0,14,35.5,55.7,63,0.0
+2025,Portable Classrooms,Issue to completion,14,0,14,142.0,182.7,203,0.0
+2025,Small Residential Projects,Application to completion,3632,0,3632,208.0,417.9000000000001,642,0.0
+2025,Small Residential Projects,Application to issue,3631,0,3631,12.0,63.0,566,0.0
+2025,Small Residential Projects,Issue to completion,3631,0,3631,182.0,378.0,631,0.0
+2025,Temporary Structures,Application to completion,118,0,118,145.0,514.5999999999999,608,0.0
+2025,Temporary Structures,Application to issue,118,0,118,14.0,35.3,169,0.0
+2025,Temporary Structures,Issue to completion,118,0,118,135.0,495.0999999999999,604,0.0
+2026,Building Additions/Alterations,Application to completion,558,0,558,125.0,205.3,272,0.0
+2026,Building Additions/Alterations,Application to issue,558,0,558,26.0,51.30000000000001,174,0.0
+2026,Building Additions/Alterations,Issue to completion,558,0,558,97.0,177.0,242,0.0
+2026,Conditional Permit,Application to completion,27,0,27,140.0,221.4,258,0.0
+2026,Conditional Permit,Application to issue,25,0,25,45.0,134.20000000000002,161,0.0
+2026,Conditional Permit,Issue to completion,25,0,25,87.0,144.20000000000002,211,0.0
+2026,Demolition Folder (DM),Application to completion,126,0,126,124.5,196.5,263,0.0
+2026,Demolition Folder (DM),Application to issue,126,0,126,36.0,99.0,226,0.0
+2026,Demolition Folder (DM),Issue to completion,126,0,126,72.0,136.5,207,0.0
+2026,Designated Structures,Application to completion,208,0,208,74.0,172.3,245,0.0
+2026,Designated Structures,Application to issue,208,0,208,7.0,29.0,113,0.0
+2026,Designated Structures,Issue to completion,208,0,208,64.0,154.20000000000005,237,0.0
+2026,Drain and Site Service,Application to completion,1245,0,1245,13.0,126.60000000000014,280,0.0
+2026,Drain and Site Service,Application to issue,1245,0,1245,1.0,17.0,167,0.0
+2026,Drain and Site Service,Issue to completion,1245,0,1245,9.0,107.60000000000014,273,0.0
+2026,Fire/Security Upgrade,Application to completion,151,0,151,107.0,200.0,270,0.0
+2026,Fire/Security Upgrade,Application to issue,140,0,140,19.0,48.0,154,0.0
+2026,Fire/Security Upgrade,Issue to completion,140,0,140,74.5,177.0,224,0.0
+2026,Mechanical(MS),Application to completion,731,0,731,129.0,210.0,280,0.0
+2026,Mechanical(MS),Application to issue,731,0,731,22.0,50.0,175,0.0
+2026,Mechanical(MS),Issue to completion,731,0,731,101.0,188.0,268,0.0
+2026,New Building,Application to completion,14,0,14,80.0,182.7,237,0.0
+2026,New Building,Application to issue,14,0,14,32.5,45.800000000000004,120,0.0
+2026,New Building,Issue to completion,14,0,14,50.0,153.20000000000002,194,0.0
+2026,New Houses,Application to completion,35,0,35,114.0,194.00000000000003,235,0.0
+2026,New Houses,Application to issue,35,0,35,24.0,61.60000000000001,145,0.0
+2026,New Houses,Issue to completion,35,0,35,46.0,162.60000000000002,207,0.0
+2026,Partial Permit,Application to completion,12,0,12,86.5,208.4,272,0.0
+2026,Partial Permit,Application to issue,12,0,12,56.0,207.5,272,0.0
+2026,Partial Permit,Issue to completion,12,0,12,3.5,57.8,59,0.0
+2026,Plumbing(PS),Application to completion,923,0,923,117.0,202.0,269,0.0
+2026,Plumbing(PS),Application to issue,923,0,923,12.0,47.0,187,0.0
+2026,Plumbing(PS),Issue to completion,923,0,923,94.0,183.0,269,0.0
+2026,Portable Classrooms,Application to completion,4,0,4,144.5,171.4,172,0.0
+2026,Portable Classrooms,Application to issue,4,0,4,39.0,65.9,74,0.0
+2026,Portable Classrooms,Issue to completion,4,0,4,101.5,137.6,143,0.0
+2026,Small Residential Projects,Application to completion,1009,0,1009,99.0,197.0,286,0.0
+2026,Small Residential Projects,Application to issue,1009,0,1009,7.0,35.0,230,0.0
+2026,Small Residential Projects,Issue to completion,1009,0,1009,86.0,181.0,281,0.0
+2026,Temporary Structures,Application to completion,96,0,96,45.0,146.0,265,0.0
+2026,Temporary Structures,Application to issue,96,0,96,7.0,31.0,105,0.0
+2026,Temporary Structures,Issue to completion,96,0,96,31.5,127.0,261,0.0
