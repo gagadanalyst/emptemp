@@ -1,5 +1,5 @@
 diff --git a/.github/workflows/cd.yml b/.github/workflows/cd.yml
-index 785e1d6..c3ceeae 100644
+index 785e1d6..fb8a1b3 100644
 --- a/.github/workflows/cd.yml
 +++ b/.github/workflows/cd.yml
 @@ -11,6 +11,7 @@ permissions:
@@ -275,7 +275,7 @@ index 785e1d6..c3ceeae 100644
 +        run: python scripts/load_duckdb_snapshot.py --backlog
 +
 +      - name: Persist immutable DuckDB SCD2 recovery checkpoint immediately after replay
-+        if: (always() && steps.duckdb_snapshot_replay.outcome != 'skipped') && vars.TORONTO_CANONICAL_REPLAY_ENABLED == 'true' && vars.TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_ID != '' && vars.TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_COUNT != ''
++        if: steps.duckdb_snapshot_replay.outcome == 'success' && vars.TORONTO_CANONICAL_REPLAY_ENABLED == 'true' && vars.TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_ID != '' && vars.TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_COUNT != ''
 +        env:
 +          GH_TOKEN: ${{ github.token }}
 +        run: python scripts/publish_duckdb_recovery.py
@@ -461,7 +461,7 @@ index 785e1d6..c3ceeae 100644
      permissions:
        pages: write
 diff --git a/.github/workflows/snowflake-canonical-raw-refresh.yml b/.github/workflows/snowflake-canonical-raw-refresh.yml
-index 837634d..09f10aa 100644
+index 837634d..eb7d652 100644
 --- a/.github/workflows/snowflake-canonical-raw-refresh.yml
 +++ b/.github/workflows/snowflake-canonical-raw-refresh.yml
 @@ -1,13 +1,24 @@
@@ -501,7 +501,7 @@ index 837634d..09f10aa 100644
  permissions:
    contents: read
    actions: read
-@@ -31,23 +43,32 @@ jobs:
+@@ -31,23 +43,33 @@ jobs:
      # Fail closed: only the explicit repository variable enables Snowflake compute.
      if: >-
        vars.SNOWFLAKE_OPERATIONS_ENABLED == 'true' &&
@@ -513,12 +513,12 @@ index 837634d..09f10aa 100644
 -        (github.event_name == 'workflow_run' &&
 -         github.event.workflow_run.conclusion == 'success' &&
 -         github.event.workflow_run.head_branch == 'main') ||
--        (github.event_name == 'workflow_dispatch' &&
--         github.ref == 'refs/heads/main')
 +        github.event_name == 'schedule' ||
 +        (github.event_name == 'repository_dispatch' &&
 +         github.event.action == 'toronto_raw_snapshot_ready') ||
-+        github.event_name == 'workflow_dispatch'
+         (github.event_name == 'workflow_dispatch' &&
+-         github.ref == 'refs/heads/main')
++         inputs.confirm_canonical_raw == true)
        )
      name: Refresh and verify canonical Snowflake RAW
      runs-on: ubuntu-latest
@@ -543,7 +543,7 @@ index 837634d..09f10aa 100644
        RUNTIME__DLTHUB_TELEMETRY: "false"
        DO_NOT_TRACK: "1"
  
-@@ -76,67 +97,16 @@ jobs:
+@@ -76,67 +98,16 @@ jobs:
            python -m pip install --upgrade "pip>=26.2.1,<27"
            python -m pip install -e ".[snowflake]"
  
@@ -708,10 +708,10 @@ index 0000000..8aa3623
 +or changed to an invalid value, scheduled replay stops; archive retention continues.
 diff --git a/scripts/load_duckdb_snapshot.py b/scripts/load_duckdb_snapshot.py
 new file mode 100644
-index 0000000..1b2767c
+index 0000000..a0cd498
 --- /dev/null
 +++ b/scripts/load_duckdb_snapshot.py
-@@ -0,0 +1,761 @@
+@@ -0,0 +1,769 @@
 +"""Replay every approved immutable raw snapshot into DuckDB in extraction order."""
 +
 +from __future__ import annotations
@@ -1086,6 +1086,7 @@ index 0000000..1b2767c
 +
 +        with tempfile.TemporaryDirectory(prefix="toronto-duckdb-archive-load-") as temp:
 +            root = Path(temp)
++            prepared_sources: list[tuple[str, Any, dict[str, Any], Path, str]] = []
 +            for name in SOURCE_NAMES:
 +                source = sources.get(name)
 +                summary = bundle_sources.get(name)
@@ -1179,6 +1180,14 @@ index 0000000..1b2767c
 +                        f"{name}: source extraction predates the bundle extraction marker."
 +                    )
 +                boundary = str(manifest["extracted_at_utc"])
++                prepared_sources.append(
++                    (name, source, manifest, parquet_path, boundary)
++                )
++
++            # Both Active and Cleared archives are fully validated before the
++            # first SCD2 write. A corrupt second source cannot leave the first
++            # source partially applied.
++            for name, source, manifest, parquet_path, boundary in prepared_sources:
 +                with duckdb.connect(str(database), read_only=True) as connection:
 +                    existing = connection.execute(
 +                        "SELECT status FROM raw.toronto_snapshot_ledger "
@@ -1268,7 +1277,6 @@ index 0000000..1b2767c
 +                        error=f"{type(exc).__name__}: {exc}"[:4000],
 +                    )
 +                    failures.append(f"{name}: {type(exc).__name__}: {exc}")
-+
 +        if failures:
 +            raise RuntimeError(
 +                f"DuckDB archive {snapshot_id} was partially processed; retrying the "
@@ -1475,10 +1483,10 @@ index 0000000..1b2767c
 +    raise SystemExit(main())
 diff --git a/scripts/migrate_legacy_snapshot_artifacts.py b/scripts/migrate_legacy_snapshot_artifacts.py
 new file mode 100644
-index 0000000..0a4098f
+index 0000000..c540d11
 --- /dev/null
 +++ b/scripts/migrate_legacy_snapshot_artifacts.py
-@@ -0,0 +1,766 @@
+@@ -0,0 +1,758 @@
 +"""Migrate legacy Actions snapshot-bundle artifacts into immutable monthly Releases.
 +
 +The default run list is the 28 previously identified successful historical CD runs.
@@ -1838,18 +1846,6 @@ index 0000000..0a4098f
 +                        "row_count_change_exceeds_configured_limit:"
 +                        f"{change_percent:.2f}%>{source.max_row_change_percent:.2f}%"
 +                    )
-+            if (
-+                parquet_bytes is not None
-+                and row_count is not None
-+                and row_count > 0
-+                and actual_digest == summary.get("sha256") == manifest.get("sha256")
-+                and row_count == summary.get("row_count") == manifest.get("row_count")
-+                and sorted(columns) == sorted(summary.get("columns", []))
-+                and sorted(columns) == sorted(manifest.get("columns", []))
-+            ):
-+                # Use only structurally verified Parquet as the next row-count
-+                # baseline; a corrupt or mismatched artifact cannot influence it.
-+                previous_row_counts[name] = row_count
 +            if manifest.get("warehouse_since") != source.warehouse_since:
 +                blockers.append("warehouse_since_differs_from_current_configuration")
 +            if manifest.get("warehouse_date_column") != source.warehouse_date_column:
@@ -1909,6 +1905,10 @@ index 0000000..0a4098f
 +                and not source_errors
 +                and not blockers
 +            )
++            if eligible and row_count is not None:
++                # Only a warehouse-approved snapshot may advance the next
++                # historical row-count comparison baseline.
++                previous_row_counts[name] = row_count
 +            normalized_manifest = {
 +                **manifest,
 +                "source_name": name,
@@ -2626,10 +2626,10 @@ index 619a89a..6e3c513 100644
  if __name__ == "__main__":
 diff --git a/scripts/publish_duckdb_recovery.py b/scripts/publish_duckdb_recovery.py
 new file mode 100644
-index 0000000..84fdf07
+index 0000000..3290ea5
 --- /dev/null
 +++ b/scripts/publish_duckdb_recovery.py
-@@ -0,0 +1,270 @@
+@@ -0,0 +1,283 @@
 +"""Publish an immutable, versioned DuckDB SCD2 recovery checkpoint."""
 +
 +from __future__ import annotations
@@ -2676,6 +2676,7 @@ index 0000000..84fdf07
 +            SELECT source_run_id, source_run_attempt, extraction_started_at_utc,
 +                   source_commit,
 +                   COUNT(DISTINCT source_name) AS source_count,
++                   COUNT(DISTINCT CASE WHEN source_name IN ('active_permits', 'cleared_permits') THEN source_name END) AS expected_source_count,
 +                   SUM(CASE WHEN LOWER(status) = 'succeeded' THEN 1 ELSE 0 END) AS succeeded_count,
 +                   COUNT(*) AS ledger_rows
 +            FROM raw.toronto_snapshot_ledger
@@ -2694,8 +2695,9 @@ index 0000000..84fdf07
 +        "extraction_started_at_utc": row[2].astimezone(UTC).isoformat(),
 +        "source_commit": str(row[3]),
 +        "source_count": int(row[4]),
-+        "succeeded_count": int(row[5]),
-+        "ledger_rows": int(row[6]),
++        "expected_source_count": int(row[5]),
++        "succeeded_count": int(row[6]),
++        "ledger_rows": int(row[7]),
 +    }
 +
 +
@@ -2808,6 +2810,17 @@ index 0000000..84fdf07
 +    if latest is None:
 +        print("No snapshot ledger exists yet; no recovery checkpoint was published.")
 +        return None
++    if (
++        latest["source_count"] != 2
++        or latest["expected_source_count"] != 2
++        or latest["succeeded_count"] != 2
++        or latest["ledger_rows"] != 2
++    ):
++        raise RuntimeError(
++            "Refusing to publish a DuckDB recovery checkpoint: the latest "
++            "snapshot does not have exactly one succeeded ledger row for "
++            f"both Active and Cleared sources: {latest}"
++        )
 +    latest_stamp = datetime.fromisoformat(
 +        latest["extraction_started_at_utc"].replace("Z", "+00:00")
 +    )
@@ -4791,10 +4804,10 @@ index 4d7f994..1f98755 100644
              app.ckan_base_url,
 diff --git a/tests/test_duckdb_recovery.py b/tests/test_duckdb_recovery.py
 new file mode 100644
-index 0000000..86e1c48
+index 0000000..0dd7ad7
 --- /dev/null
 +++ b/tests/test_duckdb_recovery.py
-@@ -0,0 +1,167 @@
+@@ -0,0 +1,192 @@
 +from __future__ import annotations
 +
 +import json
@@ -4802,6 +4815,7 @@ index 0000000..86e1c48
 +from pathlib import Path
 +
 +import duckdb
++import pytest
 +
 +from scripts import publish_duckdb_recovery as publisher
 +from scripts import restore_duckdb_recovery as restorer
@@ -4962,6 +4976,30 @@ index 0000000..86e1c48
 +
 +    with pytest.raises(RuntimeError, match="duplicate asset names"):
 +        restorer._available_checkpoints("owner/repo")
++
++
++def test_publish_refuses_recovery_checkpoint_from_partial_latest_snapshot(
++    tmp_path, monkeypatch
++):
++    database = tmp_path / "partial.duckdb"
++    _database(database)
++    with duckdb.connect(str(database)) as connection:
++        connection.execute(
++            "UPDATE raw.toronto_snapshot_ledger SET status = 'failed' "
++            "WHERE source_name = 'cleared_permits'"
++        )
++
++    published = []
++    monkeypatch.setattr(
++        publisher, "_ensure_release", lambda *args: published.append(args)
++    )
++
++    with pytest.raises(
++        RuntimeError, match="does not have exactly one succeeded ledger row"
++    ):
++        publisher.publish_checkpoint(database, "owner/repo", "901", "1")
++
++    assert published == []
 diff --git a/tests/test_ingestion.py b/tests/test_ingestion.py
 index aa0dc0d..2291260 100644
 --- a/tests/test_ingestion.py
@@ -5020,10 +5058,10 @@ index aa0dc0d..2291260 100644
      assert (
 diff --git a/tests/test_legacy_snapshot_migration.py b/tests/test_legacy_snapshot_migration.py
 new file mode 100644
-index 0000000..931f7c2
+index 0000000..311b51c
 --- /dev/null
 +++ b/tests/test_legacy_snapshot_migration.py
-@@ -0,0 +1,259 @@
+@@ -0,0 +1,260 @@
 +from __future__ import annotations
 +
 +import io
@@ -5283,15 +5321,22 @@ index 0000000..931f7c2
 +        for item in bundle["sources"]["active_permits"]["warehouse_quality_blockers"]
 +    )
 +    assert bundle["sources"]["cleared_permits"]["warehouse_eligible"] is True
++    assert previous["active_permits"] == 10  # blocked snapshot did not advance baseline
 diff --git a/tests/test_load_duckdb_snapshot.py b/tests/test_load_duckdb_snapshot.py
 new file mode 100644
-index 0000000..80b2712
+index 0000000..2ca9061
 --- /dev/null
 +++ b/tests/test_load_duckdb_snapshot.py
-@@ -0,0 +1,188 @@
+@@ -0,0 +1,294 @@
++import hashlib
++import json
 +from datetime import datetime
++from types import SimpleNamespace
++from zipfile import ZIP_STORED, ZipFile
 +
 +import duckdb
++import pyarrow as pa
++import pyarrow.parquet as pq
 +import pytest
 +
 +from scripts import load_duckdb_snapshot as loader
@@ -5477,6 +5522,106 @@ index 0000000..80b2712
 +
 +    assert "updated_at" in columns
 +    assert updated_at is not None
++
++
++def test_archive_validates_both_sources_before_loading_either(tmp_path, monkeypatch):
++    database = tmp_path / "preflight.duckdb"
++    loader._ensure_ledger(database)
++    extracted_at = "2026-11-07T15:00:00+00:00"
++    columns = ["PERMIT_NUM"]
++    members = {}
++    summaries = {}
++
++    for name in ("active_permits", "cleared_permits"):
++        if name == "active_permits":
++            import io
++
++            buffer = io.BytesIO()
++            pq.write_table(pa.table({"PERMIT_NUM": ["P-1"]}), buffer)
++            payload = buffer.getvalue()
++        else:
++            # A ZIP-valid member whose Parquet payload is corrupt.
++            payload = b"not a parquet file"
++        digest = hashlib.sha256(payload).hexdigest()
++        manifest = {
++            "source_name": name,
++            "status": "success",
++            "warehouse_status": "not_loaded",
++            "warehouse_eligible": True,
++            "warehouse_quality_blockers": [],
++            "validation_errors": [],
++            "sha256": digest,
++            "row_count": 1,
++            "columns": columns,
++            "required_columns": columns,
++            "extracted_at_utc": extracted_at,
++            "warehouse_since": None,
++            "warehouse_date_column": None,
++        }
++        members[f"{name}/data.parquet"] = payload
++        members[f"{name}/manifest.json"] = json.dumps(manifest).encode()
++        summaries[name] = {
++            "snapshot": f"{name}/data.parquet",
++            "manifest": f"{name}/manifest.json",
++            "sha256": digest,
++            "row_count": 1,
++            "columns": columns,
++            "required_columns": columns,
++            "extracted_at_utc": extracted_at,
++            "warehouse_since": None,
++            "warehouse_date_column": None,
++            "warehouse_eligible": True,
++            "warehouse_quality_blockers": [],
++            "validation_errors": [],
++        }
++
++    bundle = {
++        "format_version": 1,
++        "snapshot_stage": "raw",
++        "complete": True,
++        "approved_for_warehouse": True,
++        "source_run_id": "100",
++        "source_run_attempt": "1",
++        "source_commit": "a" * 40,
++        "extraction_started_at_utc": extracted_at,
++        "sources": summaries,
++    }
++    archive_path = tmp_path / "partial-corrupt-source.zip"
++    with ZipFile(archive_path, "w", compression=ZIP_STORED) as archive:
++        archive.writestr("bundle.json", json.dumps(bundle))
++        for member, payload in members.items():
++            archive.writestr(member, payload)
++
++    sources = [
++        SimpleNamespace(
++            name=name,
++            warehouse_load=True,
++            warehouse_strategy="scd2",
++            warehouse_table=f"raw_{name}",
++            required_columns=("PERMIT_NUM",),
++            warehouse_since=None,
++            warehouse_date_column=None,
++        )
++        for name in ("active_permits", "cleared_permits")
++    ]
++    app = SimpleNamespace(
++        sources=sources, warehouse_credentials=str(database), dataset_name="raw"
++    )
++    load_calls = []
++    monkeypatch.setattr(
++        loader, "load_scd2", lambda **kwargs: load_calls.append(kwargs["source"].name)
++    )
++
++    with pytest.raises(pa.ArrowInvalid, match="Parquet magic bytes"):
++        loader._load_archive(
++            archive_path,
++            app=app,
++            manifest_root=tmp_path / "manifests",
++            release_tag="toronto-raw-snapshot-archive-2026-11",
++            asset_name="toronto-raw-snapshot-bundle-100-1.zip",
++        )
++
++    assert load_calls == []
 diff --git a/tests/test_package_snapshot_bundle.py b/tests/test_package_snapshot_bundle.py
 new file mode 100644
 index 0000000..9183a44
@@ -6031,10 +6176,10 @@ index 0000000..2d83dc7
 +    assert (total, current) == (1, 1)
 diff --git a/tests/test_snapshot_replay_baseline_gate.py b/tests/test_snapshot_replay_baseline_gate.py
 new file mode 100644
-index 0000000..af7d4e7
+index 0000000..f1b7d78
 --- /dev/null
 +++ b/tests/test_snapshot_replay_baseline_gate.py
-@@ -0,0 +1,251 @@
+@@ -0,0 +1,256 @@
 +"""Fail-closed guards for canonical snapshot backlog replay."""
 +
 +from __future__ import annotations
@@ -6286,6 +6431,11 @@ index 0000000..af7d4e7
 +        assert "TORONTO_CANONICAL_REPLAY_ENABLED" in content
 +        assert "TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_ID" in content
 +        assert "TORONTO_CANONICAL_REPLAY_BASELINE_SNAPSHOT_COUNT" in content
++
++    assert "inputs.confirm_canonical_raw == true" in snowflake
++    assert "github.event_name == 'workflow_dispatch' &&" in snowflake
++    assert "steps.duckdb_snapshot_replay.outcome == 'success'" in cd
++    assert "always() && steps.duckdb_snapshot_replay.outcome != 'skipped'" not in cd
 diff --git a/tests/test_snowflake_refresh_raw.py b/tests/test_snowflake_refresh_raw.py
 index 1ef2b3f..8f288a3 100644
 --- a/tests/test_snowflake_refresh_raw.py
