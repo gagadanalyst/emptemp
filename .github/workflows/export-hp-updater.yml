@@ -1,0 +1,38 @@
+name: Export HP Updater Binaries
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Package binaries
+        run: |
+          mkdir -p hp-updater-analysis
+
+          cp hp-firmware-extracted/EnterpriseDU.exe \
+            hp-updater-analysis/
+
+          cp hp-firmware-extracted/EnterpriseDUUI.dll \
+            hp-updater-analysis/
+
+          sha256sum hp-updater-analysis/* \
+            > hp-updater-analysis/SHA256SUMS
+
+          ls -lh hp-updater-analysis/
+
+      - name: Upload analysis artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hp-updater-static-analysis
+          path: hp-updater-analysis/
+          if-no-files-found: error
+          retention-days: 3
