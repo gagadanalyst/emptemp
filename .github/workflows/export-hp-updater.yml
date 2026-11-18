@@ -23,7 +23,8 @@ jobs:
 
           cp hp-firmware-extracted/EnterpriseDUUI.dll \
             hp-updater-analysis/
-
+          cp hp-firmware-extracted/tassel_base_pp1_nonassert_001.2629A_from_ANY.ful2 hp-updater-analysis/
+          
           sha256sum hp-updater-analysis/* \
             > hp-updater-analysis/SHA256SUMS
 
