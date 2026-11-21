@@ -1,0 +1,3180 @@
+HP DeskJet 2855e — automated PE/CanPrint/provider-resolution export
+Mode: READ ONLY. Existing Ghidra analysis only; no program modifications.
+Program: hp_lbi_address_mapped.elf
+Language: ARM:LE:32:v7
+Compiler spec: default
+Image base: c01e3c40
+
+[REGISTER] TMode=TMode
+
+[TMODE] address=E0712210
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0712210..e0712210
+
+[TMODE] address=E0712280
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0712280..e0712280
+
+[TMODE] address=E0712378
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0712378..e0712378
+
+[TMODE] address=E07123D8
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07123d8..e07123d8
+
+[TMODE] address=E0712440
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0712440..e0712440
+
+[TMODE] address=E07126B8
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07126b8..e07126b8
+
+[TMODE] address=E0712810
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0712810..e0712810
+
+[TMODE] address=E0713D38
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0713d38..e0713d38
+
+[TMODE] address=E0713EA8
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0713ea8..e0713ea8
+
+[TMODE] address=E0713728
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07136f1..e0713a37
+
+[TMODE] address=E07140D0
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07140d0..e07140d0
+
+[TMODE] address=E0715808
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715808..e0715808
+
+[TMODE] address=E0715870
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715870..e0715870
+
+[TMODE] address=E0715950
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715950..e0715950
+
+[TMODE] address=E0715998
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715998..e0715998
+
+[TMODE] address=E0715510
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715510..e0715510
+
+[TMODE] address=E0715560
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0715560..e0715560
+
+[TMODE] address=E0726768
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0726768..e0726768
+
+[TMODE] address=E0726798
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0726798..e0726798
+
+[TMODE] address=E0726808
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0726808..e0726808
+
+[TMODE] address=E0726850
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0726850..e0726850
+
+[TMODE] address=E07268A8
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07268a8..e07268a8
+
+[TMODE] address=E07269B0
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e07269b0..e07269b0
+
+[TMODE] address=E03076C0
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e03076c0..e03076c0
+
+[TMODE] address=E0307A38
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0307a38..e0307a38
+
+[TMODE] address=E0308520
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0308520..e0308520
+
+[TMODE] address=E070CC30
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e070cc30..e070cc30
+
+[TMODE] address=E0252360
+effective_value=0x1
+stored_value=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+stored_range=e0252359..e02523a7
+
+[SYMBOLS] address=E0712210
+name=FUN_e0712210 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0712280
+name=FUN_e0712280 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0712378
+name=PE_Event_Relay_Adjacent_Anchor type=Function source=USER_DEFINED primary=true
+
+[SYMBOLS] address=E07123D8
+name=PE_Event_Service_Adjacent_Anchor type=Label source=USER_DEFINED primary=true
+
+[SYMBOLS] address=E0712440
+name=FUN_e0712440 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E07126B8
+name=PE_Event_Relay type=Function source=USER_DEFINED primary=true
+
+[SYMBOLS] address=E0712810
+name=LAB_e0712810 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E0713D38
+<no symbol at exact address>
+
+[SYMBOLS] address=E0713EA8
+<no symbol at exact address>
+
+[SYMBOLS] address=E0713728
+<no symbol at exact address>
+
+[SYMBOLS] address=E07140D0
+<no symbol at exact address>
+
+[SYMBOLS] address=E0715808
+name=LAB_e0715808 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E0715870
+name=FUN_e0715870 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0715950
+<no symbol at exact address>
+
+[SYMBOLS] address=E0715998
+name=thunk_EXT_FUN_381005a0 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0726768
+name=FUN_e0726768 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0726798
+name=FUN_e0726798 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0726808
+name=FUN_e0726808 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E0726850
+<no symbol at exact address>
+
+[SYMBOLS] address=E07268A8
+name=LAB_e07268a8 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E07269B0
+<no symbol at exact address>
+
+[SYMBOLS] address=E03076C0
+name=ConStat_Reason_Inserter_Anchor type=Function source=USER_DEFINED primary=true
+
+[SYMBOLS] address=E0307A38
+<no symbol at exact address>
+
+[SYMBOLS] address=E0308520
+name=FUN_e0308520 type=Function source=DEFAULT primary=true
+
+[SYMBOLS] address=E070CC30
+name=PE_Service_Anchor type=Label source=USER_DEFINED primary=true
+
+[SYMBOLS] address=E0252360
+<no symbol at exact address>
+
+[SYMBOLS] address=E0B35798
+<no symbol at exact address>
+
+[SYMBOLS] address=E0B3580C
+name=DAT_e0b3580c type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E0B3584C
+<no symbol at exact address>
+
+[SYMBOLS] address=E0B34014
+name=PTR_LAB_e0713d10+1_e0b34014 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E0B3412C
+name=DAT_e0b3412c type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=E0B3413C
+<no symbol at exact address>
+
+[SYMBOLS] address=E0B3401C
+<no symbol at exact address>
+
+[SYMBOLS] address=E0B33A6C
+<no symbol at exact address>
+
+[SYMBOLS] address=C1927C30
+name=DAT_c1927c30 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=C190A144
+name=DAT_c190a144 type=Label source=DEFAULT primary=true
+
+[SYMBOLS] address=C190A148
+name=DAT_c190a148 type=Label source=DEFAULT primary=true
+
+[INCOMING REFERENCES] target=E0712210
+from=e0712322 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712280
+from=e0712852 type=UNCONDITIONAL_CALL operand=0 function=<no containing function>
+reference_count=2
+
+[INCOMING REFERENCES] target=E0712280
+from=e071270c type=UNCONDITIONAL_CALL operand=0 function=PE_Event_Relay
+reference_count=1
+
+[INCOMING REFERENCES] target=E0712378
+from=e071245c type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712440
+reference_count=1
+
+[INCOMING REFERENCES] target=E07123D8
+from=e071248a type=UNCONDITIONAL_JUMP operand=0 function=FUN_e0712440
+reference_count=1
+
+[INCOMING REFERENCES] target=E0712440
+from=e0712712 type=UNCONDITIONAL_CALL operand=0 function=PE_Event_Relay
+from=e0712c12 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712ba8
+from=e071259e type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712520
+reference_count=3
+
+[INCOMING REFERENCES] target=E07126B8
+from=e07124c2 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712490
+from=e071241c type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712440
+from=e0712c0e type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712ba8
+from=e07128d4 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712870
+from=e0712a02 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712990
+from=e07125e2 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712520
+from=e0712ae6 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0712a68
+from=e071295a type=UNCONDITIONAL_CALL operand=0 function=FUN_e07128f8
+from=e0713e98 type=UNCONDITIONAL_CALL operand=0 function=FUN_e0713e80
+from=e0713d28 type=UNCONDITIONAL_CALL operand=0 function=<no containing function>
+reference_count=10
+
+[INCOMING REFERENCES] target=E0712810
+from=e0713d3c type=UNCONDITIONAL_JUMP operand=0 function=<no containing function>
+from=e0713eac type=UNCONDITIONAL_JUMP operand=0 function=<no containing function>
+reference_count=2
+
+[INCOMING REFERENCES] target=E0713D38
+reference_count=0
+
+[INCOMING REFERENCES] target=E0713EA8
+reference_count=0
+
+[INCOMING REFERENCES] target=E0713728
+reference_count=0
+
+[INCOMING REFERENCES] target=E07140D0
+reference_count=0
+
+[INCOMING REFERENCES] target=E0715950
+reference_count=0
+
+[INCOMING REFERENCES] target=E07269B0
+reference_count=0
+
+[INCOMING REFERENCES] target=E03076C0
+reference_count=0
+
+[INCOMING REFERENCES] target=E0307A38
+reference_count=0
+
+[INCOMING REFERENCES] target=E070CC30
+from=e070c13a type=UNCONDITIONAL_JUMP operand=0 function=<no containing function>
+from=e070b0aa type=UNCONDITIONAL_JUMP operand=0 function=<no containing function>
+reference_count=2
+
+[INCOMING REFERENCES] target=E0252360
+reference_count=0
+
+[INCOMING REFERENCES] target=C1927C30
+from=e0715878 type=READ operand=1 function=FUN_e0715870
+from=e071582e type=WRITE operand=1 function=<no containing function>
+reference_count=2
+
+[INCOMING REFERENCES] target=C190A144
+from=e071274e type=READ operand=1 function=PE_Event_Relay
+from=e0712760 type=READ operand=1 function=PE_Event_Relay
+from=e07121a0 type=WRITE operand=1 function=<no containing function>
+from=e071219c type=DATA operand=0 function=<no containing function>
+reference_count=4
+
+[INCOMING REFERENCES] target=C190A148
+from=e0712b7c type=READ operand=1 function=FUN_e0712b60
+from=e0712b78 type=PARAM operand=0 function=FUN_e0712b60
+from=e0712b2a type=READ operand=1 function=FUN_e0712b10
+from=e0712bd8 type=READ operand=1 function=FUN_e0712ba8
+from=e0712bd4 type=PARAM operand=0 function=FUN_e0712ba8
+from=e0712c90 type=PARAM operand=0 function=FUN_e0712c58
+from=e0712c4a type=READ operand=1 function=FUN_e0712c38
+from=e0712d18 type=PARAM operand=0 function=FUN_e0712ce0
+from=e0712d90 type=PARAM operand=0 function=FUN_e0712d58
+from=e0712e0a type=PARAM operand=0 function=FUN_e0712dd0
+from=e0712f00 type=PARAM operand=0 function=FUN_e0712ec8
+from=e0712f78 type=PARAM operand=0 function=FUN_e0712f40
+from=e0712ff0 type=PARAM operand=0 function=FUN_e0712fb8
+from=e071224c type=READ operand=1 function=FUN_e0712238
+from=e0712250 type=PARAM operand=0 function=FUN_e0712238
+from=e07122c8 type=READ operand=1 function=FUN_e0712280
+from=e071238e type=READ operand=1 function=PE_Event_Relay_Adjacent_Anchor
+from=e07124fc type=READ operand=1 function=FUN_e07124e8
+from=e0712512 type=PARAM operand=0 function=FUN_e07124e8
+from=e071255a type=READ operand=1 function=FUN_e0712520
+from=e0712556 type=PARAM operand=0 function=FUN_e0712520
+from=e071278e type=READ operand=1 function=PE_Event_Relay
+from=e071279c type=PARAM operand=0 function=PE_Event_Relay
+from=e0713bea type=WRITE operand=1 function=FUN_e0713bc8
+from=e0713be4 type=PARAM operand=0 function=FUN_e0713bc8
+from=e0712672 type=READ operand=1 function=<no containing function>
+from=e0712842 type=READ operand=1 function=<no containing function>
+from=e0712848 type=PARAM operand=0 function=<no containing function>
+from=e0712850 type=PARAM operand=0 function=<no containing function>
+from=e07134aa type=PARAM operand=0 function=<no containing function>
+from=e0712e88 type=PARAM operand=0 function=<no containing function>
+reference_count=31
+
+[RAW BYTES] address=E0B33A6C length=16
+99 21 71 E0 00 00 00 00 00 00 00 00 00 00 00 00
+little_endian_word_0=0xE0712199
+
+[RAW BYTES] address=E0B35780 length=336
+00 00 00 00 00 00 00 00 E3 0F 01 00 00 00 00 00 00 00 00 00 FF FF FF FF 70 65 5F 69 65 76 5F 6A 6F 62 00 00 A8 57 B3 E0 79 52 71 E0 73 69 72 69 75 73 49 6E 73 74 61 6E 63 65 00 00 00 00 00 00 00 00 00 00 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 00 00 00 00 00 00 00 00 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 39 13 98 E0 00 00 00 00 00 00 00 00 81 58 71 E0 89 58 71 E0 91 58 71 E0 99 58 71 E0 A1 58 71 E0 A9 58 71 E0 B1 58 71 E0 B9 58 71 E0 C9 58 71 E0 39 58 71 E0 21 59 71 E0 31 59 71 E0 39 59 71 E0 41 59 71 E0 51 59 71 E0 89 59 71 E0 91 59 71 E0 04 00 00 00 00 00 00 00 D1 58 71 E0 D9 58 71 E0 E1 58 71 E0 E9 58 71 E0 F1 58 71 E0 F9 58 71 E0 01 59 71 E0 2A 05 00 00 00 00 00 00 00 00 00 00 C8 58 B3 E0 02 00 00 00 F8 58 B3 E0 02 00 00 00 00 00 00 00 02 00 00 00 28 59 B3 E0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 99 5E 71 E0 00 00 00 00 2A 05 00 00
+little_endian_word_0=0x00000000
+
+[RAW BYTES] address=E0B3400C length=136
+20 40 B3 E0 68 40 B3 E0 11 3D 71 E0 31 3D 71 E0 39 3D 71 E0 41 3D 71 E0 49 3D 71 E0 51 3D 71 E0 59 3D 71 E0 61 3D 71 E0 69 3D 71 E0 71 3D 71 E0 79 3D 71 E0 81 3D 71 E0 89 3D 71 E0 91 3D 71 E0 99 3D 71 E0 A1 3D 71 E0 A9 3D 71 E0 B1 3D 71 E0 B9 3D 71 E0 C1 3D 71 E0 C9 3D 71 E0 D1 3D 71 E0 D9 3D 71 E0 E1 3D 71 E0 F1 3D 71 E0 F9 3D 71 E0 00 00 00 00 00 00 00 00 39 13 98 E0 73 69 72 69 75 73 49 6E 73 74 61 6E
+little_endian_word_0=0xE0B34020
+
+[RAW BYTES] address=E0B34120 length=128
+08 00 00 00 00 00 00 00 E1 3F 71 E0 00 00 00 00 00 00 00 00 81 3E 71 E0 A1 3E 71 E0 A9 3E 71 E0 41 3E 71 E0 B1 3E 71 E0 B9 3E 71 E0 C1 3E 71 E0 C9 3E 71 E0 D1 3E 71 E0 D9 3E 71 E0 E1 3E 71 E0 E9 3E 71 E0 F1 3E 71 E0 F9 3E 71 E0 01 3F 71 E0 09 3F 71 E0 11 3F 71 E0 19 3F 71 E0 21 3F 71 E0 29 3F 71 E0 31 3F 71 E0 39 3F 71 E0 41 3F 71 E0 39 40 71 E0 49 40 71 E0 51 40 71 E0 59 40 71 E0
+little_endian_word_0=0x00000008
+
+[CODE WINDOW] requested=E0712210 length=0x38
+function=FUN_e0712210 entry=e0712210 body=e0712210..e0712233
+e0712210  ldr r2,[r0,#0x0]
+e0712212  cmp r2,#0x0
+e0712214  it eq
+e0712216  bx.eq lr
+e0712218  cmp r1,#0x0
+e071221a  str.w r1,[r0,#0x5b8]
+e071221e  it eq
+e0712220  bx.eq lr
+e0712222  movw r2,#0x5a6c
+e0712226  movt r2,#0xc191
+e071222a  ldr r0,[r2,#0x0]
+    -> c1915a6c [READ, operand=1]
+e071222c  ldr r0,[r0,#0x18]
+e071222e  ldr r2,[r0,#0x0]
+e0712230  ldr r2,[r2,#0x5c]
+e0712232  bx r2
+e0712234  <DATA undefined len=1>
+e0712235  <DATA undefined len=1>
+e0712236  <DATA undefined len=1>
+e0712237  <DATA undefined len=1>
+e0712238  push {r4,r5,lr}
+e071223a  mov r5,r0
+e071223c  movs r4,#0x0
+e071223e  mov.w r0,#0x5c8
+e0712242  muls r0,r4
+e0712244  movw r1,#0xa148
+
+[CODE WINDOW] requested=E0712810 length=0x60
+function=<no containing function currently defined>
+e0712810  push {r4,r5,r6,r7,lr}
+e0712812  mov r5,r0
+e0712814  mov r6,r1
+e0712816  movw r1,#0x5a6c
+e071281a  movt r1,#0xc191
+e071281e  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712820  ldr r0,[r0,#0x14]
+e0712822  ldr r1,[r0,#0x0]
+e0712824  ldr r1,[r1,#0x34]
+e0712826  blx r1
+e0712828  movs r0,#0x0
+e071282a  b 0xe0712832
+    -> e0712832 [UNCONDITIONAL_JUMP, operand=0]
+e071282c  adds r0,#0x1
+e071282e  cmp r0,#0x20
+e0712830  bge 0xe0712856
+    -> e0712856 [CONDITIONAL_JUMP, operand=0]
+e0712832  mov.w r1,#0x5c8
+e0712836  mul r7,r0,r1
+e071283a  movw r4,#0xa148
+e071283e  movt r4,#0xc190
+e0712842  ldr r1,[r4,r7]
+    -> c190a148 [READ, operand=1]
+    -> c190a710 [READ, operand=1]
+e0712844  cmp r1,r5
+e0712846  bne 0xe071282c
+    -> e071282c [CONDITIONAL_JUMP, operand=0]
+e0712848  adds r0,r7,r4
+    -> c190a148 [PARAM, operand=0]
+    -> c190a710 [PARAM, operand=0]
+e071284a  bl 0xe07121e0
+    -> e07121e0 [UNCONDITIONAL_CALL, operand=0]
+e071284e  mov r1,r6
+e0712850  adds r0,r7,r4
+    -> c190a148 [PARAM, operand=0]
+e0712852  bl 0xe0712210
+    -> e0712210 [UNCONDITIONAL_CALL, operand=0]
+e0712856  movw r1,#0x5a6c
+e071285a  movt r1,#0xc191
+e071285e  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712860  ldr r0,[r0,#0x14]
+e0712862  ldr r1,[r0,#0x0]
+e0712864  ldr r1,[r1,#0x38]
+e0712866  pop.w {r4,r5,r6,r7,lr}
+e071286a  bx r1
+e071286c  <DATA undefined len=1>
+e071286d  <DATA undefined len=1>
+e071286e  <DATA undefined len=1>
+e071286f  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0713D38 length=0x10
+function=<no containing function currently defined>
+e0713d38  mov r0,r1
+e0713d3a  mov r1,r2
+e0713d3c  b.w 0xe0712810
+    -> e0712810 [UNCONDITIONAL_JUMP, operand=0]
+e0713d40  mov r0,r1
+e0713d42  b.w 0xe0712c58
+    -> e0712c58 [UNCONDITIONAL_CALL, operand=0]
+e0713d46  <DATA undefined len=1>
+e0713d47  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0713EA8 length=0x10
+function=<no containing function currently defined>
+e0713ea8  mov r0,r1
+e0713eaa  mov r1,r2
+e0713eac  b.w 0xe0712810
+    -> e0712810 [UNCONDITIONAL_JUMP, operand=0]
+e0713eb0  mov r0,r1
+e0713eb2  b.w 0xe0712c58
+    -> e0712c58 [UNCONDITIONAL_CALL, operand=0]
+e0713eb6  <DATA undefined len=1>
+e0713eb7  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0712280 length=0xf8
+function=FUN_e0712280 entry=e0712280 body=e0712280..e0712375
+e0712280  push {r4,r5,r6,r7,r8,r9,r10,r11,lr}
+e0712284  sub sp,#0xc
+e0712286  mov r8,r0
+e0712288  mov r10,r1
+e071228a  mov r9,r2
+e071228c  mov r11,r3
+e071228e  movw r5,#0x5a6c
+e0712292  movt r5,#0xc191
+e0712296  ldr r3,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712298  ldr r0,[r3,#0x14]
+e071229a  ldr r3,[r0,#0x0]
+e071229c  ldr r3,[r3,#0x34]
+e071229e  blx r3
+e07122a0  movw r3,#0x5a48
+e07122a4  movt r3,#0xc191
+e07122a8  ldr r7,[r3,#0x0]
+    -> c1915a48 [READ, operand=1]
+e07122aa  movw r4,#0xa148
+e07122ae  movt r4,#0xc190
+e07122b2  adds r7,#0x1
+e07122b4  str r7,[r3,#0x0]
+    -> c1915a48 [WRITE, operand=1]
+e07122b6  beq 0xe07122a0
+    -> e07122a0 [CONDITIONAL_JUMP, operand=0]
+e07122b8  cmp.w r7,#0xffffffff
+e07122bc  beq 0xe07122a0
+    -> e07122a0 [CONDITIONAL_JUMP, operand=0]
+e07122be  movs r3,#0x0
+e07122c0  mov.w r6,#0x5c8
+e07122c4  mla r6,r3,r6,r4
+e07122c8  ldr.w r12,[r6,#0x0]
+    -> c190a148 [READ, operand=1]
+    -> c190a710 [READ, operand=1]
+e07122cc  cmp.w r12,#0x0
+e07122d0  beq 0xe07122ea
+    -> e07122ea [CONDITIONAL_JUMP, operand=0]
+e07122d2  adds r3,#0x1
+e07122d4  cmp r3,#0x20
+e07122d6  blt 0xe07122c0
+    -> e07122c0 [CONDITIONAL_JUMP, operand=0]
+e07122d8  ldr r3,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07122da  ldr r0,[r3,#0x14]
+e07122dc  ldr r3,[r0,#0x0]
+e07122de  ldr r3,[r3,#0x38]
+e07122e0  blx r3
+e07122e2  movs r0,#0x20
+e07122e4  subs r0,#0x1
+e07122e6  bne 0xe07122e4
+    -> e07122e4 [CONDITIONAL_JUMP, operand=0]
+e07122e8  b 0xe0712370
+    -> e0712370 [UNCONDITIONAL_JUMP, operand=0]
+e07122ea  movw r4,#0x7360
+e07122ee  adds r0,r6,#0x4
+e07122f0  movw r2,#0x5a4
+e07122f4  mov r1,r8
+e07122f6  movt r4,#0xc020
+e07122fa  bl 0xe0714110
+    -> e0714110 [UNCONDITIONAL_CALL, operand=0]
+e07122fe  ldr r0,[sp,#0x30]
+    -> Stack[0x0] [READ, operand=1]
+e0712300  str r7,[r6,#0x0]
+    -> c190a710 [WRITE, operand=1]
+e0712302  movs r3,#0x0
+e0712304  str.w r10,[r6,#0x5b0]
+    -> c190acc0 [WRITE, operand=1]
+e0712308  str.w r0,[r6,#0x5a8]
+    -> c190acb8 [WRITE, operand=1]
+e071230c  ldr r0,[sp,#0x34]
+    -> Stack[0x4] [READ, operand=1]
+e071230e  str.w r3,[r6,#0x5b8]
+    -> c190acc8 [WRITE, operand=1]
+e0712312  strh.w r3,[r6,#0x5b4]
+    -> c190acc4 [WRITE, operand=1]
+e0712316  mov r1,r9
+e0712318  str.w r0,[r6,#0x5ac]
+    -> c190acbc [WRITE, operand=1]
+e071231c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071231e  strb.w r11,[r6,#0x5bc]
+    -> c190accc [WRITE, operand=1]
+e0712322  bl 0xe0712210
+    -> e0712210 [UNCONDITIONAL_CALL, operand=0]
+e0712326  ldr.w r12,[r4,#0x8]
+    -> c0207368 [READ, operand=1]
+e071232a  ldr r3,[r4,#0x4]
+    -> c0207364 [READ, operand=1]
+e071232c  cmp r12,r3
+e071232e  bne 0xe0712364
+    -> e0712364 [CONDITIONAL_JUMP, operand=0]
+e0712330  cmp.w r11,#0x0
+e0712334  beq 0xe0712364
+    -> e0712364 [CONDITIONAL_JUMP, operand=0]
+e0712336  ldr.w r3,[r6,#0x5a8]
+    -> c190acb8 [READ, operand=1]
+e071233a  cbz r3,0xe071235c
+    -> e071235c [CONDITIONAL_JUMP, operand=1]
+e071233c  ldr r0,[r4,#0x0]
+    -> c0207360 [READ, operand=1]
+e071233e  cmp r12,r0
+e0712340  bne 0xe0712354
+    -> e0712354 [CONDITIONAL_JUMP, operand=0]
+e0712342  ldr r1,[r6,#0x0]
+    -> c190a710 [READ, operand=1]
+e0712344  ldr.w r0,[r6,#0x5ac]
+    -> c190acbc [READ, operand=1]
+e0712348  movs r2,#0x3
+e071234a  blx r3
+e071234c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071234e  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e0712352  b 0xe0712362
+    -> e0712362 [UNCONDITIONAL_JUMP, operand=0]
+e0712354  movs r3,#0x1
+e0712356  strb.w r3,[r6,#0x5b5]
+    -> c190acc5 [WRITE, operand=1]
+e071235a  b 0xe0712362
+    -> e0712362 [UNCONDITIONAL_JUMP, operand=0]
+e071235c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071235e  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e0712362  movs r7,#0x0
+e0712364  ldr r3,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712366  ldr r0,[r3,#0x14]
+e0712368  ldr r3,[r0,#0x0]
+e071236a  ldr r3,[r3,#0x38]
+e071236c  blx r3
+e071236e  mov r0,r7
+e0712370  add sp,#0xc
+e0712372  pop.w {r4,r5,r6,r7,r8,r9,r10,r11,pc}
+e0712376  <DATA undefined len=1>
+e0712377  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0712378 length=0x68
+function=PE_Event_Relay_Adjacent_Anchor entry=e0712378 body=e0712378..e07123d3
+e0712378  push {r4,r5,r6,lr}
+e071237a  movs r4,#0x0
+e071237c  mov r5,r4
+e071237e  mov.w r0,#0x5c8
+e0712382  movw r1,#0xa148
+e0712386  movt r1,#0xc190
+e071238a  mla r6,r5,r0,r1
+e071238e  ldr r0,[r6,#0x0]
+    -> c190a148 [READ, operand=1]
+    -> c190a710 [READ, operand=1]
+e0712390  cbz r0,0xe07123ca
+    -> e07123ca [CONDITIONAL_JUMP, operand=1]
+e0712392  ldr.w r1,[r6,#0x5b8]
+    -> c190a700 [READ, operand=1]
+    -> c190acc8 [READ, operand=1]
+e0712396  cbz r1,0xe07123ca
+    -> e07123ca [CONDITIONAL_JUMP, operand=1]
+e0712398  movw r2,#0x5a6c
+e071239c  movt r2,#0xc191
+e07123a0  ldr r0,[r2,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07123a2  ldr r0,[r0,#0x18]
+e07123a4  ldr r2,[r0,#0x0]
+e07123a6  ldr r2,[r2,#0x54]
+e07123a8  blx r2
+e07123aa  cbz r0,0xe07123ca
+    -> e07123ca [CONDITIONAL_JUMP, operand=1]
+e07123ac  movw r1,#0x5a6c
+e07123b0  movt r1,#0xc191
+e07123b4  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07123b6  ldr r0,[r0,#0x18]
+e07123b8  ldr r2,[r0,#0x0]
+e07123ba  ldr.w r1,[r6,#0x5b8]
+    -> c190a700 [READ, operand=1]
+e07123be  ldr r2,[r2,#0x58]
+e07123c0  blx r2
+e07123c2  cbz r0,0xe07123c8
+    -> e07123c8 [CONDITIONAL_JUMP, operand=1]
+e07123c4  movs r0,#0x2
+e07123c6  pop {r4,r5,r6,pc}
+e07123c8  movs r4,#0x1
+e07123ca  adds r5,#0x1
+e07123cc  cmp r5,#0x20
+e07123ce  blt 0xe071237e
+    -> e071237e [CONDITIONAL_JUMP, operand=0]
+e07123d0  mov r0,r4
+e07123d2  pop {r4,r5,r6,pc}
+e07123d4  <DATA undefined len=1>
+e07123d5  <DATA undefined len=1>
+e07123d6  <DATA undefined len=1>
+e07123d7  <DATA undefined len=1>
+e07123d8  push {r4,lr}
+e07123da  sub.w sp,sp,#0x5b0
+e07123de  mov r4,r0
+
+[CODE WINDOW] requested=E07123D8 length=0x70
+function=FUN_e0712440 entry=e0712440 body=e07123d8..e071248d
+e07123d8  push {r4,lr}
+e07123da  sub.w sp,sp,#0x5b0
+e07123de  mov r4,r0
+e07123e0  movw r1,#0xa43c
+e07123e4  movt r1,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07123e8  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e07123ea  str.w r0,[sp,#0x5ac]
+    -> Stack[-0xc] [WRITE, operand=1]
+e07123ee  add r0,sp,#0x8
+e07123f0  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e07123f4  cmp r4,#0x0
+e07123f6  ite eq
+e07123f8  mov.eq r1,#0x8c
+e07123fa  mov.ne r1,#0x8b
+e07123fc  cmp r1,#0x8b
+e07123fe  str r1,[sp,#0x14]
+    -> Stack[-0x5a4] [WRITE, operand=1]
+e0712400  bne 0xe071240e
+    -> e071240e [CONDITIONAL_JUMP, operand=0]
+e0712402  movs r0,#0x1
+e0712404  cmp r4,#0x2
+e0712406  str r0,[sp,#0x30]
+    -> Stack[-0x588] [WRITE, operand=1]
+e0712408  it ne
+e071240a  mov.ne r0,#0x0
+e071240c  str r0,[sp,#0x34]
+    -> Stack[-0x584] [WRITE, operand=1]
+e071240e  movs r1,#0x0
+e0712410  mov r0,r1
+e0712412  stm sp,{r0,r1}
+    -> Stack[-0x5b8] [WRITE, operand=0]
+e0712416  add r0,sp,#0x8
+e0712418  mov r3,r1
+e071241a  mov r2,r1
+e071241c  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0712420  movw r2,#0xa43c
+e0712424  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0xc] [READ, operand=1]
+e0712428  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e071242c  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e071242e  cmp r0,r1
+e0712430  it ne
+e0712432  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712436  add.w sp,sp,#0x5b0
+e071243a  pop {r4,pc}
+e071243c  <DATA undefined len=1>
+e071243d  <DATA undefined len=1>
+e071243e  <DATA undefined len=1>
+e071243f  <DATA undefined len=1>
+e0712440  push {r4,r5,r6,lr}
+e0712442  movw r4,#0x5a4c
+e0712446  movt r4,#0xc191
+
+[CODE WINDOW] requested=E0712440 length=0x58
+function=FUN_e0712440 entry=e0712440 body=e07123d8..e071248d
+e0712440  push {r4,r5,r6,lr}
+e0712442  movw r4,#0x5a4c
+e0712446  movt r4,#0xc191
+e071244a  movw r1,#0x5a6c
+e071244e  movt r1,#0xc191
+e0712452  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712454  ldr r0,[r0,#0x14]
+e0712456  ldr r1,[r0,#0x0]
+e0712458  ldr r1,[r1,#0x34]
+e071245a  blx r1
+e071245c  bl 0xe0712378
+    -> e0712378 [UNCONDITIONAL_CALL, operand=0]
+e0712460  mov r5,r0
+e0712462  ldr r0,[r4,#0x0]
+    -> c1915a4c [READ, operand=1]
+e0712464  str r5,[r4,#0x0]
+    -> c1915a4c [WRITE, operand=1]
+e0712466  movw r4,#0x5a6c
+e071246a  movt r4,#0xc191
+e071246e  subs r6,r5,r0
+e0712470  ldr r0,[r4,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712472  ldr r0,[r0,#0x14]
+e0712474  ldr r1,[r0,#0x0]
+e0712476  ldr r1,[r1,#0x38]
+e0712478  it ne
+e071247a  mov.ne r6,#0x1
+e071247c  blx r1
+e071247e  cmp r6,#0x0
+e0712480  it eq
+e0712482  pop.eq {r4,r5,r6,pc}
+e0712484  mov r0,r5
+e0712486  pop.w {r4,r5,r6,lr}
+e071248a  b.w 0xe07123d8
+    -> e07123d8 [UNCONDITIONAL_JUMP, operand=0]
+e071248e  <DATA undefined len=1>
+e071248f  <DATA undefined len=1>
+e0712490  push {lr}
+e0712492  sub.w sp,sp,#0x5b0
+e0712496  movw r1,#0xa43c
+
+[CODE WINDOW] requested=E07126B8 length=0x120
+function=PE_Event_Relay entry=e07126b8 body=e07126b8..e07127cb
+e07126b8  push {r4,r5,r6,r7,r10,r11,lr}
+e07126bc  sub.w sp,sp,#0x324
+e07126c0  mov r5,r0
+e07126c2  mov r4,r1
+e07126c4  mov r6,r2
+e07126c6  mov r7,r3
+e07126c8  ldr.w r10,[sp,#0x340]
+    -> Stack[0x0] [READ, operand=1]
+e07126cc  ldr.w r11,[sp,#0x344]
+    -> Stack[0x4] [READ, operand=1]
+e07126d0  movw r1,#0xa43c
+e07126d4  movt r1,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07126d8  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e07126da  str r0,[sp,#0x320]
+    -> Stack[-0x20] [WRITE, operand=1]
+e07126dc  mov r0,r5
+e07126de  bl 0xe0714118
+    -> e0714118 [UNCONDITIONAL_CALL, operand=0]
+e07126e2  ldr r0,[r5,#0x14]
+e07126e4  movw r1,#0xfbad
+e07126e8  movt r1,#0xffff
+e07126ec  cmp r0,r1
+e07126ee  it ne
+e07126f0  cmp.ne r0,#0x0
+e07126f2  bne 0xe0712700
+    -> e0712700 [CONDITIONAL_JUMP, operand=0]
+e07126f4  movw r1,#0x7368
+e07126f8  movt r1,#0xc020
+e07126fc  ldr r0,[r1,#0x0]
+    -> c0207368 [READ, operand=1]
+e07126fe  str r0,[r5,#0x14]
+e0712700  stm sp,{r10,r11}
+    -> Stack[-0x340] [WRITE, operand=0]
+e0712704  mov r3,r7
+e0712706  mov r2,r6
+e0712708  mov r1,r4
+e071270a  mov r0,r5
+e071270c  bl 0xe0712280
+    -> e0712280 [UNCONDITIONAL_CALL, operand=0]
+e0712710  mov r4,r0
+e0712712  bl 0xe0712440
+    -> e0712440 [UNCONDITIONAL_CALL, operand=0]
+e0712716  movs r2,r4
+e0712718  beq 0xe07127ae
+    -> e07127ae [CONDITIONAL_JUMP, operand=0]
+e071271a  movw r6,#0x5a6c
+e071271e  movt r6,#0xc191
+e0712722  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712724  ldr r0,[r0,#0x10]
+e0712726  ldr r1,[r0,#0x0]
+e0712728  movw r7,#0xa144
+e071272c  movt r7,#0xc190
+e0712730  ldr r3,[r1,#0x14]
+e0712732  movw r1,#0x1570
+e0712736  movt r1,#0x1
+e071273a  blx r3
+e071273c  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e071273e  str r5,[sp,#0x20]
+    -> Stack[-0x320] [WRITE, operand=1]
+e0712740  str r4,[sp,#0x24]
+    -> Stack[-0x31c] [WRITE, operand=1]
+e0712742  ldr r0,[r0,#0x14]
+e0712744  ldr r1,[r0,#0x0]
+e0712746  ldr r3,[r1,#0x18]
+e0712748  movs r1,#0x1
+e071274a  add r2,sp,#0x20
+e071274c  blx r3
+e071274e  ldr r0,[r7,#0x0]
+    -> c190a144 [READ, operand=1]
+e0712750  cbz r0,0xe071276e
+    -> e071276e [CONDITIONAL_JUMP, operand=1]
+e0712752  add r0,sp,#0x8
+e0712754  bl 0xe09680b0
+    -> e09680b0 [UNCONDITIONAL_CALL, operand=0]
+e0712758  movs r0,#0x1
+e071275a  add r1,sp,#0x14
+e071275c  stm r1,{r0,r4,r5}
+    -> Stack[-0x32c] [WRITE, operand=0]
+e0712760  ldr r2,[r7,#0x0]
+    -> c190a144 [READ, operand=1]
+e0712762  movw r0,#0x347f
+e0712766  add r1,sp,#0x8
+e0712768  movt r0,#0x1
+e071276c  blx r2
+e071276e  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712770  ldr r0,[r0,#0x14]
+e0712772  ldr r1,[r0,#0x0]
+e0712774  ldr r1,[r1,#0x34]
+e0712776  blx r1
+e0712778  movs r0,#0x0
+e071277a  b 0xe0712782
+    -> e0712782 [UNCONDITIONAL_JUMP, operand=0]
+e071277c  adds r0,#0x1
+e071277e  cmp r0,#0x20
+e0712780  bge 0xe07127a4
+    -> e07127a4 [CONDITIONAL_JUMP, operand=0]
+e0712782  mov.w r1,#0x5c8
+e0712786  mul r5,r0,r1
+e071278a  add.w r10,r7,#0x4
+e071278e  ldr.w r1,[r10,r5]
+    -> c190a148 [READ, operand=1]
+    -> c190a710 [READ, operand=2]
+e0712792  cmp r1,r4
+e0712794  bne 0xe071277c
+    -> e071277c [CONDITIONAL_JUMP, operand=0]
+e0712796  bl 0xe07121a8
+    -> e07121a8 [UNCONDITIONAL_CALL, operand=0]
+e071279a  cbnz r0,0xe07127a4
+    -> e07127a4 [CONDITIONAL_JUMP, operand=1]
+e071279c  add.w r0,r5,r10
+    -> c190a148 [PARAM, operand=0]
+e07127a0  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e07127a4  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07127a6  ldr r0,[r0,#0x14]
+e07127a8  ldr r1,[r0,#0x0]
+e07127aa  ldr r1,[r1,#0x38]
+e07127ac  blx r1
+e07127ae  movw r0,#0xa43c
+e07127b2  ldr r1,[sp,#0x320]
+    -> Stack[-0x20] [READ, operand=1]
+e07127b4  movt r0,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07127b8  ldr r2,[r0,#0x0]
+    -> c022a43c [READ, operand=1]
+e07127ba  cmp r1,r2
+e07127bc  it ne
+e07127be  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e07127c2  mov r0,r4
+e07127c4  add.w sp,sp,#0x324
+e07127c8  pop.w {r4,r5,r6,r7,r10,r11,pc}
+e07127cc  <DATA undefined len=1>
+e07127cd  <DATA undefined len=1>
+e07127ce  <DATA undefined len=1>
+e07127cf  <DATA undefined len=1>
+e07127d0  push {r4,lr}
+e07127d2  mov r4,r0
+e07127d4  movw r1,#0x5a6c
+
+[CODE WINDOW] requested=E0713728 length=0xa0
+function=<no containing function currently defined>
+e0713728  <DATA undefined len=1>
+e0713729  <DATA undefined len=1>
+e071372a  <DATA undefined len=1>
+e071372b  <DATA undefined len=1>
+e071372c  <DATA undefined len=1>
+e071372d  <DATA undefined len=1>
+e071372e  <DATA undefined len=1>
+e071372f  <DATA undefined len=1>
+e0713730  <DATA undefined len=1>
+e0713731  <DATA undefined len=1>
+e0713732  <DATA undefined len=1>
+e0713733  <DATA undefined len=1>
+e0713734  <DATA undefined len=1>
+e0713735  <DATA undefined len=1>
+e0713736  <DATA undefined len=1>
+e0713737  <DATA undefined len=1>
+e0713738  <DATA undefined len=1>
+e0713739  <DATA undefined len=1>
+e071373a  <DATA undefined len=1>
+e071373b  <DATA undefined len=1>
+e071373c  <DATA undefined len=1>
+e071373d  <DATA undefined len=1>
+e071373e  <DATA undefined len=1>
+e071373f  <DATA undefined len=1>
+e0713740  <DATA undefined len=1>
+e0713741  <DATA undefined len=1>
+e0713742  <DATA undefined len=1>
+e0713743  <DATA undefined len=1>
+e0713744  <DATA undefined len=1>
+e0713745  <DATA undefined len=1>
+e0713746  <DATA undefined len=1>
+e0713747  <DATA undefined len=1>
+e0713748  <DATA undefined len=1>
+e0713749  <DATA undefined len=1>
+e071374a  <DATA undefined len=1>
+e071374b  <DATA undefined len=1>
+e071374c  <DATA undefined len=1>
+e071374d  <DATA undefined len=1>
+e071374e  <DATA undefined len=1>
+e071374f  <DATA undefined len=1>
+e0713750  <DATA undefined len=1>
+e0713751  <DATA undefined len=1>
+e0713752  <DATA undefined len=1>
+e0713753  <DATA undefined len=1>
+e0713754  <DATA undefined len=1>
+e0713755  <DATA undefined len=1>
+e0713756  <DATA undefined len=1>
+e0713757  <DATA undefined len=1>
+e0713758  <DATA undefined len=1>
+e0713759  <DATA undefined len=1>
+e071375a  <DATA undefined len=1>
+e071375b  <DATA undefined len=1>
+e071375c  <DATA undefined len=1>
+e071375d  <DATA undefined len=1>
+e071375e  <DATA undefined len=1>
+e071375f  <DATA undefined len=1>
+e0713760  <DATA undefined len=1>
+e0713761  <DATA undefined len=1>
+e0713762  <DATA undefined len=1>
+e0713763  <DATA undefined len=1>
+e0713764  <DATA undefined len=1>
+e0713765  <DATA undefined len=1>
+e0713766  <DATA undefined len=1>
+e0713767  <DATA undefined len=1>
+e0713768  <DATA undefined len=1>
+e0713769  <DATA undefined len=1>
+e071376a  <DATA undefined len=1>
+e071376b  <DATA undefined len=1>
+e071376c  <DATA undefined len=1>
+e071376d  <DATA undefined len=1>
+e071376e  <DATA undefined len=1>
+e071376f  <DATA undefined len=1>
+e0713770  <DATA undefined len=1>
+e0713771  <DATA undefined len=1>
+e0713772  <DATA undefined len=1>
+e0713773  <DATA undefined len=1>
+e0713774  <DATA undefined len=1>
+e0713775  <DATA undefined len=1>
+e0713776  <DATA undefined len=1>
+e0713777  <DATA undefined len=1>
+e0713778  <DATA undefined len=1>
+e0713779  <DATA undefined len=1>
+e071377a  <DATA undefined len=1>
+e071377b  <DATA undefined len=1>
+e071377c  <DATA undefined len=1>
+e071377d  <DATA undefined len=1>
+e071377e  <DATA undefined len=1>
+e071377f  <DATA undefined len=1>
+e0713780  <DATA undefined len=1>
+e0713781  <DATA undefined len=1>
+e0713782  <DATA undefined len=1>
+e0713783  <DATA undefined len=1>
+e0713784  <DATA undefined len=1>
+e0713785  <DATA undefined len=1>
+e0713786  <DATA undefined len=1>
+e0713787  <DATA undefined len=1>
+e0713788  <DATA undefined len=1>
+e0713789  <DATA undefined len=1>
+e071378a  <DATA undefined len=1>
+e071378b  <DATA undefined len=1>
+e071378c  <DATA undefined len=1>
+e071378d  <DATA undefined len=1>
+e071378e  <DATA undefined len=1>
+e071378f  <DATA undefined len=1>
+e0713790  <DATA undefined len=1>
+e0713791  <DATA undefined len=1>
+e0713792  <DATA undefined len=1>
+e0713793  <DATA undefined len=1>
+e0713794  <DATA undefined len=1>
+e0713795  <DATA undefined len=1>
+e0713796  <DATA undefined len=1>
+e0713797  <DATA undefined len=1>
+e0713798  <DATA undefined len=1>
+e0713799  <DATA undefined len=1>
+e071379a  <DATA undefined len=1>
+e071379b  <DATA undefined len=1>
+e071379c  <DATA undefined len=1>
+e071379d  <DATA undefined len=1>
+e071379e  <DATA undefined len=1>
+e071379f  <DATA undefined len=1>
+e07137a0  <DATA undefined len=1>
+e07137a1  <DATA undefined len=1>
+e07137a2  <DATA undefined len=1>
+e07137a3  <DATA undefined len=1>
+e07137a4  <DATA undefined len=1>
+e07137a5  <DATA undefined len=1>
+e07137a6  <DATA undefined len=1>
+e07137a7  <DATA undefined len=1>
+e07137a8  <DATA undefined len=1>
+e07137a9  <DATA undefined len=1>
+e07137aa  <DATA undefined len=1>
+e07137ab  <DATA undefined len=1>
+e07137ac  <DATA undefined len=1>
+e07137ad  <DATA undefined len=1>
+e07137ae  <DATA undefined len=1>
+e07137af  <DATA undefined len=1>
+e07137b0  <DATA undefined len=1>
+e07137b1  <DATA undefined len=1>
+e07137b2  <DATA undefined len=1>
+e07137b3  <DATA undefined len=1>
+e07137b4  <DATA undefined len=1>
+e07137b5  <DATA undefined len=1>
+e07137b6  <DATA undefined len=1>
+e07137b7  <DATA undefined len=1>
+e07137b8  <DATA undefined len=1>
+e07137b9  <DATA undefined len=1>
+e07137ba  <DATA undefined len=1>
+e07137bb  <DATA undefined len=1>
+e07137bc  <DATA undefined len=1>
+e07137bd  <DATA undefined len=1>
+e07137be  <DATA undefined len=1>
+e07137bf  <DATA undefined len=1>
+e07137c0  <DATA undefined len=1>
+e07137c1  <DATA undefined len=1>
+e07137c2  <DATA undefined len=1>
+e07137c3  <DATA undefined len=1>
+e07137c4  <DATA undefined len=1>
+e07137c5  <DATA undefined len=1>
+e07137c6  <DATA undefined len=1>
+e07137c7  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E07140D0 length=0x88
+function=<no containing function currently defined>
+e07140d0  movw r2,#0x701e
+e07140d4  movt r2,#0xa
+e07140d8  subs r1,r1,r2
+e07140da  beq 0xe07140f8
+    -> e07140f8 [CONDITIONAL_JUMP, operand=0]
+e07140dc  movw r2,#0x742e
+e07140e0  movt r2,#0x5
+e07140e4  subs r1,r1,r2
+e07140e6  beq 0xe07140fc
+    -> e07140fc [CONDITIONAL_JUMP, operand=0]
+e07140e8  movw r2,#0x908
+e07140ec  movt r2,#0xcf
+e07140f0  cmp r1,r2
+e07140f2  it eq
+e07140f4  str.eq r3,[r0,#0x10]
+e07140f6  bx lr
+e07140f8  str r3,[r0,#0x14]
+e07140fa  bx lr
+e07140fc  str r3,[r0,#0x18]
+e07140fe  bx lr
+e0714100  b.w 0xe0713c08
+    -> e0713c08 [UNCONDITIONAL_JUMP, operand=0]
+e0714104  <DATA undefined len=1>
+e0714105  <DATA undefined len=1>
+e0714106  <DATA undefined len=1>
+e0714107  <DATA undefined len=1>
+e0714108  bx lr
+e071410a  <DATA undefined len=1>
+e071410b  <DATA undefined len=1>
+e071410c  <DATA undefined len=1>
+e071410d  <DATA undefined len=1>
+e071410e  <DATA undefined len=1>
+e071410f  <DATA undefined len=1>
+e0714110  ldr.w pc,[0xe0714114]
+    -> e0714114 [READ, operand=1]
+    -> 381004cc [COMPUTED_JUMP, operand=0]
+e0714114  <DATA undefined4 len=4>
+e0714118  ldr r1,[r0,#0xc]
+e071411a  movw r2,#0x4220
+e071411e  movt r2,#0xe0b3
+e0714122  ldr.w r1,[r2,r1,lsl #0x2]
+    -> e0b34220 [DATA, operand=1]
+e0714126  str r1,[r0,#0x18]
+e0714128  b.w 0xe0968094
+    -> e0968094 [UNCONDITIONAL_JUMP, operand=0]
+e071412c  push {r4,r5,lr}
+e071412e  mov r5,r1
+e0714130  mov r4,r0
+e0714132  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e0714136  movw r1,#0x4220
+e071413a  str r5,[r4,#0xc]
+e071413c  movt r1,#0xe0b3
+e0714140  ldr.w r0,[r1,r5,lsl #0x2]
+    -> e0b34220 [DATA, operand=1]
+e0714144  str r0,[r4,#0x18]
+e0714146  mov r0,r4
+e0714148  pop.w {r4,r5,lr}
+e071414c  b.w 0xe0968094
+    -> e0968094 [UNCONDITIONAL_JUMP, operand=0]
+e0714150  <DATA undefined len=1>
+e0714151  <DATA undefined len=1>
+e0714152  <DATA undefined len=1>
+e0714153  <DATA undefined len=1>
+e0714154  <DATA undefined len=1>
+e0714155  <DATA undefined len=1>
+e0714156  <DATA undefined len=1>
+e0714157  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0715808 length=0x30
+function=<no containing function currently defined>
+e0715808  movw r2,#0x580c
+e071580c  movw r12,#0x5858
+e0715810  movt r2,#0xe0b3
+e0715814  movt r12,#0xe0b3
+e0715818  stm r0,{r2,r12}
+    -> e0b3580c [DATA, operand=1]
+    -> e0b35858 [DATA, operand=1]
+    -> c1927c34 [WRITE, operand=0]
+    -> c1927c38 [WRITE, operand=1]
+e071581c  movs r2,#0x0
+e071581e  str r2,[r0,#0x8]
+    -> c1927c3c [WRITE, operand=1]
+e0715820  str r2,[r0,#0xc]
+    -> c1927c40 [WRITE, operand=1]
+e0715822  str r2,[r0,#0x10]
+    -> c1927c44 [WRITE, operand=1]
+e0715824  movw r3,#0x7c30
+e0715828  str r1,[r0,#0x14]
+    -> c1927c48 [WRITE, operand=1]
+    -> e0b357ac [DATA, operand=0]
+e071582a  movt r3,#0xc192
+e071582e  str r0,[r3,#0x0]
+    -> c1927c30 [WRITE, operand=1]
+    -> c1927c34 [DATA, operand=0]
+e0715830  bx lr
+e0715832  <DATA undefined len=1>
+e0715833  <DATA undefined len=1>
+e0715834  <DATA undefined len=1>
+e0715835  <DATA undefined len=1>
+e0715836  <DATA undefined len=1>
+e0715837  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0715870 length=0x18
+function=FUN_e0715870 entry=e0715870 body=e0715870..e071587b
+e0715870  movw r1,#0x7c30
+e0715874  movt r1,#0xc192
+e0715878  ldr r0,[r1,#0x0]
+    -> c1927c30 [READ, operand=1]
+e071587a  bx lr
+e071587c  <DATA undefined len=1>
+e071587d  <DATA undefined len=1>
+e071587e  <DATA undefined len=1>
+e071587f  <DATA undefined len=1>
+e0715880  mov r0,r1
+e0715882  mov r1,r2
+e0715884  b.w 0xe0715540
+    -> e0715540 [UNCONDITIONAL_JUMP, operand=0]
+
+[CODE WINDOW] requested=E0715950 length=0x40
+function=<no containing function currently defined>
+e0715950  movw r2,#0x701e
+e0715954  movt r2,#0xa
+e0715958  subs r1,r1,r2
+e071595a  beq 0xe071597a
+    -> e071597a [CONDITIONAL_JUMP, operand=0]
+e071595c  movw r2,#0x742e
+e0715960  movt r2,#0x5
+e0715964  subs r1,r1,r2
+e0715966  beq 0xe071597e
+    -> e071597e [CONDITIONAL_JUMP, operand=0]
+e0715968  movw r2,#0xf3e
+e071596c  movt r2,#0x49
+e0715970  cmp r1,r2
+e0715972  it ne
+e0715974  bx.ne lr
+e0715976  str r3,[r0,#0xc]
+e0715978  bx lr
+e071597a  str r3,[r0,#0x8]
+e071597c  bx lr
+e071597e  str r3,[r0,#0x10]
+e0715980  bx lr
+e0715982  <DATA undefined len=1>
+e0715983  <DATA undefined len=1>
+e0715984  <DATA undefined len=1>
+e0715985  <DATA undefined len=1>
+e0715986  <DATA undefined len=1>
+e0715987  <DATA undefined len=1>
+e0715988  b.w 0xe07157c8
+    -> e07157c8 [UNCONDITIONAL_CALL, operand=0]
+e071598c  <DATA undefined len=1>
+e071598d  <DATA undefined len=1>
+e071598e  <DATA undefined len=1>
+e071598f  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0715998 length=0x1c
+function=thunk_EXT_FUN_381005a0 entry=e0715998 body=e0715998..e071599b
+e0715998  ldr.w pc,[0xe071599c]
+    -> e071599c [READ, operand=1]
+    -> 381005a0 [COMPUTED_JUMP, operand=0]
+e071599c  <DATA undefined4 len=4>
+e07159a0  ldr.w pc,[0xe07159a4]
+    -> e07159a4 [READ, operand=1]
+    -> 381004cc [COMPUTED_JUMP, operand=0]
+e07159a4  <DATA undefined4 len=4>
+e07159a8  push {r4,r5,r6,r7,lr}
+e07159aa  mov r4,r0
+e07159ac  subs r5,r1,#0x0
+e07159ae  beq 0xe07159c2
+    -> e07159c2 [CONDITIONAL_JUMP, operand=0]
+e07159b0  mov r0,r1
+e07159b2  bl 0xe06690ae
+    -> e06690ae [UNCONDITIONAL_CALL, operand=0]
+
+[CODE WINDOW] requested=E0715510 length=0x40
+function=FUN_e0715510 entry=e0715510 body=e0715500..e0715539
+e0715510  push {r4,lr}
+e0715512  movw r4,#0x7ac8
+e0715516  movt r4,#0xc192
+e071551a  movw r0,#0x5511
+e071551e  movt r0,#0xe071
+e0715522  str r0,[r4,#0x0]
+    -> c1927ac8 [WRITE, operand=1]
+    -> e0715511 [DATA, operand=0]
+e0715524  ldr r0,[r4,#0x10]
+    -> c1927ad8 [READ, operand=1]
+e0715526  bl 0xe0715300
+    -> e0715300 [UNCONDITIONAL_CALL, operand=0]
+e071552a  cmp r0,#0x0
+e071552c  it ne
+e071552e  pop.ne {r4,pc}
+e0715530  str r0,[r4,#0x0]
+    -> c1927ac8 [WRITE, operand=1]
+e0715532  pop.w {r4,lr}
+e0715536  b.w 0xe0715500
+    -> e0715500 [UNCONDITIONAL_JUMP, operand=0]
+e071553a  <DATA undefined len=1>
+e071553b  <DATA undefined len=1>
+e071553c  <DATA undefined len=1>
+e071553d  <DATA undefined len=1>
+e071553e  <DATA undefined len=1>
+e071553f  <DATA undefined len=1>
+e0715540  push {lr}
+e0715542  movw r2,#0x7ad4
+e0715546  movt r2,#0xc192
+    -> c1927ad4 [PARAM, operand=0]
+e071554a  mov r3,r0
+e071554c  stm r2,{r1,r3}
+    -> c1927ad4 [WRITE, operand=0]
+    -> c1927ad8 [WRITE, operand=1]
+
+[CODE WINDOW] requested=E0715560 length=0x40
+function=<no containing function currently defined>
+e0715560  push {r4,lr}
+e0715562  movw r4,#0x7ac8
+e0715566  movt r4,#0xc192
+e071556a  movw r0,#0x5561
+e071556e  movt r0,#0xe071
+e0715572  str r0,[r4,#0x0]
+    -> c1927ac8 [WRITE, operand=1]
+    -> e0715561 [DATA, operand=0]
+e0715574  ldr r0,[r4,#0x10]
+    -> c1927ad8 [READ, operand=1]
+e0715576  bl 0xe0715358
+    -> e0715358 [UNCONDITIONAL_CALL, operand=0]
+e071557a  cmp r0,#0x0
+e071557c  it ne
+e071557e  pop.ne {r4,pc}
+e0715580  ldr r0,[r4,#0x10]
+    -> c1927ad8 [READ, operand=1]
+e0715582  bl 0xe07153b0
+    -> e07153b0 [UNCONDITIONAL_CALL, operand=0]
+e0715586  movs r0,#0x0
+e0715588  str r0,[r4,#0x0]
+e071558a  pop.w {r4,lr}
+e071558e  b.w 0xe0715500
+    -> e0715500 [UNCONDITIONAL_JUMP, operand=0]
+e0715592  <DATA undefined len=1>
+e0715593  <DATA undefined len=1>
+e0715594  <DATA undefined len=1>
+e0715595  <DATA undefined len=1>
+e0715596  <DATA undefined len=1>
+e0715597  <DATA undefined len=1>
+e0715598  movw r2,#0x7ad4
+e071559c  movt r2,#0xc192
+    -> c1927ad4 [PARAM, operand=0]
+
+[CODE WINDOW] requested=E0726768 length=0x40
+function=FUN_e0726768 entry=e0726768 body=e0726768..e0726795
+e0726768  push {r4,lr}
+e072676a  sub sp,#0x8
+e072676c  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e0726770  ldr r0,[r0,#0x10]
+e0726772  ldr r1,[r0,#0x0]
+e0726774  ldr r4,[r1,#0x8]
+e0726776  movs r1,#0x1
+e0726778  mov r2,r1
+e072677a  stm sp,{r1,r2}
+    -> Stack[-0x10] [WRITE, operand=0]
+e072677e  adr.w r1,0xe07268e8
+    -> e07268e8 [PARAM, operand=1]
+e0726782  movs r3,#0x3c
+e0726784  movs r2,#0x0
+e0726786  blx r4
+e0726788  movw r4,#0xf064
+e072678c  movt r4,#0xc192
+e0726790  str r0,[r4,#0x0]
+    -> c192f064 [WRITE, operand=1]
+e0726792  add sp,#0x8
+e0726794  pop {r4,pc}
+e0726796  <DATA undefined len=1>
+e0726797  <DATA undefined len=1>
+e0726798  push {lr}
+e072679a  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e072679e  ldr r0,[r0,#0x10]
+e07267a0  ldr r1,[r0,#0x0]
+e07267a2  movw r3,#0xf064
+e07267a6  movt r3,#0xc192
+    -> c192f064 [PARAM, operand=0]
+
+[CODE WINDOW] requested=E0726798 length=0x30
+function=FUN_e0726798 entry=e0726798 body=e0726798..e07267b1
+e0726798  push {lr}
+e072679a  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e072679e  ldr r0,[r0,#0x10]
+e07267a0  ldr r1,[r0,#0x0]
+e07267a2  movw r3,#0xf064
+e07267a6  movt r3,#0xc192
+    -> c192f064 [PARAM, operand=0]
+e07267aa  ldr r2,[r1,#0x10]
+e07267ac  ldr r1,[r3,#0x0]
+    -> c192f064 [READ, operand=1]
+e07267ae  blx r2
+e07267b0  pop {pc}
+e07267b2  <DATA undefined len=1>
+e07267b3  <DATA undefined len=1>
+e07267b4  <DATA undefined len=1>
+e07267b5  <DATA undefined len=1>
+e07267b6  <DATA undefined len=1>
+e07267b7  <DATA undefined len=1>
+e07267b8  push {r4,lr}
+e07267ba  sub sp,#0xd0
+e07267bc  movw r1,#0xa43c
+e07267c0  movt r1,#0xc022
+e07267c4  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e07267c6  str r0,[sp,#0xcc]
+    -> Stack[-0xc] [WRITE, operand=1]
+
+[CODE WINDOW] requested=E0726808 length=0x48
+function=FUN_e0726808 entry=e0726808 body=e0726808..e0726849
+e0726808  push {r4,lr}
+e072680a  movw r4,#0xf064
+e072680e  movt r4,#0xc192
+e0726812  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e0726816  ldr r0,[r0,#0xc]
+e0726818  ldr r1,[r0,#0x0]
+e072681a  ldr r1,[r1,#0x34]
+e072681c  blx r1
+e072681e  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e0726822  ldr r0,[r0,#0x10]
+e0726824  ldr r1,[r0,#0x0]
+e0726826  ldr r2,[r1,#0x10]
+e0726828  ldr r1,[r4,#0x0]
+    -> c192f064 [READ, operand=1]
+e072682a  blx r2
+e072682c  cbz r0,0xe072683c
+    -> e072683c [CONDITIONAL_JUMP, operand=1]
+e072682e  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e0726832  ldr r0,[r0,#0x10]
+e0726834  ldr r1,[r0,#0x0]
+e0726836  ldr r2,[r1,#0x40]
+e0726838  ldr r1,[r4,#0x0]
+    -> c192f064 [READ, operand=1]
+e072683a  blx r2
+e072683c  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e0726840  ldr r0,[r0,#0xc]
+e0726842  ldr r1,[r0,#0x0]
+e0726844  ldr r1,[r1,#0x38]
+e0726846  blx r1
+e0726848  pop {r4,pc}
+e072684a  <DATA undefined len=1>
+e072684b  <DATA undefined len=1>
+e072684c  <DATA undefined len=1>
+e072684d  <DATA undefined len=1>
+e072684e  <DATA undefined len=1>
+e072684f  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0726850 length=0x60
+function=<no containing function currently defined>
+e0726850  subs r1,#0x10
+e0726852  beq 0xe0726862
+    -> e0726862 [CONDITIONAL_JUMP, operand=0]
+e0726854  subs r1,#0xa
+e0726856  beq 0xe0726876
+    -> e0726876 [CONDITIONAL_JUMP, operand=0]
+e0726858  subs r1,#0x6d
+e072685a  it ne
+e072685c  cmp.ne r1,#0x9
+e072685e  bne 0xe072689a
+    -> e072689a [CONDITIONAL_JUMP, operand=0]
+e0726860  b 0xe0726882
+    -> e0726882 [UNCONDITIONAL_JUMP, operand=0]
+e0726862  push {lr}
+e0726864  bl 0xe07267b8
+    -> e07267b8 [UNCONDITIONAL_CALL, operand=0]
+e0726868  cbnz r0,0xe0726896
+    -> e0726896 [CONDITIONAL_JUMP, operand=1]
+e072686a  bl 0xe0726768
+    -> e0726768 [UNCONDITIONAL_CALL, operand=0]
+e072686e  movs r0,#0x2
+e0726870  pop.w lr
+e0726874  bx lr
+e0726876  movw r1,#0xf068
+e072687a  movs r0,#0x1
+e072687c  movt r1,#0xc192
+    -> c192f068 [PARAM, operand=0]
+e0726880  str r0,[r1,#0x0]
+    -> c192f068 [WRITE, operand=1]
+e0726882  push {lr}
+e0726884  bl 0xe0726798
+    -> e0726798 [UNCONDITIONAL_CALL, operand=0]
+e0726888  cbz r0,0xe0726896
+    -> e0726896 [CONDITIONAL_JUMP, operand=1]
+e072688a  bl 0xe07267b8
+    -> e07267b8 [UNCONDITIONAL_CALL, operand=0]
+e072688e  cmp r0,#0x0
+e0726890  it ne
+e0726892  bl.ne 0xe0726808
+    -> e0726808 [CONDITIONAL_CALL, operand=0]
+e0726896  pop.w lr
+e072689a  movs r0,#0x1
+e072689c  bx lr
+e072689e  <DATA undefined len=1>
+e072689f  <DATA undefined len=1>
+e07268a0  bx lr
+e07268a2  <DATA undefined len=1>
+e07268a3  <DATA undefined len=1>
+e07268a4  <DATA undefined len=1>
+e07268a5  <DATA undefined len=1>
+e07268a6  <DATA undefined len=1>
+e07268a7  <DATA undefined len=1>
+e07268a8  push {r4,r5,lr}
+e07268aa  sub sp,#0x4
+e07268ac  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+
+[CODE WINDOW] requested=E07268A8 length=0x44
+function=<no containing function currently defined>
+e07268a8  push {r4,r5,lr}
+e07268aa  sub sp,#0x4
+e07268ac  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e07268b0  ldr r0,[r0,#0xc]
+e07268b2  movw r2,#0x2802
+e07268b6  movw r4,#0xf06c
+e07268ba  ldr r1,[r0,#0x0]
+e07268bc  movt r4,#0xc192
+e07268c0  movs r3,#0x1
+e07268c2  ldr r5,[r1,#0x8]
+e07268c4  movw r1,#0x6851
+e07268c8  movt r1,#0xe072
+e07268cc  str r1,[sp,#0x0]
+    -> e0726851 [DATA, operand=0]
+e07268ce  mov r1,r4
+e07268d0  blx r5
+e07268d2  bl 0xe0726960
+    -> e0726960 [UNCONDITIONAL_CALL, operand=0]
+e07268d6  ldr r0,[r0,#0xc]
+e07268d8  ldr r1,[r0,#0x0]
+e07268da  ldr r2,[r1,#0xc]
+e07268dc  mov r1,r4
+e07268de  blx r2
+e07268e0  add sp,#0x4
+e07268e2  pop {r4,r5,pc}
+e07268e4  <DATA undefined len=1>
+e07268e5  <DATA undefined len=1>
+e07268e6  <DATA undefined len=1>
+e07268e7  <DATA undefined len=1>
+e07268e8  <DATA string len=18>
+
+[CODE WINDOW] requested=E07269B0 length=0x40
+function=<no containing function currently defined>
+e07269b0  movw r2,#0x701e
+e07269b4  movt r2,#0xa
+e07269b8  subs r1,r1,r2
+e07269ba  beq 0xe07269ea
+    -> e07269ea [CONDITIONAL_JUMP, operand=0]
+e07269bc  movw r2,#0x742e
+e07269c0  movt r2,#0x5
+e07269c4  subs r1,r1,r2
+e07269c6  beq 0xe07269ee
+    -> e07269ee [CONDITIONAL_JUMP, operand=0]
+e07269c8  movw r2,#0x498e
+e07269cc  movt r2,#0x38
+e07269d0  subs r1,r1,r2
+e07269d2  beq 0xe07269e6
+    -> e07269e6 [CONDITIONAL_JUMP, operand=0]
+e07269d4  movw r2,#0xbf7a
+e07269d8  movt r2,#0x96
+e07269dc  cmp r1,r2
+e07269de  it ne
+e07269e0  bx.ne lr
+e07269e2  str r3,[r0,#0x8]
+e07269e4  bx lr
+e07269e6  str r3,[r0,#0x4]
+e07269e8  bx lr
+e07269ea  str r3,[r0,#0xc]
+e07269ec  bx lr
+e07269ee  str r3,[r0,#0x10]
+
+[CODE WINDOW] requested=E03076C0 length=0x1c0
+function=ConStat_Reason_Inserter_Anchor entry=e03076c0 body=e03076c0..e03077ed
+e03076c0  push {r4,r5,r6,r7,r10,r11,lr}
+e03076c4  mov r5,r0
+e03076c6  mov r7,r1
+e03076c8  mov r6,r2
+e03076ca  mov r10,r3
+e03076cc  ldrb.w r0,[r0,#0x224]
+e03076d0  cmp r0,#0x0
+e03076d2  beq.w 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e03076d6  mov r0,r5
+e03076d8  bl 0xe0308908
+    -> e0308908 [UNCONDITIONAL_CALL, operand=0]
+e03076dc  mov r1,r0
+e03076de  mov r0,r5
+e03076e0  bl 0xe0307890
+    -> e0307890 [UNCONDITIONAL_CALL, operand=0]
+e03076e4  mov r4,r0
+e03076e6  mov r1,r7
+e03076e8  mov r0,r5
+e03076ea  bl 0xe03078e8
+    -> e03078e8 [UNCONDITIONAL_CALL, operand=0]
+e03076ee  cmp r4,#0x0
+e03076f0  it ge
+e03076f2  cmp.ge r0,#0x0
+e03076f4  blt 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e03076f6  movw r0,#0x8f4
+e03076fa  adds r0,r5,r0
+e03076fc  lsl.w r11,r4,#0x6
+e0307700  add.w r2,r11,r0
+e0307704  movw r7,#0x1ac8
+e0307708  cbnz r6,0xe0307740
+    -> e0307740 [CONDITIONAL_JUMP, operand=1]
+e030770a  str r6,[r2,#0xc]
+e030770c  mov r0,r5
+e030770e  str r6,[r2,#0x10]
+e0307710  bl 0xe0308988
+    -> e0308988 [UNCONDITIONAL_CALL, operand=0]
+e0307714  adds r0,r5,r7
+e0307716  str.w r6,[r0,r4,lsl #0x3]
+e030771a  add.w r0,r0,r4, lsl #0x3
+e030771e  str r6,[r0,#0x4]
+e0307720  add.w r0,r11,r5
+e0307724  movs r1,#0x1
+e0307726  str.w r1,[r0,#0x344]
+e030772a  ldr r0,[r5,#0x0]
+e030772c  ldr.w r1,[r0,#0x2d0]
+e0307730  mov r0,r5
+e0307732  blx r1
+e0307734  cmp.w r10,#0x0
+e0307738  it ne
+e030773a  bl.ne 0xe0305708
+    -> e0305708 [CONDITIONAL_CALL, operand=0]
+e030773e  b 0xe03077e2
+    -> e03077e2 [UNCONDITIONAL_JUMP, operand=0]
+e0307740  ldr r0,[r2,#0xc]
+e0307742  cmp r0,#0xb
+e0307744  bcs 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e0307746  subs r0,r6,#0x1
+e0307748  beq 0xe03077aa
+    -> e03077aa [CONDITIONAL_JUMP, operand=0]
+e030774a  subs r0,#0xa
+e030774c  bcc 0xe03077b4
+    -> e03077b4 [CONDITIONAL_JUMP, operand=0]
+e030774e  beq 0xe030778e
+    -> e030778e [CONDITIONAL_JUMP, operand=0]
+e0307750  cmp r0,#0x2
+e0307752  bcc 0xe0307772
+    -> e0307772 [CONDITIONAL_JUMP, operand=0]
+e0307754  bne 0xe03077b4
+    -> e03077b4 [CONDITIONAL_JUMP, operand=0]
+e0307756  adds r0,r5,r7
+e0307758  ldr.w r3,[r0,r4,lsl #0x3]
+e030775c  orr r3,r3,#0x800000
+e0307760  str.w r3,[r0,r4,lsl #0x3]
+e0307764  add.w r0,r0,r4, lsl #0x3
+e0307768  ldr r3,[r0,#0x4]
+e030776a  bic r3,r3,#0x800000
+e030776e  str r3,[r0,#0x4]
+e0307770  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e0307772  adds r0,r5,r7
+e0307774  ldr.w r3,[r0,r4,lsl #0x3]
+e0307778  orr r3,r3,#0x2000000
+e030777c  str.w r3,[r0,r4,lsl #0x3]
+e0307780  add.w r0,r0,r4, lsl #0x3
+e0307784  ldr r3,[r0,#0x4]
+e0307786  bic r3,r3,#0x2000000
+e030778a  str r3,[r0,#0x4]
+e030778c  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e030778e  adds r0,r5,r7
+e0307790  ldr.w r3,[r0,r4,lsl #0x3]
+e0307794  orr r3,r3,#0x1000000
+e0307798  str.w r3,[r0,r4,lsl #0x3]
+e030779c  add.w r0,r0,r4, lsl #0x3
+e03077a0  ldr r3,[r0,#0x4]
+e03077a2  bic r3,r3,#0x1000000
+e03077a6  str r3,[r0,#0x4]
+e03077a8  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e03077aa  add.w r0,r11,r5
+e03077ae  movs r1,#0x0
+e03077b0  str.w r1,[r0,#0x344]
+e03077b4  ldr r0,[r2,#0xc]
+e03077b6  adds r1,r0,#0x1
+e03077b8  str r1,[r2,#0xc]
+e03077ba  add.w r0,r2,r0, lsl #0x2
+e03077be  cmp r6,#0x25
+e03077c0  str r6,[r0,#0x10]
+e03077c2  itt ne
+e03077c4  mov.ne r0,#0x0
+e03077c6  str.w.ne r0,[r5,#0x2f8]
+e03077ca  ldr r0,[r5,#0x0]
+e03077cc  ldr.w r1,[r0,#0x2d0]
+e03077d0  mov r0,r5
+e03077d2  blx r1
+e03077d4  cmp.w r10,#0x0
+e03077d8  beq 0xe03077e2
+    -> e03077e2 [CONDITIONAL_JUMP, operand=0]
+e03077da  bl 0xe0305708
+    -> e0305708 [UNCONDITIONAL_CALL, operand=0]
+e03077de  bl 0xe0305788
+    -> e0305788 [UNCONDITIONAL_CALL, operand=0]
+e03077e2  movs r0,#0x0
+e03077e4  pop.w {r4,r5,r6,r7,r10,r11,pc}
+e03077e8  movs r0,#0x3
+e03077ea  pop.w {r4,r5,r6,r7,r10,r11,pc}
+e03077ee  <DATA undefined len=1>
+e03077ef  <DATA undefined len=1>
+e03077f0  ldrb.w r3,[r0,#0x224]
+e03077f4  cbnz r3,0xe03077fa
+    -> e03077fa [CONDITIONAL_JUMP, operand=1]
+e03077f6  movs r0,#0x3
+e03077f8  bx lr
+e03077fa  cmp r1,#0x1d
+e03077fc  bcs 0xe0307818
+    -> e0307818 [CONDITIONAL_JUMP, operand=0]
+e03077fe  movw r3,#0x1d58
+e0307802  adds r0,r0,r3
+e0307804  add.w r0,r0,r1, lsl #0x4
+e0307808  ldr r1,[r2,#0x0]
+e030780a  str r1,[r0,#0x0]
+e030780c  ldr r1,[r2,#0x4]
+e030780e  str r1,[r0,#0x4]
+e0307810  ldr r1,[r2,#0x8]
+e0307812  str r1,[r0,#0x8]
+e0307814  ldr r1,[r2,#0xc]
+e0307816  str r1,[r0,#0xc]
+e0307818  push {lr}
+e030781a  bl 0xe0305708
+    -> e0305708 [UNCONDITIONAL_CALL, operand=0]
+e030781e  movs r0,#0x0
+e0307820  pop.w lr
+e0307824  bx lr
+e0307826  <DATA undefined len=1>
+e0307827  <DATA undefined len=1>
+e0307828  push {r4,lr}
+e030782a  sub.w sp,sp,#0x304
+e030782e  movw r12,#0xa43c
+e0307832  movt r12,#0xc022
+e0307836  ldr.w r12,[r12,#0x0]
+    -> c022a43c [READ, operand=1]
+e030783a  str.w r12,[sp,#0x300]
+e030783e  ldrb.w r12,[r0,#0x224]
+e0307842  cmp.w r12,#0x0
+e0307846  it eq
+e0307848  mov.eq r4,#0x3
+e030784a  beq 0xe030786e
+    -> e030786e [CONDITIONAL_JUMP, operand=0]
+e030784c  str.w r1,[r0,#0x8b8]
+e0307850  str.w r2,[r0,#0x8c0]
+e0307854  str.w r3,[r0,#0x8c8]
+e0307858  bl 0xe0305708
+    -> e0305708 [UNCONDITIONAL_CALL, operand=0]
+e030785c  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+e0307860  ldr r0,[r0,#0x28]
+e0307862  ldr r1,[r0,#0x0]
+e0307864  ldr r3,[r1,#0x18]
+e0307866  movs r1,#0xb6
+e0307868  mov r2,sp
+e030786a  blx r3
+e030786c  movs r4,#0x0
+e030786e  movw r0,#0xa43c
+e0307872  ldr r1,[sp,#0x300]
+e0307874  movt r0,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e0307878  ldr r2,[r0,#0x0]
+    -> c022a43c [READ, operand=1]
+e030787a  cmp r1,r2
+e030787c  it ne
+e030787e  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+
+[CODE WINDOW] requested=E0307A38 length=0x60
+function=<no containing function currently defined>
+e0307a38  push {r4,r5,lr}
+e0307a3a  movs r4,r1
+e0307a3c  itt eq
+e0307a3e  mov.eq r0,#0x4
+e0307a40  pop.eq {r4,r5,pc}
+e0307a42  mov r5,r0
+e0307a44  bl 0xe03028b0
+    -> e03028b0 [UNCONDITIONAL_CALL, operand=0]
+e0307a48  cmp r0,#0x4
+e0307a4a  it eq
+e0307a4c  pop.eq {r4,r5,pc}
+e0307a4e  mov r1,r4
+e0307a50  mov r0,r5
+e0307a52  bl 0xe0308520
+    -> e0308520 [UNCONDITIONAL_CALL, operand=0]
+e0307a56  ldrb r0,[r5,#0xc]
+e0307a58  cbnz r0,0xe0307a62
+    -> e0307a62 [CONDITIONAL_JUMP, operand=1]
+e0307a5a  str.w r0,[r4,#0x8c]
+e0307a5e  str.w r0,[r4,#0x90]
+e0307a62  movw r0,#0x1f30
+e0307a66  ldr r0,[r0,r5]
+e0307a68  pop {r4,r5,pc}
+e0307a6a  <DATA undefined len=1>
+e0307a6b  <DATA undefined len=1>
+e0307a6c  <DATA undefined len=1>
+e0307a6d  <DATA undefined len=1>
+e0307a6e  <DATA undefined len=1>
+e0307a6f  <DATA undefined len=1>
+e0307a70  movs r0,#0x1
+e0307a72  bx lr
+e0307a74  <DATA undefined len=1>
+e0307a75  <DATA undefined len=1>
+e0307a76  <DATA undefined len=1>
+e0307a77  <DATA undefined len=1>
+e0307a78  movs r0,#0x1
+e0307a7a  bx lr
+e0307a7c  <DATA undefined len=1>
+e0307a7d  <DATA undefined len=1>
+e0307a7e  <DATA undefined len=1>
+e0307a7f  <DATA undefined len=1>
+e0307a80  movs r0,#0x1
+e0307a82  bx lr
+e0307a84  <DATA undefined len=1>
+e0307a85  <DATA undefined len=1>
+e0307a86  <DATA undefined len=1>
+e0307a87  <DATA undefined len=1>
+e0307a88  movs r0,#0x1
+e0307a8a  bx lr
+e0307a8c  <DATA undefined len=1>
+e0307a8d  <DATA undefined len=1>
+e0307a8e  <DATA undefined len=1>
+e0307a8f  <DATA undefined len=1>
+e0307a90  movs r0,#0x1
+e0307a92  bx lr
+e0307a94  <DATA undefined len=1>
+e0307a95  <DATA undefined len=1>
+e0307a96  <DATA undefined len=1>
+e0307a97  <DATA undefined len=1>
+
+[CODE WINDOW] requested=E0308520 length=0x58
+function=FUN_e0308520 entry=e0308520 body=e0308520..e03085f9
+e0308520  push {r4}
+e0308522  ldr.w r2,[r0,#0x278]
+e0308526  str r2,[r1,#0xc]
+e0308528  ldr.w r2,[r0,#0x27c]
+e030852c  str r2,[r1,#0x10]
+e030852e  ldr.w r2,[r0,#0x280]
+e0308532  str r2,[r1,#0x14]
+e0308534  ldr.w r2,[r0,#0x2ac]
+e0308538  str r2,[r1,#0x40]
+e030853a  ldr.w r2,[r0,#0x2f8]
+e030853e  str.w r2,[r1,#0x8c]
+e0308542  ldr.w r2,[r0,#0x2fc]
+e0308546  str.w r2,[r1,#0x90]
+e030854a  ldr.w r2,[r0,#0x300]
+e030854e  str.w r2,[r1,#0x94]
+e0308552  ldr.w r2,[r0,#0x304]
+e0308556  str.w r2,[r1,#0x98]
+e030855a  ldr.w r2,[r0,#0x308]
+e030855e  str.w r2,[r1,#0x9c]
+e0308562  ldr.w r2,[r0,#0x30c]
+e0308566  str.w r2,[r1,#0xa0]
+e030856a  ldr.w r2,[r0,#0x310]
+e030856e  str.w r2,[r1,#0xa4]
+e0308572  ldr.w r2,[r0,#0x314]
+e0308576  str.w r2,[r1,#0xa8]
+
+[CODE WINDOW] requested=E070CC30 length=0x140
+function=<no containing function currently defined>
+e070cc30  push {r4,r5,r6,r7,lr}
+e070cc32  sub sp,#0x8
+e070cc34  mov r4,r1
+e070cc36  mov r6,r2
+e070cc38  movw r5,#0x66b0
+e070cc3c  mov r7,r3
+e070cc3e  movt r5,#0xc190
+e070cc42  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cc46  ldr r0,[r0,#0x40]
+e070cc48  ldr r1,[r0,#0x0]
+e070cc4a  ldr r2,[r1,#0x8]
+e070cc4c  mov r1,sp
+e070cc4e  blx r2
+e070cc50  ldr r0,[sp,#0x0]
+e070cc52  ldr r1,[r0,#0x0]
+e070cc54  ldr r1,[r1,#0x18]
+e070cc56  blx r1
+e070cc58  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cc5c  ldr r0,[r0,#0x24]
+e070cc5e  ldr r1,[r0,#0x0]
+e070cc60  mov r3,r4
+e070cc62  ldr.w r12,[r1,#0xc]
+e070cc66  mov r1,r6
+e070cc68  mov r2,r7
+e070cc6a  blx r12
+e070cc6c  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cc70  ldr r0,[r0,#0x2c]
+e070cc72  ldr r1,[r0,#0x0]
+e070cc74  movw r2,#0xc129
+e070cc78  ldr r3,[r1,#0x8]
+e070cc7a  mov r1,r4
+e070cc7c  movt r2,#0xe070
+    -> e070c129 [PARAM, operand=0]
+e070cc80  blx r3
+e070cc82  movw r7,#0x9fac
+e070cc86  movt r7,#0xc190
+e070cc8a  ldr r0,[r7,#0x0]
+    -> c1909fac [READ, operand=1]
+e070cc8c  mov.w r1,#0xffffffff
+e070cc90  bl 0xe06ff648
+    -> e06ff648 [UNCONDITIONAL_CALL, operand=0]
+e070cc94  movs r0,#0x0
+e070cc96  str r0,[r5,#0x14]
+    -> c19066c4 [WRITE, operand=1]
+e070cc98  str r0,[r5,#0x18]
+    -> c19066c8 [WRITE, operand=1]
+e070cc9a  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cc9e  ldr r0,[r0,#0x60]
+e070cca0  cbz r0,0xe070ccae
+    -> e070ccae [CONDITIONAL_JUMP, operand=1]
+e070cca2  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cca6  ldr r0,[r0,#0x60]
+e070cca8  ldr r1,[r0,#0x0]
+e070ccaa  ldr r3,[r1,#0x10]
+e070ccac  b 0xe070ccbc
+    -> e070ccbc [UNCONDITIONAL_JUMP, operand=0]
+e070ccae  movw r1,#0x65f0
+e070ccb2  movt r1,#0xc190
+e070ccb6  ldr r0,[r1,#0x0]
+    -> c19065f0 [READ, operand=1]
+e070ccb8  ldr r1,[r0,#0x0]
+e070ccba  ldr r3,[r1,#0x8]
+e070ccbc  mov r2,r6
+e070ccbe  mov r1,r4
+e070ccc0  blx r3
+e070ccc2  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070ccc6  ldr r0,[r0,#0x24]
+e070ccc8  ldr r1,[r0,#0x0]
+e070ccca  ldr r2,[r1,#0x10]
+e070cccc  mov r1,r4
+e070ccce  blx r2
+e070ccd0  tst r0,#0x1
+e070ccd4  beq 0xe070cd08
+    -> e070cd08 [CONDITIONAL_JUMP, operand=0]
+e070ccd6  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070ccda  ldr r0,[r0,#0x60]
+e070ccdc  cbz r0,0xe070ccea
+    -> e070ccea [CONDITIONAL_JUMP, operand=1]
+e070ccde  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070cce2  ldr r0,[r0,#0x60]
+e070cce4  ldr r1,[r0,#0x0]
+e070cce6  ldr r1,[r1,#0x2c]
+e070cce8  b 0xe070ccf8
+    -> e070ccf8 [UNCONDITIONAL_JUMP, operand=0]
+e070ccea  movw r1,#0x65f0
+e070ccee  movt r1,#0xc190
+e070ccf2  ldr r0,[r1,#0x0]
+    -> c19065f0 [READ, operand=1]
+e070ccf4  ldr r1,[r0,#0x0]
+e070ccf6  ldr r1,[r1,#0x24]
+e070ccf8  blx r1
+e070ccfa  bl 0xe070aee0
+    -> e070aee0 [UNCONDITIONAL_CALL, operand=0]
+e070ccfe  ldr r0,[r0,#0x2c]
+e070cd00  ldr r1,[r0,#0x0]
+e070cd02  ldr r2,[r1,#0x14]
+e070cd04  mov r1,r4
+e070cd06  blx r2
+e070cd08  movs r4,#0x0
+e070cd0a  strb r4,[r5,#0x11]
+    -> c19066c1 [WRITE, operand=1]
+e070cd0c  strb r4,[r5,#0x0]
+    -> c19066b0 [WRITE, operand=1]
+e070cd0e  strb r4,[r5,#0x10]
+    -> c19066c0 [WRITE, operand=1]
+e070cd10  movs r1,#0x2
+e070cd12  mov r0,sp
+e070cd14  strb r4,[r5,#0x12]
+    -> c19066c2 [WRITE, operand=1]
+e070cd16  bl 0xe0251288
+    -> e0251288 [UNCONDITIONAL_CALL, operand=0]
+e070cd1a  mov r0,r4
+e070cd1c  add sp,#0x8
+e070cd1e  pop {r4,r5,r6,r7,pc}
+e070cd20  movs r0,#0x0
+e070cd22  bx lr
+e070cd24  <DATA undefined len=1>
+e070cd25  <DATA undefined len=1>
+e070cd26  <DATA undefined len=1>
+e070cd27  <DATA undefined len=1>
+e070cd28  bx lr
+e070cd2a  <DATA undefined len=1>
+e070cd2b  <DATA undefined len=1>
+e070cd2c  <DATA undefined len=1>
+e070cd2d  <DATA undefined len=1>
+e070cd2e  <DATA undefined len=1>
+e070cd2f  <DATA undefined len=1>
+e070cd30  bx lr
+e070cd32  <DATA undefined len=1>
+e070cd33  <DATA undefined len=1>
+e070cd34  <DATA undefined len=1>
+e070cd35  <DATA undefined len=1>
+e070cd36  <DATA undefined len=1>
+e070cd37  <DATA undefined len=1>
+e070cd38  bx lr
+e070cd3a  <DATA undefined len=1>
+e070cd3b  <DATA undefined len=1>
+e070cd3c  <DATA undefined len=1>
+e070cd3d  <DATA undefined len=1>
+e070cd3e  <DATA undefined len=1>
+e070cd3f  <DATA undefined len=1>
+e070cd40  push {r4,r5,lr}
+e070cd42  movw r2,#0x5b4
+e070cd46  sub.w sp,sp,r2
+e070cd4a  mov r4,r0
+e070cd4c  mov r5,r1
+e070cd4e  movw r1,#0xa43c
+e070cd52  movt r1,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e070cd56  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e070cd58  str.w r0,[sp,#0x5b0]
+    -> Stack[-0x10] [WRITE, operand=1]
+e070cd5c  add r0,sp,#0xc
+e070cd5e  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e070cd62  mov r1,r4
+e070cd64  movs r0,#0x9a
+e070cd66  movs r2,#0x1
+e070cd68  str r0,[sp,#0x18]
+    -> Stack[-0x5a8] [WRITE, operand=1]
+e070cd6a  mov r0,r2
+e070cd6c  add r3,sp,#0x34
+e070cd6e  stm r3,{r0,r1,r2,r5}
+    -> Stack[-0x58c] [WRITE, operand=0]
+
+[CODE WINDOW] requested=E0252360 length=0x100
+function=<no containing function currently defined>
+e0252360  <DATA undefined len=1>
+e0252361  <DATA undefined len=1>
+e0252362  <DATA undefined len=1>
+e0252363  <DATA undefined len=1>
+e0252364  <DATA undefined len=1>
+e0252365  <DATA undefined len=1>
+e0252366  <DATA undefined len=1>
+e0252367  <DATA undefined len=1>
+e0252368  <DATA undefined len=1>
+e0252369  <DATA undefined len=1>
+e025236a  <DATA undefined len=1>
+e025236b  <DATA undefined len=1>
+e025236c  <DATA undefined len=1>
+e025236d  <DATA undefined len=1>
+e025236e  <DATA undefined len=1>
+e025236f  <DATA undefined len=1>
+e0252370  <DATA undefined len=1>
+e0252371  <DATA undefined len=1>
+e0252372  <DATA undefined len=1>
+e0252373  <DATA undefined len=1>
+e0252374  <DATA undefined len=1>
+e0252375  <DATA undefined len=1>
+e0252376  <DATA undefined len=1>
+e0252377  <DATA undefined len=1>
+e0252378  <DATA undefined len=1>
+e0252379  <DATA undefined len=1>
+e025237a  <DATA undefined len=1>
+e025237b  <DATA undefined len=1>
+e025237c  <DATA undefined len=1>
+e025237d  <DATA undefined len=1>
+e025237e  <DATA undefined len=1>
+e025237f  <DATA undefined len=1>
+e0252380  <DATA undefined len=1>
+e0252381  <DATA undefined len=1>
+e0252382  <DATA undefined len=1>
+e0252383  <DATA undefined len=1>
+e0252384  <DATA undefined len=1>
+e0252385  <DATA undefined len=1>
+e0252386  <DATA undefined len=1>
+e0252387  <DATA undefined len=1>
+e0252388  <DATA undefined len=1>
+e0252389  <DATA undefined len=1>
+e025238a  <DATA undefined len=1>
+e025238b  <DATA undefined len=1>
+e025238c  <DATA undefined len=1>
+e025238d  <DATA undefined len=1>
+e025238e  <DATA undefined len=1>
+e025238f  <DATA undefined len=1>
+e0252390  <DATA undefined len=1>
+e0252391  <DATA undefined len=1>
+e0252392  <DATA undefined len=1>
+e0252393  <DATA undefined len=1>
+e0252394  <DATA undefined len=1>
+e0252395  <DATA undefined len=1>
+e0252396  <DATA undefined len=1>
+e0252397  <DATA undefined len=1>
+e0252398  <DATA undefined len=1>
+e0252399  <DATA undefined len=1>
+e025239a  <DATA undefined len=1>
+e025239b  <DATA undefined len=1>
+e025239c  <DATA undefined len=1>
+e025239d  <DATA undefined len=1>
+e025239e  <DATA undefined len=1>
+e025239f  <DATA undefined len=1>
+e02523a0  <DATA undefined len=1>
+e02523a1  <DATA undefined len=1>
+e02523a2  <DATA undefined len=1>
+e02523a3  <DATA undefined len=1>
+e02523a4  <DATA undefined len=1>
+e02523a5  <DATA undefined len=1>
+e02523a6  <DATA undefined len=1>
+e02523a7  <DATA undefined len=1>
+e02523a8  push {r5,lr}
+e02523aa  movw r1,#0x1b7c
+e02523ae  movt r1,#0xc136
+e02523b2  ldr r0,[r1,#0x0]
+    -> c1361b7c [READ, operand=1]
+e02523b4  ldr r0,[r0,#0x8]
+e02523b6  ldr r1,[r0,#0x0]
+e02523b8  ldr r2,[r1,#0x6c]
+e02523ba  movw r1,#0x1a28
+e02523be  movt r1,#0x1
+e02523c2  blx r2
+e02523c4  cmp r0,#0x0
+e02523c6  it eq
+e02523c8  pop.eq {pc}
+e02523ca  movw r2,#0x1b7c
+e02523ce  movt r2,#0xc136
+e02523d2  ldr r0,[r2,#0x0]
+    -> c1361b7c [READ, operand=1]
+e02523d4  ldr r0,[r0,#0x8]
+e02523d6  ldr r2,[r0,#0x0]
+e02523d8  movw r1,#0x1a28
+e02523dc  movt r1,#0x1
+e02523e0  ldr r3,[r2,#0x8]
+e02523e2  movw r2,#0x1de0
+e02523e6  movt r2,#0xc01b
+e02523ea  blx r3
+e02523ec  pop {pc}
+e02523ee  <DATA undefined len=1>
+e02523ef  <DATA undefined len=1>
+e02523f0  push {lr}
+e02523f2  movw r1,#0x1b7c
+e02523f6  movt r1,#0xc136
+e02523fa  ldr r0,[r1,#0x0]
+    -> c1361b7c [READ, operand=1]
+e02523fc  ldr r0,[r0,#0x8]
+e02523fe  ldr r1,[r0,#0x0]
+e0252400  ldr r2,[r1,#0x6c]
+e0252402  movw r1,#0x1a28
+e0252406  movt r1,#0x1
+e025240a  blx r2
+e025240c  cmp r0,#0x0
+e025240e  it eq
+e0252410  pop.eq {pc}
+e0252412  movw r2,#0x1b7c
+e0252416  movt r2,#0xc136
+e025241a  ldr r0,[r2,#0x0]
+    -> c1361b7c [READ, operand=1]
+e025241c  ldr r0,[r0,#0x8]
+e025241e  ldr r2,[r0,#0x0]
+e0252420  movw r1,#0x1a28
+e0252424  movt r1,#0x1
+e0252428  ldr r3,[r2,#0xc]
+e025242a  movw r2,#0x1de0
+e025242e  movt r2,#0xc01b
+e0252432  blx r3
+e0252434  pop {pc}
+e0252436  <DATA undefined len=1>
+e0252437  <DATA undefined len=1>
+e0252438  push {r4,lr}
+e025243a  mov r4,r1
+e025243c  bl 0xe02515b8
+    -> e02515b8 [UNCONDITIONAL_CALL, operand=0]
+e0252440  mov r0,r4
+e0252442  bl 0xe0251a80
+    -> e0251a80 [UNCONDITIONAL_CALL, operand=0]
+e0252446  bl 0xe02518a0
+    -> e02518a0 [UNCONDITIONAL_CALL, operand=0]
+e025244a  pop.w {r4,lr}
+e025244e  b.w 0xe02515d0
+    -> e02515d0 [UNCONDITIONAL_CALL, operand=0]
+e0252452  <DATA undefined len=1>
+e0252453  <DATA undefined len=1>
+e0252454  <DATA undefined len=1>
+e0252455  <DATA undefined len=1>
+e0252456  <DATA undefined len=1>
+e0252457  <DATA undefined len=1>
+e0252458  bx lr
+e025245a  <DATA undefined len=1>
+e025245b  <DATA undefined len=1>
+e025245c  <DATA undefined len=1>
+e025245d  <DATA undefined len=1>
+e025245e  <DATA undefined len=1>
+e025245f  <DATA undefined len=1>
+
+[CALLER WINDOWS] target=E07126B8
+
+[CALLSITE] from=e07124c2 type=UNCONDITIONAL_CALL function=FUN_e0712490 entry=e0712490
+
+[CODE WINDOW] requested=e0712492 length=0x50
+function=FUN_e0712490 entry=e0712490 body=e0712490..e07124e1
+e0712492  sub.w sp,sp,#0x5b0
+e0712496  movw r1,#0xa43c
+e071249a  movt r1,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e071249e  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e07124a0  str.w r0,[sp,#0x5ac]
+    -> Stack[-0x8] [WRITE, operand=1]
+e07124a4  add r0,sp,#0x8
+e07124a6  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e07124aa  movs r0,#0x5
+e07124ac  movs r2,#0x0
+e07124ae  str r0,[sp,#0x14]
+    -> Stack[-0x5a0] [WRITE, operand=1]
+e07124b0  mov r0,r2
+e07124b2  stm sp,{r0,r2}
+    -> Stack[-0x5b4] [WRITE, operand=0]
+e07124b6  movw r1,#0x3bdc
+e07124ba  movt r1,#0xe0b3
+    -> e0b33bdc [PARAM, operand=0]
+e07124be  add r0,sp,#0x8
+e07124c0  movs r3,#0x1
+e07124c2  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e07124c6  movw r2,#0xa43c
+e07124ca  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x8] [READ, operand=1]
+e07124ce  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07124d2  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e07124d4  cmp r0,r1
+e07124d6  it ne
+e07124d8  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e07124dc  add.w sp,sp,#0x5b0
+e07124e0  pop {pc}
+
+[CALLSITE] from=e071241c type=UNCONDITIONAL_CALL function=FUN_e0712440 entry=e0712440
+
+[CODE WINDOW] requested=e0712440 length=0x4e
+function=FUN_e0712440 entry=e0712440 body=e07123d8..e071248d
+e0712440  push {r4,r5,r6,lr}
+e0712442  movw r4,#0x5a4c
+e0712446  movt r4,#0xc191
+e071244a  movw r1,#0x5a6c
+e071244e  movt r1,#0xc191
+e0712452  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712454  ldr r0,[r0,#0x14]
+e0712456  ldr r1,[r0,#0x0]
+e0712458  ldr r1,[r1,#0x34]
+e071245a  blx r1
+e071245c  bl 0xe0712378
+    -> e0712378 [UNCONDITIONAL_CALL, operand=0]
+e0712460  mov r5,r0
+e0712462  ldr r0,[r4,#0x0]
+    -> c1915a4c [READ, operand=1]
+e0712464  str r5,[r4,#0x0]
+    -> c1915a4c [WRITE, operand=1]
+e0712466  movw r4,#0x5a6c
+e071246a  movt r4,#0xc191
+e071246e  subs r6,r5,r0
+e0712470  ldr r0,[r4,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712472  ldr r0,[r0,#0x14]
+e0712474  ldr r1,[r0,#0x0]
+e0712476  ldr r1,[r1,#0x38]
+e0712478  it ne
+e071247a  mov.ne r6,#0x1
+e071247c  blx r1
+e071247e  cmp r6,#0x0
+e0712480  it eq
+e0712482  pop.eq {r4,r5,r6,pc}
+e0712484  mov r0,r5
+e0712486  pop.w {r4,r5,r6,lr}
+e071248a  b.w 0xe07123d8
+    -> e07123d8 [UNCONDITIONAL_JUMP, operand=0]
+
+[CALLSITE] from=e0712c0e type=UNCONDITIONAL_CALL function=FUN_e0712ba8 entry=e0712ba8
+
+[CODE WINDOW] requested=e0712bde length=0x54
+function=FUN_e0712ba8 entry=e0712ba8 body=e0712ba8..e0712c31
+e0712bde  ldr.w r5,[r0,#0x5a8]
+    -> c190a6f0 [READ, operand=1]
+    -> c190acb8 [READ, operand=1]
+e0712be2  ldr.w r6,[r0,#0x5ac]
+    -> c190a6f4 [READ, operand=1]
+    -> c190acbc [READ, operand=1]
+e0712be6  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e0712bea  cbz r5,0xe0712bf4
+    -> e0712bf4 [CONDITIONAL_JUMP, operand=1]
+e0712bec  mov r1,r4
+e0712bee  mov r0,r6
+e0712bf0  movs r2,#0x2
+e0712bf2  blx r5
+e0712bf4  add r0,sp,#0x8
+e0712bf6  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e0712bfa  movs r0,#0x2
+e0712bfc  str r0,[sp,#0x14]
+    -> Stack[-0x5ac] [WRITE, operand=1]
+e0712bfe  movs r1,#0x0
+e0712c00  str r4,[sp,#0x30]
+    -> Stack[-0x590] [WRITE, operand=1]
+e0712c02  mov r0,r1
+e0712c04  stm sp,{r0,r1}
+    -> Stack[-0x5c0] [WRITE, operand=0]
+e0712c08  add r0,sp,#0x8
+e0712c0a  mov r3,r1
+e0712c0c  mov r2,r1
+e0712c0e  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0712c12  bl 0xe0712440
+    -> e0712440 [UNCONDITIONAL_CALL, operand=0]
+e0712c16  movw r2,#0xa43c
+e0712c1a  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x14] [READ, operand=1]
+e0712c1e  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e0712c22  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e0712c24  cmp r0,r1
+e0712c26  it ne
+e0712c28  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712c2c  add.w sp,sp,#0x5b0
+e0712c30  pop {r4,r5,r6,pc}
+
+[CALLSITE] from=e07128d4 type=UNCONDITIONAL_CALL function=FUN_e0712870 entry=e0712870
+
+[CODE WINDOW] requested=e07128a4 length=0x50
+function=FUN_e0712870 entry=e0712870 body=e0712870..e07128f3
+e07128a4  stm r5,{r0,r4}
+    -> c0207368 [WRITE, operand=0]
+    -> c020736c [WRITE, operand=1]
+e07128a8  movw r5,#0x5a6c
+e07128ac  movt r5,#0xc191
+e07128b0  ldr r0,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07128b2  ldr r0,[r0,#0x14]
+e07128b4  ldr r1,[r0,#0x0]
+e07128b6  ldr r1,[r1,#0x38]
+e07128b8  blx r1
+e07128ba  add r0,sp,#0x8
+e07128bc  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e07128c0  movs r0,#0x8a
+e07128c2  str r0,[sp,#0x14]
+    -> Stack[-0x5ac] [WRITE, operand=1]
+e07128c4  str r6,[sp,#0x1c]
+    -> Stack[-0x5a4] [WRITE, operand=1]
+e07128c6  mov r0,r4
+e07128c8  stm sp,{r0,r4}
+    -> Stack[-0x5c0] [WRITE, operand=0]
+e07128cc  add r0,sp,#0x8
+e07128ce  mov r3,r4
+e07128d0  mov r2,r4
+e07128d2  mov r1,r4
+e07128d4  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e07128d8  movw r2,#0xa43c
+e07128dc  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x14] [READ, operand=1]
+e07128e0  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07128e4  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e07128e6  cmp r0,r1
+e07128e8  it ne
+e07128ea  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e07128ee  add.w sp,sp,#0x5b0
+e07128f2  pop {r4,r5,r6,pc}
+
+[CALLSITE] from=e0712a02 type=UNCONDITIONAL_CALL function=FUN_e0712990 entry=e0712990
+
+[CODE WINDOW] requested=e07129d2 length=0x50
+function=FUN_e0712990 entry=e0712990 body=e0712990..e0712a21
+e07129d4  movt r4,#0xc191
+e07129d8  ldr r0,[r4,#0x0]
+    -> c1915a6c [READ, operand=1]
+e07129da  ldr r0,[r0,#0x14]
+e07129dc  ldr r1,[r0,#0x0]
+e07129de  ldr r1,[r1,#0x38]
+e07129e0  blx r1
+e07129e2  bl 0xe0712520
+    -> e0712520 [UNCONDITIONAL_CALL, operand=0]
+e07129e6  cbz r5,0xe0712a06
+    -> e0712a06 [CONDITIONAL_JUMP, operand=1]
+e07129e8  add r0,sp,#0x8
+e07129ea  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e07129ee  movs r0,#0x3
+e07129f0  movs r1,#0x0
+e07129f2  str r0,[sp,#0x14]
+    -> Stack[-0x5a8] [WRITE, operand=1]
+e07129f4  str r1,[sp,#0x40]
+    -> Stack[-0x57c] [WRITE, operand=1]
+e07129f6  mov r0,r1
+e07129f8  stm sp,{r0,r1}
+    -> Stack[-0x5bc] [WRITE, operand=0]
+e07129fc  add r0,sp,#0x8
+e07129fe  mov r3,r1
+e0712a00  mov r2,r1
+e0712a02  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0712a06  movw r2,#0xa43c
+e0712a0a  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x10] [READ, operand=1]
+e0712a0e  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e0712a12  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e0712a14  cmp r0,r1
+e0712a16  it ne
+e0712a18  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712a1c  add.w sp,sp,#0x5b0
+e0712a20  pop {r4,r5,pc}
+
+[CALLSITE] from=e07125e2 type=UNCONDITIONAL_CALL function=FUN_e0712520 entry=e0712520
+
+[CODE WINDOW] requested=e07125b2 length=0x56
+function=FUN_e0712520 entry=e0712520 body=e0712520..e0712607
+e07125b2  blx r1
+e07125b4  movs r4,#0x0
+e07125b6  b 0xe07125e8
+    -> e07125e8 [UNCONDITIONAL_JUMP, operand=0]
+e07125b8  add r0,sp,#0x88
+e07125ba  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e07125be  movs r2,#0x2
+e07125c0  movs r1,#0x0
+e07125c2  movw r0,#0xfbad
+e07125c6  str r1,[sp,#0x98]
+    -> Stack[-0x5a4] [WRITE, operand=1]
+e07125c8  add r3,sp,#0x8
+e07125ca  str r2,[sp,#0x94]
+    -> Stack[-0x5a8] [WRITE, operand=1]
+e07125cc  ldr.w r2,[r3,r4,lsl #0x2]
+    -> Stack[-0x634] [DATA, operand=1]
+e07125d0  movt r0,#0xffff
+e07125d4  str r0,[sp,#0x9c]
+    -> Stack[-0x5a0] [WRITE, operand=1]
+e07125d6  add r0,sp,#0x88
+e07125d8  mov r3,r1
+e07125da  str r2,[sp,#0xb0]
+    -> Stack[-0x58c] [WRITE, operand=1]
+e07125dc  mov r2,r1
+e07125de  stm sp,{r1,r2}
+    -> Stack[-0x63c] [WRITE, operand=0]
+e07125e2  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e07125e6  adds r4,#0x1
+e07125e8  cmp r4,r5
+e07125ea  blt 0xe07125b8
+    -> e07125b8 [CONDITIONAL_JUMP, operand=0]
+e07125ec  movw r2,#0xa43c
+e07125f0  ldr.w r0,[sp,#0x62c]
+    -> Stack[-0x10] [READ, operand=1]
+e07125f4  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e07125f8  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e07125fa  cmp r0,r1
+e07125fc  it ne
+e07125fe  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712602  add.w sp,sp,#0x630
+e0712606  pop {r4,r5,pc}
+
+[CALLSITE] from=e0712ae6 type=UNCONDITIONAL_CALL function=FUN_e0712a68 entry=e0712a68
+
+[CODE WINDOW] requested=e0712ab6 length=0x50
+function=FUN_e0712a68 entry=e0712a68 body=e0712a68..e0712b05
+e0712ab6  movt r4,#0xc191
+e0712aba  ldr r0,[r4,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712abc  ldr r0,[r0,#0x14]
+e0712abe  ldr r1,[r0,#0x0]
+e0712ac0  ldr r1,[r1,#0x38]
+e0712ac2  blx r1
+e0712ac4  bl 0xe0712520
+    -> e0712520 [UNCONDITIONAL_CALL, operand=0]
+e0712ac8  cbz r5,0xe0712aea
+    -> e0712aea [CONDITIONAL_JUMP, operand=1]
+e0712aca  add r0,sp,#0x8
+e0712acc  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e0712ad0  str r6,[sp,#0x1c]
+    -> Stack[-0x5a4] [WRITE, operand=1]
+e0712ad2  movs r0,#0x3
+e0712ad4  movs r1,#0x0
+e0712ad6  str r0,[sp,#0x14]
+    -> Stack[-0x5ac] [WRITE, operand=1]
+e0712ad8  str r1,[sp,#0x40]
+    -> Stack[-0x580] [WRITE, operand=1]
+e0712ada  mov r0,r1
+e0712adc  stm sp,{r0,r1}
+    -> Stack[-0x5c0] [WRITE, operand=0]
+e0712ae0  add r0,sp,#0x8
+e0712ae2  mov r3,r1
+e0712ae4  mov r2,r1
+e0712ae6  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0712aea  movw r2,#0xa43c
+e0712aee  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x14] [READ, operand=1]
+e0712af2  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e0712af6  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e0712af8  cmp r0,r1
+e0712afa  it ne
+e0712afc  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712b00  add.w sp,sp,#0x5b0
+e0712b04  pop {r4,r5,r6,pc}
+
+[CALLSITE] from=e071295a type=UNCONDITIONAL_CALL function=FUN_e07128f8 entry=e07128f8
+
+[CODE WINDOW] requested=e071292a length=0x64
+function=FUN_e07128f8 entry=e07128f8 body=e07128f8..e071298d
+e071292a  stm r4,{r0,r5}
+    -> c0207360 [WRITE, operand=0]
+    -> c0207364 [WRITE, operand=1]
+e071292e  movw r1,#0x5a6c
+e0712932  movt r1,#0xc191
+e0712936  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712938  ldr r0,[r0,#0x14]
+e071293a  ldr r1,[r0,#0x0]
+e071293c  ldr r1,[r1,#0x38]
+e071293e  blx r1
+e0712940  add r0,sp,#0x8
+e0712942  bl 0xe0968066
+    -> e0968066 [UNCONDITIONAL_CALL, operand=0]
+e0712946  movs r0,#0x4
+e0712948  str r0,[sp,#0x14]
+    -> Stack[-0x5a8] [WRITE, operand=1]
+e071294a  movs r1,#0x0
+e071294c  str r5,[sp,#0x1c]
+    -> Stack[-0x5a0] [WRITE, operand=1]
+e071294e  mov r0,r1
+e0712950  stm sp,{r0,r1}
+    -> Stack[-0x5bc] [WRITE, operand=0]
+e0712954  add r0,sp,#0x8
+e0712956  mov r3,r1
+e0712958  mov r2,r1
+e071295a  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e071295e  bl 0xe0712520
+    -> e0712520 [UNCONDITIONAL_CALL, operand=0]
+e0712962  bl 0xe07124e8
+    -> e07124e8 [UNCONDITIONAL_CALL, operand=0]
+e0712966  movw r0,#0xfbad
+e071296a  movt r0,#0xffff
+e071296e  str r0,[r4,#0x4]
+    -> c0207364 [WRITE, operand=1]
+e0712970  str r0,[r4,#0x8]
+    -> c0207368 [WRITE, operand=1]
+e0712972  movw r2,#0xa43c
+e0712976  ldr.w r0,[sp,#0x5ac]
+    -> Stack[-0x10] [READ, operand=1]
+e071297a  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e071297e  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e0712980  cmp r0,r1
+e0712982  it ne
+e0712984  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e0712988  add.w sp,sp,#0x5b0
+e071298c  pop {r4,r5,pc}
+
+[CALLSITE] from=e0713e98 type=UNCONDITIONAL_CALL function=FUN_e0713e80 entry=e0713e80
+
+[CODE WINDOW] requested=e0713e80 length=0x20
+function=FUN_e0713e80 entry=e0713e80 body=e0713e80..e0713e9f
+e0713e80  push {r6,lr}
+e0713e82  sub sp,#0x8
+e0713e84  ldr r6,[sp,#0x18]
+    -> Stack[0x8] [READ, operand=1]
+e0713e86  ldr r0,[sp,#0x14]
+    -> Stack[0x4] [READ, operand=1]
+e0713e88  ldr.w r12,[sp,#0x10]
+    -> Stack[0x0] [READ, operand=1]
+e0713e8c  stm sp,{r0,r6}
+    -> Stack[-0x10] [WRITE, operand=0]
+e0713e90  mov r0,r1
+e0713e92  mov r1,r2
+e0713e94  mov r2,r3
+e0713e96  mov r3,r12
+e0713e98  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0713e9c  add sp,#0x8
+e0713e9e  pop {r6,pc}
+
+[CALLSITE] from=e0713d28 type=UNCONDITIONAL_CALL function=<no containing function>
+
+[CODE WINDOW] requested=e0713cf8 length=0x90
+function=<no containing function currently defined>
+e0713d10  push {r6,lr}
+e0713d12  sub sp,#0x8
+e0713d14  ldr r6,[sp,#0x18]
+e0713d16  ldr r0,[sp,#0x14]
+e0713d18  ldr.w r12,[sp,#0x10]
+e0713d1c  stm sp,{r0,r6}
+e0713d20  mov r0,r1
+e0713d22  mov r1,r2
+e0713d24  mov r2,r3
+e0713d26  mov r3,r12
+e0713d28  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0713d2c  add sp,#0x8
+e0713d2e  pop {r6,pc}
+e0713d30  mov r0,r1
+e0713d32  b.w 0xe07127d0
+    -> e07127d0 [UNCONDITIONAL_JUMP, operand=0]
+e0713d36  <DATA undefined len=1>
+e0713d37  <DATA undefined len=1>
+e0713d38  mov r0,r1
+e0713d3a  mov r1,r2
+e0713d3c  b.w 0xe0712810
+    -> e0712810 [UNCONDITIONAL_JUMP, operand=0]
+e0713d40  mov r0,r1
+e0713d42  b.w 0xe0712c58
+    -> e0712c58 [UNCONDITIONAL_CALL, operand=0]
+e0713d46  <DATA undefined len=1>
+e0713d47  <DATA undefined len=1>
+e0713d48  mov r0,r1
+e0713d4a  b.w 0xe0712ce0
+    -> e0712ce0 [UNCONDITIONAL_CALL, operand=0]
+e0713d4e  <DATA undefined len=1>
+e0713d4f  <DATA undefined len=1>
+e0713d50  mov r0,r1
+e0713d52  b.w 0xe0712d58
+    -> e0712d58 [UNCONDITIONAL_CALL, operand=0]
+e0713d56  <DATA undefined len=1>
+e0713d57  <DATA undefined len=1>
+e0713d58  mov r0,r1
+e0713d5a  mov r1,r2
+e0713d5c  b.w 0xe0712dd0
+    -> e0712dd0 [UNCONDITIONAL_CALL, operand=0]
+e0713d60  mov r0,r1
+e0713d62  b.w 0xe0712e50
+    -> e0712e50 [UNCONDITIONAL_JUMP, operand=0]
+e0713d66  <DATA undefined len=1>
+e0713d67  <DATA undefined len=1>
+e0713d68  mov r0,r1
+e0713d6a  b.w 0xe0712ec8
+    -> e0712ec8 [UNCONDITIONAL_CALL, operand=0]
+e0713d6e  <DATA undefined len=1>
+e0713d6f  <DATA undefined len=1>
+e0713d70  mov r0,r1
+e0713d72  b.w 0xe0712f40
+    -> e0712f40 [UNCONDITIONAL_CALL, operand=0]
+e0713d76  <DATA undefined len=1>
+e0713d77  <DATA undefined len=1>
+e0713d78  mov r0,r1
+e0713d7a  b.w 0xe0712fb8
+    -> e0712fb8 [UNCONDITIONAL_CALL, operand=0]
+e0713d7e  <DATA undefined len=1>
+e0713d7f  <DATA undefined len=1>
+e0713d80  mov r0,r1
+e0713d82  b.w 0xe0713030
+    -> e0713030 [UNCONDITIONAL_CALL, operand=0]
+e0713d86  <DATA undefined len=1>
+e0713d87  <DATA undefined len=1>
+callsites_exported=10 (all returned references exported)
+
+[CALLER WINDOWS] target=E0712280
+
+[CALLSITE] from=e071270c type=UNCONDITIONAL_CALL function=PE_Event_Relay entry=e07126b8
+
+[CODE WINDOW] requested=e07126dc length=0x90
+function=PE_Event_Relay entry=e07126b8 body=e07126b8..e07127cb
+e07126dc  mov r0,r5
+e07126de  bl 0xe0714118
+    -> e0714118 [UNCONDITIONAL_CALL, operand=0]
+e07126e2  ldr r0,[r5,#0x14]
+e07126e4  movw r1,#0xfbad
+e07126e8  movt r1,#0xffff
+e07126ec  cmp r0,r1
+e07126ee  it ne
+e07126f0  cmp.ne r0,#0x0
+e07126f2  bne 0xe0712700
+    -> e0712700 [CONDITIONAL_JUMP, operand=0]
+e07126f4  movw r1,#0x7368
+e07126f8  movt r1,#0xc020
+e07126fc  ldr r0,[r1,#0x0]
+    -> c0207368 [READ, operand=1]
+e07126fe  str r0,[r5,#0x14]
+e0712700  stm sp,{r10,r11}
+    -> Stack[-0x340] [WRITE, operand=0]
+e0712704  mov r3,r7
+e0712706  mov r2,r6
+e0712708  mov r1,r4
+e071270a  mov r0,r5
+e071270c  bl 0xe0712280
+    -> e0712280 [UNCONDITIONAL_CALL, operand=0]
+e0712710  mov r4,r0
+e0712712  bl 0xe0712440
+    -> e0712440 [UNCONDITIONAL_CALL, operand=0]
+e0712716  movs r2,r4
+e0712718  beq 0xe07127ae
+    -> e07127ae [CONDITIONAL_JUMP, operand=0]
+e071271a  movw r6,#0x5a6c
+e071271e  movt r6,#0xc191
+e0712722  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712724  ldr r0,[r0,#0x10]
+e0712726  ldr r1,[r0,#0x0]
+e0712728  movw r7,#0xa144
+e071272c  movt r7,#0xc190
+e0712730  ldr r3,[r1,#0x14]
+e0712732  movw r1,#0x1570
+e0712736  movt r1,#0x1
+e071273a  blx r3
+e071273c  ldr r0,[r6,#0x0]
+    -> c1915a6c [READ, operand=1]
+e071273e  str r5,[sp,#0x20]
+    -> Stack[-0x320] [WRITE, operand=1]
+e0712740  str r4,[sp,#0x24]
+    -> Stack[-0x31c] [WRITE, operand=1]
+e0712742  ldr r0,[r0,#0x14]
+e0712744  ldr r1,[r0,#0x0]
+e0712746  ldr r3,[r1,#0x18]
+e0712748  movs r1,#0x1
+e071274a  add r2,sp,#0x20
+e071274c  blx r3
+e071274e  ldr r0,[r7,#0x0]
+    -> c190a144 [READ, operand=1]
+e0712750  cbz r0,0xe071276e
+    -> e071276e [CONDITIONAL_JUMP, operand=1]
+e0712752  add r0,sp,#0x8
+e0712754  bl 0xe09680b0
+    -> e09680b0 [UNCONDITIONAL_CALL, operand=0]
+e0712758  movs r0,#0x1
+e071275a  add r1,sp,#0x14
+e071275c  stm r1,{r0,r4,r5}
+    -> Stack[-0x32c] [WRITE, operand=0]
+e0712760  ldr r2,[r7,#0x0]
+    -> c190a144 [READ, operand=1]
+e0712762  movw r0,#0x347f
+e0712766  add r1,sp,#0x8
+e0712768  movt r0,#0x1
+callsites_exported=1 (all returned references exported)
+
+[CALLER WINDOWS] target=E0712210
+
+[CALLSITE] from=e0712322 type=UNCONDITIONAL_CALL function=FUN_e0712280 entry=e0712280
+
+[CODE WINDOW] requested=e07122f2 length=0x84
+function=FUN_e0712280 entry=e0712280 body=e0712280..e0712375
+e07122f4  mov r1,r8
+e07122f6  movt r4,#0xc020
+e07122fa  bl 0xe0714110
+    -> e0714110 [UNCONDITIONAL_CALL, operand=0]
+e07122fe  ldr r0,[sp,#0x30]
+    -> Stack[0x0] [READ, operand=1]
+e0712300  str r7,[r6,#0x0]
+    -> c190a710 [WRITE, operand=1]
+e0712302  movs r3,#0x0
+e0712304  str.w r10,[r6,#0x5b0]
+    -> c190acc0 [WRITE, operand=1]
+e0712308  str.w r0,[r6,#0x5a8]
+    -> c190acb8 [WRITE, operand=1]
+e071230c  ldr r0,[sp,#0x34]
+    -> Stack[0x4] [READ, operand=1]
+e071230e  str.w r3,[r6,#0x5b8]
+    -> c190acc8 [WRITE, operand=1]
+e0712312  strh.w r3,[r6,#0x5b4]
+    -> c190acc4 [WRITE, operand=1]
+e0712316  mov r1,r9
+e0712318  str.w r0,[r6,#0x5ac]
+    -> c190acbc [WRITE, operand=1]
+e071231c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071231e  strb.w r11,[r6,#0x5bc]
+    -> c190accc [WRITE, operand=1]
+e0712322  bl 0xe0712210
+    -> e0712210 [UNCONDITIONAL_CALL, operand=0]
+e0712326  ldr.w r12,[r4,#0x8]
+    -> c0207368 [READ, operand=1]
+e071232a  ldr r3,[r4,#0x4]
+    -> c0207364 [READ, operand=1]
+e071232c  cmp r12,r3
+e071232e  bne 0xe0712364
+    -> e0712364 [CONDITIONAL_JUMP, operand=0]
+e0712330  cmp.w r11,#0x0
+e0712334  beq 0xe0712364
+    -> e0712364 [CONDITIONAL_JUMP, operand=0]
+e0712336  ldr.w r3,[r6,#0x5a8]
+    -> c190acb8 [READ, operand=1]
+e071233a  cbz r3,0xe071235c
+    -> e071235c [CONDITIONAL_JUMP, operand=1]
+e071233c  ldr r0,[r4,#0x0]
+    -> c0207360 [READ, operand=1]
+e071233e  cmp r12,r0
+e0712340  bne 0xe0712354
+    -> e0712354 [CONDITIONAL_JUMP, operand=0]
+e0712342  ldr r1,[r6,#0x0]
+    -> c190a710 [READ, operand=1]
+e0712344  ldr.w r0,[r6,#0x5ac]
+    -> c190acbc [READ, operand=1]
+e0712348  movs r2,#0x3
+e071234a  blx r3
+e071234c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071234e  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e0712352  b 0xe0712362
+    -> e0712362 [UNCONDITIONAL_JUMP, operand=0]
+e0712354  movs r3,#0x1
+e0712356  strb.w r3,[r6,#0x5b5]
+    -> c190acc5 [WRITE, operand=1]
+e071235a  b 0xe0712362
+    -> e0712362 [UNCONDITIONAL_JUMP, operand=0]
+e071235c  mov r0,r6
+    -> c190a710 [PARAM, operand=0]
+e071235e  bl 0xe0712268
+    -> e0712268 [UNCONDITIONAL_CALL, operand=0]
+e0712362  movs r7,#0x0
+e0712364  ldr r3,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712366  ldr r0,[r3,#0x14]
+e0712368  ldr r3,[r0,#0x0]
+e071236a  ldr r3,[r3,#0x38]
+e071236c  blx r3
+e071236e  mov r0,r7
+e0712370  add sp,#0xc
+e0712372  pop.w {r4,r5,r6,r7,r8,r9,r10,r11,pc}
+
+[CALLSITE] from=e0712852 type=UNCONDITIONAL_CALL function=<no containing function>
+
+[CODE WINDOW] requested=e0712822 length=0x90
+function=<no containing function currently defined>
+e0712822  ldr r1,[r0,#0x0]
+e0712824  ldr r1,[r1,#0x34]
+e0712826  blx r1
+e0712828  movs r0,#0x0
+e071282a  b 0xe0712832
+    -> e0712832 [UNCONDITIONAL_JUMP, operand=0]
+e071282c  adds r0,#0x1
+e071282e  cmp r0,#0x20
+e0712830  bge 0xe0712856
+    -> e0712856 [CONDITIONAL_JUMP, operand=0]
+e0712832  mov.w r1,#0x5c8
+e0712836  mul r7,r0,r1
+e071283a  movw r4,#0xa148
+e071283e  movt r4,#0xc190
+e0712842  ldr r1,[r4,r7]
+    -> c190a148 [READ, operand=1]
+    -> c190a710 [READ, operand=1]
+e0712844  cmp r1,r5
+e0712846  bne 0xe071282c
+    -> e071282c [CONDITIONAL_JUMP, operand=0]
+e0712848  adds r0,r7,r4
+    -> c190a148 [PARAM, operand=0]
+    -> c190a710 [PARAM, operand=0]
+e071284a  bl 0xe07121e0
+    -> e07121e0 [UNCONDITIONAL_CALL, operand=0]
+e071284e  mov r1,r6
+e0712850  adds r0,r7,r4
+    -> c190a148 [PARAM, operand=0]
+e0712852  bl 0xe0712210
+    -> e0712210 [UNCONDITIONAL_CALL, operand=0]
+e0712856  movw r1,#0x5a6c
+e071285a  movt r1,#0xc191
+e071285e  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712860  ldr r0,[r0,#0x14]
+e0712862  ldr r1,[r0,#0x0]
+e0712864  ldr r1,[r1,#0x38]
+e0712866  pop.w {r4,r5,r6,r7,lr}
+e071286a  bx r1
+e071286c  <DATA undefined len=1>
+e071286d  <DATA undefined len=1>
+e071286e  <DATA undefined len=1>
+e071286f  <DATA undefined len=1>
+e0712870  push {r4,r5,r6,lr}
+e0712872  sub.w sp,sp,#0x5b0
+e0712876  mov r6,r0
+e0712878  movw r1,#0xa43c
+e071287c  movt r1,#0xc022
+e0712880  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e0712882  movw r5,#0x7368
+e0712886  movt r5,#0xc020
+e071288a  str.w r0,[sp,#0x5ac]
+    -> Stack[-0x14] [WRITE, operand=1]
+e071288e  movw r1,#0x5a6c
+e0712892  movt r1,#0xc191
+e0712896  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712898  ldr r0,[r0,#0x14]
+e071289a  ldr r1,[r0,#0x0]
+e071289c  ldr r1,[r1,#0x34]
+e071289e  blx r1
+e07128a0  movs r4,#0x0
+e07128a2  mov r0,r6
+e07128a4  stm r5,{r0,r4}
+    -> c0207368 [WRITE, operand=0]
+    -> c020736c [WRITE, operand=1]
+e07128a8  movw r5,#0x5a6c
+e07128ac  movt r5,#0xc191
+e07128b0  ldr r0,[r5,#0x0]
+    -> c1915a6c [READ, operand=1]
+callsites_exported=2 (all returned references exported)
+
+[CALLER WINDOWS] target=E0712810
+
+[CALLSITE] from=e0713d3c type=UNCONDITIONAL_JUMP function=<no containing function>
+
+[CODE WINDOW] requested=e0713d0c length=0x90
+function=<no containing function currently defined>
+e0713d10  push {r6,lr}
+e0713d12  sub sp,#0x8
+e0713d14  ldr r6,[sp,#0x18]
+e0713d16  ldr r0,[sp,#0x14]
+e0713d18  ldr.w r12,[sp,#0x10]
+e0713d1c  stm sp,{r0,r6}
+e0713d20  mov r0,r1
+e0713d22  mov r1,r2
+e0713d24  mov r2,r3
+e0713d26  mov r3,r12
+e0713d28  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0713d2c  add sp,#0x8
+e0713d2e  pop {r6,pc}
+e0713d30  mov r0,r1
+e0713d32  b.w 0xe07127d0
+    -> e07127d0 [UNCONDITIONAL_JUMP, operand=0]
+e0713d36  <DATA undefined len=1>
+e0713d37  <DATA undefined len=1>
+e0713d38  mov r0,r1
+e0713d3a  mov r1,r2
+e0713d3c  b.w 0xe0712810
+    -> e0712810 [UNCONDITIONAL_JUMP, operand=0]
+e0713d40  mov r0,r1
+e0713d42  b.w 0xe0712c58
+    -> e0712c58 [UNCONDITIONAL_CALL, operand=0]
+e0713d46  <DATA undefined len=1>
+e0713d47  <DATA undefined len=1>
+e0713d48  mov r0,r1
+e0713d4a  b.w 0xe0712ce0
+    -> e0712ce0 [UNCONDITIONAL_CALL, operand=0]
+e0713d4e  <DATA undefined len=1>
+e0713d4f  <DATA undefined len=1>
+e0713d50  mov r0,r1
+e0713d52  b.w 0xe0712d58
+    -> e0712d58 [UNCONDITIONAL_CALL, operand=0]
+e0713d56  <DATA undefined len=1>
+e0713d57  <DATA undefined len=1>
+e0713d58  mov r0,r1
+e0713d5a  mov r1,r2
+e0713d5c  b.w 0xe0712dd0
+    -> e0712dd0 [UNCONDITIONAL_CALL, operand=0]
+e0713d60  mov r0,r1
+e0713d62  b.w 0xe0712e50
+    -> e0712e50 [UNCONDITIONAL_JUMP, operand=0]
+e0713d66  <DATA undefined len=1>
+e0713d67  <DATA undefined len=1>
+e0713d68  mov r0,r1
+e0713d6a  b.w 0xe0712ec8
+    -> e0712ec8 [UNCONDITIONAL_CALL, operand=0]
+e0713d6e  <DATA undefined len=1>
+e0713d6f  <DATA undefined len=1>
+e0713d70  mov r0,r1
+e0713d72  b.w 0xe0712f40
+    -> e0712f40 [UNCONDITIONAL_CALL, operand=0]
+e0713d76  <DATA undefined len=1>
+e0713d77  <DATA undefined len=1>
+e0713d78  mov r0,r1
+e0713d7a  b.w 0xe0712fb8
+    -> e0712fb8 [UNCONDITIONAL_CALL, operand=0]
+e0713d7e  <DATA undefined len=1>
+e0713d7f  <DATA undefined len=1>
+e0713d80  mov r0,r1
+e0713d82  b.w 0xe0713030
+    -> e0713030 [UNCONDITIONAL_CALL, operand=0]
+e0713d86  <DATA undefined len=1>
+e0713d87  <DATA undefined len=1>
+e0713d88  mov r0,r1
+e0713d8a  b.w 0xe07130a8
+    -> e07130a8 [UNCONDITIONAL_CALL, operand=0]
+e0713d8e  <DATA undefined len=1>
+e0713d8f  <DATA undefined len=1>
+e0713d90  mov r0,r1
+e0713d92  b.w 0xe0713120
+    -> e0713120 [UNCONDITIONAL_CALL, operand=0]
+e0713d96  <DATA undefined len=1>
+e0713d97  <DATA undefined len=1>
+e0713d98  mov r0,r1
+e0713d9a  b.w 0xe0713198
+    -> e0713198 [UNCONDITIONAL_CALL, operand=0]
+
+[CALLSITE] from=e0713eac type=UNCONDITIONAL_JUMP function=<no containing function>
+
+[CODE WINDOW] requested=e0713e7c length=0x90
+function=<no containing function currently defined>
+e0713e7c  <DATA undefined len=1>
+e0713e7d  <DATA undefined len=1>
+e0713e7e  <DATA undefined len=1>
+e0713e7f  <DATA undefined len=1>
+e0713e80  push {r6,lr}
+e0713e82  sub sp,#0x8
+e0713e84  ldr r6,[sp,#0x18]
+    -> Stack[0x8] [READ, operand=1]
+e0713e86  ldr r0,[sp,#0x14]
+    -> Stack[0x4] [READ, operand=1]
+e0713e88  ldr.w r12,[sp,#0x10]
+    -> Stack[0x0] [READ, operand=1]
+e0713e8c  stm sp,{r0,r6}
+    -> Stack[-0x10] [WRITE, operand=0]
+e0713e90  mov r0,r1
+e0713e92  mov r1,r2
+e0713e94  mov r2,r3
+e0713e96  mov r3,r12
+e0713e98  bl 0xe07126b8
+    -> e07126b8 [UNCONDITIONAL_CALL, operand=0]
+e0713e9c  add sp,#0x8
+e0713e9e  pop {r6,pc}
+e0713ea0  mov r0,r1
+e0713ea2  b.w 0xe07127d0
+    -> e07127d0 [UNCONDITIONAL_JUMP, operand=0]
+e0713ea6  <DATA undefined len=1>
+e0713ea7  <DATA undefined len=1>
+e0713ea8  mov r0,r1
+e0713eaa  mov r1,r2
+e0713eac  b.w 0xe0712810
+    -> e0712810 [UNCONDITIONAL_JUMP, operand=0]
+e0713eb0  mov r0,r1
+e0713eb2  b.w 0xe0712c58
+    -> e0712c58 [UNCONDITIONAL_CALL, operand=0]
+e0713eb6  <DATA undefined len=1>
+e0713eb7  <DATA undefined len=1>
+e0713eb8  mov r0,r1
+e0713eba  b.w 0xe0712ce0
+    -> e0712ce0 [UNCONDITIONAL_CALL, operand=0]
+e0713ebe  <DATA undefined len=1>
+e0713ebf  <DATA undefined len=1>
+e0713ec0  mov r0,r1
+e0713ec2  b.w 0xe0712d58
+    -> e0712d58 [UNCONDITIONAL_CALL, operand=0]
+e0713ec6  <DATA undefined len=1>
+e0713ec7  <DATA undefined len=1>
+e0713ec8  mov r0,r1
+e0713eca  mov r1,r2
+e0713ecc  b.w 0xe0712dd0
+    -> e0712dd0 [UNCONDITIONAL_CALL, operand=0]
+e0713ed0  mov r0,r1
+e0713ed2  b.w 0xe0712e50
+    -> e0712e50 [UNCONDITIONAL_JUMP, operand=0]
+e0713ed6  <DATA undefined len=1>
+e0713ed7  <DATA undefined len=1>
+e0713ed8  mov r0,r1
+e0713eda  b.w 0xe0712ec8
+    -> e0712ec8 [UNCONDITIONAL_CALL, operand=0]
+e0713ede  <DATA undefined len=1>
+e0713edf  <DATA undefined len=1>
+e0713ee0  mov r0,r1
+e0713ee2  b.w 0xe0712f40
+    -> e0712f40 [UNCONDITIONAL_CALL, operand=0]
+e0713ee6  <DATA undefined len=1>
+e0713ee7  <DATA undefined len=1>
+e0713ee8  mov r0,r1
+e0713eea  b.w 0xe0712fb8
+    -> e0712fb8 [UNCONDITIONAL_CALL, operand=0]
+e0713eee  <DATA undefined len=1>
+e0713eef  <DATA undefined len=1>
+e0713ef0  mov r0,r1
+e0713ef2  b.w 0xe0713030
+    -> e0713030 [UNCONDITIONAL_CALL, operand=0]
+e0713ef6  <DATA undefined len=1>
+e0713ef7  <DATA undefined len=1>
+e0713ef8  mov r0,r1
+e0713efa  b.w 0xe07130a8
+    -> e07130a8 [UNCONDITIONAL_CALL, operand=0]
+e0713efe  <DATA undefined len=1>
+e0713eff  <DATA undefined len=1>
+e0713f00  mov r0,r1
+e0713f02  b.w 0xe0713120
+    -> e0713120 [UNCONDITIONAL_CALL, operand=0]
+e0713f06  <DATA undefined len=1>
+e0713f07  <DATA undefined len=1>
+e0713f08  mov r0,r1
+e0713f0a  b.w 0xe0713198
+    -> e0713198 [UNCONDITIONAL_CALL, operand=0]
+callsites_exported=2 (all returned references exported)
+
+[CALLER WINDOWS] target=E0713D38
+callsites_exported=0 (all returned references exported)
+
+[CALLER WINDOWS] target=E0713EA8
+callsites_exported=0 (all returned references exported)
+
+[CALLER WINDOWS] target=E0712378
+
+[CALLSITE] from=e071245c type=UNCONDITIONAL_CALL function=FUN_e0712440 entry=e0712440
+
+[CODE WINDOW] requested=e0712440 length=0x4e
+function=FUN_e0712440 entry=e0712440 body=e07123d8..e071248d
+e0712440  push {r4,r5,r6,lr}
+e0712442  movw r4,#0x5a4c
+e0712446  movt r4,#0xc191
+e071244a  movw r1,#0x5a6c
+e071244e  movt r1,#0xc191
+e0712452  ldr r0,[r1,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712454  ldr r0,[r0,#0x14]
+e0712456  ldr r1,[r0,#0x0]
+e0712458  ldr r1,[r1,#0x34]
+e071245a  blx r1
+e071245c  bl 0xe0712378
+    -> e0712378 [UNCONDITIONAL_CALL, operand=0]
+e0712460  mov r5,r0
+e0712462  ldr r0,[r4,#0x0]
+    -> c1915a4c [READ, operand=1]
+e0712464  str r5,[r4,#0x0]
+    -> c1915a4c [WRITE, operand=1]
+e0712466  movw r4,#0x5a6c
+e071246a  movt r4,#0xc191
+e071246e  subs r6,r5,r0
+e0712470  ldr r0,[r4,#0x0]
+    -> c1915a6c [READ, operand=1]
+e0712472  ldr r0,[r0,#0x14]
+e0712474  ldr r1,[r0,#0x0]
+e0712476  ldr r1,[r1,#0x38]
+e0712478  it ne
+e071247a  mov.ne r6,#0x1
+e071247c  blx r1
+e071247e  cmp r6,#0x0
+e0712480  it eq
+e0712482  pop.eq {r4,r5,r6,pc}
+e0712484  mov r0,r5
+e0712486  pop.w {r4,r5,r6,lr}
+e071248a  b.w 0xe07123d8
+    -> e07123d8 [UNCONDITIONAL_JUMP, operand=0]
+callsites_exported=1 (all returned references exported)
+
+[CALLER WINDOWS] target=E0715950
+callsites_exported=0 (all returned references exported)
+
+[CALLER WINDOWS] target=E07269B0
+callsites_exported=0 (all returned references exported)
+
+[INTERPRETATION LIMIT]
+The reconstructed ELF does not map runtime RAM at 0xC190A128/0xC190A144/0xC190A148, 0xC1915A4C/0xC1915A6C, or 0xC1927C30.
+Zero RAM xrefs are not conclusive; inspect immediate address construction and indirect access.
+0x5742E pool handles and the separate 0xA701E callback-registration token are not assumed equal.
+This export does not infer live provider/callback pointers or current printer state.
