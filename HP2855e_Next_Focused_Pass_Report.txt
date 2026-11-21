@@ -1,0 +1,2440 @@
+HP DeskJet 2855e — next focused static pass
+Program=hp_lbi_address_mapped.elf imageBase=c01e3c40
+Mode=read-only; existing code/listing only; no new functions, no undefined-byte disassembly, no program edits.
+Focus: (1) readiness helper pointer-table/caller evidence; (2) DSID 0x12FB0 query consumers and status/reason candidate functions; (3) PINK mask interface vtable and service binding.
+No printer communication or state-changing action is performed.
+
+
+============================================================
+1. TARGET REFERENCES AND FUNCTION OWNERS
+============================================================
+
+TARGET 0xE0306778 readiness helper A function=<none>
+  reference_count=0
+
+TARGET 0xE03067B0 readiness helper B function=<none>
+  reference_count=0
+
+TARGET 0xE03067E8 selected-object snapshot updater candidate function=FUN_e03067e8 @ e03067e8
+  reference_count=0
+
+TARGET 0xE0302AA6 DSID 0x12FB0 status query sequence function=<none>
+  reference_count=0
+
+TARGET 0xE030B478 PINK selector-to-mask caller function=FUN_e030b478 @ e030b478
+  reference_count=0
+
+TARGET 0xE0308438 candidate scalar-mask implementation function=<none>
+  reference_count=0
+
+TARGET 0xE0308228 alternate mask implementation function=<none>
+  reference_count=0
+
+TARGET 0xE03076B0 reason slot wrapper function=FUN_e03076b0 @ e03076b0
+  reference_count=0
+
+TARGET 0xE03076C0 ConStat reason writer function=ConStat_Reason_Inserter_Anchor @ e03076c0
+  reference_count=0
+
+TARGET 0xE0308D90 PINK dependency setter function=<none>
+  reference_count=0
+
+TARGET 0xE0308E20 service 0xA701E field assignment function=<none>
+  REF from=e0308dbe type=CONDITIONAL_JUMP operand=0 owner=<none>
+  reference_count=1
+
+TARGET 0xE0308F10 PINK object accessor function=FUN_e0308f10 @ e0308f10
+  REF from=e0302b7c type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302b78 @ e0302b78
+  REF from=e0303642 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0303610 @ e0303610
+  REF from=e030571a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0305708 @ e0305708
+  REF from=e030579a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0305788 @ e0305788
+  REF from=e030aa4a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa40 @ e030aa40
+  REF from=e030aa94 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aaa8 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aac0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aad0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aae0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030aa70 @ e030aa70
+  REF from=e030afa6 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030af68 @ e030af68
+  REF from=e030b0b2 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b058 @ e030b058
+  REF from=e030b0d6 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b058 @ e030b058
+  REF from=e030b0e8 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b058 @ e030b058
+  REF from=e030b7fc type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b798 @ e030b798
+  REF from=e030b80e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b798 @ e030b798
+  REF from=e030b92a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b93e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b954 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b964 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b978 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b994 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9a4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9ba type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9ce type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9e2 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9f8 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba08 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba1c type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba34 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba48 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba5e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba6e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba80 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030bb1a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030bc86 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030bc08 @ e030bc08
+  REF from=e030bd00 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030bcb0 @ e030bcb0
+  REF from=e030be8e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030beae type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bec0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bed4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bf00 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bf32 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bfc0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030bfd0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030be28 @ e030be28
+  REF from=e030c010 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c008 @ e030c008
+  REF from=e030c020 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c008 @ e030c008
+  REF from=e030c032 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c008 @ e030c008
+  REF from=e030c340 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c2f8 @ e030c2f8
+  REF from=e030c3ce type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c358 @ e030c358
+  REF from=e030c7a6 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c7c0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c7de type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c7f4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c80a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c820 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c838 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c852 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c864 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c87e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c898 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c8b2 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c8cc type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c8e4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c798 @ e030c798
+  REF from=e030c9ae type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c970 @ e030c970
+  REF from=e030c9fe type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030c9c8 @ e030c9c8
+  REF from=e030cc0e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030cbd0 @ e030cbd0
+  REF from=e030cd30 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030cd18 @ e030cd18
+  REF from=e030cd88 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030cd78 @ e030cd78
+  REF from=e030dc64 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030dbd8 @ e030dbd8
+  REF from=e030df4a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030de58 @ e030de58
+  REF from=e030df5a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030de58 @ e030de58
+  REF from=e030df6a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030de58 @ e030de58
+  REF from=e030e0c8 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030e0f0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030e104 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030eb2c type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030eb28 @ e030eb28
+  REF from=e030f488 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f428 @ e030f428
+  REF from=e030f7c6 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f7de type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f7a0 @ e030f7a0
+  reference_count=80 (capped)
+
+TARGET 0xE030FDF0 candidate service/query helper function=thunk_EXT_FUN_38100424 @ e030fdf0
+  REF from=e0302bf4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302be8 @ e0302be8
+  REF from=e0302c00 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302be8 @ e0302be8
+  REF from=e030396a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0303950 @ e0303950
+  REF from=e0305140 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0305128 @ e0305128
+  REF from=e0302a88 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302a78 @ e0302a78
+  REF from=e030a5c0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030a5a0 @ e030a5a0
+  REF from=e030a86a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030a828 @ e030a828
+  REF from=e03029b6 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e03029a8 @ e03029a8
+  REF from=e030e05e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030a3ce type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03062fc type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306240 @ e0306240
+  REF from=e030630a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306240 @ e0306240
+  REF from=e0302996 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302988 @ e0302988
+  REF from=e0302a66 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302a58 @ e0302a58
+  REF from=e0302d14 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0302f4e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302f40 @ e0302f40
+  REF from=e0302f8e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302f80 @ e0302f80
+  REF from=e0303246 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03036c8 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0303796 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03037c0 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0305a7a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0305a70 @ e0305a70
+  REF from=e030a48e type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030a418 @ e030a418
+  REF from=e0306088 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306038 @ e0306038
+  REF from=e030e346 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030e522 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030e652 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03062aa type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306240 @ e0306240
+  REF from=e03062be type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306240 @ e0306240
+  REF from=e03027be type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0302740 @ e0302740
+  reference_count=30
+
+TARGET 0xE030F330 candidate dependency setup helper function=FUN_e030f330 @ e030f330
+  REF from=e0308e42 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0308e30 @ e0308e30
+  reference_count=1
+
+TARGET 0xE03091F0 dependency-setter adjustor thunk function=<none>
+  reference_count=0
+
+TARGET 0xE030FEB8 selected ConStat object getter function=FUN_e030feb8 @ e030feb8
+  REF from=e030f470 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f428 @ e030f428
+  REF from=e030f808 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030fa3a type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030faf2 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030faa8 @ e030faa8
+  REF from=e030fbc4 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030fb40 @ e030fb40
+  REF from=e030f3d8 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e030f390 @ e030f390
+  reference_count=6
+
+TARGET 0xE030FB40 F8AE47 reason ingress callback function=FUN_e030fb40 @ e030fb40
+  reference_count=0
+
+TARGET 0xE0305708 event 0x87 notifier function=FUN_e0305708 @ e0305708
+  REF from=e0306dae type=UNCONDITIONAL_CALL operand=0 owner=FUN_e0306cf8 @ e0306cf8
+  REF from=e030773a type=CONDITIONAL_CALL operand=0 owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+  REF from=e03077da type=UNCONDITIONAL_CALL operand=0 owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+  REF from=e0302b6e type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0302d8c type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0307bfe type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0307f62 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0307f72 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0307ffc type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0308272 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0308282 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03083c6 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03083d2 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0308466 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03067a2 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03067d2 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0306ca2 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0306cee type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03075ce type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030761e type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e03076a6 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030781a type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e0307858 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030c22c type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  REF from=e030c5ae type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  reference_count=25
+
+TARGET 0xE07269B0 PE SiriusInstance dependency setter function=<none>
+  reference_count=0
+
+TARGET 0xE01D74CC subscription/mask policy candidate owner function=FUN_e01d74cc @ e01d74cc
+  REF from=e01d7d14 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e01d7c60 @ e01d7c60
+  reference_count=1
+
+TARGET 0xE01D7EB4 candidate reason 0x12 policy function function=FUN_e01d7eb4 @ e01d7eb4
+  REF from=e01d8ad4 type=UNCONDITIONAL_CALL operand=0 owner=<none>
+  reference_count=1
+
+TARGET 0xE01D82B0 adjacent policy function function=FUN_e01d82b0 @ e01d82b0
+  REF from=e01d7ff0 type=UNCONDITIONAL_CALL operand=0 owner=FUN_e01d7eb4 @ e01d7eb4
+  reference_count=1
+
+TARGET 0xE01D87C0 candidate reason 0x13 policy function function=FUN_e01d87c0 @ e01d87c0
+  REF from=e01d81ec type=UNCONDITIONAL_CALL operand=0 owner=FUN_e01d7eb4 @ e01d7eb4
+  reference_count=1
+
+
+============================================================
+2. THUMB FUNCTION-POINTER SCAN IN INITIALIZED NON-EXECUTABLE BLOCKS
+============================================================
+
+POINTER HIT block=.romfs_objs address=e09ae544 value=0xE030FB41
+  e09ae524  0x20202020
+  e09ae528  0xE09AE638
+  e09ae52c  0xE030F9A1
+  e09ae530  0x20202020
+  e09ae534  0xE09AE658
+  e09ae538  0xE030FAA9
+  e09ae53c  0x20202020
+  e09ae540  0xE09AE674
+  e09ae544  0xE030FB41
+  e09ae548  0x20202020
+  e09ae54c  0xE09AE698
+  e09ae550  0xE030FC19
+  e09ae554  0x20202020
+  e09ae558  0xE09AE6B4
+  e09ae55c  0xE030FD19
+  e09ae560  0x20202020
+  e09ae564  0x20202020
+
+POINTER HIT block=.romfs_objs address=e09aea8c value=0xE0308439
+  e09aea6c  0xE0307F51
+  e09aea70  0xE0307F61
+  e09aea74  0xE0308341
+  e09aea78  0xE03083B9
+  e09aea7c  0xE0302B59
+  e09aea80  0xE0302B79
+  e09aea84  0xE0307F71
+  e09aea88  0xE03083F1
+  e09aea8c  0xE0308439
+  e09aea90  0xE0307CE9
+  e09aea94  0xE0302CF1
+  e09aea98  0xE0302D51
+  e09aea9c  0xE0308019
+  e09aeaa0  0xE0308141
+  e09aeaa4  0xE0308191
+  e09aeaa8  0xE0308199
+  e09aeaac  0xE0308291
+
+POINTER HIT block=.romfs_objs address=e09aebac value=0xE0307A39
+  e09aeb8c  0xE0303A21
+  e09aeb90  0xE0303A31
+  e09aeb94  0xE0303A41
+  e09aeb98  0xE0303AC9
+  e09aeb9c  0xE0303B19
+  e09aeba0  0xE0303B29
+  e09aeba4  0xE0303B31
+  e09aeba8  0xE0303B41
+  e09aebac  0xE0307A39
+  e09aebb0  0xE0307AD9
+  e09aebb4  0xE0307B71
+  e09aebb8  0xE0307C59
+  e09aebbc  0xE03081E1
+  e09aebc0  0xE0307C09
+  e09aebc4  0xE0307CA1
+  e09aebc8  0xE0307EE1
+  e09aebcc  0xE03081A1
+
+POINTER HIT block=.romfs_objs address=e09aebf8 value=0xE0308229
+  e09aebd8  0xE0303019
+  e09aebdc  0xE0307DD1
+  e09aebe0  0xE0307E19
+  e09aebe4  0xE0308331
+  e09aebe8  0xE03084E1
+  e09aebec  0xE0307BB9
+  e09aebf0  0xE0302921
+  e09aebf4  0xE0302A99
+  e09aebf8  0xE0308229
+  e09aebfc  0xE03080A9
+  e09aec00  0xE03080F9
+  e09aec04  0xE0307FA9
+  e09aec08  0xE03082D1
+  e09aec0c  0xE0307AB1
+  e09aec10  0xE0307BD9
+  e09aec14  0xE0307BF9
+  e09aec18  0xE0308271
+
+POINTER HIT block=.romfs_objs address=e09aece8 value=0xE03067E9
+  e09aecc8  0xE0307B59
+  e09aeccc  0xE0307B61
+  e09aecd0  0xE0307B69
+  e09aecd4  0xE0303549
+  e09aecd8  0xE0303201
+  e09aecdc  0xE0303681
+  e09aece0  0xE0306759
+  e09aece4  0xE0306729
+  e09aece8  0xE03067E9
+  e09aecec  0xE03067E1
+  e09aecf0  0xE0306779
+  e09aecf4  0xE03067B1
+  e09aecf8  0xE0306CF9
+  e09aecfc  0xE0306F31
+  e09aed00  0xE0306E31
+  e09aed04  0xE03075E9
+  e09aed08  0xE0306C21
+
+POINTER HIT block=.romfs_objs address=e09aecf0 value=0xE0306779
+  e09aecd0  0xE0307B69
+  e09aecd4  0xE0303549
+  e09aecd8  0xE0303201
+  e09aecdc  0xE0303681
+  e09aece0  0xE0306759
+  e09aece4  0xE0306729
+  e09aece8  0xE03067E9
+  e09aecec  0xE03067E1
+  e09aecf0  0xE0306779
+  e09aecf4  0xE03067B1
+  e09aecf8  0xE0306CF9
+  e09aecfc  0xE0306F31
+  e09aed00  0xE0306E31
+  e09aed04  0xE03075E9
+  e09aed08  0xE0306C21
+  e09aed0c  0xE0306CB1
+  e09aed10  0xE0307631
+
+POINTER HIT block=.romfs_objs address=e09aecf4 value=0xE03067B1
+  e09aecd4  0xE0303549
+  e09aecd8  0xE0303201
+  e09aecdc  0xE0303681
+  e09aece0  0xE0306759
+  e09aece4  0xE0306729
+  e09aece8  0xE03067E9
+  e09aecec  0xE03067E1
+  e09aecf0  0xE0306779
+  e09aecf4  0xE03067B1
+  e09aecf8  0xE0306CF9
+  e09aecfc  0xE0306F31
+  e09aed00  0xE0306E31
+  e09aed04  0xE03075E9
+  e09aed08  0xE0306C21
+  e09aed0c  0xE0306CB1
+  e09aed10  0xE0307631
+  e09aed14  0xE03076B1
+
+POINTER HIT block=.romfs_objs address=e09aed14 value=0xE03076B1
+  e09aecf4  0xE03067B1
+  e09aecf8  0xE0306CF9
+  e09aecfc  0xE0306F31
+  e09aed00  0xE0306E31
+  e09aed04  0xE03075E9
+  e09aed08  0xE0306C21
+  e09aed0c  0xE0306CB1
+  e09aed10  0xE0307631
+  e09aed14  0xE03076B1
+  e09aed18  0xE03076C1
+  e09aed1c  0xE03077F1
+  e09aed20  0xE0307829
+  e09aed24  0xE0307911
+  e09aed28  0x20202004
+  e09aed2c  0x20202020
+  e09aed30  0xE0308A71
+  e09aed34  0xE0308A69
+
+POINTER HIT block=.romfs_objs address=e09aed18 value=0xE03076C1
+  e09aecf8  0xE0306CF9
+  e09aecfc  0xE0306F31
+  e09aed00  0xE0306E31
+  e09aed04  0xE03075E9
+  e09aed08  0xE0306C21
+  e09aed0c  0xE0306CB1
+  e09aed10  0xE0307631
+  e09aed14  0xE03076B1
+  e09aed18  0xE03076C1
+  e09aed1c  0xE03077F1
+  e09aed20  0xE0307829
+  e09aed24  0xE0307911
+  e09aed28  0x20202004
+  e09aed2c  0x20202020
+  e09aed30  0xE0308A71
+  e09aed34  0xE0308A69
+  e09aed38  0xE0308A61
+
+POINTER HIT block=.romfs_objs address=e09aeff0 value=0xE0308D91
+  e09aefd0  0xE030A301
+  e09aefd4  0xE030A321
+  e09aefd8  0xE030A329
+  e09aefdc  0xE030A331
+  e09aefe0  0xE0308C81
+  e09aefe4  0xE0308C91
+  e09aefe8  0xE0308C99
+  e09aefec  0xE0308CD1
+  e09aeff0  0xE0308D91
+  e09aeff4  0xE0308E31
+  e09aeff8  0xE0308E51
+  e09aeffc  0x20202004
+  e09af000  0x20202020
+  e09af004  0xE0309231
+  e09af008  0xE0309229
+  e09af00c  0xE0309221
+  e09af010  0x20202008
+
+POINTER HIT block=.romfs_objs address=e09af1a8 value=0xE03091F1
+  e09af188  0xE03091C1
+  e09af18c  0xE03091C9
+  e09af190  0xE03091D1
+  e09af194  0x20202018
+  e09af198  0x20202020
+  e09af19c  0xE03091D9
+  e09af1a0  0xE03091E1
+  e09af1a4  0xE03091E9
+  e09af1a8  0xE03091F1
+  e09af1ac  0xE03091F9
+  e09af1b0  0xE0309201
+  e09af1b4  0xE0309241
+  e09af1b8  0x20202020
+  e09af1bc  0x20202020
+  e09af1c0  0xE0302989
+  e09af1c4  0xE0302B41
+  e09af1c8  0xE030B799
+
+Total pointer-word matches=11
+Interpretation: a pointer-table hit is a candidate registration/vtable entry; it is not proof that the corresponding callback is installed at runtime.
+
+
+============================================================
+3. FOCUSED CODE WINDOWS
+============================================================
+
+--- WINDOW 0xE0302A78 (-36/+80) ---
+     e0302a54  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0302a58  movs r0,r2  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a5a  itt eq  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a5c  mov.eq r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a5e  bx.eq lr  CONDITIONAL_TERMINATOR destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a60  push {lr}  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a62  movs r2,#0x10  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a64  movs r1,#0x0  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a66  bl 0xe030fdf0  UNCONDITIONAL_CALL destinations=[e030fdf0] owner=FUN_e0302a58 @ e0302a58
+     e0302a6a  movs r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a6c  pop.w lr  FALL_THROUGH destinations=[] owner=FUN_e0302a58 @ e0302a58
+     e0302a70  bx lr  TERMINATOR destinations=[] owner=FUN_e0302a58 @ e0302a58
+ >>> e0302a78  push {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7a  movs r4,r2  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7c  itt eq  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7e  mov.eq r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a80  pop.eq {r4,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a82  mov r0,r2  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a84  movs r2,#0x10  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a86  movs r1,#0x0  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a88  bl 0xe030fdf0  UNCONDITIONAL_CALL destinations=[e030fdf0] owner=FUN_e0302a78 @ e0302a78
+     e0302a8c  movs r0,#0x0  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a8e  str r0,[r4,#0xc]  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a90  movs r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a92  pop {r4,pc}  TERMINATOR destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a98  push {r4,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9a  movs r4,r1  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9c  itt eq  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9e  mov.eq r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0302aa0  pop.eq {r4,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0302aa2  bl 0xe0308f10  UNCONDITIONAL_CALL destinations=[e0308f10] owner=<none>
+     e0302aa6  ldr r0,[r0,#0x1c]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aa8  ldr r1,[r0,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aaa  ldr r2,[r1,#0x10]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aac  movw r1,#0x2fb0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab0  movt r1,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab4  blx r2  COMPUTED_CALL destinations=[] owner=<none>
+     e0302ab6  str r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab8  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302aba  pop {r4,pc}  TERMINATOR destinations=[] owner=<none>
+     e0302ac0  cmp r3,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac2  beq 0xe0302ac8  CONDITIONAL_JUMP destinations=[e0302ac8] owner=<none>
+     e0302ac4  subs r0,r2,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac6  cmp r0,#0xe  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac8  itt cs  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE0302A98 (-36/+80) ---
+     e0302a78  push {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7a  movs r4,r2  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7c  itt eq  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a7e  mov.eq r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a80  pop.eq {r4,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a82  mov r0,r2  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a84  movs r2,#0x10  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a86  movs r1,#0x0  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a88  bl 0xe030fdf0  UNCONDITIONAL_CALL destinations=[e030fdf0] owner=FUN_e0302a78 @ e0302a78
+     e0302a8c  movs r0,#0x0  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a8e  str r0,[r4,#0xc]  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a90  movs r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e0302a78 @ e0302a78
+     e0302a92  pop {r4,pc}  TERMINATOR destinations=[] owner=FUN_e0302a78 @ e0302a78
+ >>> e0302a98  push {r4,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9a  movs r4,r1  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9c  itt eq  FALL_THROUGH destinations=[] owner=<none>
+     e0302a9e  mov.eq r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0302aa0  pop.eq {r4,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0302aa2  bl 0xe0308f10  UNCONDITIONAL_CALL destinations=[e0308f10] owner=<none>
+     e0302aa6  ldr r0,[r0,#0x1c]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aa8  ldr r1,[r0,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aaa  ldr r2,[r1,#0x10]  FALL_THROUGH destinations=[] owner=<none>
+     e0302aac  movw r1,#0x2fb0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab0  movt r1,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab4  blx r2  COMPUTED_CALL destinations=[] owner=<none>
+     e0302ab6  str r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0302ab8  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302aba  pop {r4,pc}  TERMINATOR destinations=[] owner=<none>
+     e0302ac0  cmp r3,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac2  beq 0xe0302ac8  CONDITIONAL_JUMP destinations=[e0302ac8] owner=<none>
+     e0302ac4  subs r0,r2,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac6  cmp r0,#0xe  FALL_THROUGH destinations=[] owner=<none>
+     e0302ac8  itt cs  FALL_THROUGH destinations=[] owner=<none>
+     e0302aca  mov.cs r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0302acc  bx.cs lr  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0302ace  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ad0  str r0,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0302ad2  movs r0,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ad4  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0302ad8  cmp r3,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ada  beq 0xe0302ae0  CONDITIONAL_JUMP destinations=[e0302ae0] owner=<none>
+     e0302adc  subs r0,r2,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0302ade  cmp r0,#0xe  FALL_THROUGH destinations=[] owner=<none>
+     e0302ae0  itt cs  FALL_THROUGH destinations=[] owner=<none>
+     e0302ae2  mov.cs r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0302ae4  bx.cs lr  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0302ae6  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0302ae8  str r0,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE0306778 (-36/+80) ---
+     e0306754  pop {r4,pc}  TERMINATOR destinations=[] owner=<none>
+     e0306758  subs r2,#0x8f  FALL_THROUGH destinations=[] owner=<none>
+     e030675a  beq 0xe0306764  CONDITIONAL_JUMP destinations=[e0306764] owner=<none>
+     e030675c  cmp r2,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e030675e  bne 0xe0306768  CONDITIONAL_JUMP destinations=[e0306768] owner=<none>
+     e0306760  mov r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0306762  b 0xe0306766  UNCONDITIONAL_JUMP destinations=[e0306766] owner=<none>
+     e0306764  movs r1,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0306766  strb r1,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e0306768  movs r0,#0x2  FALL_THROUGH destinations=[] owner=<none>
+     e030676a  bx lr  TERMINATOR destinations=[] owner=<none>
+ >>> e0306778  push {r4,r5,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e030677a  mov r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e030677c  mov r5,r1  FALL_THROUGH destinations=[] owner=<none>
+     e030677e  ldrb.w r0,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e0306782  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0306784  it eq  FALL_THROUGH destinations=[] owner=<none>
+     e0306786  cmp.eq r1,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e0306788  bne 0xe030679e  CONDITIONAL_JUMP destinations=[e030679e] owner=<none>
+     e030678a  ldr r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e030678c  ldr.w r2,[r0,#0x294]  FALL_THROUGH destinations=[] owner=<none>
+     e0306790  movw r0,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e0306794  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e0306798  ldr r1,[r0,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e030679a  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e030679c  blx r2  COMPUTED_CALL destinations=[] owner=<none>
+     e030679e  strb.w r5,[r4,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067a2  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03067a6  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067a8  pop {r4,r5,pc}  TERMINATOR destinations=[] owner=<none>
+     e03067b0  push {lr}  FALL_THROUGH destinations=[] owner=<none>
+     e03067b2  ldrb.w r2,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067b6  cmp r2,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067b8  it eq  FALL_THROUGH destinations=[] owner=<none>
+     e03067ba  cmp.eq r1,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e03067bc  bne 0xe03067ce  CONDITIONAL_JUMP destinations=[e03067ce] owner=<none>
+     e03067be  movw r3,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e03067c2  movt r3,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e03067c6  ldr r2,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e03067c8  strb r1,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE03067B0 (-36/+80) ---
+     e030678c  ldr.w r2,[r0,#0x294]  FALL_THROUGH destinations=[] owner=<none>
+     e0306790  movw r0,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e0306794  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e0306798  ldr r1,[r0,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e030679a  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e030679c  blx r2  COMPUTED_CALL destinations=[] owner=<none>
+     e030679e  strb.w r5,[r4,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067a2  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03067a6  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067a8  pop {r4,r5,pc}  TERMINATOR destinations=[] owner=<none>
+ >>> e03067b0  push {lr}  FALL_THROUGH destinations=[] owner=<none>
+     e03067b2  ldrb.w r2,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067b6  cmp r2,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067b8  it eq  FALL_THROUGH destinations=[] owner=<none>
+     e03067ba  cmp.eq r1,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e03067bc  bne 0xe03067ce  CONDITIONAL_JUMP destinations=[e03067ce] owner=<none>
+     e03067be  movw r3,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e03067c2  movt r3,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e03067c6  ldr r2,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e03067c8  strb r1,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e03067ca  str.w r2,[r0,#0x220]  FALL_THROUGH destinations=[] owner=<none>
+     e03067ce  strb.w r1,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067d2  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03067d6  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067d8  pop {pc}  TERMINATOR destinations=[] owner=<none>
+     e03067e0  ldrb.w r0,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067e4  bx lr  TERMINATOR destinations=[] owner=<none>
+     e03067e8  push {r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067ec  sub sp,#0x10  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067ee  cmp r0,r1  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f0  it eq  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f2  mov.eq r0,#0x3  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f4  beq.w 0xe0306c16  CONDITIONAL_JUMP destinations=[e0306c16] owner=FUN_e03067e8 @ e03067e8
+     e03067f8  str.w r1,[r0,#0x220]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067fc  str.w r1,[r0,#0x21c]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306800  mov r6,r0  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+
+--- WINDOW 0xE03067E8 (-36/+80) ---
+     e03067c6  ldr r2,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e03067c8  strb r1,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e03067ca  str.w r2,[r0,#0x220]  FALL_THROUGH destinations=[] owner=<none>
+     e03067ce  strb.w r1,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067d2  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03067d6  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03067d8  pop {pc}  TERMINATOR destinations=[] owner=<none>
+     e03067e0  ldrb.w r0,[r0,#0x224]  FALL_THROUGH destinations=[] owner=<none>
+     e03067e4  bx lr  TERMINATOR destinations=[] owner=<none>
+ >>> e03067e8  push {r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067ec  sub sp,#0x10  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067ee  cmp r0,r1  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f0  it eq  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f2  mov.eq r0,#0x3  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067f4  beq.w 0xe0306c16  CONDITIONAL_JUMP destinations=[e0306c16] owner=FUN_e03067e8 @ e03067e8
+     e03067f8  str.w r1,[r0,#0x220]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e03067fc  str.w r1,[r0,#0x21c]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306800  mov r6,r0  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306802  ldr r0,[r1,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306804  mov r5,r1  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306806  ldr.w r2,[r0,#0x158]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030680a  mov r0,r1  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030680c  add.w r1,r6,#0x26c  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306810  blx r2  COMPUTED_CALL destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306812  movw r1,#0x13c8  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306816  adds r4,r6,r1  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306818  str.w r0,[r4,#0xb68]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030681c  ldr r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030681e  ldr.w r2,[r0,#0x1b8]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306822  mov r0,r5  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306824  add.w r1,r6,#0x870  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306828  blx r2  COMPUTED_CALL destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030682a  str.w r0,[r4,#0xb6c]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e030682e  ldr r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306830  ldr.w r2,[r0,#0x198]  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306834  movw r0,#0x8a8  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+     e0306838  adds r1,r6,r0  FALL_THROUGH destinations=[] owner=FUN_e03067e8 @ e03067e8
+
+--- WINDOW 0xE030FEB8 (-36/+80) ---
+     e030feb0  bx lr  TERMINATOR destinations=[] owner=FUN_e030feb8 @ e030feb8
+ >>> e030feb8  movw r1,#0xe904  FALL_THROUGH destinations=[] owner=FUN_e030feb8 @ e030feb8
+     e030febc  movt r1,#0xc143  FALL_THROUGH destinations=[] owner=FUN_e030feb8 @ e030feb8
+     e030fec0  ldr r0,[r1,#0x4]  FALL_THROUGH destinations=[] owner=FUN_e030feb8 @ e030feb8
+     e030fec2  b.w 0xe030feb0  UNCONDITIONAL_JUMP destinations=[e030feb0] owner=FUN_e030feb8 @ e030feb8
+     e030fec8  movw r2,#0x61c  FALL_THROUGH destinations=[] owner=<none>
+     e030fecc  movt r2,#0xc01e  FALL_THROUGH destinations=[] owner=<none>
+     e030fed0  ldr r0,[r2,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e030fed2  b.w 0xe03102b0  CALL_TERMINATOR destinations=[e03102b0] owner=<none>
+     e030fed8  cbz r1,0xe030fee6  CONDITIONAL_JUMP destinations=[e030fee6] owner=<none>
+     e030feda  ldr r0,[r1,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e030fedc  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e030fede  ite eq  FALL_THROUGH destinations=[] owner=<none>
+     e030fee0  mov.eq r0,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e030fee2  mov.ne r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e030fee4  bx lr  TERMINATOR destinations=[] owner=<none>
+     e030fee6  movs r0,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e030fee8  bx lr  TERMINATOR destinations=[] owner=<none>
+     e030fef0  push {lr}  FALL_THROUGH destinations=[] owner=<none>
+     e030fef2  movw r3,#0x61c  FALL_THROUGH destinations=[] owner=<none>
+     e030fef6  movt r3,#0xc01e  FALL_THROUGH destinations=[] owner=<none>
+     e030fefa  ldr r0,[r3,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e030fefc  bl 0xe03102f8  UNCONDITIONAL_CALL destinations=[e03102f8] owner=<none>
+     e030ff00  subs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e030ff02  it ne  FALL_THROUGH destinations=[] owner=<none>
+     e030ff04  mov.ne r0,#0x1  FALL_THROUGH destinations=[] owner=<none>
+     e030ff06  pop {pc}  TERMINATOR destinations=[] owner=<none>
+     e030ff08  movw r3,#0x61c  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE030B478 (-36/+80) ---
+     e030b454  movw r0,#0x2fc2  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b458  movt r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b45c  b 0xe030b474  UNCONDITIONAL_JUMP destinations=[e030b474] owner=FUN_e030b450 @ e030b450
+     e030b45e  cmp r0,#0x6d  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b460  movw r3,#0x2fc6  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b464  mov.w r0,#0xffffffff  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b468  movt r3,#0x1  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b46c  it eq  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b46e  mov.eq r0,r3  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b470  it ne  FALL_THROUGH destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b472  bx.ne lr  CONDITIONAL_TERMINATOR destinations=[] owner=FUN_e030b450 @ e030b450
+     e030b474  b.w 0xe030a980  UNCONDITIONAL_JUMP destinations=[e030a980] owner=FUN_e030b450 @ e030b450
+ >>> e030b478  push {r4,r5,r6,r7,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b47c  mov r5,r0  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b47e  mov r10,r1  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b480  mov r6,r2  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b482  mov r4,r3  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b484  ldrb.w r11,[sp,#0x1c]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b488  ldrb r0,[r0,#0xc]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b48a  cbz r0,0xe030b4c6  CONDITIONAL_JUMP destinations=[e030b4c6] owner=FUN_e030b478 @ e030b478
+     e030b48c  ldr r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b48e  ldr.w r2,[r0,#0x214]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b492  mov r0,r5  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b494  blx r2  COMPUTED_CALL destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b496  cbnz r0,0xe030b49e  CONDITIONAL_JUMP destinations=[e030b49e] owner=FUN_e030b478 @ e030b478
+     e030b498  movs r0,#0x3  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b49a  pop.w {r4,r5,r6,r7,r10,r11,pc}  TERMINATOR destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b49e  mov r0,r10  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4a0  bl 0xe0305180  UNCONDITIONAL_CALL destinations=[e0305180] owner=FUN_e030b478 @ e030b478
+     e030b4a4  cbz r0,0xe030b4b4  CONDITIONAL_JUMP destinations=[e030b4b4] owner=FUN_e030b478 @ e030b478
+     e030b4a6  ldr r2,[r5,#0x6c]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4a8  ldr r1,[r5,#0x68]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4aa  mov r0,r10  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4ac  bl 0xe0304e70  UNCONDITIONAL_CALL destinations=[e0304e70] owner=FUN_e030b478 @ e030b478
+     e030b4b0  mov r7,r0  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4b2  b 0xe030b4b8  UNCONDITIONAL_JUMP destinations=[e030b4b8] owner=FUN_e030b478 @ e030b478
+     e030b4b4  mov.w r7,#0xffffffff  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4b8  ldr r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4ba  ldr.w r2,[r0,#0x294]  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4be  mov r0,r5  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4c0  mov r1,r7  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4c2  blx r2  COMPUTED_CALL destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4c4  cbnz r0,0xe030b4cc  CONDITIONAL_JUMP destinations=[e030b4cc] owner=FUN_e030b478 @ e030b478
+     e030b4c6  movs r0,#0x2  FALL_THROUGH destinations=[] owner=FUN_e030b478 @ e030b478
+     e030b4c8  pop.w {r4,r5,r6,r7,r10,r11,pc}  TERMINATOR destinations=[] owner=FUN_e030b478 @ e030b478
+
+--- WINDOW 0xE0308438 (-36/+80) ---
+     e0308414  adds r0,r5,r0  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e0308416  add.w r1,r0,r4, lsl #0x3  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e030841a  mov r0,r6  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e030841c  movs r2,#0x8  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e030841e  bl 0xe030fe08  UNCONDITIONAL_CALL destinations=[e030fe08] owner=FUN_e03083f0 @ e03083f0
+     e0308422  movw r0,#0x20a4  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e0308426  adds r0,r5,r0  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e0308428  ldr.w r0,[r0,r4,lsl #0x2]  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e030842c  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e030842e  movs r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e03083f0 @ e03083f0
+     e0308430  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=FUN_e03083f0 @ e03083f0
+ >>> e0308438  push {r4,r5,r6,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e030843a  mov r5,r2  FALL_THROUGH destinations=[] owner=<none>
+     e030843c  mov r6,r1  FALL_THROUGH destinations=[] owner=<none>
+     e030843e  mov r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308440  bl 0xe0302bb0  UNCONDITIONAL_CALL destinations=[e0302bb0] owner=<none>
+     e0308444  cmp r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0308446  it eq  FALL_THROUGH destinations=[] owner=<none>
+     e0308448  pop.eq {r4,r5,r6,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e030844a  mov r1,r6  FALL_THROUGH destinations=[] owner=<none>
+     e030844c  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e030844e  bl 0xe0307890  UNCONDITIONAL_CALL destinations=[e0307890] owner=<none>
+     e0308452  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0308454  blt 0xe030846e  CONDITIONAL_JUMP destinations=[e030846e] owner=<none>
+     e0308456  movw r1,#0x1ac8  FALL_THROUGH destinations=[] owner=<none>
+     e030845a  adds r1,r4,r1  FALL_THROUGH destinations=[] owner=<none>
+     e030845c  add.w r2,r1,r0, lsl #0x3  FALL_THROUGH destinations=[] owner=<none>
+     e0308460  ldr r0,[r2,#0x4]  FALL_THROUGH destinations=[] owner=<none>
+     e0308462  orrs r0,r5  FALL_THROUGH destinations=[] owner=<none>
+     e0308464  str r0,[r2,#0x4]  FALL_THROUGH destinations=[] owner=<none>
+     e0308466  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e030846a  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e030846c  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e030846e  movs r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0308470  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e0308478  push {r4,r5,r6,r7,r10,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e030847c  mov r7,r3  FALL_THROUGH destinations=[] owner=<none>
+     e030847e  mov r5,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308480  mov r6,r1  FALL_THROUGH destinations=[] owner=<none>
+     e0308482  mov r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308484  bl 0xe0302f80  UNCONDITIONAL_CALL destinations=[e0302f80] owner=<none>
+     e0308488  cmp r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE0308228 (-36/+80) ---
+     e0308204  blt 0xe030821e  CONDITIONAL_JUMP destinations=[e030821e] owner=<none>
+     e0308206  mov r6,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308208  mov r2,r5  FALL_THROUGH destinations=[] owner=<none>
+     e030820a  mov r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e030820c  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e030820e  bl 0xe0308878  UNCONDITIONAL_CALL destinations=[e0308878] owner=<none>
+     e0308212  movw r0,#0x2044  FALL_THROUGH destinations=[] owner=<none>
+     e0308216  adds r0,r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308218  ldr.w r0,[r0,r6,lsl #0x2]  FALL_THROUGH destinations=[] owner=<none>
+     e030821c  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e030821e  movs r0,#0x3  FALL_THROUGH destinations=[] owner=<none>
+     e0308220  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+ >>> e0308228  push {r4,r5,r6,lr}  FALL_THROUGH destinations=[] owner=<none>
+     e030822a  mov r5,r2  FALL_THROUGH destinations=[] owner=<none>
+     e030822c  mov r6,r1  FALL_THROUGH destinations=[] owner=<none>
+     e030822e  mov r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308230  bl 0xe0302bb8  UNCONDITIONAL_CALL destinations=[e0302bb8] owner=<none>
+     e0308234  cmp r0,#0x4  FALL_THROUGH destinations=[] owner=<none>
+     e0308236  it eq  FALL_THROUGH destinations=[] owner=<none>
+     e0308238  pop.eq {r4,r5,r6,pc}  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e030823a  ldrb r0,[r4,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e030823c  cbnz r0,0xe0308242  CONDITIONAL_JUMP destinations=[e0308242] owner=<none>
+     e030823e  movs r0,#0x2  FALL_THROUGH destinations=[] owner=<none>
+     e0308240  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e0308242  mov r1,r6  FALL_THROUGH destinations=[] owner=<none>
+     e0308244  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e0308246  bl 0xe0307890  UNCONDITIONAL_CALL destinations=[e0307890] owner=<none>
+     e030824a  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e030824c  blt 0xe0308266  CONDITIONAL_JUMP destinations=[e0308266] owner=<none>
+     e030824e  mov r6,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308250  mov r2,r5  FALL_THROUGH destinations=[] owner=<none>
+     e0308252  mov r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308254  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e0308256  bl 0xe03088e0  UNCONDITIONAL_CALL destinations=[e03088e0] owner=<none>
+     e030825a  movw r0,#0x20bc  FALL_THROUGH destinations=[] owner=<none>
+     e030825e  adds r0,r4,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308260  ldr.w r0,[r0,r6,lsl #0x2]  FALL_THROUGH destinations=[] owner=<none>
+     e0308264  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e0308266  movs r0,#0x3  FALL_THROUGH destinations=[] owner=<none>
+     e0308268  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e0308270  push {lr}  FALL_THROUGH destinations=[] owner=<none>
+     e0308272  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e0308276  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0308278  pop {pc}  TERMINATOR destinations=[] owner=<none>
+
+--- WINDOW 0xE03076B0 (-36/+80) ---
+     e030768c  beq 0xe030766a  CONDITIONAL_JUMP destinations=[e030766a] owner=<none>
+     e030768e  movs r2,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0307690  str r2,[r0,#0x10]  FALL_THROUGH destinations=[] owner=<none>
+     e0307692  str r2,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e0307694  ldr r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e0307696  str.w r1,[r4,#0x2f8]  FALL_THROUGH destinations=[] owner=<none>
+     e030769a  ldr.w r1,[r0,#0x2d0]  FALL_THROUGH destinations=[] owner=<none>
+     e030769e  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e03076a0  blx r1  COMPUTED_CALL destinations=[] owner=<none>
+     e03076a2  bl 0xe0305788  UNCONDITIONAL_CALL destinations=[e0305788] owner=<none>
+     e03076a6  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03076aa  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03076ac  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+ >>> e03076b0  push {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b2  ldr r3,[r0,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b4  ldr.w r4,[r3,#0x2c4]  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b8  movs r3,#0x1  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076ba  blx r4  COMPUTED_CALL destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076bc  pop {r4,pc}  TERMINATOR destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076c0  push {r4,r5,r6,r7,r10,r11,lr}  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c4  mov r5,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c6  mov r7,r1  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c8  mov r6,r2  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ca  mov r10,r3  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076cc  ldrb.w r0,[r0,#0x224]  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d0  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d2  beq.w 0xe03077e8  CONDITIONAL_JUMP destinations=[e03077e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d6  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d8  bl 0xe0308908  UNCONDITIONAL_CALL destinations=[e0308908] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076dc  mov r1,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076de  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e0  bl 0xe0307890  UNCONDITIONAL_CALL destinations=[e0307890] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e4  mov r4,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e6  mov r1,r7  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e8  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ea  bl 0xe03078e8  UNCONDITIONAL_CALL destinations=[e03078e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ee  cmp r4,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f0  it ge  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f2  cmp.ge r0,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f4  blt 0xe03077e8  CONDITIONAL_JUMP destinations=[e03077e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f6  movw r0,#0x8f4  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076fa  adds r0,r5,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076fc  lsl.w r11,r4,#0x6  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e0307700  add.w r2,r11,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+
+--- WINDOW 0xE03076C0 (-36/+80) ---
+     e030769e  mov r0,r4  FALL_THROUGH destinations=[] owner=<none>
+     e03076a0  blx r1  COMPUTED_CALL destinations=[] owner=<none>
+     e03076a2  bl 0xe0305788  UNCONDITIONAL_CALL destinations=[e0305788] owner=<none>
+     e03076a6  bl 0xe0305708  UNCONDITIONAL_CALL destinations=[e0305708] owner=<none>
+     e03076aa  movs r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e03076ac  pop {r4,r5,r6,pc}  TERMINATOR destinations=[] owner=<none>
+     e03076b0  push {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b2  ldr r3,[r0,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b4  ldr.w r4,[r3,#0x2c4]  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076b8  movs r3,#0x1  FALL_THROUGH destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076ba  blx r4  COMPUTED_CALL destinations=[] owner=FUN_e03076b0 @ e03076b0
+     e03076bc  pop {r4,pc}  TERMINATOR destinations=[] owner=FUN_e03076b0 @ e03076b0
+ >>> e03076c0  push {r4,r5,r6,r7,r10,r11,lr}  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c4  mov r5,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c6  mov r7,r1  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076c8  mov r6,r2  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ca  mov r10,r3  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076cc  ldrb.w r0,[r0,#0x224]  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d0  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d2  beq.w 0xe03077e8  CONDITIONAL_JUMP destinations=[e03077e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d6  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076d8  bl 0xe0308908  UNCONDITIONAL_CALL destinations=[e0308908] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076dc  mov r1,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076de  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e0  bl 0xe0307890  UNCONDITIONAL_CALL destinations=[e0307890] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e4  mov r4,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e6  mov r1,r7  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076e8  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ea  bl 0xe03078e8  UNCONDITIONAL_CALL destinations=[e03078e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076ee  cmp r4,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f0  it ge  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f2  cmp.ge r0,#0x0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f4  blt 0xe03077e8  CONDITIONAL_JUMP destinations=[e03077e8] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076f6  movw r0,#0x8f4  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076fa  adds r0,r5,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e03076fc  lsl.w r11,r4,#0x6  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e0307700  add.w r2,r11,r0  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e0307704  movw r7,#0x1ac8  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e0307708  cbnz r6,0xe0307740  CONDITIONAL_JUMP destinations=[e0307740] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e030770a  str r6,[r2,#0xc]  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e030770c  mov r0,r5  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e030770e  str r6,[r2,#0x10]  FALL_THROUGH destinations=[] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+     e0307710  bl 0xe0308988  UNCONDITIONAL_CALL destinations=[e0308988] owner=ConStat_Reason_Inserter_Anchor @ e03076c0
+
+--- WINDOW 0xE0308D90 (-36/+80) ---
+     e0308d6c  subs r1,r1,r3  FALL_THROUGH destinations=[] owner=<none>
+     e0308d6e  beq 0xe0308d7c  CONDITIONAL_JUMP destinations=[e0308d7c] owner=<none>
+     e0308d70  movw r3,#0xb0c  FALL_THROUGH destinations=[] owner=<none>
+     e0308d74  cmp r1,r3  FALL_THROUGH destinations=[] owner=<none>
+     e0308d76  bne 0xe0308d8a  CONDITIONAL_JUMP destinations=[e0308d8a] owner=<none>
+     e0308d78  ldr r2,[r0,#0x14]  FALL_THROUGH destinations=[] owner=<none>
+     e0308d7a  b 0xe0308d8a  UNCONDITIONAL_JUMP destinations=[e0308d8a] owner=<none>
+     e0308d7c  ldr r2,[r0,#0x4]  FALL_THROUGH destinations=[] owner=<none>
+     e0308d7e  b 0xe0308d8a  UNCONDITIONAL_JUMP destinations=[e0308d8a] owner=<none>
+     e0308d80  ldr r2,[r0,#0x8]  FALL_THROUGH destinations=[] owner=<none>
+     e0308d82  b 0xe0308d8a  UNCONDITIONAL_JUMP destinations=[e0308d8a] owner=<none>
+     e0308d84  ldr r2,[r0,#0xc]  FALL_THROUGH destinations=[] owner=<none>
+     e0308d86  b 0xe0308d8a  UNCONDITIONAL_JUMP destinations=[e0308d8a] owner=<none>
+     e0308d88  ldr r2,[r0,#0x10]  FALL_THROUGH destinations=[] owner=<none>
+     e0308d8a  mov r0,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308d8c  bx lr  TERMINATOR destinations=[] owner=<none>
+ >>> e0308d90  movw r2,#0x3ee5  FALL_THROUGH destinations=[] owner=<none>
+     e0308d94  movt r2,#0x22  FALL_THROUGH destinations=[] owner=<none>
+     e0308d98  subs r1,r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308d9a  bcs 0xe0308dda  CONDITIONAL_JUMP destinations=[e0308dda] owner=<none>
+     e0308d9c  movw r2,#0xb32c  FALL_THROUGH destinations=[] owner=<none>
+     e0308da0  movt r2,#0xfffd  FALL_THROUGH destinations=[] owner=<none>
+     e0308da4  subs r1,r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308da6  beq 0xe0308e18  CONDITIONAL_JUMP destinations=[e0308e18] owner=<none>
+     e0308da8  movw r2,#0xd79b  FALL_THROUGH destinations=[] owner=<none>
+     e0308dac  movt r2,#0xfff7  FALL_THROUGH destinations=[] owner=<none>
+     e0308db0  subs r1,r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308db2  beq 0xe0308e2c  CONDITIONAL_JUMP destinations=[e0308e2c] owner=<none>
+     e0308db4  movw r2,#0xa672  FALL_THROUGH destinations=[] owner=<none>
+     e0308db8  movt r2,#0xfff2  FALL_THROUGH destinations=[] owner=<none>
+     e0308dbc  subs r1,r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308dbe  beq 0xe0308e20  CONDITIONAL_JUMP destinations=[e0308e20] owner=<none>
+     e0308dc0  movw r0,#0xdda6  FALL_THROUGH destinations=[] owner=<none>
+     e0308dc4  movt r0,#0xfff6  FALL_THROUGH destinations=[] owner=<none>
+     e0308dc8  cmp r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e0308dca  it ne  FALL_THROUGH destinations=[] owner=<none>
+     e0308dcc  bx.ne lr  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0308dce  movw r0,#0xe8e8  FALL_THROUGH destinations=[] owner=<none>
+     e0308dd2  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e0308dd6  str r3,[r0,#0x4]  FALL_THROUGH destinations=[] owner=<none>
+     e0308dd8  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308dda  subs r1,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e0308ddc  beq 0xe0308e24  CONDITIONAL_JUMP destinations=[e0308e24] owner=<none>
+     e0308dde  movw r2,#0x59e  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE0308E20 (-36/+80) ---
+     e0308dfe  subs r1,r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308e00  beq 0xe0308e1c  CONDITIONAL_JUMP destinations=[e0308e1c] owner=<none>
+     e0308e02  movw r2,#0x6348  FALL_THROUGH destinations=[] owner=<none>
+     e0308e06  movt r2,#0x7  FALL_THROUGH destinations=[] owner=<none>
+     e0308e0a  cmp r1,r2  FALL_THROUGH destinations=[] owner=<none>
+     e0308e0c  it ne  FALL_THROUGH destinations=[] owner=<none>
+     e0308e0e  bx.ne lr  CONDITIONAL_TERMINATOR destinations=[] owner=<none>
+     e0308e10  str r3,[r0,#0x30]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e12  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e14  str r3,[r0,#0x1c]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e16  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e18  str r3,[r0,#0x20]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e1a  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e1c  str r3,[r0,#0x24]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e1e  bx lr  TERMINATOR destinations=[] owner=<none>
+ >>> e0308e20  str r3,[r0,#0x28]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e22  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e24  str r3,[r0,#0x2c]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e26  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e28  str r3,[r0,#0x34]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e2a  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e2c  str r3,[r0,#0x38]  FALL_THROUGH destinations=[] owner=<none>
+     e0308e2e  bx lr  TERMINATOR destinations=[] owner=<none>
+     e0308e30  push {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e32  mov r4,r0  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e34  movw r0,#0xe904  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e38  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e3c  bl 0xe0308c18  UNCONDITIONAL_CALL destinations=[e0308c18] owner=FUN_e0308e30 @ e0308e30
+     e0308e40  ldr r0,[r4,#0x30]  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e42  bl 0xe030f330  UNCONDITIONAL_CALL destinations=[e030f330] owner=FUN_e0308e30 @ e0308e30
+     e0308e46  ldr r0,[r4,#0x30]  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e48  pop.w {r4,lr}  FALL_THROUGH destinations=[] owner=FUN_e0308e30 @ e0308e30
+     e0308e4c  b.w 0xe030fdb8  CALL_TERMINATOR destinations=[e030fdb8] owner=FUN_e0308e30 @ e0308e30
+     e0308e50  cmp r1,#0x2  FALL_THROUGH destinations=[] owner=<none>
+     e0308e52  bls 0xe0308e60  CONDITIONAL_JUMP destinations=[e0308e60] owner=<none>
+     e0308e54  movw r0,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e0308e58  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e0308e5c  b.w 0xe0308c40  UNCONDITIONAL_JUMP destinations=[e0308c40] owner=<none>
+     e0308e60  movw r0,#0xe904  FALL_THROUGH destinations=[] owner=<none>
+     e0308e64  movt r0,#0xc143  FALL_THROUGH destinations=[] owner=<none>
+     e0308e68  b.w 0xe0308c38  UNCONDITIONAL_JUMP destinations=[e0308c38] owner=<none>
+     e0308e70  movw r2,#0xedd4  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE0308F10 (-36/+80) ---
+ >>> e0308f10  movw r0,#0x3000  FALL_THROUGH destinations=[] owner=FUN_e0308f10 @ e0308f10
+     e0308f14  movt r0,#0xc144  FALL_THROUGH destinations=[] owner=FUN_e0308f10 @ e0308f10
+     e0308f18  bx lr  TERMINATOR destinations=[] owner=FUN_e0308f10 @ e0308f10
+     e0308f20  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0308f24  b.w 0xe0309db0  CALL_TERMINATOR destinations=[e0309db0] owner=<none>
+     e0308f30  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0308f34  b.w 0xe0309d78  CALL_TERMINATOR destinations=[e0309d78] owner=<none>
+     e0308f38  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0308f3c  b.w 0xe0309dd0  CALL_TERMINATOR destinations=[e0309dd0] owner=<none>
+     e0308f50  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0308f54  b.w 0xe0309d38  CALL_TERMINATOR destinations=[e0309d38] owner=<none>
+     e0308f58  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0308f5c  b.w 0xe0309bf8  CALL_TERMINATOR destinations=[e0309bf8] owner=<none>
+     e0308f60  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE030FDF0 (-36/+80) ---
+     e030fdcc  stm sp,{r1,r2,r3}  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fdd0  movw r3,#0xe4c8  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fdd4  movw r1,#0xe4d4  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fdd8  movt r3,#0xe09a  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fddc  movt r1,#0xe09a  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fde0  movs r2,#0xd  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fde2  blx r4  COMPUTED_CALL destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fde4  add sp,#0xc  FALL_THROUGH destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+     e030fde6  pop {r4,pc}  TERMINATOR destinations=[] owner=FUN_e030fdb8 @ e030fdb8
+ >>> e030fdf0  ldr.w pc,[0xe030fdf4]  COMPUTED_JUMP destinations=[38100424] owner=thunk_EXT_FUN_38100424 @ e030fdf0
+     e030fdf8  ldr.w pc,[0xe030fdfc]  COMPUTED_CALL_TERMINATOR destinations=[e06a69a0] owner=FUN_e0302800 @ e0302800
+     e030fe08  ldr.w pc,[0xe030fe0c]  COMPUTED_JUMP destinations=[381005a0] owner=thunk_EXT_FUN_381005a0 @ e030fe08
+     e030fe10  cmp r0,r1  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe12  it eq  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe14  bx.eq lr  CONDITIONAL_TERMINATOR destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe16  ldr r3,[r0,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe18  ldr.w r12,[r2,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe1c  cmp r3,r12  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe1e  it ne  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe20  add.ne r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe22  bne 0xe030fe10  CONDITIONAL_JUMP destinations=[e030fe10] owner=FUN_e030fe10 @ e030fe10
+     e030fe24  bx lr  TERMINATOR destinations=[] owner=FUN_e030fe10 @ e030fe10
+     e030fe28  push {r4,r5,lr}  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe2a  mov r4,r0  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe2c  mov r5,r1  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe2e  mov r0,r1  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe30  bl 0xe0305180  UNCONDITIONAL_CALL destinations=[e0305180] owner=FUN_e030fe28 @ e030fe28
+     e030fe34  cbz r0,0xe030fe42  CONDITIONAL_JUMP destinations=[e030fe42] owner=FUN_e030fe28 @ e030fe28
+     e030fe36  ldr r2,[r4,#0x6c]  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe38  ldr r1,[r4,#0x68]  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe3a  mov r0,r5  FALL_THROUGH destinations=[] owner=FUN_e030fe28 @ e030fe28
+     e030fe3c  bl 0xe0304e70  UNCONDITIONAL_CALL destinations=[e0304e70] owner=FUN_e030fe28 @ e030fe28
+     e030fe40  b 0xe030fe46  UNCONDITIONAL_JUMP destinations=[e030fe46] owner=FUN_e030fe28 @ e030fe28
+
+--- WINDOW 0xE030F330 (-36/+80) ---
+ >>> e030f330  push {r4,r5,lr}  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f332  sub sp,#0xc  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f334  movw r4,#0x3050  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f338  mov r5,r0  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f33a  movt r4,#0xc144  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f33e  movw r3,#0x24f7  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f342  adr.w r2,0xe030f380  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f346  movw r1,#0x100c  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f34a  adds r0,r4,#0x4  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f34c  bl 0xe059f8e4  UNCONDITIONAL_CALL destinations=[e059f8e4] owner=FUN_e030f330 @ e030f330
+     e030f350  str r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f352  ldr r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f354  movw r1,#0xe264  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f358  movt r1,#0xe09a  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f35c  ldr r4,[r0,#0x3c]  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f35e  movs r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f360  mov r2,r0  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f362  stm sp,{r0,r1,r2}  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f366  movw r3,#0xe270  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f36a  movw r1,#0xe27c  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f36e  movt r3,#0xe09a  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f372  movt r1,#0xe09a  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f376  mov r0,r5  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f378  movs r2,#0x4  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f37a  blx r4  COMPUTED_CALL destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f37c  add sp,#0xc  FALL_THROUGH destinations=[] owner=FUN_e030f330 @ e030f330
+     e030f37e  pop {r4,r5,pc}  TERMINATOR destinations=[] owner=FUN_e030f330 @ e030f330
+
+--- WINDOW 0xE03091F0 (-36/+80) ---
+     e0309200  sub.w r0,r0,#0x18  FALL_THROUGH destinations=[] owner=<none>
+     e0309204  b.w 0xe0308e30  CALL_TERMINATOR destinations=[e0308e30] owner=<none>
+     e0309210  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e0309214  b.w 0xe0309748  CALL_TERMINATOR destinations=[e0309748] owner=<none>
+     e0309218  sub.w r0,r0,#0x8  FALL_THROUGH destinations=[] owner=<none>
+     e030921c  b.w 0xe0309728  CALL_TERMINATOR destinations=[e0309728] owner=<none>
+
+--- WINDOW 0xE01D74CC (-36/+80) ---
+     e01d74a8  mov r2,#0x3c00000  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74ac  mov r0,#0xf3  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74b0  add r2,r2,#0x8000000a  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74b4  bl 0xe01d36d0  UNCONDITIONAL_CALL destinations=[e01d36d0] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74b8  ldr r2,[r5,#0x8]  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74bc  cmp r2,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74c0  bne 0xe01d73e0  CONDITIONAL_JUMP destinations=[e01d73e0] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74c4  add sp,sp,#0xc  FALL_THROUGH destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+     e01d74c8  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,r11,pc}  TERMINATOR destinations=[] owner=FUN_e01d73b8 @ e01d73b8
+ >>> e01d74cc  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74d0  sub sp,sp,#0x1c  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74d4  strb r0,[sp,#0x3]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74d8  cpy r11,r1  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74dc  movw r4,#0x7370  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74e0  str r2,[sp,#0x18]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74e4  movt r4,#0xc01e  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74e8  mov r0,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74ec  str r0,[sp,#0x10]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74f0  cmp r3,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74f4  str r0,[r4,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74f8  movne r0,#0xc  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d74fc  moveq r0,#0xb  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d7500  ldr r1,[r4,#0x68]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d7504  ldr r3,[r4,#0x64]  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d7508  mov r2,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d750c  mov r7,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d7510  mov r1,r1, lsr r3  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d7514  blx 0xe01d9a0e  UNCONDITIONAL_CALL destinations=[e01d9a0e] owner=FUN_e01d74cc @ e01d74cc
+     e01d7518  rsb r1,r7,r7, lsl #0x2  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+     e01d751c  add r3,r11,r1, lsl #0x3  FALL_THROUGH destinations=[] owner=FUN_e01d74cc @ e01d74cc
+
+--- WINDOW 0xE01D7EB4 (-36/+80) ---
+     e01d7e90  cmp r1,r0  FALL_THROUGH destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7e94  blt 0xe01d7e54  CONDITIONAL_JUMP destinations=[e01d7e54] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7e98  mov r0,#0x6  FALL_THROUGH destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7e9c  blx 0xe01d6d6a  UNCONDITIONAL_CALL destinations=[e01d6d6a] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7ea0  bic r1,r0,#0x2  FALL_THROUGH destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7ea4  mov r0,#0x6  FALL_THROUGH destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7ea8  blx 0xe01d6e42  UNCONDITIONAL_CALL destinations=[e01d6e42] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7eac  cpy r0,r4  FALL_THROUGH destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+     e01d7eb0  ldmia sp!,{r4,r5,r6,r7,r10,r11,pc}  TERMINATOR destinations=[] owner=FUN_e01d7d68 @ e01d7d68
+ >>> e01d7eb4  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7eb8  sub sp,sp,#0x1bc  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ebc  str r0,[sp,#0x24]  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ec0  str r1,[sp,#0x20]  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ec4  cpy r7,r2  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ec8  movw r5,#0x736c  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ecc  cpy r11,r3  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ed0  movt r5,#0xc01e  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ed4  mov r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ed8  bl 0xe01dc008  UNCONDITIONAL_CALL destinations=[e01dc008] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7edc  str r0,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ee0  adr r0,0xe01d8108  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ee4  mov r4,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ee8  blx 0xe01d9198  UNCONDITIONAL_CALL destinations=[e01d9198] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7eec  adr r0,0xe01d8114  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ef0  str r4,[r5,#0x78]  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ef4  blx 0xe01d02dc  UNCONDITIONAL_CALL destinations=[e01d02dc] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7ef8  cpy r6,r4  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7efc  movw r3,#0x73ec  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7f00  rsb r2,r6,r6, lsl #0x2  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+     e01d7f04  movt r3,#0xc01e  FALL_THROUGH destinations=[] owner=FUN_e01d7eb4 @ e01d7eb4
+
+--- WINDOW 0xE01D82B0 (-36/+80) ---
+     e01d828c  ldmia sp!,{r4,r5,pc}  TERMINATOR destinations=[] owner=FUN_e01d826c @ e01d826c
+     e01d8290  stmdb sp!,{r4,r5,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d8290 @ e01d8290
+     e01d8294  add r5,r0,#0x4  FALL_THROUGH destinations=[] owner=FUN_e01d8290 @ e01d8290
+     e01d8298  bl 0xe01d826c  UNCONDITIONAL_CALL destinations=[e01d826c] owner=FUN_e01d8290 @ e01d8290
+     e01d829c  cpy r4,r0  FALL_THROUGH destinations=[] owner=FUN_e01d8290 @ e01d8290
+     e01d82a0  cpy r0,r5  FALL_THROUGH destinations=[] owner=FUN_e01d8290 @ e01d8290
+     e01d82a4  bl 0xe01d826c  UNCONDITIONAL_CALL destinations=[e01d826c] owner=FUN_e01d8290 @ e01d8290
+     e01d82a8  pkhbt r0,r0,r4, lsl #0x10  FALL_THROUGH destinations=[] owner=FUN_e01d8290 @ e01d8290
+     e01d82ac  ldmia sp!,{r4,r5,pc}  TERMINATOR destinations=[] owner=FUN_e01d8290 @ e01d8290
+ >>> e01d82b0  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82b4  sub sp,sp,#0x30  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82b8  cpy r4,r0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82bc  add r0,sp,#0x24  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82c0  cpy r5,r3  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82c4  cpy r10,r2  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82c8  stmia r0,{r1,r4,r5}  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82cc  mov r0,#0x1  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82d0  mvn r5,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82d4  strb r0,[sp,#0x3]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82d8  cmp r1,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82dc  mov r11,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82e0  adreq r0,0xe01d84f0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82e4  cpy r9,r11  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82e8  str r11,[sp,#0x1c]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82ec  bleq 0xe01d02d4  CONDITIONAL_CALL destinations=[e01d02d4] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82f0  adr r0,0xe01d851c  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82f4  ldr r4,[sp,#0x28]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82f8  blx 0xe01d02dc  UNCONDITIONAL_CALL destinations=[e01d02dc] owner=FUN_e01d82b0 @ e01d82b0
+     e01d82fc  ldr r0,[sp,#0x60]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d8300  ldr r2,[sp,#0x5c]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+
+--- WINDOW 0xE01D87C0 (-36/+80) ---
+     e01d879c  cmp r5,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87a0  addge r12,r10,r5, lsl #0x2  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87a4  strge r9,[r12,#0xa4]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87a8  add r12,r5,#0x1  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87ac  str r12,[r10,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87b0  adr r0,0xe01d88e8  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87b4  add sp,sp,#0x30  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87b8  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d82b0 @ e01d82b0
+     e01d87bc  b 0xe01d02d4  CALL_TERMINATOR destinations=[e01d02d4] owner=FUN_e01d82b0 @ e01d82b0
+ >>> e01d87c0  stmdb sp!,{r4,r5,r6,r7,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87c4  cpy r5,r0  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87c8  cpy r6,r1  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87cc  cpy r4,r2  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87d0  movw r0,#0x1521  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87d4  cmp r5,r0  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87d8  bne 0xe01d87f8  CONDITIONAL_JUMP destinations=[e01d87f8] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87dc  adr r0,0xe01d88ec  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87e0  blx 0xe01dbdde  UNCONDITIONAL_CALL destinations=[e01dbdde] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87e4  cpy r0,r6  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87e8  blx 0xe01dbf76  UNCONDITIONAL_CALL destinations=[e01dbf76] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87ec  movw r0,#0x4240  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87f0  add r0,r0,#0xf0000  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87f4  blx 0xe01d57ac  UNCONDITIONAL_CALL destinations=[e01d57ac] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87f8  cmp r4,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d87fc  bne 0xe01d8868  CONDITIONAL_JUMP destinations=[e01d8868] owner=FUN_e01d87c0 @ e01d87c0
+     e01d8800  movw r1,#0x9020  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d8804  add r1,r1,#0x18400000  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d8808  ldr r0,[r1,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d880c  movw r4,#0x4240  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+     e01d8810  add r4,r4,#0xf0000  FALL_THROUGH destinations=[] owner=FUN_e01d87c0 @ e01d87c0
+
+--- WINDOW 0xE01D89C0 (-36/+80) ---
+     e01d899c  movt r1,#0x801e  FALL_THROUGH destinations=[] owner=<none>
+     e01d89a0  movt r0,#0x801e  FALL_THROUGH destinations=[] owner=<none>
+     e01d89a4  cmp r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89a8  subne r2,r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89ac  movne r1,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89b0  blne 0xe01e32cc  CONDITIONAL_CALL destinations=[e01e32cc] owner=<none>
+     e01d89b4  movw r1,#0x7ec4  FALL_THROUGH destinations=[] owner=<none>
+     e01d89b8  movw r0,#0x7ec4  FALL_THROUGH destinations=[] owner=<none>
+     e01d89bc  movt r1,#0xc01e  FALL_THROUGH destinations=[] owner=<none>
+ >>> e01d89c0  movt r0,#0xc01e  FALL_THROUGH destinations=[] owner=<none>
+     e01d89c4  cmp r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89c8  subne r2,r1,r0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89cc  movne r1,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89d0  blne 0xe01e32cc  CONDITIONAL_CALL destinations=[e01e32cc] owner=<none>
+     e01d89d4  ldr r0,[r4,#0x14]  FALL_THROUGH destinations=[] owner=<none>
+     e01d89d8  movw r1,#0xabcd  FALL_THROUGH destinations=[] owner=<none>
+     e01d89dc  movt r1,#0x123  FALL_THROUGH destinations=[] owner=<none>
+     e01d89e0  movw r6,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e01d89e4  movt r6,#0x8020  FALL_THROUGH destinations=[] owner=<none>
+     e01d89e8  cmp r0,r1  FALL_THROUGH destinations=[] owner=<none>
+     e01d89ec  moveq r0,#0x200000  FALL_THROUGH destinations=[] owner=<none>
+     e01d89f0  addeq r0,r0,#0x80000000  FALL_THROUGH destinations=[] owner=<none>
+     e01d89f4  streq r0,[r4,#0x14]  FALL_THROUGH destinations=[] owner=<none>
+     e01d89f8  beq 0xe01d8a04  CONDITIONAL_JUMP destinations=[e01d8a04] owner=<none>
+     e01d89fc  cmp r0,#0x0  FALL_THROUGH destinations=[] owner=<none>
+     e01d8a00  beq 0xe01d8a08  CONDITIONAL_JUMP destinations=[e01d8a08] owner=<none>
+     e01d8a04  cpy r6,r0  FALL_THROUGH destinations=[] owner=<none>
+     e01d8a08  ldr r7,[r4,#0x0]  FALL_THROUGH destinations=[] owner=<none>
+     e01d8a0c  ldrb r10,[r4,#0x18]  FALL_THROUGH destinations=[] owner=<none>
+     e01d8a10  cmp r5,#0x0  FALL_THROUGH destinations=[] owner=<none>
+
+--- WINDOW 0xE01D8D08 (-36/+80) ---
+     e01d8ce4  ldr r2,[r1,r0]  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8ce6  cbz r2,0xe01d8cf0  CONDITIONAL_JUMP destinations=[e01d8cf0] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8ce8  adds r0,r0,r1  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cea  ldr r0,[r0,#0x8]  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cec  ldr r0,[r0,#0x10]  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cee  pop {pc}  TERMINATOR destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cf0  movw r2,#0xa  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cf4  adr.w r1,0xe01d9024  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cf8  movt r2,#0x83c0  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8cfc  movw r0,#0x5be  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8d00  blx 0xe01d36d0  UNCONDITIONAL_CALL destinations=[e01d36d0] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8d04  movs r0,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+     e01d8d06  pop {pc}  TERMINATOR destinations=[] owner=FUN_e01d8cd0 @ e01d8cd0
+ >>> e01d8d08  push {r4,r5,r6,r7,r10,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d0c  mov r7,r0  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d0e  mov r10,r1  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d10  mov r6,r2  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d12  movw r5,#0x1000  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d16  movt r5,#0x1802  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d1a  ldr r4,[r5,#0x8]  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d1c  bl 0xe01d9176  UNCONDITIONAL_CALL destinations=[e01d9176] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d20  cmp.w r10,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d24  uxth r4,r4  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d26  ite ne  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d28  bic.ne r4,r4,#0x20  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d2c  orr.eq r4,r4,#0x20  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d30  cmp r6,#0x0  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d32  ite ne  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d34  orr.ne r4,r4,#0x1  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d38  bic.eq r4,r4,#0x1  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d3c  str r4,[r5,#0x8]  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d3e  lsls r1,r7,#0x18  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d40  str r1,[r5,#0x14]  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d42  ldr r2,[r5,#0x0]  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d44  movs r1,r6  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d46  it ne  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d48  mov.ne r1,#0xd  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d4a  ubfx r2,r2,#0xb,#0x5  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d4e  cmp r2,r1  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d50  bne 0xe01d8d42  CONDITIONAL_JUMP destinations=[e01d8d42] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d52  pop.w {r4,r5,r6,r7,r10,lr}  FALL_THROUGH destinations=[] owner=FUN_e01d8d08 @ e01d8d08
+     e01d8d56  b.w 0xe01d9188  UNCONDITIONAL_JUMP destinations=[e01d9188] owner=FUN_e01d8d08 @ e01d8d08
+
+
+============================================================
+4. SELECTED FUNCTION DECOMPILATION
+============================================================
+
+--- FUNCTION FUN_e0302a78 @ e0302a78 (anchor 0xE0302A78) ---
+
+undefined4 FUN_e0302a78(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  if (param_3 == 0) {
+    return 4;
+  }
+  thunk_EXT_FUN_38100424(param_3,0,0x10);
+  *(undefined4 *)(param_3 + 0xc) = 0;
+  return 1;
+}
+
+
+
+--- FUNCTION FUN_e030b478 @ e030b478 (anchor 0xE030B478) ---
+
+undefined4 FUN_e030b478(int *param_1,undefined4 param_2,int param_3,uint param_4,char param_5)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  uint uVar3;
+  
+  if ((char)param_1[3] != '\0') {
+    iVar1 = (**(code **)(*param_1 + 0x214))(param_1);
+    if (iVar1 == 0) {
+      return 3;
+    }
+    iVar1 = FUN_e0305180(param_2);
+    if (iVar1 == 0) {
+      uVar2 = 0xffffffff;
+    }
+    else {
+      uVar2 = FUN_e0304e70(param_2,param_1[0x1a],param_1[0x1b]);
+    }
+    iVar1 = (**(code **)(*param_1 + 0x294))(param_1,uVar2);
+    if (iVar1 != 0) {
+      uVar3 = 0;
+      if (param_4 < 8) {
+        if (param_4 == 7) {
+          iVar1 = FUN_e0308f10();
+          (**(code **)(**(int **)(iVar1 + 0x20) + 0x54))(*(int **)(iVar1 + 0x20),uVar2,0x20);
+          return 0;
+        }
+        if (param_4 == 4) {
+          if (param_3 == 2 || param_3 == 1) {
+            uVar3 = 0x10000;
+          }
+          if (param_3 == 3 || param_3 == 1) {
+            uVar3 = uVar3 | 0x80;
+          }
+          iVar1 = FUN_e0308f10();
+          (**(code **)(**(int **)(iVar1 + 0x20) + 0x54))(*(int **)(iVar1 + 0x20),uVar2,uVar3);
+          return 0;
+        }
+        if (param_4 == 3) {
+          if (param_3 == 2 || param_3 == 1) {
+            uVar3 = 0x200000;
+          }
+          if (param_3 == 3 || param_3 == 1) {
+            uVar3 = uVar3 | 0x1000;
+          }
+          iVar1 = FUN_e0308f10();
+          (**(code **)(**(int **)(iVar1 + 0x20) + 0x54))(*(int **)(iVar1 + 0x20),uVar2,uVar3);
+          return 0;
+        }
+        if (param_4 == 1) {
+          if (param_3 == 2 || param_3 == 1) {
+            uVar3 = 0x20000;
+          }
+          if (param_3 == 3 || param_3 == 1) {
+            uVar3 = uVar3 | 0x40;
+          }
+          iVar1 = FUN_e0308f10();
+          (**(code **)(**(int **)(iVar1 + 0x20) + 0x54))(*(int **)(iVar1 + 0x20),uVar2,uVar3);
+          return 0;
+        }
+      }
+      else {
+        if (param_4 == 8) {
+          iVar1 = FUN_e0308f10();
+          (**(code **)(**(int **)(iVar1 + 0x20) + 0x54))(*(int **)(iVar1 + 0x20),uVar2,0x800);
+          return 0;
+        }
+        if (param_4 == 0xb) {
+          FUN_e030aa70(uVar2);
+          return 0;
+        }
+        if (param_4 == 0xd) {
+          FUN_e030b450(param_2,param_5 != '\0',1);
+          return 0;
+        }
+        if (param_4 == 0xe) {
+          uVar2 = 0;
+          if (param_5 != '\0') {
+            uVar2 = 2;
+          }
+          FUN_e030b450(param_2,uVar2,2);
+          return 0;
+        }
+      }
+      return 3;
+    }
+  }
+  return 2;
+}
+
+
+
+--- FUNCTION FUN_e03076b0 @ e03076b0 (anchor 0xE03076B0) ---
+
+void FUN_e03076b0(int *param_1)
+
+{
+  (**(code **)(*param_1 + 0x2c4))();
+  return;
+}
+
+
+
+--- FUNCTION ConStat_Reason_Inserter_Anchor @ e03076c0 (anchor 0xE03076C0) ---
+
+undefined4 ConStat_Reason_Inserter_Anchor(int *param_1,undefined4 param_2,int param_3,int param_4)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  int iVar3;
+  
+  if ((char)param_1[0x89] != '\0') {
+    uVar1 = FUN_e0308908(param_1);
+    iVar2 = FUN_e0307890(param_1,uVar1);
+    iVar3 = FUN_e03078e8(param_1,param_2);
+    if (-1 < iVar2 && -1 < iVar3) {
+      if (param_3 == 0) {
+        param_1[iVar2 * 0x10 + 0x240] = 0;
+        param_1[iVar2 * 0x10 + 0x241] = 0;
+        FUN_e0308988(param_1);
+        param_1[iVar2 * 2 + 0x6b2] = 0;
+        param_1[iVar2 * 2 + 0x6b3] = 0;
+        param_1[iVar2 * 0x10 + 0xd1] = 1;
+        (**(code **)(*param_1 + 0x2d0))(param_1);
+        if (param_4 != 0) {
+          FUN_e0305708();
+        }
+      }
+      else {
+        if (10 < (uint)param_1[iVar2 * 0x10 + 0x240]) {
+          return 3;
+        }
+        if (param_3 == 1) {
+          param_1[iVar2 * 0x10 + 0xd1] = 0;
+        }
+        else if (9 < param_3 - 1U) {
+          if (param_3 == 0xb) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x1000000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xfeffffff;
+          }
+          else if (param_3 - 0xbU < 2) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x2000000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xfdffffff;
+          }
+          else if (param_3 - 0xbU == 2) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x800000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xff7fffff;
+          }
+        }
+        iVar3 = param_1[iVar2 * 0x10 + 0x240];
+        param_1[iVar2 * 0x10 + 0x240] = iVar3 + 1;
+        param_1[iVar2 * 0x10 + iVar3 + 0x241] = param_3;
+        if (param_3 != 0x25) {
+          param_1[0xbe] = 0;
+        }
+        (**(code **)(*param_1 + 0x2d0))(param_1);
+        if (param_4 != 0) {
+          FUN_e0305708();
+          FUN_e0305788();
+        }
+      }
+      return 0;
+    }
+  }
+  return 3;
+}
+
+
+
+--- FUNCTION FUN_e03067e8 @ e03067e8 (anchor 0xE03067E8) ---
+
+void FUN_e03067e8(int *param_1,int *param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  code *pcVar4;
+  uint uVar5;
+  int *piVar6;
+  int iVar7;
+  uint uVar8;
+  int iVar9;
+  undefined1 local_2d [9];
+  
+  if (param_1 != param_2) {
+    param_1[0x88] = (int)param_2;
+    param_1[0x87] = (int)param_2;
+    iVar1 = (**(code **)(*param_2 + 0x158))(param_2,param_1 + 0x9b);
+    param_1[0x7cc] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1b8))(param_2,param_1 + 0x21c);
+    param_1[0x7cd] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x198))(param_2,param_1 + 0x22a);
+    param_1[0x7ce] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1bc))(param_2,param_1 + 0x29d);
+    param_1[0x7f7] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 400))(param_2,param_1 + 0x612);
+    param_1[0x817] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x174))(param_2,param_1 + 0x2dd);
+    param_1[0x804] = iVar1;
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xa4]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xa5];
+      iVar1 = (**(code **)(*param_2 + 0x15c))(param_2,iVar7,param_1 + uVar8 * 0x10 + 0xce);
+      pcVar4 = *(code **)(*param_2 + 0x1a8);
+      param_1[uVar8 + 1999] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x12e);
+      pcVar4 = *(code **)(*param_2 + 0x1ac);
+      param_1[uVar8 + 0x7d5] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x158);
+      pcVar4 = *(code **)(*param_2 + 0x4c);
+      param_1[uVar8 + 0x7db] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x18 + 0x182);
+      pcVar4 = *(code **)(*param_2 + 0x1a4);
+      param_1[uVar8 + 0x7e1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 9 + 0x6be);
+      pcVar4 = *(code **)(*param_2 + 0x160);
+      param_1[uVar8 + 0x82f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x10 + 0x23d);
+      pcVar4 = *(code **)(*param_2 + 0x16c);
+      param_1[uVar8 + 0x7f1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 6 + 0x2a1);
+      pcVar4 = *(code **)(*param_2 + 0x170);
+      param_1[uVar8 + 0x7f8] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x2c5);
+      pcVar4 = *(code **)(*param_2 + 0x164);
+      param_1[uVar8 + 0x7fe] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x20 + 0x4f2);
+      pcVar4 = *(code **)(*param_2 + 0x1b4);
+      param_1[uVar8 + 0x805] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 5 + 0x5b2);
+      pcVar4 = *(code **)(*param_2 + 0x168);
+      param_1[uVar8 + 0x80b] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0xb + 0x5d0);
+      pcVar4 = *(code **)(*param_2 + 8);
+      param_1[uVar8 + 0x811] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x613);
+      pcVar4 = *(code **)(*param_2 + 0x188);
+      param_1[uVar8 + 0x818] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x13 + 0x61f);
+      pcVar4 = *(code **)(*param_2 + 0x48);
+      param_1[uVar8 + 0x81e] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x6eb);
+      pcVar4 = *(code **)(*param_2 + 0x178);
+      param_1[uVar8 + 0x834] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 8 + 0x708);
+      pcVar4 = *(code **)(*param_2 + 0x34);
+      param_1[uVar8 + 0x83f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x6b2);
+      param_1[uVar8 + 0x829] = iVar1;
+    }
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xaf]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xb0];
+      iVar1 = (**(code **)(*param_2 + 0x54))(param_2,iVar7,param_1 + uVar8 * 2 + 0x212);
+      pcVar4 = *(code **)(*param_2 + 0x6c);
+      param_1[uVar8 + 0x7e7] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x233);
+      pcVar4 = *(code **)(*param_2 + 0x20);
+      param_1[uVar8 + 0x7ec] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x691);
+      pcVar4 = *(code **)(*param_2 + 0x58);
+      param_1[uVar8 + 0x824] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 + 0x703);
+      piVar6 = param_1 + uVar8 * 6 + 0x738;
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x83a] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,1,piVar6);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,2,piVar6 + 2);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,3,piVar6 + 4);
+      param_1[uVar8 + 0x845] = iVar1;
+    }
+    uVar8 = 0;
+    do {
+      iVar1 = (**(code **)(*param_2 + 0x74))(param_2,uVar8,param_1 + uVar8 * 4 + 0x756);
+      uVar5 = uVar8 + 1;
+      param_1[uVar8 + 0x84a] = iVar1;
+      uVar8 = uVar5;
+    } while (uVar5 < 0x1d);
+    iVar1 = 0x65;
+    do {
+      iVar7 = 1;
+      do {
+        iVar9 = 1;
+        do {
+          iVar2 = (**(code **)(*param_2 + 0x3c))(param_2,iVar1,iVar7,iVar9,local_2d);
+          iVar3 = iVar9 + (iVar1 * 3 + iVar7) * 0x14;
+          param_1[iVar3 + -0xd98] = iVar2;
+          iVar9 = iVar9 + 1;
+          *(undefined1 *)((int)param_1 + iVar3 + 0x9db) = local_2d[0];
+        } while (iVar9 < 0x15);
+        iVar7 = iVar7 + 1;
+      } while (iVar7 < 4);
+      iVar1 = iVar1 + 1;
+    } while (iVar1 < 0x83);
+    FUN_e0975a20((int)param_1 + 0x225,param_1 + 0x21f,0x14);
+    FUN_e0975a20((int)param_1 + 0x239,(int)param_1 + 0x887,0x14);
+    *(undefined1 *)(param_1 + 0x9a) = 0;
+  }
+  return;
+}
+
+
+
+--- FUNCTION FUN_e0308b70 @ e0308b70 (anchor 0xE0308B70) ---
+
+undefined4 * FUN_e0308b70(undefined4 *param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  int iVar3;
+  
+  uVar1 = 0;
+  do {
+    uVar2 = uVar1 + 1;
+    param_1[uVar1] = 0;
+    uVar1 = uVar2;
+  } while (uVar2 < 3);
+  iVar3 = FUN_e0981052(0xc1442ff0);
+  if (iVar3 != 0) {
+    FUN_e030cf48(0xc143e910);
+    FUN_e0981216(0xc01e05e8);
+    FUN_e0981116(0xc1442ff0);
+  }
+  *param_1 = 0xc143e910;
+  iVar3 = FUN_e0981052(0xc1442ff8);
+  if (iVar3 != 0) {
+    FUN_e0306240(0xc143eb2c);
+    FUN_e0981216(0xc01e05f4);
+    FUN_e0981116(0xc1442ff8);
+  }
+  param_1[1] = 0xc143eb2c;
+  return param_1;
+}
+
+
+
+--- FUNCTION FUN_e0308c48 @ e0308c48 (anchor 0xE0308C48) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+int * FUN_e0308c48(void)
+
+{
+  int *piVar1;
+  int iVar2;
+  
+  piVar1 = _DAT_c143e908;
+  if ((_DAT_c143e908 == (int *)0x0) ||
+     (iVar2 = (**(code **)(*_DAT_c143e908 + 0x298))(_DAT_c143e908), iVar2 == 0)) {
+    return _DAT_c143e904;
+  }
+  return piVar1;
+}
+
+
+
+--- FUNCTION FUN_e0308e30 @ e0308e30 (anchor 0xE0308E30) ---
+
+void FUN_e0308e30(int param_1)
+
+{
+  FUN_e0308c18(&DAT_c143e904);
+  FUN_e030f330(*(undefined4 *)(param_1 + 0x30));
+  FUN_e030fdb8(*(undefined4 *)(param_1 + 0x30));
+  return;
+}
+
+
+
+--- FUNCTION FUN_e0308f10 @ e0308f10 (anchor 0xE0308F10) ---
+
+undefined1 * FUN_e0308f10(void)
+
+{
+  return &DAT_c1443000;
+}
+
+
+
+--- FUNCTION thunk_EXT_FUN_38100424 @ e030fdf0 (anchor 0xE030FDF0) ---
+
+void thunk_EXT_FUN_38100424(void)
+
+{
+                    /* WARNING: Could not recover jumptable at 0xe030fdf0. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (*DAT_e030fdf4)();
+  return;
+}
+
+
+
+--- FUNCTION FUN_e030f330 @ e030f330 (anchor 0xE030F330) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e030f330(int *param_1)
+
+{
+  _DAT_c1443050 = FUN_e059f8e4(0xc1443054,0x100c,"constat_udw.cpp",0x24f7);
+  (**(code **)(*param_1 + 0x3c))(param_1,&DAT_e09ae27c,4,&DAT_e09ae270,1,&DAT_e09ae264,1);
+  return;
+}
+
+
+
+--- FUNCTION FUN_e01d74cc @ e01d74cc (anchor 0xE01D74CC) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e01d74cc(char param_1,int param_2,int param_3,int param_4)
+
+{
+  undefined4 uVar1;
+  uint uVar2;
+  uint uVar3;
+  int iVar4;
+  uint uVar5;
+  int iVar6;
+  byte bVar7;
+  uint uVar8;
+  int iVar9;
+  int *piVar10;
+  uint uVar11;
+  uint extraout_r12;
+  uint extraout_r12_00;
+  bool bVar12;
+  undefined8 uVar13;
+  undefined1 local_40;
+  byte local_3f;
+  char local_3e;
+  char local_3d;
+  int local_38;
+  int local_34;
+  uint local_30;
+  int local_28;
+  
+  local_30 = 0;
+  _DAT_c01e7370 = 0;
+  if (param_4 == 0) {
+    uVar1 = 0xb;
+  }
+  else {
+    uVar1 = 0xc;
+  }
+  uVar11 = 0;
+  local_3d = param_1;
+  local_28 = param_3;
+  FUN_e01d9a0e(uVar1,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),0);
+  do {
+    iVar9 = param_2 + uVar11 * 0x18;
+    local_3e = (char)uVar11 + '0';
+    if (*(int *)(iVar9 + 8) == 0) {
+      local_30 = local_30 | 1 << (uVar11 & 0xff);
+    }
+    else {
+      uVar1 = *(undefined4 *)(iVar9 + 4);
+      if (local_3d != '\0') {
+        uVar1 = FUN_e01d8c4c(uVar1);
+      }
+      uVar2 = FUN_e01d8c50(uVar1);
+      uVar3 = FUN_e01d8c90(uVar1);
+      iVar9 = FUN_e01d8cd0();
+      while (uVar2 < uVar3) {
+        _DAT_c01e7370 = _DAT_c01e7370 + iVar9;
+        FUN_e01d02c2(local_3e);
+        FUN_e01d9a0e(0x10,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),
+                     _DAT_c01e7370 >> (_DAT_c01e73d4 & 0xff));
+        uVar8 = 0x1521;
+        uVar5 = extraout_r12;
+        if (local_28 == 0x1521) {
+          uVar8 = _DAT_c01e7370;
+          uVar5 = _DAT_c01e73dc;
+        }
+        uVar2 = uVar2 + iVar9;
+        if (local_28 == 0x1521) {
+          thunk_FUN_e01dbf16(uVar8 >> (uVar5 & 0xff) & 0xff);
+        }
+      }
+      if (*(char *)(*(int *)(&DAT_c01e73f4 + uVar11 * 0xc) + 5) == '\0') {
+        FUN_e01d73b8(uVar11,local_3d);
+      }
+    }
+    uVar11 = uVar11 + 1;
+  } while (uVar11 < 4);
+  uVar2 = 0;
+  local_3f = 0;
+  uVar11 = 0;
+  do {
+    if (*(int *)(param_2 + uVar11 * 0x18 + 8) != 0) {
+      uVar2 = uVar2 | 1 << (uVar11 & 0xff);
+    }
+    uVar11 = uVar11 + 1;
+  } while (uVar11 < 4);
+  do {
+    uVar11 = 0;
+    if (uVar2 == 0) {
+      do {
+        uVar3 = *(uint *)(uVar11 * 0x18 + -0x3fe18c88);
+        uVar2 = *(int *)(*(int *)(&DAT_c01e73f4 + uVar11 * 0xc) + 0x10) - 1;
+        if ((uVar2 & uVar3) != 0) {
+          *(uint *)(uVar11 * 0x18 + -0x3fe18c88) =
+               (*(int *)(*(int *)(&DAT_c01e73f4 + uVar11 * 0xc) + 0x10) + uVar3) - 1 & ~uVar2;
+        }
+        uVar11 = uVar11 + 1;
+      } while (uVar11 < 4);
+      uVar11 = 0;
+      do {
+        local_3e = (char)uVar11 + '0';
+        iVar9 = *(int *)(*(int *)(&DAT_c01e73f4 + uVar11 * 0xc) + 0x10);
+        uVar2 = *(uint *)(uVar11 * 0x18 + -0x3fe18c88);
+        if (local_3d != '\0') {
+          uVar2 = FUN_e01d8c4c(uVar2);
+        }
+        if ((*(int *)(uVar11 * 0x18 + -0x3fe18c84) != 0) &&
+           (uVar3 = FUN_e01d8d6c(uVar2), uVar3 == uVar11)) {
+          iVar4 = FUN_e01d8c90(uVar2);
+          uVar13 = FUN_e01d8c50();
+          bVar12 = (int)uVar13 == iVar4;
+          if (bVar12) {
+            uVar13 = CONCAT44(1,local_30);
+          }
+          if (!bVar12 || ((uint)uVar13 & (int)((ulonglong)uVar13 >> 0x20) << (uVar11 & 0xff)) != 0)
+          {
+            iVar4 = FUN_e01d8c50(uVar2);
+            iVar6 = FUN_e01d8c72(uVar11);
+            while (uVar2 < (uint)(iVar6 + iVar4)) {
+              _DAT_c01e7370 = _DAT_c01e7370 + iVar9;
+              FUN_e01d02c2(local_3e);
+              FUN_e01d9a0e(0x10,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),
+                           _DAT_c01e7370 >> (_DAT_c01e73d4 & 0xff));
+              uVar5 = 0x1521;
+              uVar3 = extraout_r12_00;
+              if (local_28 == 0x1521) {
+                uVar5 = _DAT_c01e7370;
+                uVar3 = _DAT_c01e73dc;
+              }
+              uVar2 = uVar2 + iVar9;
+              if (local_28 == 0x1521) {
+                thunk_FUN_e01dbf16(uVar5 >> (uVar3 & 0xff) & 0xff);
+              }
+            }
+          }
+        }
+        uVar11 = uVar11 + 1;
+      } while (uVar11 < 4);
+      while (_DAT_c01e7370 < _DAT_c01e73d8) {
+        _DAT_c01e7370 = _DAT_c01e7370 + 0x10000;
+        FUN_e01d9a0e(0x10,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),
+                     _DAT_c01e7370 >> (_DAT_c01e73d4 & 0xff));
+        if (local_28 == 0x1521) {
+          thunk_FUN_e01dbf16(_DAT_c01e7370 >> (_DAT_c01e73dc & 0xff) & 0xff);
+        }
+      }
+      FUN_e01d9a0e(0x10,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),
+                   _DAT_c01e7370 >> (_DAT_c01e73d4 & 0xff));
+      FUN_e01d02dc(&DAT_e01d7d4c);
+      return;
+    }
+    local_3e = '\0';
+    _DAT_c01e73e0 = _DAT_c01e73e0 + 1;
+    if (3 < _DAT_c01e73e0) {
+      _DAT_c01e73e0 = 0;
+    }
+    uVar11 = 0;
+    do {
+      iVar9 = param_2 + uVar11 * 0x18;
+      if (*(int *)(iVar9 + 0x10) != 0) {
+        if (*(int *)(iVar9 + 0x10) == 7) {
+          local_3f = 0x1e;
+        }
+        iVar4 = FUN_e01d96e0(uVar11);
+        *(int *)(iVar9 + 0x10) = iVar4;
+        if (iVar4 == 0) {
+          FUN_e01d02c2((uVar11 + 0x41) - (uint)local_3f & 0xff);
+          local_3e = '\x01';
+          _DAT_c01e7370 = _DAT_c01e7370 + *(int *)(iVar9 + 0x14);
+          bVar12 = *(int *)(iVar9 + 8) == 0;
+          uVar3 = _DAT_c01e7370;
+          if (bVar12) {
+            uVar3 = 1 << (uVar11 & 0xff);
+          }
+          local_3f = 0;
+          if (bVar12) {
+            uVar2 = uVar2 & ~uVar3;
+          }
+        }
+      }
+      uVar11 = uVar11 + 1;
+    } while (uVar11 < 4);
+    bVar7 = 0;
+    uVar11 = _DAT_c01e73e0;
+    do {
+      if (3 < uVar11) {
+        uVar11 = 0;
+      }
+      iVar9 = uVar11 * 3;
+      piVar10 = (int *)(param_2 + uVar11 * 0x18);
+      if (uVar11 != 0) {
+        iVar9 = *(int *)(param_2 + 8);
+      }
+      if ((((uVar11 == 0 || iVar9 == 0) || (0xffff < *(uint *)(param_2 + 4))) && (piVar10[4] == 0))
+         && (piVar10[2] != 0)) {
+        iVar9 = *piVar10;
+        local_38 = piVar10[1];
+        _DAT_c01e73e0 = uVar11;
+        if (local_3d != '\0') {
+          local_38 = FUN_e01d8c4c();
+        }
+        local_34 = FUN_e01d8c90(local_38);
+        uVar5 = FUN_e01d8cd0();
+        uVar3 = (local_34 + uVar5) - local_38;
+        if ((uint)piVar10[2] < uVar3) {
+          uVar3 = piVar10[2];
+        }
+        if (uVar5 != uVar3) {
+          iVar4 = FUN_e01d9344();
+          iVar9 = local_34;
+          FUN_e01e3374(piVar10[3],local_34 + iVar4,uVar5);
+          FUN_e01e3374(piVar10[3] + (local_38 - iVar9),*piVar10,uVar3);
+          iVar9 = piVar10[3];
+        }
+        piVar10[5] = uVar5;
+        *piVar10 = *piVar10 + uVar3;
+        piVar10[1] = piVar10[1] + uVar3;
+        piVar10[2] = piVar10[2] - uVar3;
+        iVar6 = FUN_e01d9344();
+        iVar4 = local_34;
+        iVar6 = FUN_e01d7254(local_34 + iVar6,iVar9,uVar5,&local_40);
+        if (iVar6 != 0) {
+          FUN_e01d02c2(uVar11 + 0x61 & 0xff);
+          _DAT_c01e7370 = _DAT_c01e7370 + piVar10[5];
+          if (piVar10[2] == 0) {
+            uVar2 = uVar2 & ~(1 << (uVar11 & 0xff));
+          }
+          goto LAB_e01d78a8;
+        }
+        iVar9 = FUN_e01d9688(iVar4,iVar9,uVar5,local_40);
+        piVar10[4] = iVar9;
+        break;
+      }
+      bVar7 = bVar7 + 1;
+      uVar11 = uVar11 + 1;
+    } while (bVar7 < 4);
+    if (local_3e != '\0') {
+LAB_e01d78a8:
+      if (local_28 == 0x1521) {
+        thunk_FUN_e01dbf16(_DAT_c01e7370 >> (_DAT_c01e73dc & 0xff) & 0xff);
+      }
+      FUN_e01d9a0e(0x10,_DAT_c01e73d8 >> (_DAT_c01e73d4 & 0xff),
+                   _DAT_c01e7370 >> (_DAT_c01e73d4 & 0xff));
+    }
+  } while( true );
+}
+
+
+
+--- FUNCTION FUN_e01d7eb4 @ e01d7eb4 (anchor 0xE01D7EB4) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e01d7eb4(undefined4 param_1,undefined4 param_2,int param_3,int param_4)
+
+{
+  int iVar1;
+  char *pcVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  uint uVar6;
+  undefined1 auStack_1b8 [404];
+  
+  _DAT_c01e736c = FUN_e01dc008(1);
+  uVar3 = 0;
+  FUN_e01d9198("[FLASH] ");
+  _DAT_c01e73e4 = 0;
+  FUN_e01d02dc("[FLASH] Available sectors    ");
+  uVar4 = 0;
+  do {
+    iVar1 = uVar4 * 0xc;
+    uVar5 = (uint)*(ushort *)(*(int *)(&DAT_c01e73f4 + iVar1) + 0xe);
+    if (*(uint *)(*(int *)(&DAT_c01e73f4 + iVar1) + 0x10) < 0x10000) {
+      uVar6 = uVar4 + 0x61;
+    }
+    else {
+      uVar6 = uVar4 + 0x41;
+    }
+    for (; uVar5 != 0; uVar5 = uVar5 - 1) {
+      FUN_e01d02c2(uVar6 & 0xff);
+    }
+    uVar3 = uVar3 + *(int *)(&DAT_c01e73ec + iVar1);
+    if (_DAT_c01e73e4 < *(uint *)(*(int *)(&DAT_c01e73f4 + iVar1) + 0x10)) {
+      _DAT_c01e73e4 = *(uint *)(*(int *)(&DAT_c01e73f4 + iVar1) + 0x10);
+    }
+    uVar4 = uVar4 + 1;
+  } while (uVar4 < 4);
+  FUN_e01d02dc(&DAT_e01d7d4c);
+  _DAT_c01e7370 = 0;
+  _DAT_c01e73e8 = 0;
+  for (_DAT_c01e73d4 = 0; (uVar3 >> (_DAT_c01e73d4 & 0xff)) >> 6 != 0;
+      _DAT_c01e73d4 = _DAT_c01e73d4 + 1) {
+  }
+  for (_DAT_c01e73dc = 0; uVar4 = uVar3 >> (_DAT_c01e73dc & 0xff), uVar4 >> 8 != 0;
+      _DAT_c01e73dc = _DAT_c01e73dc + 1) {
+  }
+  _DAT_c01e73d8 = uVar3;
+  if (param_3 == 0x1521) {
+    thunk_FUN_e01dbf16(uVar4 & 0xff);
+  }
+  FUN_e01d82b0(param_1,param_2,auStack_1b8,0x10000,0x10000,1,_DAT_c01e73d4,_DAT_c01e73d8,
+               &DAT_c01e73e8,param_3);
+  FUN_e01d7d68(auStack_1b8,uVar3,param_3,param_4);
+  uVar3 = FUN_e01d6d6a(1);
+  if ((uVar3 & 1) == 0 && param_4 == 0) {
+    FUN_e01d02dc("\n\r[FLASH] Forcing power state to OFF: ");
+    FUN_e01d0312(uVar3);
+    FUN_e01d6e42(1,uVar3 | 1);
+    pcVar2 = " -> ";
+    uVar3 = uVar3 | 1;
+  }
+  else {
+    pcVar2 = "\n\r[FLASH] Leaving power state alone: ";
+  }
+  FUN_e01d02dc(pcVar2);
+  FUN_e01d0312(uVar3);
+  FUN_e01d02dc("\n\r[FLASH] Board may now be turned off\n\r");
+  FUN_e01d68fe();
+  FUN_e01d9a0e(0x12,0);
+  FUN_e01d87c0(param_3,_DAT_c01e73e8,param_4);
+  return;
+}
+
+
+
+--- FUNCTION FUN_e01d82b0 @ e01d82b0 (anchor 0xE01D82B0) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e01d82b0(byte *param_1,int param_2,int *param_3,uint param_4,undefined4 param_5,
+                 undefined4 param_6,uint param_7,uint param_8,uint *param_9,int param_10)
+
+{
+  byte bVar1;
+  bool bVar2;
+  char *pcVar3;
+  int iVar4;
+  uint uVar5;
+  byte *pbVar6;
+  byte *pbVar7;
+  int iVar8;
+  byte *pbVar9;
+  int iVar10;
+  uint uVar11;
+  uint uVar12;
+  int local_4c;
+  uint local_48;
+  int local_40;
+  int local_38;
+  
+  pcVar3 = (char *)0x1;
+  bVar2 = true;
+  uVar11 = 0;
+  if (param_2 == 0) {
+    pcVar3 = "[FLASH] Whoa! There is no data to flash.\n\r";
+  }
+  iVar10 = 0;
+  local_38 = 0;
+  if (param_2 == 0) {
+    thunk_FUN_e01d02dc(pcVar3);
+  }
+  FUN_e01d02dc("[FLASH] Extracting S-Records\n\r");
+  FUN_e01d9a0e(8,param_8 >> (param_7 & 0xff),0);
+  pbVar6 = param_1;
+  iVar8 = -1;
+  pbVar9 = param_1;
+LAB_e01d8788:
+  do {
+    while( true ) {
+      if (param_1 + param_2 <= pbVar6) {
+        if (-1 < iVar8) {
+          param_3[iVar8 + 0x29] = iVar10;
+        }
+        *param_3 = iVar8 + 1;
+        thunk_FUN_e01d02dc(&DAT_e01d88e8);
+        return;
+      }
+      bVar1 = *pbVar6;
+      pbVar7 = pbVar6 + 1;
+      if (bVar1 != 0x50 && bVar1 != 0x4e) {
+        uVar11 = (uint)pbVar6[1];
+        pbVar7 = pbVar6 + 2;
+      }
+      pbVar6 = pbVar7;
+      if (bVar1 != 0x30) break;
+LAB_e01d837c:
+      pbVar6 = pbVar6 + uVar11;
+    }
+    if (bVar1 != 0x33) {
+      if (bVar1 == 0x35) {
+        pbVar6 = pbVar6 + 5;
+      }
+      else {
+        if (bVar1 == 0x37) goto LAB_e01d837c;
+        if (bVar1 == 0x4e) {
+          if (iVar8 < 0) {
+            FUN_e01d02dc("[FLASH] Bad format; Hanging!\n\r");
+            do {
+                    /* WARNING: Do nothing block with infinite loop */
+            } while( true );
+          }
+          uVar5 = FUN_e01d8290(pbVar6);
+          param_3[iVar8 + 0x51] = uVar5 >> 0x18;
+          param_3[iVar8 + 0x15] = uVar5 & 0xffffff;
+          pbVar6 = pbVar6 + 9;
+          bVar2 = false;
+          local_40 = 0;
+        }
+        else if (bVar1 == 0x50) {
+          if (iVar8 != -1) {
+            param_3[iVar8 + 0x29] = iVar10;
+            iVar10 = 0;
+          }
+          pbVar9 = (byte *)((uint)(pbVar9 + 0x3f) & 0xffffffc0);
+          iVar4 = FUN_e01d8290(pbVar6);
+          pbVar6 = pbVar6 + 9;
+          param_3[iVar8 + 0x3e] = iVar4;
+          param_3[iVar8 + 2] = (int)pbVar9;
+          bVar2 = true;
+          iVar8 = iVar8 + 1;
+        }
+        else {
+          FUN_e01d36d0(0x1de,"nos_reflash_shared.c",0x83c00015);
+        }
+      }
+      goto LAB_e01d8788;
+    }
+    pbVar7 = pbVar6 + 4;
+    uVar12 = uVar11 + 0xfc & 0xff;
+    iVar4 = CONCAT31(CONCAT21(CONCAT11(*pbVar6,pbVar6[1]),pbVar6[2]),pbVar6[3]);
+    uVar5 = uVar11 + *pbVar6 + (uint)pbVar6[1] + (uint)pbVar6[2] + (uint)pbVar6[3] & 0xff;
+    if (bVar2) {
+      if (-1 < iVar8) {
+        param_3[iVar8 + 0x15] = iVar4;
+      }
+      bVar2 = false;
+      local_40 = iVar4;
+    }
+    if (local_40 != iVar4) {
+      FUN_e01d02dc("[FLASH] Found a gap: expected=");
+      FUN_e01d0312(local_40);
+      FUN_e01d02dc("; actual=");
+      FUN_e01d0312(iVar4);
+      FUN_e01d02dc(&DAT_e01d85a0);
+    }
+    iVar4 = uVar12 - 1;
+    iVar10 = iVar10 + iVar4;
+    local_40 = local_40 + iVar4;
+    uVar11 = (uVar11 + 0xfc) * 0x1000000;
+    if (pbVar9 + uVar12 < pbVar7) {
+      FUN_e01e3374(pbVar9,pbVar7);
+      pbVar9 = pbVar9 + iVar4;
+      while( true ) {
+        uVar12 = uVar11 >> 0x18;
+        uVar11 = uVar11 - 0x1000000;
+        if (uVar12 < 2) break;
+        uVar5 = uVar5 + *pbVar7 & 0xff;
+        pbVar7 = pbVar7 + 1;
+      }
+    }
+    else {
+      while( true ) {
+        uVar12 = uVar11 >> 0x18;
+        uVar11 = uVar11 - 0x1000000;
+        if (uVar12 < 2) break;
+        bVar1 = *pbVar7;
+        *pbVar9 = bVar1;
+        uVar5 = uVar5 + bVar1 & 0xff;
+        pbVar7 = pbVar7 + 1;
+        pbVar9 = pbVar9 + 1;
+      }
+    }
+    if (param_9 != (uint *)0x0) {
+      uVar12 = *param_9;
+    }
+    uVar11 = uVar11 >> 0x18;
+    if (param_9 != (uint *)0x0) {
+      *param_9 = uVar12 + uVar5;
+    }
+    pbVar6 = pbVar7 + 1;
+    if ((uVar5 + *pbVar7 & 0xff) != 0xff) {
+      FUN_e01d02dc("[FLASH] Checksum failure just prior to ");
+      FUN_e01d0312(pbVar6);
+      FUN_e01d02dc();
+      FUN_e01d02dc("srecs\r\n");
+      local_4c = 1;
+      local_48 = 0;
+      pbVar7 = pbVar7 + -0x10d;
+      do {
+        FUN_e01d02ee(*pbVar7);
+        if ((local_48 + 1) % 0x1b == 0) {
+          FUN_e01d02dc(&DAT_e01d85a0);
+          local_4c = local_4c + 1;
+          if (local_4c == 10 || local_4c == 0xb) {
+            thunk_FUN_e01d02dc(&DAT_e01d85a0);
+          }
+        }
+        local_48 = local_48 + 1;
+        pbVar7 = pbVar7 + 1;
+      } while (local_48 < 0x2be);
+      FUN_e01d02dc("SREC checksum error\r\n");
+      FUN_e01d36d0(0x1b6,"nos_reflash_shared.c",0x83c00014);
+    }
+    iVar4 = _DAT_18409020;
+    if (param_4 <= (uint)(iVar10 - local_38)) {
+      FUN_e01d9a0e(9,param_8 >> (param_7 & 0xff),iVar10 >> (param_7 & 0xff));
+      uVar5 = _DAT_18409020 - iVar4;
+      if (50000 < uVar5) {
+        FUN_e01d02dc("[FLASH] BOOT_ui_set_status took ");
+        FUN_e01d0312(uVar5);
+        FUN_e01d02dc(" usec.");
+        FUN_e01d02dc(&DAT_e01d85a0);
+      }
+      FUN_e01d02c2(0x2e);
+      local_38 = iVar10;
+      if (param_10 == 0x1521) {
+        thunk_FUN_e01dbf16(0);
+      }
+    }
+  } while( true );
+}
+
+
+
+--- FUNCTION FUN_e01d87c0 @ e01d87c0 (anchor 0xE01D87C0) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e01d87c0(int param_1,undefined4 param_2,int param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  uint uVar3;
+  uint uVar4;
+  
+  if (param_1 == 0x1521) {
+    FUN_e01dbdde(&DAT_e01d88ec);
+    FUN_e01dbf76(param_2);
+    FUN_e01d57ac(1000000);
+  }
+  if (param_3 == 0) {
+    uVar4 = 1000000;
+    iVar2 = _DAT_18409020;
+    do {
+      iVar1 = _DAT_18409020;
+      if (-1 < _DAT_18409020 - iVar2) {
+        iVar2 = thunk_FUN_e01d9a0e(0x13,param_2,0);
+      }
+      uVar3 = _DAT_18409020 - iVar1;
+      if (uVar4 < (uint)(_DAT_18409020 - iVar1)) {
+        uVar3 = uVar4;
+      }
+      uVar4 = uVar4 - uVar3;
+    } while (param_1 != 0x1521 || uVar4 != 0);
+  }
+  uVar4 = FUN_e01d6d6a(1);
+  if ((uVar4 & 0x20) != 0) {
+    thunk_FUN_e01d6e42(1,uVar4 & 0xffffffdf);
+  }
+  FUN_e01d0ccc();
+  FUN_e01d36d0(0x271,"nos_reflash_shared.c",0x83c00017);
+  return;
+}
+
+
+
+Functions decompiled=15
+
+
+============================================================
+5. DSID 0x12FB0 IMMEDIATE-SEQUENCE SEARCH
+============================================================
+
+DSID LOW/HIGH IMMEDIATE HIT at e02d6110 movw r5,#0x2fb0
+  e02d6110  movw r5,#0x2fb0
+  e02d6114  movt r5,#0xe09a
+  e02d6118  ldm.w r5,{r0,r1}
+  e02d611c  str.w r1,[sp,#0x650]
+  e02d6120  adds r1,r6,r4
+  e02d6122  movw r3,#0x64c
+  e02d6126  movs r2,#0x0
+
+DSID LOW/HIGH IMMEDIATE HIT at e0302aac movw r1,#0x2fb0
+  e0302aac  movw r1,#0x2fb0
+  e0302ab0  movt r1,#0x1
+  e0302ab4  blx r2
+  e0302ab6  str r0,[r4,#0x0]
+  e0302ab8  movs r0,#0x0
+  e0302aba  pop {r4,pc}
+
+DSID LOW/HIGH IMMEDIATE HIT at e06a8960 movw r1,#0x2fb0
+  e06a8960  movw r1,#0x2fb0
+  e06a8964  movt r1,#0xffff
+  e06a8968  adds r1,r0,r1
+  e06a896a  movw r0,#0x6667
+  e06a896e  movt r0,#0x6666
+  e06a8972  smmul r0,r0,r1
+  e06a8976  lsrs r0,r0,#0x2
+Executable instructions checked for DSID immediate=2247190
+
+DSID immediate-sequence candidates=3
+A matching immediate sequence establishes code that constructs the DSID, not by itself the meaning of a returned status.
+
+
+============================================================
+6. VTABLE ADDRESS-POINT CROSSCHECK
+============================================================
+
+ADDRESS-POINT 0xE09AEA38
+  +0x00000050 @ e09aea88 = 0xE03083F1
+  +0x00000054 @ e09aea8c = 0xE0308439
+  +0x00000058 @ e09aea90 = 0xE0307CE9
+  +0x00000170 @ e09aeba8 = 0xE0303B41
+  +0x00000174 @ e09aebac = 0xE0307A39
+  +0x00000178 @ e09aebb0 = 0xE0307AD9
+
+ADDRESS-POINT 0xE09AEA54
+  +0x00000294 @ e09aece8 = 0xE03067E9
+  +0x000002C0 @ e09aed14 = 0xE03076B1
+  +0x000002C4 @ e09aed18 = 0xE03076C1
+  +0x000002C8 @ e09aed1c = 0xE03077F1
+  +0x000002CC @ e09aed20 = 0xE0307829
+
+ADDRESS-POINT 0xE09AF194
+  +0x0000000C @ e09af1a0 = 0xE03091E1
+  +0x00000010 @ e09af1a4 = 0xE03091E9
+  +0x00000014 @ e09af1a8 = 0xE03091F1
+  +0x00000018 @ e09af1ac = 0xE03091F9
+  +0x0000001C @ e09af1b0 = 0xE0309201
+
+
+============================================================
+7. DEPENDENCY ROOT AND PROVIDER-FIELD REFERENCES
+============================================================
+
+GLOBAL 0xC143E904
+  from=e0308c66 type=READ owner=FUN_e0308c48 @ e0308c48
+  from=e0308e38 type=PARAM owner=FUN_e0308e30 @ e0308e30
+  from=e0306798 type=READ owner=<none>
+  from=e03067c6 type=READ owner=<none>
+  from=e03067c2 type=PARAM owner=<none>
+  from=e0308cbc type=PARAM owner=<none>
+  from=e0308e58 type=DATA owner=<none>
+  from=e0308e64 type=DATA owner=<none>
+  from=e0308b7e type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308bbe type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308be6 type=DATA owner=FUN_e0308b70 @ e0308b70
+  reference_count=11
+
+GLOBAL 0xC143E908
+  from=e030fec0 type=READ owner=FUN_e030feb8 @ e030feb8
+  from=e0308c52 type=READ owner=FUN_e0308c48 @ e0308c48
+  from=e0308b7e type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308be4 type=WRITE owner=FUN_e0308b70 @ e0308b70
+  reference_count=4
+
+GLOBAL 0xC143E910
+  reference_count=0
+
+GLOBAL 0xC1442FF0
+  reference_count=0
+
+GLOBAL 0xC1442FF8
+  reference_count=0
+
+GLOBAL 0xC1443000
+  from=e0308e80 type=WRITE owner=<none>
+  from=e030925c type=DATA owner=<none>
+  reference_count=2
+
+GLOBAL 0xC144301C
+  from=e0308eb8 type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443020
+  from=e0308eba type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443028
+  from=e0308ebe type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443030
+  from=e0308ec2 type=WRITE owner=<none>
+  reference_count=1
+Service-key mapping already established in prior evidence: 0xDEED54 -> C144301C; 0x1FF211 -> C1443020; 0xA701E -> C1443028; 0xF8AE47 -> C1443030.
+The raw provider values are in RAM outside the imported ELF; this section reports static references, not runtime pointer contents.
+
+
+============================================================
+8. CONCLUSIONS TO COMPLETE FROM EVIDENCE
+============================================================
+A. Readiness: pointer words for E0306779/E03067B1 must be tied to a table or callback owner before assigning their receiver type.
+B. DSID: compare the E01D7EB4/E01D87C0 and neighboring policy functions against the actual 0x12FB0 query and reason-writer ABI; numeric 0x12/0x13 alone is not enough.
+C. Mask provider: E0308438 is a strong +0x54 candidate because its arguments match E030B478's scalar mask ABI; runtime vptr at C1443020 remains unavailable in the imported ELF.
+D. No finding here establishes the user's active subscription reason or an entitlement/account correction.
+E. No bypass, account/eligibility modification, state write, reset, RTP action, printer request, or firmware modification is performed.
