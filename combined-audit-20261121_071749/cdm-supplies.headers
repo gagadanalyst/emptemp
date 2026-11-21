@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: HP HTTP Server; HP DeskJet 2800 series - 588S5A; Serial Number: CN48NDZPMS; Built:Fri Jul 17, 2026 02:33:17PM {TBP1CN2629AR}
+Content-Type: application/json
+ETag: 2000000
+Transfer-Encoding: chunked
+Content-Encoding: gzip
+Cache-Control: must-revalidate, max-age=0
+Pragma: no-cache
+

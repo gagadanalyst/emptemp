@@ -1,0 +1,17 @@
+HP DeskJet 2855e — runtime evidence scope
+Printer: 192.168.2.180
+Capture time: 20261121_071749
+
+The four JSON files in this folder are fresh HTTP GET responses from previously confirmed read-only CDM diagnostic resources:
+- /cdm/alert/v1/alerts
+- /cdm/supply/v1/configPublic
+- /cdm/supply/v1/suppliesPublic
+- /cdm/supply/v1/supplyAssessment
+
+No POST, PUT, DELETE, RTP action, reset, region-reset, cartridge-setup, or printer state-changing request was made.
+
+IMPORTANT LIMITATION:
+These HTTP resources do not expose firmware RAM at 0xC143ED50, 0xC1443030, or the selected ConStat object's reason-group memory. This run therefore does NOT establish the live readiness byte, concrete provider pointer, or active internal reason. Those require a supported read-only runtime memory/debug facility. Do not infer those values from the HTTP responses.
+
+Ghidra exit status: 0
+Ghidra report: HP2855e_Combined_Ghidra_Report.txt (if the headless run completed successfully)

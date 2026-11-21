@@ -1,0 +1,2840 @@
+HP DeskJet 2855e — combined read-only Ghidra audit
+Program=hp_lbi_address_mapped.elf imageBase=c01e3c40
+NO auto-analysis, disassembly of undefined bytes, function creation, memory edits, context edits, or firmware writes.
+
+[KNOWN ADDRESS MAP]
+selected object candidate=0xC143EB2C
+readiness field candidate=0xC143ED50 (object+0x224)
+selected-object pointer cell=0xC143E908 (unmapped RAM in supplied ELF)
+F8AE47 provider pointer cell=0xC1443030 (unmapped RAM in supplied ELF)
+ConStat CanPrint field candidate=object+0x2F8
+ConStat reason groups candidate=object+0x8F4
+
+[FUNCTION INVENTORY]
+address=0xE0306240 function=FUN_e0306240 entry=e0306240 body=[[e0306240, e0306725]]
+address=0xE03067E8 function=FUN_e03067e8 entry=e03067e8 body=[[e03067e8, e0306a77] [e0306a7c, e0306c1b]]
+address=0xE03076C0 function=ConStat_Reason_Inserter_Anchor entry=e03076c0 body=[[e03076c0, e03077ed]]
+address=0xE0308988 function=FUN_e0308988 entry=e0308988 body=[[e0308988, e03089cd]]
+address=0xE0308B70 function=FUN_e0308b70 entry=e0308b70 body=[[e0308b70, e0308be9]]
+address=0xE0308C48 function=FUN_e0308c48 entry=e0308c48 body=[[e0308c48, e0308c69]]
+address=0xE030FB40 function=FUN_e030fb40 entry=e030fb40 body=[[e030fb40, e030fc11]]
+address=0xE030FEB8 function=FUN_e030feb8 entry=e030feb8 body=[[e030feb0, e030feb1] [e030feb8, e030fec5]]
+
+[INSTRUCTION WINDOW E030679E -112/+112]
+     e030672e  mov r4,r0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e0306730  bl 0xe0302800  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0302800]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0306734, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0302800, 4)
+     e0306734  tst r5,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x1, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (unique, 0x1ad900, 4) INT_AND (register, 0x34, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x61, 1) INT_EQUAL (unique, 0x1ad900, 4) , (const, 0x0, 4)
+          pcode: (register, 0x60, 1) INT_SLESS (unique, 0x1ad900, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x68, 1)
+     e0306738  it eq  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e030673a  pop.eq {r4,r5,pc}  fn=<none> flow=CONDITIONAL_TERMINATOR destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe030673c, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e030673c  mov r0,r4  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e030673e  pop.w {r4,r5,lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x58, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e0306742  b.w 0xe06a69a0  fn=<none> flow=CALL_TERMINATOR destinations=[e06a69a0]
+          pcode:  ---  BRANCH (ram, 0xe06a69a0, 4)
+     e0306748  push {r4,lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e030674a  mov r4,r0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e030674c  bl 0xe0302810  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0302810]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0306750, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0302810, 4)
+     e0306750  movs r0,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0306752  strb r0,[r4,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x30, 4) , (const, 0xc, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e0306754  pop {r4,pc}  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0306758  subs r2,#0x8f  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x8f, 4) , (register, 0x28, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x28, 4) , (const, 0x8f, 4)
+          pcode: (register, 0x28, 4) INT_SUB (register, 0x28, 4) , (const, 0x8f, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e030675a  beq 0xe0306764  fn=<none> flow=CONDITIONAL_JUMP destinations=[e0306764]
+          pcode: (unique, 0x122b00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306764, 4) , (unique, 0x122b00, 1)
+     e030675c  cmp r2,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x1, 4) , (register, 0x28, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e030675e  bne 0xe0306768  fn=<none> flow=CONDITIONAL_JUMP destinations=[e0306768]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306768, 4) , (unique, 0x122d00, 1)
+     e0306760  mov r1,r2  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (register, 0x28, 4)
+     e0306762  b 0xe0306766  fn=<none> flow=UNCONDITIONAL_JUMP destinations=[e0306766]
+          pcode:  ---  BRANCH (ram, 0xe0306766, 4)
+     e0306764  movs r1,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0306766  strb r1,[r0,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x20, 4) , (const, 0xc, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e0306768  movs r0,#0x2  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x2, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030676a  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0306778  push {r4,r5,lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e030677a  mov r4,r0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e030677c  mov r5,r1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x24, 4)
+     e030677e  ldrb.w r0,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e0306782  cmp r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x0, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0306784  it eq  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e0306786  cmp.eq r1,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306788, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x1, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0306788  bne 0xe030679e  fn=<none> flow=CONDITIONAL_JUMP destinations=[e030679e]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe030679e, 4) , (unique, 0x122d00, 1)
+     e030678a  ldr r0,[r4,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030678c  ldr.w r2,[r0,#0x294]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x294, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e0306790  movw r0,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0306794  movt r0,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0306798  ldr r1,[r0,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030679a  mov r0,r4  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e030679c  blx r2  fn=<none> flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x28, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030679e, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+ >>> e030679e  strb.w r5,[r4,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x30, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x1a0300, 1) SUBPIECE (register, 0x34, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (unique, 0x1a0300, 1)
+     e03067a2  bl 0xe0305708  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0305708]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe03067a6, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0305708, 4)
+     e03067a6  movs r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e03067a8  pop {r4,r5,pc}  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067b0  push {lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e03067b2  ldrb.w r2,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x28, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e03067b6  cmp r2,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x0, 4) , (register, 0x28, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067b8  it eq  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e03067ba  cmp.eq r1,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067bc, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x1, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067bc  bne 0xe03067ce  fn=<none> flow=CONDITIONAL_JUMP destinations=[e03067ce]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067ce, 4) , (unique, 0x122d00, 1)
+     e03067be  movw r3,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x2c, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x2c, 4) , (const, 0x0, 4)
+     e03067c2  movt r3,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x2c, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x2c, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e03067c6  ldr r2,[r3,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e03067c8  strb r1,[r0,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x20, 4) , (const, 0xc, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e03067ca  str.w r2,[r0,#0x220]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x220, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x28, 4)
+     e03067ce  strb.w r1,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x1a0300, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (unique, 0x1a0300, 1)
+     e03067d2  bl 0xe0305708  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0305708]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe03067d6, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0305708, 4)
+     e03067d6  movs r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e03067d8  pop {pc}  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067e0  ldrb.w r0,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e03067e4  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067e8  push {r4,r5,r6,r7,r8,r9,r10,r11,lr}  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x54, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x4c, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x48, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x44, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x40, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x3c, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x38, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+     e03067ec  sub sp,#0x10  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129e00, 4) COPY (const, 0x10, 4)
+          pcode: (register, 0x54, 4) INT_SUB (register, 0x54, 4) , (unique, 0x129e00, 4)
+     e03067ee  cmp r0,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (register, 0x24, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (unique, 0x149d00, 4) INT_SUB (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067f0  it eq  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e03067f2  mov.eq r0,#0x3  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067f4, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x20, 4) COPY (const, 0x3, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e03067f4  beq.w 0xe0306c16  fn=FUN_e03067e8 @ e03067e8 flow=CONDITIONAL_JUMP destinations=[e0306c16]
+          pcode: (unique, 0x124c00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306c16, 4) , (unique, 0x124c00, 1)
+     e03067f8  str.w r1,[r0,#0x220]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x220, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x24, 4)
+     e03067fc  str.w r1,[r0,#0x21c]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x21c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x24, 4)
+     e0306800  mov r6,r0  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x38, 4) COPY (register, 0x20, 4)
+     e0306802  ldr r0,[r1,#0x0]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e0306804  mov r5,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x24, 4)
+     e0306806  ldr.w r2,[r0,#0x158]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x158, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e030680a  mov r0,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x24, 4)
+     e030680c  add.w r1,r6,#0x26c  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12ae00, 4) COPY (const, 0x26c, 4)
+          pcode: (unique, 0x12b000, 4) INT_RIGHT (unique, 0x12ae00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12b000, 4) , (const, 0x0, 4)
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x24, 4) INT_ADD (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+
+[INSTRUCTION WINDOW E03067CE -112/+112]
+     e030675e  bne 0xe0306768  fn=<none> flow=CONDITIONAL_JUMP destinations=[e0306768]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306768, 4) , (unique, 0x122d00, 1)
+     e0306760  mov r1,r2  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (register, 0x28, 4)
+     e0306762  b 0xe0306766  fn=<none> flow=UNCONDITIONAL_JUMP destinations=[e0306766]
+          pcode:  ---  BRANCH (ram, 0xe0306766, 4)
+     e0306764  movs r1,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0306766  strb r1,[r0,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x20, 4) , (const, 0xc, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e0306768  movs r0,#0x2  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x2, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030676a  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0306778  push {r4,r5,lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e030677a  mov r4,r0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e030677c  mov r5,r1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x24, 4)
+     e030677e  ldrb.w r0,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e0306782  cmp r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x0, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0306784  it eq  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e0306786  cmp.eq r1,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306788, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x1, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0306788  bne 0xe030679e  fn=<none> flow=CONDITIONAL_JUMP destinations=[e030679e]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe030679e, 4) , (unique, 0x122d00, 1)
+     e030678a  ldr r0,[r4,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030678c  ldr.w r2,[r0,#0x294]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x294, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e0306790  movw r0,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0306794  movt r0,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0306798  ldr r1,[r0,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030679a  mov r0,r4  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e030679c  blx r2  fn=<none> flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x28, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030679e, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030679e  strb.w r5,[r4,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x30, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x1a0300, 1) SUBPIECE (register, 0x34, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (unique, 0x1a0300, 1)
+     e03067a2  bl 0xe0305708  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0305708]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe03067a6, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0305708, 4)
+     e03067a6  movs r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e03067a8  pop {r4,r5,pc}  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067b0  push {lr}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e03067b2  ldrb.w r2,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x28, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e03067b6  cmp r2,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x0, 4) , (register, 0x28, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067b8  it eq  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e03067ba  cmp.eq r1,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067bc, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x1, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067bc  bne 0xe03067ce  fn=<none> flow=CONDITIONAL_JUMP destinations=[e03067ce]
+          pcode: (unique, 0x122d00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067ce, 4) , (unique, 0x122d00, 1)
+     e03067be  movw r3,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x2c, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x2c, 4) , (const, 0x0, 4)
+     e03067c2  movt r3,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x2c, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x2c, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e03067c6  ldr r2,[r3,#0x0]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e03067c8  strb r1,[r0,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x20, 4) , (const, 0xc, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e03067ca  str.w r2,[r0,#0x220]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x220, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x28, 4)
+ >>> e03067ce  strb.w r1,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x1a0300, 1) SUBPIECE (register, 0x24, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (unique, 0x1a0300, 1)
+     e03067d2  bl 0xe0305708  fn=<none> flow=UNCONDITIONAL_CALL destinations=[e0305708]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe03067d6, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0305708, 4)
+     e03067d6  movs r0,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e03067d8  pop {pc}  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067e0  ldrb.w r0,[r0,#0x224]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x224, 4)
+          pcode: (unique, 0x14d900, 1) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14d900, 1)
+     e03067e4  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e03067e8  push {r4,r5,r6,r7,r8,r9,r10,r11,lr}  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x54, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x4c, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x48, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x44, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x40, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x3c, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x38, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+     e03067ec  sub sp,#0x10  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129e00, 4) COPY (const, 0x10, 4)
+          pcode: (register, 0x54, 4) INT_SUB (register, 0x54, 4) , (unique, 0x129e00, 4)
+     e03067ee  cmp r0,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (register, 0x24, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (unique, 0x149d00, 4) INT_SUB (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e03067f0  it eq  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126d00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e03067f2  mov.eq r0,#0x3  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x500, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x500, 1)
+          pcode:  ---  CBRANCH (ram, 0xe03067f4, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x20, 4) COPY (const, 0x3, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e03067f4  beq.w 0xe0306c16  fn=FUN_e03067e8 @ e03067e8 flow=CONDITIONAL_JUMP destinations=[e0306c16]
+          pcode: (unique, 0x124c00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0306c16, 4) , (unique, 0x124c00, 1)
+     e03067f8  str.w r1,[r0,#0x220]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x220, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x24, 4)
+     e03067fc  str.w r1,[r0,#0x21c]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x21c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x24, 4)
+     e0306800  mov r6,r0  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x38, 4) COPY (register, 0x20, 4)
+     e0306802  ldr r0,[r1,#0x0]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e0306804  mov r5,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x24, 4)
+     e0306806  ldr.w r2,[r0,#0x158]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x158, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e030680a  mov r0,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x24, 4)
+     e030680c  add.w r1,r6,#0x26c  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12ae00, 4) COPY (const, 0x26c, 4)
+          pcode: (unique, 0x12b000, 4) INT_RIGHT (unique, 0x12ae00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12b000, 4) , (const, 0x0, 4)
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x24, 4) INT_ADD (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+     e0306810  blx r2  fn=FUN_e03067e8 @ e03067e8 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x28, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0306812, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e0306812  movw r1,#0x13c8  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) INT_ZEXT (const, 0x13c8, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+     e0306816  adds r4,r6,r1  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x38, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x38, 4) , (register, 0x24, 4)
+          pcode: (register, 0x30, 4) INT_ADD (register, 0x38, 4) , (register, 0x24, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0306818  str.w r0,[r4,#0xb68]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x30, 4) , (const, 0xb68, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x20, 4)
+     e030681c  ldr r0,[r5,#0x0]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x34, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030681e  ldr.w r2,[r0,#0x1b8]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x1b8, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e0306822  mov r0,r5  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x34, 4)
+     e0306824  add.w r1,r6,#0x870  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12ae00, 4) COPY (const, 0x870, 4)
+          pcode: (unique, 0x12b000, 4) INT_RIGHT (unique, 0x12ae00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12b000, 4) , (const, 0x0, 4)
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x24, 4) INT_ADD (register, 0x38, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+     e0306828  blx r2  fn=FUN_e03067e8 @ e03067e8 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x28, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030682a, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030682a  str.w r0,[r4,#0xb6c]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x30, 4) , (const, 0xb6c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x20, 4)
+     e030682e  ldr r0,[r5,#0x0]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x34, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e0306830  ldr.w r2,[r0,#0x198]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x20, 4) , (const, 0x198, 4)
+          pcode: (register, 0x28, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e0306834  movw r0,#0x8a8  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0x8a8, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0306838  adds r1,r6,r0  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x38, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x38, 4) , (register, 0x20, 4)
+          pcode: (register, 0x24, 4) INT_ADD (register, 0x38, 4) , (register, 0x20, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e030683a  mov r0,r5  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x34, 4)
+     e030683c  blx r2  fn=FUN_e03067e8 @ e03067e8 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x28, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030683e, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030683e  str.w r0,[r4,#0xb70]  fn=FUN_e03067e8 @ e03067e8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x30, 4) , (const, 0xb70, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x13f100, 4) , (register, 0x20, 4)
+
+[INSTRUCTION WINDOW E0308EC2 -144/+144]
+     e0308e32  mov r4,r0  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e0308e34  movw r0,#0xe904  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308e38  movt r0,#0xc143  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e3c  bl 0xe0308c18  fn=FUN_e0308e30 @ e0308e30 flow=UNCONDITIONAL_CALL destinations=[e0308c18]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308e40, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0308c18, 4)
+     e0308e40  ldr r0,[r4,#0x30]  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e0308e42  bl 0xe030f330  fn=FUN_e0308e30 @ e0308e30 flow=UNCONDITIONAL_CALL destinations=[e030f330]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308e46, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe030f330, 4)
+     e0308e46  ldr r0,[r4,#0x30]  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e0308e48  pop.w {r4,lr}  fn=FUN_e0308e30 @ e0308e30 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x58, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e0308e4c  b.w 0xe030fdb8  fn=FUN_e0308e30 @ e0308e30 flow=CALL_TERMINATOR destinations=[e030fdb8]
+          pcode:  ---  BRANCH (ram, 0xe030fdb8, 4)
+     e0308e50  cmp r1,#0x2  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x2, 4) , (register, 0x24, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x24, 4) , (const, 0x2, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x24, 4) , (const, 0x2, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0308e52  bls 0xe0308e60  fn=<none> flow=CONDITIONAL_JUMP destinations=[e0308e60]
+          pcode: (unique, 0x123d00, 1) BOOL_NEGATE (register, 0x62, 1)
+          pcode: (unique, 0x123f00, 1) BOOL_OR (unique, 0x123d00, 1) , (register, 0x61, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0308e60, 4) , (unique, 0x123f00, 1)
+     e0308e54  movw r0,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308e58  movt r0,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e5c  b.w 0xe0308c40  fn=<none> flow=UNCONDITIONAL_JUMP destinations=[e0308c40]
+          pcode:  ---  BRANCH (ram, 0xe0308c40, 4)
+     e0308e60  movw r0,#0xe904  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0xe904, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308e64  movt r0,#0xc143  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e68  b.w 0xe0308c38  fn=<none> flow=UNCONDITIONAL_JUMP destinations=[e0308c38]
+          pcode:  ---  BRANCH (ram, 0xe0308c38, 4)
+     e0308e70  movw r2,#0xedd4  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xedd4, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308e74  movw r12,#0xeffc  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x50, 4) INT_ZEXT (const, 0xeffc, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x50, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x50, 4) , (const, 0x0, 4)
+     e0308e78  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e7c  movt r12,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x50, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x50, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e80  stm r0,{r2,r12}  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x20, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x28, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x50, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+     e0308e84  movw r2,#0xf010  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xf010, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308e88  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e8c  str r2,[r0,#0x8]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x8, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308e8e  movw r2,#0xf164  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xf164, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308e92  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308e96  str r2,[r0,#0xc]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0xc, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308e98  movw r2,#0xedc8  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xedc8, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308e9c  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308ea0  str r2,[r0,#0x10]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x10, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ea2  movw r2,#0xf178  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xf178, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308ea6  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308eaa  str r2,[r0,#0x14]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x14, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308eac  movw r2,#0xf194  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xf194, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e0308eb0  movt r2,#0xe09a  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308eb4  str r2,[r0,#0x18]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x18, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308eb6  movs r2,#0x0  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0308eb8  str r2,[r0,#0x1c]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x1c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308eba  str r2,[r0,#0x20]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x20, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ebc  str r2,[r0,#0x24]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x24, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ebe  str r2,[r0,#0x28]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x28, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ec0  str r2,[r0,#0x2c]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x2c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+ >>> e0308ec2  str r2,[r0,#0x30]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x30, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ec4  str r2,[r0,#0x34]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x34, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ec6  str r2,[r0,#0x38]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x38, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x28, 4)
+     e0308ec8  str r1,[r0,#0x3c]  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x3c, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x24, 4)
+     e0308eca  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0308ed0  tst r1,#0x1  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x1, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (unique, 0x1ad900, 4) INT_AND (register, 0x24, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x61, 1) INT_EQUAL (unique, 0x1ad900, 4) , (const, 0x0, 4)
+          pcode: (register, 0x60, 1) INT_SLESS (unique, 0x1ad900, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x68, 1)
+     e0308ed4  bne.w 0xe030fdf8  fn=<none> flow=CONDITIONAL_JUMP destinations=[e030fdf8]
+          pcode: (unique, 0x124e00, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe030fdf8, 4) , (unique, 0x124e00, 1)
+     e0308ed8  bx lr  fn=<none> flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0308f10  movw r0,#0x3000  fn=FUN_e0308f10 @ e0308f10 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0x3000, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308f14  movt r0,#0xc144  fn=FUN_e0308f10 @ e0308f10 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc144, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308f18  bx lr  fn=FUN_e0308f10 @ e0308f10 flow=TERMINATOR destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x58, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x58, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0308f20  sub.w r0,r0,#0x8  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x8, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (unique, 0x12a600, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x20, 4) INT_SUB (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308f24  b.w 0xe0309db0  fn=<none> flow=CALL_TERMINATOR destinations=[e0309db0]
+          pcode:  ---  BRANCH (ram, 0xe0309db0, 4)
+     e0308f30  sub.w r0,r0,#0x8  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x8, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (unique, 0x12a600, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x20, 4) INT_SUB (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308f34  b.w 0xe0309d78  fn=<none> flow=CALL_TERMINATOR destinations=[e0309d78]
+          pcode:  ---  BRANCH (ram, 0xe0309d78, 4)
+     e0308f38  sub.w r0,r0,#0x8  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x8, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (unique, 0x12a600, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x20, 4) INT_SUB (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308f3c  b.w 0xe0309dd0  fn=<none> flow=CALL_TERMINATOR destinations=[e0309dd0]
+          pcode:  ---  BRANCH (ram, 0xe0309dd0, 4)
+     e0308f50  sub.w r0,r0,#0x8  fn=<none> flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12a600, 4) COPY (const, 0x8, 4)
+          pcode: (register, 0x68, 1) COPY (register, 0x62, 1)
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (unique, 0x12a600, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x20, 4) INT_SUB (register, 0x20, 4) , (unique, 0x12a600, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+
+[INSTRUCTION WINDOW E030FB40 -32/+160]
+     e030fb20  mov r2,r0  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (register, 0x20, 4)
+     e030fb22  mov r0,r4  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e030fb24  movs r3,#0x14  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x2c, 4) COPY (const, 0x14, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x2c, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030fb26  blx r5  fn=FUN_e030faa8 @ e030faa8 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x34, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x34, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fb28, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030fb28  movw r2,#0xa43c  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) INT_ZEXT (const, 0xa43c, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e030fb2c  ldr r0,[sp,#0x18]  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x141200, 4) INT_ADD (register, 0x54, 4) , (const, 0x18, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x141200, 4)
+     e030fb2e  movt r2,#0xc022  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc022, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x28, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x28, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e030fb32  ldr r1,[r2,#0x0]  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fb34  cmp r0,r1  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (register, 0x24, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (unique, 0x149d00, 4) INT_SUB (register, 0x20, 4) , (register, 0x24, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149d00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e030fb36  it ne  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x126f00, 1) INT_NOTEQUAL (register, 0x61, 1) , (const, 0x0, 1)
+     e030fb38  bl.ne 0xe093ea50  fn=FUN_e030faa8 @ e030faa8 flow=CONDITIONAL_CALL destinations=[e093ea50]
+          pcode: (unique, 0x700, 1) INT_EQUAL (register, 0x61, 1) , (const, 0x0, 1)
+          pcode: (unique, 0x2700, 1) BOOL_NEGATE (unique, 0x700, 1)
+          pcode:  ---  CBRANCH (ram, 0xe030fb3c, 4) , (unique, 0x2700, 1)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fb3c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe093ea50, 4)
+     e030fb3c  add sp,#0x1c  fn=FUN_e030faa8 @ e030faa8 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129e00, 4) COPY (const, 0x1c, 4)
+          pcode: (register, 0x54, 4) INT_ADD (register, 0x54, 4) , (unique, 0x129e00, 4)
+     e030fb3e  pop {r4,r5,pc}  fn=FUN_e030faa8 @ e030faa8 flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+ >>> e030fb40  push {r4,r5,lr}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e030fb42  sub sp,#0x2c  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129e00, 4) COPY (const, 0x2c, 4)
+          pcode: (register, 0x54, 4) INT_SUB (register, 0x54, 4) , (unique, 0x129e00, 4)
+     e030fb44  movw r1,#0xa43c  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) INT_ZEXT (const, 0xa43c, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x24, 4) , (const, 0x0, 4)
+     e030fb48  movt r1,#0xc022  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc022, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x24, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x24, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e030fb4c  ldr r0,[r1,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x24, 4) , (const, 0x0, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fb4e  str r0,[sp,#0x28]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x141200, 4) INT_ADD (register, 0x54, 4) , (const, 0x28, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x141200, 4) , (register, 0x20, 4)
+     e030fb50  movw r4,#0xe460  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) INT_ZEXT (const, 0xe460, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x30, 4) , (const, 0x0, 4)
+     e030fb54  movt r4,#0xe09a  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x30, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x30, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e030fb58  add r2,sp,#0x4  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x4, 4)
+          pcode: (register, 0x28, 4) COPY (unique, 0x129d00, 4)
+     e030fb5a  ldmia r4!,{r0,r1,r3}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x2c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x30, 4) COPY (register, 0x80, 4)
+     e030fb5c  stmia r2!,{r0,r1,r3}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x28, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x20, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x24, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x2c, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x28, 4) COPY (register, 0x80, 4)
+     e030fb5e  ldm.w r4,{r0,r1}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+     e030fb62  stm r2,{r0,r1}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x28, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x20, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x24, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+     e030fb66  movw r4,#0xe474  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) INT_ZEXT (const, 0xe474, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x30, 4) , (const, 0x0, 4)
+     e030fb6a  movt r4,#0xe09a  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xe09a, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x30, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x30, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e030fb6e  add r2,sp,#0x18  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x18, 4)
+          pcode: (register, 0x28, 4) COPY (unique, 0x129d00, 4)
+     e030fb70  ldmia r4!,{r0,r1,r3}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x2c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x30, 4) COPY (register, 0x80, 4)
+     e030fb72  stmia r2!,{r0,r1,r3}  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x28, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x20, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x24, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x2c, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x28, 4) COPY (register, 0x80, 4)
+     e030fb74  ldrb r0,[r4,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x14b000, 1) LOAD (const, 0x1a1, 8) , (unique, 0x140d00, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14b000, 1)
+     e030fb76  strb r0,[r2,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e030fb78  ldrb r0,[r4,#0x1]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x30, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x14b000, 1) LOAD (const, 0x1a1, 8) , (unique, 0x140d00, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14b000, 1)
+     e030fb7a  strb r0,[r2,#0x1]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x28, 4) , (const, 0x1, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e030fb7c  ldrb r0,[r4,#0x2]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x30, 4) , (const, 0x2, 4)
+          pcode: (unique, 0x14b000, 1) LOAD (const, 0x1a1, 8) , (unique, 0x140d00, 4)
+          pcode: (register, 0x20, 4) INT_ZEXT (unique, 0x14b000, 1)
+     e030fb7e  strb r0,[r2,#0x2]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140d00, 4) INT_ADD (register, 0x28, 4) , (const, 0x2, 4)
+          pcode: (unique, 0x19f600, 1) SUBPIECE (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140d00, 4) , (unique, 0x19f600, 1)
+     e030fb80  bl 0xe0318328  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e0318328]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fb84, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0318328, 4)
+     e030fb84  cbz r0,0xe030fb96  fn=FUN_e030fb40 @ e030fb40 flow=CONDITIONAL_JUMP destinations=[e030fb96]
+          pcode: (unique, 0x148400, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  CBRANCH (ram, 0xe030fb96, 4) , (unique, 0x148400, 1)
+     e030fb86  ldr.w r1,[0xe030fde8]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (ram, 0xe030fde8, 4)
+     e030fb8a  movw r0,#0x225  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0x225, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e030fb8e  mov.w r2,#0x80000000  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12aa00, 4) COPY (const, 0x80000000, 4)
+          pcode: (unique, 0x12ac00, 4) INT_RIGHT (unique, 0x12aa00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12ac00, 4) , (const, 0x0, 4)
+          pcode: (register, 0x28, 4) COPY (unique, 0x12aa00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+     e030fb92  blx 0xe02366d8  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e02366d8]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fb96, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x0, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe02366d8, 4)
+     e030fb96  bl 0xe0308f10  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e0308f10]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fb9a, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0308f10, 4)
+     e030fb9a  ldr r0,[r0,#0x30]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fb9c  ldr r1,[r0,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fb9e  ldr r3,[r1,#0x24]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x24, 4) , (const, 0x24, 4)
+          pcode: (register, 0x2c, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fba0  add r1,sp,#0x18  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x18, 4)
+          pcode: (register, 0x24, 4) COPY (unique, 0x129d00, 4)
+     e030fba2  movs r2,#0x14  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (const, 0x14, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030fba4  blx r3  fn=FUN_e030fb40 @ e030fb40 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fba6, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030fba6  add r0,sp,#0x18  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x18, 4)
+          pcode: (register, 0x20, 4) COPY (unique, 0x129d00, 4)
+     e030fba8  bl 0xe03053f8  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e03053f8]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbac, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe03053f8, 4)
+     e030fbac  add r1,sp,#0x18  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x18, 4)
+          pcode: (register, 0x24, 4) COPY (unique, 0x129d00, 4)
+     e030fbae  movs r2,#0xf  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (const, 0xf, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030fbb0  mov r4,r0  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e030fbb2  bl 0xe03053d0  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e03053d0]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbb6, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe03053d0, 4)
+     e030fbb6  bl 0xe0308f10  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e0308f10]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbba, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0308f10, 4)
+     e030fbba  ldr r0,[r0,#0x30]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x30, 4)
+          pcode: (register, 0x20, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fbbc  ldr r1,[r0,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fbbe  ldr r1,[r1,#0x18]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x24, 4) , (const, 0x18, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fbc0  blx r1  fn=FUN_e030fb40 @ e030fb40 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x24, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x24, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbc2, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030fbc2  mov r5,r0  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x20, 4)
+     e030fbc4  bl 0xe030feb8  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e030feb8]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbc8, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe030feb8, 4)
+     e030fbc8  ldr r1,[r0,#0x0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x24, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+     e030fbca  ldr.w r3,[r1,#0x2c0]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x13f100, 4) INT_ADD (register, 0x24, 4) , (const, 0x2c0, 4)
+          pcode: (register, 0x2c, 4) LOAD (const, 0x1a1, 8) , (unique, 0x13f100, 4)
+     e030fbce  mov r1,r4  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (register, 0x30, 4)
+     e030fbd0  mov r2,r5  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (register, 0x34, 4)
+     e030fbd2  blx r3  fn=FUN_e030fb40 @ e030fb40 flow=COMPUTED_CALL destinations=[]
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x2c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x2c, 4) , (const, 0xfffffffe, 4)
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbd4, 4) , (const, 0x1, 4)
+          pcode:  ---  CALLIND (register, 0x5c, 4)
+     e030fbd4  add r1,sp,#0x4  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x129d00, 4) INT_ADD (register, 0x54, 4) , (const, 0x4, 4)
+          pcode: (register, 0x24, 4) COPY (unique, 0x129d00, 4)
+     e030fbd6  movs r2,#0x14  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (const, 0x14, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e030fbd8  bl 0xe0305360  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e0305360]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbdc, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0305360, 4)
+     e030fbdc  bl 0xe0308f10  fn=FUN_e030fb40 @ e030fb40 flow=UNCONDITIONAL_CALL destinations=[e0308f10]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe030fbe0, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0308f10, 4)
+     e030fbe0  ldr r4,[r0,#0x30]  fn=FUN_e030fb40 @ e030fb40 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x20, 4) , (const, 0x30, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (unique, 0x140900, 4)
+
+[INSTRUCTION WINDOW E0308B70 -32/+144]
+     e0308b50  push {r4,r5,r6,r7,lr}  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x3c, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x38, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e0308b52  mov r5,r1  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x24, 4)
+     e0308b54  mov r6,r2  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x38, 4) COPY (register, 0x28, 4)
+     e0308b56  mov r7,r3  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x3c, 4) COPY (register, 0x2c, 4)
+     e0308b58  bl 0xe0308c48  fn=FUN_e0308b50 @ e0308b50 flow=UNCONDITIONAL_CALL destinations=[e0308c48]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308b5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0308c48, 4)
+     e0308b5c  movs r4,#0x2  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (const, 0x2, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x30, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0308b5e  cbz r0,0xe0308b6c  fn=FUN_e0308b50 @ e0308b50 flow=CONDITIONAL_JUMP destinations=[e0308b6c]
+          pcode: (unique, 0x148400, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  CBRANCH (ram, 0xe0308b6c, 4) , (unique, 0x148400, 1)
+     e0308b60  mov r3,r7  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x2c, 4) COPY (register, 0x3c, 4)
+     e0308b62  mov r2,r6  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (register, 0x38, 4)
+     e0308b64  mov r1,r5  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (register, 0x34, 4)
+     e0308b66  bl 0xe03034a0  fn=FUN_e0308b50 @ e0308b50 flow=UNCONDITIONAL_CALL destinations=[e03034a0]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308b6a, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe03034a0, 4)
+     e0308b6a  mov r4,r0  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e0308b6c  mov r0,r4  fn=FUN_e0308b50 @ e0308b50 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e0308b6e  pop {r4,r5,r6,r7,pc}  fn=FUN_e0308b50 @ e0308b50 flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x38, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x3c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+ >>> e0308b70  push {r4,r5,r6,lr}  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x38, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e0308b72  mov r4,r0  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e0308b74  movs r0,#0x0  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0308b76  mov r1,r0  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x24, 4) COPY (register, 0x20, 4)
+     e0308b78  adds r0,#0x1  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x20, 4) , (const, 0x1, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x20, 4) , (const, 0x1, 4)
+          pcode: (register, 0x20, 4) INT_ADD (register, 0x20, 4) , (const, 0x1, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0308b7a  movs r2,#0x0  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x28, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x28, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0308b7c  cmp r0,#0x3  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x66, 1) INT_LESSEQUAL (const, 0x3, 4) , (register, 0x20, 4)
+          pcode: (register, 0x67, 1) INT_SBORROW (register, 0x20, 4) , (const, 0x3, 4)
+          pcode: (unique, 0x149700, 4) INT_SUB (register, 0x20, 4) , (const, 0x3, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (unique, 0x149700, 4) , (const, 0x0, 4)
+          pcode: (register, 0x62, 1) COPY (register, 0x66, 1)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+          pcode: (register, 0x63, 1) COPY (register, 0x67, 1)
+     e0308b7e  str.w r2,[r4,r1,lsl #0x2]  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12b800, 4) INT_LEFT (register, 0x24, 4) , (const, 0x2, 4)
+          pcode: (unique, 0x12ba00, 4) INT_ADD (register, 0x30, 4) , (unique, 0x12b800, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x12ba00, 4) , (register, 0x28, 4)
+     e0308b82  bcc 0xe0308b76  fn=FUN_e0308b70 @ e0308b70 flow=CONDITIONAL_JUMP destinations=[e0308b76]
+          pcode: (unique, 0x123100, 1) INT_EQUAL (register, 0x62, 1) , (const, 0x0, 1)
+          pcode:  ---  CBRANCH (ram, 0xe0308b76, 4) , (unique, 0x123100, 1)
+     e0308b84  movw r6,#0x2ff0  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x38, 4) INT_ZEXT (const, 0x2ff0, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x38, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x38, 4) , (const, 0x0, 4)
+     e0308b88  movt r6,#0xc144  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc144, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x38, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x38, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308b8c  movw r5,#0xe910  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) INT_ZEXT (const, 0xe910, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x34, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x34, 4) , (const, 0x0, 4)
+     e0308b90  mov r0,r6  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x38, 4)
+     e0308b92  movt r5,#0xc143  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc143, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x34, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x34, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308b96  bl 0xe0981052  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981052]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308b9a, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981052, 4)
+     e0308b9a  cbz r0,0xe0308bb4  fn=FUN_e0308b70 @ e0308b70 flow=CONDITIONAL_JUMP destinations=[e0308bb4]
+          pcode: (unique, 0x148400, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  CBRANCH (ram, 0xe0308bb4, 4) , (unique, 0x148400, 1)
+     e0308b9c  mov r0,r5  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x34, 4)
+     e0308b9e  bl 0xe030cf48  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e030cf48]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308ba2, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe030cf48, 4)
+     e0308ba2  movw r0,#0x5e8  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0x5e8, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308ba6  movt r0,#0xc01e  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc01e, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308baa  bl 0xe0981216  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981216]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bae, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981216, 4)
+     e0308bae  mov r0,r6  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x38, 4)
+     e0308bb0  bl 0xe0981116  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981116]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bb4, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981116, 4)
+     e0308bb4  movw r6,#0x2ff8  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x38, 4) INT_ZEXT (const, 0x2ff8, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x38, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x38, 4) , (const, 0x0, 4)
+     e0308bb8  movt r6,#0xc144  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc144, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x38, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x38, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308bbc  mov r0,r6  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x38, 4)
+     e0308bbe  str r5,[r4,#0x0]  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x0, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x34, 4)
+     e0308bc0  bl 0xe0981052  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981052]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bc4, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981052, 4)
+     e0308bc4  cbz r0,0xe0308be0  fn=FUN_e0308b70 @ e0308b70 flow=CONDITIONAL_JUMP destinations=[e0308be0]
+          pcode: (unique, 0x148400, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  CBRANCH (ram, 0xe0308be0, 4) , (unique, 0x148400, 1)
+     e0308bc6  add.w r0,r5,#0x21c  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12ae00, 4) COPY (const, 0x21c, 4)
+          pcode: (unique, 0x12b000, 4) INT_RIGHT (unique, 0x12ae00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12b000, 4) , (const, 0x0, 4)
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x20, 4) INT_ADD (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308bca  bl 0xe0306240  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0306240]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bce, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0306240, 4)
+     e0308bce  movw r0,#0x5f4  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) INT_ZEXT (const, 0x5f4, 2)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308bd2  movt r0,#0xc01e  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x156600, 4) INT_ZEXT (const, 0xc01e, 2)
+          pcode: (unique, 0x156700, 4) INT_LEFT (unique, 0x156600, 4) , (const, 0x10, 4)
+          pcode: (unique, 0x156800, 4) INT_AND (register, 0x20, 4) , (const, 0xffff, 4)
+          pcode: (register, 0x20, 4) INT_OR (unique, 0x156700, 4) , (unique, 0x156800, 4)
+     e0308bd6  bl 0xe0981216  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981216]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bda, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981216, 4)
+     e0308bda  mov r0,r6  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x38, 4)
+     e0308bdc  bl 0xe0981116  fn=FUN_e0308b70 @ e0308b70 flow=UNCONDITIONAL_CALL destinations=[e0981116]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308be0, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0981116, 4)
+     e0308be0  add.w r0,r5,#0x21c  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x12ae00, 4) COPY (const, 0x21c, 4)
+          pcode: (unique, 0x12b000, 4) INT_RIGHT (unique, 0x12ae00, 4) , (const, 0x1f, 4)
+          pcode: (register, 0x68, 1) SUBPIECE (unique, 0x12b000, 4) , (const, 0x0, 4)
+          pcode: (register, 0x66, 1) INT_CARRY (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x67, 1) INT_SCARRY (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x20, 4) INT_ADD (register, 0x34, 4) , (unique, 0x12ae00, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+     e0308be4  str r0,[r4,#0x4]  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x20, 4)
+     e0308be6  mov r0,r4  fn=FUN_e0308b70 @ e0308b70 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (register, 0x30, 4)
+     e0308be8  pop {r4,r5,r6,pc}  fn=FUN_e0308b70 @ e0308b70 flow=TERMINATOR destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x30, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x34, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x38, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x5c, 4) LOAD (const, 0x1a1, 8) , (register, 0x80, 4)
+          pcode: (register, 0x80, 4) INT_ADD (register, 0x80, 4) , (const, 0x4, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+          pcode: (unique, 0x0, 4) INT_AND (register, 0x5c, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) INT_NOTEQUAL (unique, 0x0, 4) , (const, 0x0, 4)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode: (register, 0x5c, 4) INT_AND (register, 0x5c, 4) , (const, 0xfffffffe, 4)
+          pcode:  ---  RETURN (register, 0x5c, 4)
+     e0308bf0  push {r4,r5,lr}  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x80, 4) COPY (register, 0x54, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x58, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x34, 4)
+          pcode: (register, 0x80, 4) INT_SUB (register, 0x80, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (register, 0x80, 4) , (register, 0x30, 4)
+          pcode: (register, 0x54, 4) COPY (register, 0x80, 4)
+     e0308bf2  mov r4,r0  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x30, 4) COPY (register, 0x20, 4)
+     e0308bf4  bl 0xe0318328  fn=FUN_e0308bf0 @ e0308bf0 flow=UNCONDITIONAL_CALL destinations=[e0318328]
+          pcode: (register, 0x58, 4) INT_OR (const, 0xe0308bf8, 4) , (const, 0x1, 4)
+          pcode: (register, 0x69, 1) COPY (const, 0x1, 1)
+          pcode:  ---  CALLOTHER (const, 0x3e, 4) , (register, 0x69, 1)
+          pcode:  ---  CALL (ram, 0xe0318328, 4)
+     e0308bf8  cbz r0,0xe0308c00  fn=FUN_e0308bf0 @ e0308bf0 flow=CONDITIONAL_JUMP destinations=[e0308c00]
+          pcode: (unique, 0x148400, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode:  ---  CBRANCH (ram, 0xe0308c00, 4) , (unique, 0x148400, 1)
+     e0308bfa  movs r0,#0x0  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x20, 4) COPY (const, 0x0, 4)
+          pcode: (register, 0x64, 1) INT_SLESS (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x65, 1) INT_EQUAL (register, 0x20, 4) , (const, 0x0, 4)
+          pcode: (register, 0x61, 1) COPY (register, 0x65, 1)
+          pcode: (register, 0x60, 1) COPY (register, 0x64, 1)
+     e0308bfc  str r0,[r4,#0x4]  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x4, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x20, 4)
+     e0308bfe  str r0,[r4,#0x8]  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (unique, 0x140900, 4) INT_ADD (register, 0x30, 4) , (const, 0x8, 4)
+          pcode:  ---  STORE (const, 0x1a1, 8) , (unique, 0x140900, 4) , (register, 0x20, 4)
+     e0308c00  mov r5,r0  fn=FUN_e0308bf0 @ e0308bf0 flow=FALL_THROUGH destinations=[]
+          pcode: (register, 0x34, 4) COPY (register, 0x20, 4)
+
+[CONSTAT FIELD ACCESS CENSUS: EXECUTABLE CODE 0xE0306000..0xE0310000]
+field=+0x224 WRITE-CANDIDATE e030626a strb.w r0,[r4,#0x224] fn=FUN_e0306240 @ e0306240
+field=+0x21c WRITE-CANDIDATE e030626e str.w r0,[r4,#0x21c] fn=FUN_e0306240 @ e0306240
+field=+0x220 WRITE-CANDIDATE e0306272 str.w r0,[r4,#0x220] fn=FUN_e0306240 @ e0306240
+field=+0x8f4 ADDRESS/OTHER e03063c2 movw r0,#0x8f4 fn=FUN_e0306240 @ e0306240
+field=+0x224 READ-CANDIDATE e030677e ldrb.w r0,[r0,#0x224] fn=<none>
+field=+0x224 WRITE-CANDIDATE e030679e strb.w r5,[r4,#0x224] fn=<none>
+field=+0x224 READ-CANDIDATE e03067b2 ldrb.w r2,[r0,#0x224] fn=<none>
+field=+0x220 WRITE-CANDIDATE e03067ca str.w r2,[r0,#0x220] fn=<none>
+field=+0x224 WRITE-CANDIDATE e03067ce strb.w r1,[r0,#0x224] fn=<none>
+field=+0x224 READ-CANDIDATE e03067e0 ldrb.w r0,[r0,#0x224] fn=<none>
+field=+0x220 WRITE-CANDIDATE e03067f8 str.w r1,[r0,#0x220] fn=FUN_e03067e8 @ e03067e8
+field=+0x21c WRITE-CANDIDATE e03067fc str.w r1,[r0,#0x21c] fn=FUN_e03067e8 @ e03067e8
+field=+0x8f4 ADDRESS/OTHER e030691e movw r1,#0x8f4 fn=FUN_e03067e8 @ e03067e8
+field=+0x2c0 READ-CANDIDATE e0306a82 ldr.w r7,[r0,#0x2c0] fn=FUN_e03067e8 @ e03067e8
+field=+0x224 READ-CANDIDATE e0306c24 ldrb.w r0,[r0,#0x224] fn=<none>
+field=+0x224 READ-CANDIDATE e0306cb4 ldrb.w r0,[r0,#0x224] fn=<none>
+field=+0x224 READ-CANDIDATE e0306d04 ldrb.w r0,[r0,#0x224] fn=FUN_e0306cf8 @ e0306cf8
+field=+0x2c0 READ-CANDIDATE e0306e9a ldr.w r3,[r0,#0x2c0] fn=<none>
+field=+0x224 READ-CANDIDATE e0306f38 ldrb.w r0,[r0,#0x224] fn=<none>
+field=+0x8f4 ADDRESS/OTHER e0306f6c movw r2,#0x8f4 fn=<none>
+field=+0x2f8 WRITE-CANDIDATE e0307064 str.w r7,[r6,#0x2f8] fn=<none>
+field=+0x2c0 READ-CANDIDATE e03074ea ldr.w r3,[r0,#0x2c0] fn=<none>
+field=+0x2d0 READ-CANDIDATE e03075c6 ldr.w r2,[r0,#0x2d0] fn=<none>
+field=+0x224 READ-CANDIDATE e030763e ldrb.w r1,[r4,#0x224] fn=<none>
+field=+0x8f4 ADDRESS/OTHER e030764c movw r1,#0x8f4 fn=<none>
+field=+0x2f8 WRITE-CANDIDATE e0307696 str.w r1,[r4,#0x2f8] fn=<none>
+field=+0x2d0 READ-CANDIDATE e030769a ldr.w r1,[r0,#0x2d0] fn=<none>
+field=+0x2c4 READ-CANDIDATE e03076b4 ldr.w r4,[r3,#0x2c4] fn=FUN_e03076b0 @ e03076b0
+field=+0x224 READ-CANDIDATE e03076cc ldrb.w r0,[r0,#0x224] fn=ConStat_Reason_Inserter_Anchor @ e03076c0
+field=+0x8f4 ADDRESS/OTHER e03076f6 movw r0,#0x8f4 fn=ConStat_Reason_Inserter_Anchor @ e03076c0
+field=+0x2d0 READ-CANDIDATE e030772c ldr.w r1,[r0,#0x2d0] fn=ConStat_Reason_Inserter_Anchor @ e03076c0
+field=+0x2f8 WRITE-CANDIDATE e03077c6 str.w.ne r0,[r5,#0x2f8] fn=ConStat_Reason_Inserter_Anchor @ e03076c0
+field=+0x2d0 READ-CANDIDATE e03077cc ldr.w r1,[r0,#0x2d0] fn=ConStat_Reason_Inserter_Anchor @ e03076c0
+field=+0x224 READ-CANDIDATE e03077f0 ldrb.w r3,[r0,#0x224] fn=<none>
+field=+0x224 READ-CANDIDATE e030783e ldrb.w r12,[r0,#0x224] fn=<none>
+field=+0x2c0 READ-CANDIDATE e03078f0 ldr.w r3,[r3,#0x2c0] fn=FUN_e03078e8 @ e03078e8
+field=+0x2f8 READ-CANDIDATE e0307918 ldr.w r0,[r0,#0x2f8] fn=<none>
+field=+0x2c0 READ-CANDIDATE e030793a ldr.w r4,[r0,#0x2c0] fn=<none>
+field=+0x2f8 READ-CANDIDATE e0307974 ldr.w r0,[r5,#0x2f8] fn=<none>
+field=+0x2c0 READ-CANDIDATE e03079a8 ldr.w r3,[r0,#0x2c0] fn=<none>
+field=+0x2f8 WRITE-CANDIDATE e03079b2 str.w r10,[r5,#0x2f8] fn=<none>
+field=+0x2c0 READ-CANDIDATE e03079be ldr.w r1,[r0,#0x2c0] fn=<none>
+field=+0x2f8 READ-CANDIDATE e03079fc ldr.w r0,[r5,#0x2f8] fn=<none>
+field=+0x21c READ-CANDIDATE e0307e18 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307e68 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307e88 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307ec8 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307f50 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307f80 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0307f90 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0308008 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0308318 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e0308394 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e03083e0 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x21c READ-CANDIDATE e03084e0 ldr.w r0,[r0,#0x21c] fn=<none>
+field=+0x2f8 READ-CANDIDATE e030853a ldr.w r2,[r0,#0x2f8] fn=FUN_e0308520 @ e0308520
+field=+0x2c0 READ-CANDIDATE e03085c2 ldr.w r4,[r4,#0x2c0] fn=FUN_e0308520 @ e0308520
+field=+0x8f4 ADDRESS/OTHER e03087d2 movw r3,#0x8f4 fn=FUN_e03087d0 @ e03087d0
+field=+0x21c READ-CANDIDATE e030890e ldr.w r0,[r0,#0x21c] fn=FUN_e0308908 @ e0308908
+field=+0x8f4 ADDRESS/OTHER e030898e movw r3,#0x8f4 fn=FUN_e0308988 @ e0308988
+field=+0x2f8 READ-CANDIDATE e03089ba ldr.w r2,[r0,#0x2f8] fn=FUN_e0308988 @ e0308988
+field=+0x2f8 WRITE-CANDIDATE e03089c2 str.w.ne r1,[r0,#0x2f8] fn=FUN_e0308988 @ e0308988
+field=+0x21c ADDRESS/OTHER e0308bc6 add.w r0,r5,#0x21c fn=FUN_e0308b70 @ e0308b70
+field=+0x21c ADDRESS/OTHER e0308be0 add.w r0,r5,#0x21c fn=FUN_e0308b70 @ e0308b70
+field=+0x2c0 ADDRESS/OTHER e030a82c sub.w sp,sp,#0x2c0 fn=FUN_e030a828 @ e030a828
+field=+0x21c ADDRESS/OTHER e030a85e add r0,sp,#0x21c fn=FUN_e030a828 @ e030a828
+field=+0x2c0 ADDRESS/OTHER e030a976 add.w sp,sp,#0x2c0 fn=FUN_e030a828 @ e030a828
+field=+0x220 READ-CANDIDATE e030c4d2 ldr.w r3,[r0,#0x220] fn=<none>
+field=+0x2c0 READ-CANDIDATE e030fbca ldr.w r3,[r1,#0x2c0] fn=FUN_e030fb40 @ e030fb40
+matches=69
+
+[F8AE47 / LOW-HALF IMMEDIATE CANDIDATES IN EXECUTABLE MEMORY]
+e0251448 movw r2,#0xae47 fn=<none>
+e02532c8 movw r2,#0xae47 fn=<none>
+e02fdff0 movw r2,#0xae47 fn=<none>
+e031265e movw r0,#0xae47 fn=FUN_e0312658 @ e0312658
+e0315cf0 movw r2,#0xae47 fn=<none>
+e0316680 movw r2,#0xae47 fn=<none>
+e0352930 movw r2,#0xae47 fn=<none>
+e035630e movw r5,#0xae47 fn=<none>
+e0363af4 movw r5,#0xae47 fn=<none>
+e03c47c8 movw r2,#0xae47 fn=<none>
+e03c5ef0 movw r2,#0xae47 fn=<none>
+e03df540 movw r2,#0xae47 fn=<none>
+e03e1188 movw r2,#0xae47 fn=<none>
+e044b148 movw r2,#0xae47 fn=<none>
+e049aec0 movw r2,#0xae47 fn=<none>
+e05135d2 movw r2,#0xae47 fn=<none>
+e051541a movw r2,#0xae47 fn=<none>
+e051625a movw r2,#0xae47 fn=<none>
+e0529a38 movw r2,#0xae47 fn=<none>
+e052fc22 movw r2,#0xae47 fn=<none>
+e054a200 movw r2,#0xae47 fn=<none>
+e054ef92 movw r2,#0xae47 fn=<none>
+e055d638 movw r2,#0xae47 fn=<none>
+e055fc80 movw r0,#0xae47 fn=<none>
+e06a33b0 movw r2,#0xae47 fn=<none>
+e06a87b0 movw r0,#0xae47 fn=<none>
+e06a8d30 movw r2,#0xae47 fn=<none>
+e0724288 movw r2,#0xae47 fn=<none>
+e0725030 movw r2,#0xae47 fn=<none>
+e07536e6 movw r0,#0xae47 fn=FUN_e07536e0 @ e07536e0
+e07651c8 movw r2,#0xae47 fn=<none>
+e0788fb8 movw r2,#0xae47 fn=<none>
+e078dc28 movw r2,#0xae47 fn=<none>
+e0793740 movw r2,#0xae47 fn=<none>
+e07a1c48 movw r2,#0xae47 fn=<none>
+e07b58fc movw r5,#0xae47 fn=<none>
+e07bcf24 movw r2,#0xae47 fn=<none>
+e07f5768 movw r0,#0xae47 fn=<none>
+e07fd990 movw r2,#0xae47 fn=<none>
+e0835970 movw r2,#0xae47 fn=<none>
+e0838272 movw r2,#0xae47 fn=<none>
+e083df80 movw r0,#0xae47 fn=<none>
+e08b0f78 movw r2,#0xae47 fn=<none>
+e08f02d2 movw r2,#0xae47 fn=<none>
+e08f8ec0 movw r2,#0xae47 fn=<none>
+candidate_count=45
+
+[ROMFS ALIGNED WORD SCAN: SERVICE KEY AND CALLBACK POINTER]
+hit address=e09a4f44 value=0xf8ae47
+  e09a4f34  0x20202020
+  e09a4f38  0xFFFFFFFF
+  e09a4f3c  0x20202020
+  e09a4f40  0x20202020
+  e09a4f44  0x00F8AE47
+  e09a4f48  0x00202001
+  e09a4f4c  0x20202020
+  e09a4f50  0xFFFFFFFF
+  e09a4f54  0x20202020
+hit address=e09a7eb0 value=0xf8ae47
+  e09a7ea0  0x20202020
+  e09a7ea4  0xFFFFFFFF
+  e09a7ea8  0x20000000
+  e09a7eac  0x20202000
+  e09a7eb0  0x00F8AE47
+  e09a7eb4  0x00202001
+  e09a7eb8  0x20202020
+  e09a7ebc  0xFFFFFFFF
+  e09a7ec0  0x20000000
+hit address=e09a8f50 value=0xf8ae47
+  e09a8f40  0x20202020
+  e09a8f44  0xFFFFFFFF
+  e09a8f48  0x20000000
+  e09a8f4c  0x20202000
+  e09a8f50  0x00F8AE47
+  e09a8f54  0x00202001
+  e09a8f58  0x20202020
+  e09a8f5c  0xFFFFFFFF
+  e09a8f60  0x20000000
+hit address=e09ae544 value=0xe030fb41
+  e09ae534  0xE09AE658
+  e09ae538  0xE030FAA9
+  e09ae53c  0x20202020
+  e09ae540  0xE09AE674
+  e09ae544  0xE030FB41
+  e09ae548  0x20202020
+  e09ae54c  0xE09AE698
+  e09ae550  0xE030FC19
+  e09ae554  0x20202020
+hit address=e09b3ac0 value=0xf8ae47
+  e09b3ab0  0x20202020
+  e09b3ab4  0xFFFFFFFF
+  e09b3ab8  0x20202020
+  e09b3abc  0x20202020
+  e09b3ac0  0x00F8AE47
+  e09b3ac4  0x20202001
+  e09b3ac8  0x20202020
+  e09b3acc  0xFFFFFFFF
+  e09b3ad0  0x5F666564
+hit address=e09b4080 value=0xf8ae47
+  e09b4070  0x20202020
+  e09b4074  0xFFFFFFFF
+  e09b4078  0x20202020
+  e09b407c  0x20202020
+  e09b4080  0x00F8AE47
+  e09b4084  0x20202001
+  e09b4088  0x20202020
+  e09b408c  0xFFFFFFFF
+  e09b4090  0x20202020
+hit address=e09b9ad4 value=0xf8ae47
+  e09b9ac4  0x20202020
+  e09b9ac8  0xFFFFFFFF
+  e09b9acc  0x20202020
+  e09b9ad0  0x20202020
+  e09b9ad4  0x00F8AE47
+  e09b9ad8  0x20202001
+  e09b9adc  0x20202020
+  e09b9ae0  0xFFFFFFFF
+  e09b9ae4  0x20202020
+hit address=e09ba6d8 value=0xf8ae47
+  e09ba6c8  0x20202020
+  e09ba6cc  0xFFFFFFFF
+  e09ba6d0  0x20202020
+  e09ba6d4  0x20202020
+  e09ba6d8  0x00F8AE47
+  e09ba6dc  0x20202001
+  e09ba6e0  0x20202020
+  e09ba6e4  0xFFFFFFFF
+  e09ba6e8  0x20202020
+hit address=e09c2850 value=0xf8ae47
+  e09c2840  0x00000000
+  e09c2844  0xFFFFFFFF
+  e09c2848  0x00000000
+  e09c284c  0x00000000
+  e09c2850  0x00F8AE47
+  e09c2854  0x00000001
+  e09c2858  0x00000000
+  e09c285c  0xFFFFFFFF
+  e09c2860  0x00000000
+hit address=e09c3524 value=0xf8ae47
+  e09c3514  0x00000000
+  e09c3518  0xFFFFFFFF
+  e09c351c  0x00000000
+  e09c3520  0x00000000
+  e09c3524  0x00F8AE47
+  e09c3528  0x00000001
+  e09c352c  0x00000000
+  e09c3530  0xFFFFFFFF
+  e09c3534  0x00000000
+hit address=e09cacf8 value=0xf8ae47
+  e09cace8  0x00000000
+  e09cacec  0xFFFFFFFF
+  e09cacf0  0x00000000
+  e09cacf4  0x00000000
+  e09cacf8  0x00F8AE47
+  e09cacfc  0x00000001
+  e09cad00  0x00000000
+  e09cad04  0xFFFFFFFF
+  e09cad08  0x00000000
+hit address=e09cb35c value=0xf8ae47
+  e09cb34c  0x00000000
+  e09cb350  0xFFFFFFFF
+  e09cb354  0x00000000
+  e09cb358  0x00000000
+  e09cb35c  0x00F8AE47
+  e09cb360  0x00000001
+  e09cb364  0x00000000
+  e09cb368  0xFFFFFFFF
+  e09cb36c  0x746E6F66
+hit address=e09cfcec value=0xf8ae47
+  e09cfcdc  0x00000000
+  e09cfce0  0xFFFFFFFF
+  e09cfce4  0x00000000
+  e09cfce8  0x00000000
+  e09cfcec  0x00F8AE47
+  e09cfcf0  0x00000001
+  e09cfcf4  0x00000000
+  e09cfcf8  0xFFFFFFFF
+  e09cfcfc  0x70616568
+hit address=e09dd70c value=0xf8ae47
+  e09dd6fc  0x00000000
+  e09dd700  0xFFFFFFFF
+  e09dd704  0x00000000
+  e09dd708  0x00000000
+  e09dd70c  0x00F8AE47
+  e09dd710  0x00000001
+  e09dd714  0x00000000
+  e09dd718  0xFFFFFFFF
+  e09dd71c  0x00000000
+hit address=e09df288 value=0xf8ae47
+  e09df278  0x00000000
+  e09df27c  0xFFFFFFFF
+  e09df280  0x00000000
+  e09df284  0x00000000
+  e09df288  0x00F8AE47
+  e09df28c  0x00000001
+  e09df290  0x00000000
+  e09df294  0xFFFFFFFF
+  e09df298  0x00000000
+hit address=e09ee04c value=0xf8ae47
+  e09ee03c  0x00000000
+  e09ee040  0xFFFFFFFF
+  e09ee044  0x00000000
+  e09ee048  0x00000000
+  e09ee04c  0x00F8AE47
+  e09ee050  0x00000001
+  e09ee054  0x00000000
+  e09ee058  0xFFFFFFFF
+  e09ee05c  0x00000000
+hit address=e09ef778 value=0xf8ae47
+  e09ef768  0x00000000
+  e09ef76c  0xFFFFFFFF
+  e09ef770  0x00000000
+  e09ef774  0x00000000
+  e09ef778  0x00F8AE47
+  e09ef77c  0x00000001
+  e09ef780  0x00000000
+  e09ef784  0xFFFFFFFF
+  e09ef788  0x00000000
+hit address=e09efe10 value=0xf8ae47
+  e09efe00  0x00000000
+  e09efe04  0xFFFFFFFF
+  e09efe08  0x00000000
+  e09efe0c  0x00000000
+  e09efe10  0x00F8AE47
+  e09efe14  0x00000001
+  e09efe18  0x00000000
+  e09efe1c  0xFFFFFFFF
+  e09efe20  0x00000000
+hit address=e09f19d8 value=0xf8ae47
+  e09f19c8  0x00000001
+  e09f19cc  0xFFFFFFFF
+  e09f19d0  0x00000000
+  e09f19d4  0x00000000
+  e09f19d8  0x00F8AE47
+  e09f19dc  0x00000001
+  e09f19e0  0x00000000
+  e09f19e4  0xFFFFFFFF
+  e09f19e8  0x00000000
+hit address=e09f1d48 value=0xf8ae47
+  e09f1d38  0x00000003
+  e09f1d3c  0xFFFFFFFF
+  e09f1d40  0x00000000
+  e09f1d44  0x00000000
+  e09f1d48  0x00F8AE47
+  e09f1d4c  0x00000001
+  e09f1d50  0x00000000
+  e09f1d54  0xFFFFFFFF
+  e09f1d58  0x00000000
+hit address=e0a99500 value=0xf8ae47
+  e0a994f0  0x00000000
+  e0a994f4  0xFFFFFFFF
+  e0a994f8  0x00000000
+  e0a994fc  0x00000000
+  e0a99500  0x00F8AE47
+  e0a99504  0x00000001
+  e0a99508  0x00000000
+  e0a9950c  0xFFFFFFFF
+  e0a99510  0x00000000
+hit address=e0a99c74 value=0xf8ae47
+  e0a99c64  0x00000000
+  e0a99c68  0xFFFFFFFF
+  e0a99c6c  0x00000000
+  e0a99c70  0x00000000
+  e0a99c74  0x00F8AE47
+  e0a99c78  0x00000001
+  e0a99c7c  0x00000000
+  e0a99c80  0xFFFFFFFF
+  e0a99c84  0x00000000
+hit address=e0a9a85c value=0xf8ae47
+  e0a9a84c  0x00000000
+  e0a9a850  0xFFFFFFFF
+  e0a9a854  0x00000000
+  e0a9a858  0x00000000
+  e0a9a85c  0x00F8AE47
+  e0a9a860  0x00000001
+  e0a9a864  0x00000000
+  e0a9a868  0xFFFFFFFF
+  e0a9a86c  0x00000000
+hit address=e0a9e798 value=0xf8ae47
+  e0a9e788  0x00000000
+  e0a9e78c  0xFFFFFFFF
+  e0a9e790  0x00000000
+  e0a9e794  0x00000000
+  e0a9e798  0x00F8AE47
+  e0a9e79c  0x00000001
+  e0a9e7a0  0x00000000
+  e0a9e7a4  0xFFFFFFFF
+  e0a9e7a8  0x0078646C
+hit address=e0a9ee50 value=0xf8ae47
+  e0a9ee40  0x00000000
+  e0a9ee44  0xFFFFFFFF
+  e0a9ee48  0x00000000
+  e0a9ee4c  0x00000000
+  e0a9ee50  0x00F8AE47
+  e0a9ee54  0x00000001
+  e0a9ee58  0x00000000
+  e0a9ee5c  0xFFFFFFFF
+  e0a9ee60  0x00000000
+hit address=e0b1de0c value=0xf8ae47
+  e0b1ddfc  0x00000000
+  e0b1de00  0xFFFFFFFF
+  e0b1de04  0x00000000
+  e0b1de08  0x00000000
+  e0b1de0c  0x00F8AE47
+  e0b1de10  0x00000001
+  e0b1de14  0x00000000
+  e0b1de18  0xFFFFFFFF
+  e0b1de1c  0x00000000
+hit address=e0b24ea0 value=0xf8ae47
+  e0b24e90  0x00000000
+  e0b24e94  0xFFFFFFFF
+  e0b24e98  0x00000000
+  e0b24e9c  0x00000000
+  e0b24ea0  0x00F8AE47
+  e0b24ea4  0x00000001
+  e0b24ea8  0x00000000
+  e0b24eac  0xFFFFFFFF
+  e0b24eb0  0x6772656D
+hit address=e0b252a4 value=0xf8ae47
+  e0b25294  0x00000000
+  e0b25298  0xFFFFFFFF
+  e0b2529c  0x00000000
+  e0b252a0  0x00000000
+  e0b252a4  0x00F8AE47
+  e0b252a8  0x00000001
+  e0b252ac  0x00000000
+  e0b252b0  0xFFFFFFFF
+  e0b252b4  0x5F67666D
+hit address=e0b25eb8 value=0xf8ae47
+  e0b25ea8  0x00000000
+  e0b25eac  0xFFFFFFFF
+  e0b25eb0  0x00000000
+  e0b25eb4  0x00000000
+  e0b25eb8  0x00F8AE47
+  e0b25ebc  0x00000001
+  e0b25ec0  0x00000000
+  e0b25ec4  0xFFFFFFFF
+  e0b25ec8  0x00000000
+hit address=e0b32960 value=0xf8ae47
+  e0b32950  0x00000000
+  e0b32954  0xFFFFFFFF
+  e0b32958  0x00000000
+  e0b3295c  0x00000000
+  e0b32960  0x00F8AE47
+  e0b32964  0x00000001
+  e0b32968  0x00000000
+  e0b3296c  0xFFFFFFFF
+  e0b32970  0x00000000
+hit address=e0b3383c value=0xf8ae47
+  e0b3382c  0x00000000
+  e0b33830  0xFFFFFFFF
+  e0b33834  0x00000000
+  e0b33838  0x00000000
+  e0b3383c  0x00F8AE47
+  e0b33840  0x00000001
+  e0b33844  0x00000000
+  e0b33848  0xFFFFFFFF
+  e0b3384c  0x645F6570
+hit address=e0b38710 value=0xf8ae47
+  e0b38700  0x00000000
+  e0b38704  0xFFFFFFFF
+  e0b38708  0x00000000
+  e0b3870c  0x00000000
+  e0b38710  0x00F8AE47
+  e0b38714  0x00000001
+  e0b38718  0x00000000
+  e0b3871c  0xFFFFFFFF
+  e0b38720  0x735F6570
+hit address=e0b38e0c value=0xf8ae47
+  e0b38dfc  0x00000000
+  e0b38e00  0xFFFFFFFF
+  e0b38e04  0x00000000
+  e0b38e08  0x00000000
+  e0b38e0c  0x00F8AE47
+  e0b38e10  0x00000001
+  e0b38e14  0x00000000
+  e0b38e18  0xFFFFFFFF
+  e0b38e1c  0x00000000
+hit address=e0b4ab58 value=0xf8ae47
+  e0b4ab48  0x00000000
+  e0b4ab4c  0xFFFFFFFF
+  e0b4ab50  0x00000000
+  e0b4ab54  0x00000000
+  e0b4ab58  0x00F8AE47
+  e0b4ab5c  0x00000001
+  e0b4ab60  0x00000000
+  e0b4ab64  0xFFFFFFFF
+  e0b4ab68  0x00000000
+hit address=e0b4cea8 value=0xf8ae47
+  e0b4ce98  0x00000000
+  e0b4ce9c  0xFFFFFFFF
+  e0b4cea0  0x00000000
+  e0b4cea4  0x00000000
+  e0b4cea8  0x00F8AE47
+  e0b4ceac  0x00000001
+  e0b4ceb0  0x00000000
+  e0b4ceb4  0xFFFFFFFF
+  e0b4ceb8  0x00000000
+hit address=e0b514c0 value=0xf8ae47
+  e0b514b0  0x00000000
+  e0b514b4  0xFFFFFFFF
+  e0b514b8  0x00000000
+  e0b514bc  0x00000000
+  e0b514c0  0x00F8AE47
+  e0b514c4  0x00000001
+  e0b514c8  0x00000000
+  e0b514cc  0xFFFFFFFF
+  e0b514d0  0x00000000
+hit address=e0b583b8 value=0xf8ae47
+  e0b583a8  0x00000000
+  e0b583ac  0xFFFFFFFF
+  e0b583b0  0x00000000
+  e0b583b4  0x00000000
+  e0b583b8  0x00F8AE47
+  e0b583bc  0x00000001
+  e0b583c0  0x00000000
+  e0b583c4  0xFFFFFFFF
+  e0b583c8  0x00000000
+hit address=e0b5b02c value=0xf8ae47
+  e0b5b01c  0x00000000
+  e0b5b020  0xFFFFFFFF
+  e0b5b024  0x00000000
+  e0b5b028  0x00000000
+  e0b5b02c  0x00F8AE47
+  e0b5b030  0x00000001
+  e0b5b034  0x00000000
+  e0b5b038  0xFFFFFFFF
+  e0b5b03c  0x00000000
+hit address=e0b5bb90 value=0xf8ae47
+  e0b5bb80  0x00000000
+  e0b5bb84  0xFFFFFFFF
+  e0b5bb88  0x00000000
+  e0b5bb8c  0x00000000
+  e0b5bb90  0x00F8AE47
+  e0b5bb94  0x00000001
+  e0b5bb98  0x00000000
+  e0b5bb9c  0xFFFFFFFF
+  e0b5bba0  0x00000000
+hit address=e0b5bf6c value=0xf8ae47
+  e0b5bf5c  0x00000000
+  e0b5bf60  0xFFFFFFFF
+  e0b5bf64  0x00000000
+  e0b5bf68  0x00000000
+  e0b5bf6c  0x00F8AE47
+  e0b5bf70  0x00000001
+  e0b5bf74  0x00000000
+  e0b5bf78  0xFFFFFFFF
+  e0b5bf7c  0x00000000
+hit address=e0b5ca0c value=0xf8ae47
+  e0b5c9fc  0x00000000
+  e0b5ca00  0xFFFFFFFF
+  e0b5ca04  0x00000000
+  e0b5ca08  0x00000000
+  e0b5ca0c  0x00F8AE47
+  e0b5ca10  0x00000001
+  e0b5ca14  0x00000000
+  e0b5ca18  0xFFFFFFFF
+  e0b5ca1c  0x74736172
+hit address=e0b5cf04 value=0xf8ae47
+  e0b5cef4  0x00000000
+  e0b5cef8  0xFFFFFFFF
+  e0b5cefc  0x00000000
+  e0b5cf00  0x00000000
+  e0b5cf04  0x00F8AE47
+  e0b5cf08  0x00000001
+  e0b5cf0c  0x00000000
+  e0b5cf10  0xFFFFFFFF
+  e0b5cf14  0x00000000
+hit address=e0b5d298 value=0xf8ae47
+  e0b5d288  0x00000000
+  e0b5d28c  0xFFFFFFFF
+  e0b5d290  0x00000000
+  e0b5d294  0x00000000
+  e0b5d298  0x00F8AE47
+  e0b5d29c  0x00000001
+  e0b5d2a0  0x00000000
+  e0b5d2a4  0xFFFFFFFF
+  e0b5d2a8  0x00000000
+hit address=e0b5da4c value=0xf8ae47
+  e0b5da3c  0x00000000
+  e0b5da40  0xFFFFFFFF
+  e0b5da44  0x00000000
+  e0b5da48  0x00000000
+  e0b5da4c  0x00F8AE47
+  e0b5da50  0x00000001
+  e0b5da54  0x00000000
+  e0b5da58  0xFFFFFFFF
+  e0b5da5c  0x00000000
+hit address=e0b5f664 value=0xf8ae47
+  e0b5f654  0x00000002
+  e0b5f658  0xFFFFFFFF
+  e0b5f65c  0x00000000
+  e0b5f660  0x00000000
+  e0b5f664  0x00F8AE47
+  e0b5f668  0x00000001
+  e0b5f66c  0x00000000
+  e0b5f670  0xFFFFFFFF
+  e0b5f674  0x00000000
+hit address=e0b62264 value=0xf8ae47
+  e0b62254  0x00000000
+  e0b62258  0xFFFFFFFF
+  e0b6225c  0x00000000
+  e0b62260  0x00000000
+  e0b62264  0x00F8AE47
+  e0b62268  0x00000001
+  e0b6226c  0x00000000
+  e0b62270  0xFFFFFFFF
+  e0b62274  0x00000000
+hit address=e0b795b4 value=0xf8ae47
+  e0b795a4  0x00000000
+  e0b795a8  0xFFFFFFFF
+  e0b795ac  0x00000000
+  e0b795b0  0x00000000
+  e0b795b4  0x00F8AE47
+  e0b795b8  0x00000001
+  e0b795bc  0x00000000
+  e0b795c0  0xFFFFFFFF
+  e0b795c4  0x00000000
+hit address=e0b79cd8 value=0xf8ae47
+  e0b79cc8  0x00000000
+  e0b79ccc  0xFFFFFFFF
+  e0b79cd0  0x00000000
+  e0b79cd4  0x00000000
+  e0b79cd8  0x00F8AE47
+  e0b79cdc  0x00000001
+  e0b79ce0  0x00000000
+  e0b79ce4  0xFFFFFFFF
+  e0b79ce8  0x6F696473
+hit address=e0b803f4 value=0xf8ae47
+  e0b803e4  0x00000000
+  e0b803e8  0xFFFFFFFF
+  e0b803ec  0x00000000
+  e0b803f0  0x00000000
+  e0b803f4  0x00F8AE47
+  e0b803f8  0x00000001
+  e0b803fc  0x00000000
+  e0b80400  0xFFFFFFFF
+  e0b80404  0x735F6D73
+hit address=e0b80814 value=0xf8ae47
+  e0b80804  0x00000001
+  e0b80808  0xFFFFFFFF
+  e0b8080c  0x00000000
+  e0b80810  0x00000000
+  e0b80814  0x00F8AE47
+  e0b80818  0x00000001
+  e0b8081c  0x00000000
+  e0b80820  0xFFFFFFFF
+  e0b80824  0x72676D73
+hit address=e0b810a8 value=0xf8ae47
+  e0b81098  0x00000000
+  e0b8109c  0xFFFFFFFF
+  e0b810a0  0x00000000
+  e0b810a4  0x00000000
+  e0b810a8  0x00F8AE47
+  e0b810ac  0x00000001
+  e0b810b0  0x00000000
+  e0b810b4  0xFFFFFFFF
+  e0b810b8  0x00000000
+hit address=e0b8324c value=0xf8ae47
+  e0b8323c  0x00000000
+  e0b83240  0xFFFFFFFF
+  e0b83244  0x00000000
+  e0b83248  0x00000000
+  e0b8324c  0x00F8AE47
+  e0b83250  0x00000001
+  e0b83254  0x00000000
+  e0b83258  0xFFFFFFFF
+  e0b8325c  0x00000000
+hit address=e0b91ed4 value=0xf8ae47
+  e0b91ec4  0x00000000
+  e0b91ec8  0xFFFFFFFF
+  e0b91ecc  0x00000000
+  e0b91ed0  0x00000000
+  e0b91ed4  0x00F8AE47
+  e0b91ed8  0x00000001
+  e0b91edc  0x00000000
+  e0b91ee0  0xFFFFFFFF
+  e0b91ee4  0x00000000
+hit address=e0b9419c value=0xf8ae47
+  e0b9418c  0x00000000
+  e0b94190  0xFFFFFFFF
+  e0b94194  0x00000000
+  e0b94198  0x00000000
+  e0b9419c  0x00F8AE47
+  e0b941a0  0x00000001
+  e0b941a4  0x00000000
+  e0b941a8  0xFFFFFFFF
+  e0b941ac  0x00000000
+hit address=e0b96d90 value=0xf8ae47
+  e0b96d80  0x00000000
+  e0b96d84  0xFFFFFFFF
+  e0b96d88  0x00000000
+  e0b96d8c  0x00000000
+  e0b96d90  0x00F8AE47
+  e0b96d94  0x00000001
+  e0b96d98  0x00000000
+  e0b96d9c  0xFFFFFFFF
+  e0b96da0  0x00000000
+hit address=e0b982f0 value=0xf8ae47
+  e0b982e0  0x00000000
+  e0b982e4  0xFFFFFFFF
+  e0b982e8  0x00000000
+  e0b982ec  0x0000009F
+  e0b982f0  0x00F8AE47
+  e0b982f4  0x00000001
+  e0b982f8  0x00000000
+  e0b982fc  0xFFFFFFFF
+  e0b98300  0x00776475
+hit address=e0b984b0 value=0xf8ae47
+  e0b984a0  0x00000000
+  e0b984a4  0xFFFFFFFF
+  e0b984a8  0x00000000
+  e0b984ac  0x00000000
+  e0b984b0  0x00F8AE47
+  e0b984b4  0x00000001
+  e0b984b8  0x00000000
+  e0b984bc  0xFFFFFFFF
+  e0b984c0  0x00000000
+hit address=e0b9c028 value=0xf8ae47
+  e0b9c018  0x00000001
+  e0b9c01c  0xFFFFFFFF
+  e0b9c020  0x00000000
+  e0b9c024  0x00000000
+  e0b9c028  0x00F8AE47
+  e0b9c02c  0x00000001
+  e0b9c030  0x00000000
+  e0b9c034  0xFFFFFFFF
+  e0b9c038  0x00000000
+hit address=e0bab04c value=0xf8ae47
+  e0bab03c  0x00000000
+  e0bab040  0xFFFFFFFF
+  e0bab044  0x00000000
+  e0bab048  0x00000000
+  e0bab04c  0x00F8AE47
+  e0bab050  0x00000001
+  e0bab054  0x00000000
+  e0bab058  0xFFFFFFFF
+  e0bab05c  0x00000000
+hit address=e0bac684 value=0xf8ae47
+  e0bac674  0x00000000
+  e0bac678  0xFFFFFFFF
+  e0bac67c  0x00000000
+  e0bac680  0x00000000
+  e0bac684  0x00F8AE47
+  e0bac688  0x00000001
+  e0bac68c  0x00000000
+  e0bac690  0xFFFFFFFF
+  e0bac694  0x00000000
+hit address=e0bb0284 value=0xf8ae47
+  e0bb0274  0x00000000
+  e0bb0278  0xFFFFFFFF
+  e0bb027c  0x00000000
+  e0bb0280  0x00000000
+  e0bb0284  0x00F8AE47
+  e0bb0288  0x00000001
+  e0bb028c  0x00000000
+  e0bb0290  0xFFFFFFFF
+  e0bb0294  0x6B726F77
+hits=61
+
+[REFERENCES TO C143E908]
+from=e030fec0 type=READ primary=true function=FUN_e030feb8 @ e030feb8
+from=e0308c52 type=READ primary=true function=FUN_e0308c48 @ e0308c48
+from=e0308b7e type=WRITE primary=false function=FUN_e0308b70 @ e0308b70
+from=e0308be4 type=WRITE primary=true function=FUN_e0308b70 @ e0308b70
+reference_count_reported=4
+
+[REFERENCES TO C1443030]
+from=e0308ec2 type=WRITE primary=true function=<none>
+reference_count_reported=1
+
+[REFERENCES TO C1443028]
+from=e0308ebe type=WRITE primary=true function=<none>
+reference_count_reported=1
+
+[REFERENCES TO E030FB41]
+reference_count_reported=0
+
+[DECOMPILE E0306240]
+function=FUN_e0306240 entry=e0306240 body=[[e0306240, e0306725]]
+
+undefined4 * FUN_e0306240(undefined4 *param_1)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 *puVar4;
+  undefined4 *puVar3;
+  int iVar5;
+  uint uVar6;
+  uint uVar7;
+  undefined4 *puVar8;
+  int iVar9;
+  int iVar10;
+  int iVar11;
+  
+  FUN_e0302740(param_1,0);
+  *param_1 = &DAT_e09aea54;
+  param_1[1] = &DAT_e09aed28;
+  param_1[2] = &DAT_e09aedb4;
+  *(undefined1 *)(param_1 + 0x89) = 0;
+  param_1[0x87] = 0;
+  param_1[0x88] = 0;
+  param_1[0x99] = 0;
+  puVar3 = &DAT_e09aba54;
+  puVar8 = param_1 + 0x9b;
+  do {
+    puVar4 = puVar3 + 1;
+    *puVar8 = *puVar3;
+    puVar3 = puVar4;
+    puVar8 = puVar8 + 1;
+  } while (puVar4 != (undefined4 *)&DAT_e09abb20);
+  param_1[0x7cc] = 0;
+  thunk_EXT_FUN_38100424(param_1 + 0x21c,0,0x38);
+  param_1[0x7cd] = 1;
+  thunk_EXT_FUN_38100424(param_1 + 0x22a,0,0x24);
+  param_1[0x7ce] = 1;
+  uVar2 = DAT_e09ab184;
+  uVar1 = DAT_e09ab180;
+  param_1[0x29d] = DAT_e09ab17c;
+  param_1[0x29e] = uVar1;
+  param_1[0x29f] = uVar2;
+  param_1[0x2a0] = DAT_e09ab188;
+  param_1[0x7f7] = 1;
+  param_1[0x612] = 0;
+  param_1[0x817] = 1;
+  param_1[0x804] = 1;
+  thunk_EXT_FUN_38100424(param_1 + 0x2dd,0,0x854);
+  thunk_EXT_FUN_38100424(param_1 + 0x6a5,0,0x34);
+  thunk_EXT_FUN_381005a0(param_1 + 1999,&DAT_e09ab290,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0xce,"         ",0x180);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7d5,&DAT_e09ab230,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x12e,&DAT_e09ab790,0xa8);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7db,&DAT_e09ab218,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x158,&DAT_e09ab838,0xa8);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7e1,&DAT_e09ab308,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x182,"    d  ",0x240);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7f1,&DAT_e09ab338,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x23d,&DAT_e09abc28,0x180);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7f8,&DAT_e09ab2c0,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x2a1,&DAT_e09ab700,0x90);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7fe,&DAT_e09ab278,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x2c5,&DAT_e09ab53c,0x60);
+  thunk_EXT_FUN_381005a0(param_1 + 0x805,&DAT_e09ab2a8,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x4f2,&DAT_e09ac500,0x300);
+  thunk_EXT_FUN_381005a0(param_1 + 0x80b,&DAT_e09ab248,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x5b2,&DAT_e09ab610,0x78);
+  thunk_EXT_FUN_381005a0(param_1 + 0x811,&DAT_e09ab2d8,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x5d0,&DAT_e09abb20,0x108);
+  thunk_EXT_FUN_381005a0(param_1 + 0x818,&DAT_e09ab368,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x613,&DAT_e09ab3f4,0x30);
+  thunk_EXT_FUN_381005a0(param_1 + 0x81e,&DAT_e09ab350,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x61f,&DAT_e09abf28,0x1c8);
+  thunk_EXT_FUN_381005a0(param_1 + 0x834,&DAT_e09ab2f0,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x6eb,&DAT_e09ab4dc,0x60);
+  thunk_EXT_FUN_381005a0(param_1 + 0x83f,&DAT_e09ab320,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x708,"         ",0xc0);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7e7,&DAT_e09ab1a0,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x212,&DAT_e09ab3cc,0x28);
+  thunk_EXT_FUN_381005a0(param_1 + 0x7ec,"         ",0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x233,&DAT_e09ab3a4,0x28);
+  thunk_EXT_FUN_381005a0(param_1 + 0x824,&DAT_e09ab204,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x691,&DAT_e09ab48c,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x829,&DAT_e09ab260,0x18);
+  thunk_EXT_FUN_381005a0(param_1 + 0x6b2,&DAT_e09ab424,0x30);
+  thunk_EXT_FUN_381005a0(param_1 + 0x82f,&DAT_e09ab1c8,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x6be,&DAT_e09ab8e0,0xb4);
+  thunk_EXT_FUN_381005a0(param_1 + 0x83a,&DAT_e09ab1b4,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x703,&DAT_e09ab1f0,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x845,&DAT_e09ab1dc,0x14);
+  thunk_EXT_FUN_381005a0(param_1 + 0x738,&DAT_e09ab688,0x78);
+  thunk_EXT_FUN_381005a0(param_1 + 0x84a,&DAT_e09ab59c,0x74);
+  thunk_EXT_FUN_381005a0(param_1 + 0x756,&DAT_e09ac0f0,0x1d0);
+  iVar5 = 0x65;
+  do {
+    iVar9 = 1;
+    do {
+      iVar10 = 1;
+      do {
+        iVar11 = iVar10 + (iVar9 + iVar5 * 3) * 0x14;
+        param_1[iVar11 + -0xd98] = (uint)(byte)"DSID_CONSTAT_USER_ACK_BITS_Y   "[iVar11 + 0xb];
+        iVar10 = iVar10 + 1;
+        *(undefined *)((int)param_1 + iVar11 + 0x9db) = (&UNK_e09ab747)[iVar11];
+      } while (iVar10 < 0x15);
+      iVar9 = iVar9 + 1;
+    } while (iVar9 < 4);
+    iVar5 = iVar5 + 1;
+  } while (iVar5 < 0x83);
+  FUN_e0975a20((int)param_1 + 0x225,&DAT_e0306a78,0x14);
+  FUN_e0975a20((int)param_1 + 0x239,&DAT_e0306a78,0x14);
+  FUN_e0975a20((int)param_1 + 0x24d,&DAT_e0306a78,0x14);
+  *(undefined1 *)(param_1 + 0x9a) = 0;
+  uVar6 = 0;
+  do {
+    uVar7 = uVar6 + 1;
+    *(undefined1 *)((int)(param_1 + 0x4f2) + uVar6 + 0xb60) = 0;
+    uVar6 = uVar7;
+  } while (uVar7 < 6);
+  return param_1;
+}
+
+
+
+[DECOMPILE E03067E8]
+function=FUN_e03067e8 entry=e03067e8 body=[[e03067e8, e0306a77] [e0306a7c, e0306c1b]]
+
+void FUN_e03067e8(int *param_1,int *param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  code *pcVar4;
+  uint uVar5;
+  int *piVar6;
+  int iVar7;
+  uint uVar8;
+  int iVar9;
+  undefined1 local_2d [9];
+  
+  if (param_1 != param_2) {
+    param_1[0x88] = (int)param_2;
+    param_1[0x87] = (int)param_2;
+    iVar1 = (**(code **)(*param_2 + 0x158))(param_2,param_1 + 0x9b);
+    param_1[0x7cc] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1b8))(param_2,param_1 + 0x21c);
+    param_1[0x7cd] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x198))(param_2,param_1 + 0x22a);
+    param_1[0x7ce] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1bc))(param_2,param_1 + 0x29d);
+    param_1[0x7f7] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 400))(param_2,param_1 + 0x612);
+    param_1[0x817] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x174))(param_2,param_1 + 0x2dd);
+    param_1[0x804] = iVar1;
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xa4]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xa5];
+      iVar1 = (**(code **)(*param_2 + 0x15c))(param_2,iVar7,param_1 + uVar8 * 0x10 + 0xce);
+      pcVar4 = *(code **)(*param_2 + 0x1a8);
+      param_1[uVar8 + 1999] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x12e);
+      pcVar4 = *(code **)(*param_2 + 0x1ac);
+      param_1[uVar8 + 0x7d5] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x158);
+      pcVar4 = *(code **)(*param_2 + 0x4c);
+      param_1[uVar8 + 0x7db] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x18 + 0x182);
+      pcVar4 = *(code **)(*param_2 + 0x1a4);
+      param_1[uVar8 + 0x7e1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 9 + 0x6be);
+      pcVar4 = *(code **)(*param_2 + 0x160);
+      param_1[uVar8 + 0x82f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x10 + 0x23d);
+      pcVar4 = *(code **)(*param_2 + 0x16c);
+      param_1[uVar8 + 0x7f1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 6 + 0x2a1);
+      pcVar4 = *(code **)(*param_2 + 0x170);
+      param_1[uVar8 + 0x7f8] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x2c5);
+      pcVar4 = *(code **)(*param_2 + 0x164);
+      param_1[uVar8 + 0x7fe] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x20 + 0x4f2);
+      pcVar4 = *(code **)(*param_2 + 0x1b4);
+      param_1[uVar8 + 0x805] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 5 + 0x5b2);
+      pcVar4 = *(code **)(*param_2 + 0x168);
+      param_1[uVar8 + 0x80b] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0xb + 0x5d0);
+      pcVar4 = *(code **)(*param_2 + 8);
+      param_1[uVar8 + 0x811] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x613);
+      pcVar4 = *(code **)(*param_2 + 0x188);
+      param_1[uVar8 + 0x818] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x13 + 0x61f);
+      pcVar4 = *(code **)(*param_2 + 0x48);
+      param_1[uVar8 + 0x81e] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x6eb);
+      pcVar4 = *(code **)(*param_2 + 0x178);
+      param_1[uVar8 + 0x834] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 8 + 0x708);
+      pcVar4 = *(code **)(*param_2 + 0x34);
+      param_1[uVar8 + 0x83f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x6b2);
+      param_1[uVar8 + 0x829] = iVar1;
+    }
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xaf]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xb0];
+      iVar1 = (**(code **)(*param_2 + 0x54))(param_2,iVar7,param_1 + uVar8 * 2 + 0x212);
+      pcVar4 = *(code **)(*param_2 + 0x6c);
+      param_1[uVar8 + 0x7e7] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x233);
+      pcVar4 = *(code **)(*param_2 + 0x20);
+      param_1[uVar8 + 0x7ec] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x691);
+      pcVar4 = *(code **)(*param_2 + 0x58);
+      param_1[uVar8 + 0x824] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 + 0x703);
+      piVar6 = param_1 + uVar8 * 6 + 0x738;
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x83a] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,1,piVar6);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,2,piVar6 + 2);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,3,piVar6 + 4);
+      param_1[uVar8 + 0x845] = iVar1;
+    }
+    uVar8 = 0;
+    do {
+      iVar1 = (**(code **)(*param_2 + 0x74))(param_2,uVar8,param_1 + uVar8 * 4 + 0x756);
+      uVar5 = uVar8 + 1;
+      param_1[uVar8 + 0x84a] = iVar1;
+      uVar8 = uVar5;
+    } while (uVar5 < 0x1d);
+    iVar1 = 0x65;
+    do {
+      iVar7 = 1;
+      do {
+        iVar9 = 1;
+        do {
+          iVar2 = (**(code **)(*param_2 + 0x3c))(param_2,iVar1,iVar7,iVar9,local_2d);
+          iVar3 = iVar9 + (iVar1 * 3 + iVar7) * 0x14;
+          param_1[iVar3 + -0xd98] = iVar2;
+          iVar9 = iVar9 + 1;
+          *(undefined1 *)((int)param_1 + iVar3 + 0x9db) = local_2d[0];
+        } while (iVar9 < 0x15);
+        iVar7 = iVar7 + 1;
+      } while (iVar7 < 4);
+      iVar1 = iVar1 + 1;
+    } while (iVar1 < 0x83);
+    FUN_e0975a20((int)param_1 + 0x225,param_1 + 0x21f,0x14);
+    FUN_e0975a20((int)param_1 + 0x239,(int)param_1 + 0x887,0x14);
+    *(undefined1 *)(param_1 + 0x9a) = 0;
+  }
+  return;
+}
+
+
+
+[DECOMPILE E0308B70]
+function=FUN_e0308b70 entry=e0308b70 body=[[e0308b70, e0308be9]]
+
+undefined4 * FUN_e0308b70(undefined4 *param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  int iVar3;
+  
+  uVar1 = 0;
+  do {
+    uVar2 = uVar1 + 1;
+    param_1[uVar1] = 0;
+    uVar1 = uVar2;
+  } while (uVar2 < 3);
+  iVar3 = FUN_e0981052(0xc1442ff0);
+  if (iVar3 != 0) {
+    FUN_e030cf48(0xc143e910);
+    FUN_e0981216(0xc01e05e8);
+    FUN_e0981116(0xc1442ff0);
+  }
+  *param_1 = 0xc143e910;
+  iVar3 = FUN_e0981052(0xc1442ff8);
+  if (iVar3 != 0) {
+    FUN_e0306240(0xc143eb2c);
+    FUN_e0981216(0xc01e05f4);
+    FUN_e0981116(0xc1442ff8);
+  }
+  param_1[1] = 0xc143eb2c;
+  return param_1;
+}
+
+
+
+[DECOMPILE E030FB40]
+function=FUN_e030fb40 entry=e030fb40 body=[[e030fb40, e030fc11]]
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e030fb40(void)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  int *piVar4;
+  code *pcVar5;
+  undefined4 local_34;
+  undefined4 uStack_30;
+  undefined4 uStack_2c;
+  undefined4 local_28;
+  undefined4 uStack_24;
+  undefined4 local_20;
+  undefined4 uStack_1c;
+  undefined4 uStack_18;
+  undefined1 local_14;
+  undefined1 local_13;
+  undefined1 local_12;
+  int local_10;
+  
+  local_10 = _DAT_c022a43c;
+  local_34 = DAT_e09ae460;
+  uStack_30 = DAT_e09ae464;
+  uStack_2c = DAT_e09ae468;
+  local_28 = DAT_e09ae46c;
+  uStack_24 = DAT_e09ae470;
+  local_20 = DAT_e09ae474;
+  uStack_1c = DAT_e09ae478;
+  uStack_18 = DAT_e09ae47c;
+  local_14 = DAT_e09ae480;
+  local_13 = DAT_e09ae481;
+  local_12 = DAT_e09ae482;
+  iVar1 = thunk_EXT_FUN_e0238c0c();
+  if (iVar1 != 0) {
+    func_0xe02366d8(0x225,DAT_e030fde8,0x80000000);
+  }
+  iVar1 = FUN_e0308f10();
+  (**(code **)(**(int **)(iVar1 + 0x30) + 0x24))(*(int **)(iVar1 + 0x30),&local_20,0x14);
+  uVar2 = FUN_e03053f8(&local_20);
+  FUN_e03053d0(uVar2,&local_20,0xf);
+  iVar1 = FUN_e0308f10();
+  uVar3 = (**(code **)(**(int **)(iVar1 + 0x30) + 0x18))();
+  piVar4 = (int *)FUN_e030feb8();
+  uVar2 = (**(code **)(*piVar4 + 0x2c0))(piVar4,uVar2,uVar3);
+  FUN_e0305360(uVar2,&local_34,0x14);
+  iVar1 = FUN_e0308f10();
+  piVar4 = *(int **)(iVar1 + 0x30);
+  pcVar5 = *(code **)(*piVar4 + 0x28);
+  uVar2 = func_0xe0242c5e(&local_34);
+  (*pcVar5)(piVar4,&local_34,uVar2,0x14,0);
+  if (local_10 != _DAT_c022a43c) {
+    FUN_e093ea50();
+  }
+  return;
+}
+
+
+
+[DECOMPILE E030FEB8]
+function=FUN_e030feb8 entry=e030feb8 body=[[e030feb0, e030feb1] [e030feb8, e030fec5]]
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 FUN_e030feb8(void)
+
+{
+  return _DAT_c143e908;
+}
+
+
+
+[STATIC LIMITS / RUNTIME HANDOFF]
+The imported ELF does not map the RAM cells 0xC143E908, 0xC1443030 or selected-object address 0xC143EB2C.
+Static analysis can identify code and candidate pointer handoffs, but cannot report the live byte at 0xC143ED50, live provider pointer, or active reason-group contents.
+Those values require a supported read-only runtime memory/debug capture. The companion launcher only refreshes known read-only CDM HTTP diagnostics; it does not claim to read firmware RAM.
+
+[END]
+report=/home/mrae/proj/hp2855e-re/evidence/combined-audit-20261121_071749/HP2855e_Combined_Ghidra_Report.txt
