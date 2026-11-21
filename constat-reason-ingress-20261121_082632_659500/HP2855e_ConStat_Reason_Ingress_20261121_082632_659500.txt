@@ -1,0 +1,889 @@
+HP DeskJet 2855e — ConStat reason-ingress / callback registration trace
+Program=hp_lbi_address_mapped.elf imageBase=c01e3c40
+Mode=read-only; existing instructions/functions/references/initialized data only; no analysis or program edits.
+Targets: C143E908 receiver; vtable +0x2C0 wrapper -> +0x2C4 reason writer; +0x29C/+0x2A0 readiness helpers; DSID 0x12FB0 query via C144301C.
+No printer communication, live runtime memory, state changes, firmware modification or method invocation.
+
+
+============================================================
+1. TARGET REFERENCES — REASON WRAPPER, WRITER, CALLBACKS AND QUERY
+============================================================
+
+TARGET 0xE03076B0 function=FUN_e03076b0 @ e03076b0
+  reference_count=0
+
+TARGET 0xE03076C0 function=ConStat_Reason_Inserter_Anchor @ e03076c0
+  reference_count=0
+
+TARGET 0xE030FB40 function=FUN_e030fb40 @ e030fb40
+  reference_count=0
+
+TARGET 0xE030F390 function=FUN_e030f390 @ e030f390
+  reference_count=0
+
+TARGET 0xE030F428 function=FUN_e030f428 @ e030f428
+  reference_count=0
+
+TARGET 0xE030FEB8 function=FUN_e030feb8 @ e030feb8
+  REF from=e030f470 type=UNCONDITIONAL_CALL owner=FUN_e030f428 @ e030f428
+  REF from=e030f808 type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030fa3a type=UNCONDITIONAL_CALL owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030faf2 type=UNCONDITIONAL_CALL owner=FUN_e030faa8 @ e030faa8
+  REF from=e030fbc4 type=UNCONDITIONAL_CALL owner=FUN_e030fb40 @ e030fb40
+  REF from=e030f3d8 type=UNCONDITIONAL_CALL owner=FUN_e030f390 @ e030f390
+  reference_count=6
+
+TARGET 0xE0308F10 function=FUN_e0308f10 @ e0308f10
+  REF from=e0302b7c type=UNCONDITIONAL_CALL owner=FUN_e0302b78 @ e0302b78
+  REF from=e0303642 type=UNCONDITIONAL_CALL owner=FUN_e0303610 @ e0303610
+  REF from=e030571a type=UNCONDITIONAL_CALL owner=FUN_e0305708 @ e0305708
+  REF from=e030579a type=UNCONDITIONAL_CALL owner=FUN_e0305788 @ e0305788
+  REF from=e030aa4a type=UNCONDITIONAL_CALL owner=FUN_e030aa40 @ e030aa40
+  REF from=e030aa94 type=UNCONDITIONAL_CALL owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aaa8 type=UNCONDITIONAL_CALL owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aac0 type=UNCONDITIONAL_CALL owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aad0 type=UNCONDITIONAL_CALL owner=FUN_e030aa70 @ e030aa70
+  REF from=e030aae0 type=UNCONDITIONAL_CALL owner=FUN_e030aa70 @ e030aa70
+  REF from=e030afa6 type=UNCONDITIONAL_CALL owner=FUN_e030af68 @ e030af68
+  REF from=e030b0b2 type=UNCONDITIONAL_CALL owner=FUN_e030b058 @ e030b058
+  REF from=e030b0d6 type=UNCONDITIONAL_CALL owner=FUN_e030b058 @ e030b058
+  REF from=e030b0e8 type=UNCONDITIONAL_CALL owner=FUN_e030b058 @ e030b058
+  REF from=e030b7fc type=UNCONDITIONAL_CALL owner=FUN_e030b798 @ e030b798
+  REF from=e030b80e type=UNCONDITIONAL_CALL owner=FUN_e030b798 @ e030b798
+  REF from=e030b92a type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b93e type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b954 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b964 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b978 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b994 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9a4 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9ba type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9ce type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9e2 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030b9f8 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba08 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba1c type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba34 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba48 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba5e type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba6e type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030ba80 type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030bb1a type=UNCONDITIONAL_CALL owner=FUN_e030b8e8 @ e030b8e8
+  REF from=e030bc86 type=UNCONDITIONAL_CALL owner=FUN_e030bc08 @ e030bc08
+  REF from=e030bd00 type=UNCONDITIONAL_CALL owner=FUN_e030bcb0 @ e030bcb0
+  REF from=e030be8e type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030beae type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bec0 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bed4 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bf00 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bf32 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bfc0 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030bfd0 type=UNCONDITIONAL_CALL owner=FUN_e030be28 @ e030be28
+  REF from=e030c010 type=UNCONDITIONAL_CALL owner=FUN_e030c008 @ e030c008
+  REF from=e030c020 type=UNCONDITIONAL_CALL owner=FUN_e030c008 @ e030c008
+  REF from=e030c032 type=UNCONDITIONAL_CALL owner=FUN_e030c008 @ e030c008
+  REF from=e030c340 type=UNCONDITIONAL_CALL owner=FUN_e030c2f8 @ e030c2f8
+  REF from=e030c3ce type=UNCONDITIONAL_CALL owner=FUN_e030c358 @ e030c358
+  REF from=e030c7a6 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c7c0 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c7de type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c7f4 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c80a type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c820 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c838 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c852 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c864 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c87e type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c898 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c8b2 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c8cc type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c8e4 type=UNCONDITIONAL_CALL owner=FUN_e030c798 @ e030c798
+  REF from=e030c9ae type=UNCONDITIONAL_CALL owner=FUN_e030c970 @ e030c970
+  REF from=e030c9fe type=UNCONDITIONAL_CALL owner=FUN_e030c9c8 @ e030c9c8
+  REF from=e030cc0e type=UNCONDITIONAL_CALL owner=FUN_e030cbd0 @ e030cbd0
+  REF from=e030cd30 type=UNCONDITIONAL_CALL owner=FUN_e030cd18 @ e030cd18
+  REF from=e030cd88 type=UNCONDITIONAL_CALL owner=FUN_e030cd78 @ e030cd78
+  REF from=e030dc64 type=UNCONDITIONAL_CALL owner=FUN_e030dbd8 @ e030dbd8
+  REF from=e030df4a type=UNCONDITIONAL_CALL owner=FUN_e030de58 @ e030de58
+  REF from=e030df5a type=UNCONDITIONAL_CALL owner=FUN_e030de58 @ e030de58
+  REF from=e030df6a type=UNCONDITIONAL_CALL owner=FUN_e030de58 @ e030de58
+  REF from=e030e0c8 type=UNCONDITIONAL_CALL owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030e0f0 type=UNCONDITIONAL_CALL owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030e104 type=UNCONDITIONAL_CALL owner=FUN_e030dfe0 @ e030dfe0
+  REF from=e030eb2c type=UNCONDITIONAL_CALL owner=FUN_e030eb28 @ e030eb28
+  REF from=e030f488 type=UNCONDITIONAL_CALL owner=FUN_e030f428 @ e030f428
+  REF from=e030f7c6 type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f7de type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f7ec type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f7fa type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f824 type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030f84c type=UNCONDITIONAL_CALL owner=FUN_e030f7a0 @ e030f7a0
+  REF from=e030fa0c type=UNCONDITIONAL_CALL owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030fa2c type=UNCONDITIONAL_CALL owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030fa52 type=UNCONDITIONAL_CALL owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030fa70 type=UNCONDITIONAL_CALL owner=FUN_e030f9a0 @ e030f9a0
+  REF from=e030fae4 type=UNCONDITIONAL_CALL owner=FUN_e030faa8 @ e030faa8
+  REF from=e030fb0a type=UNCONDITIONAL_CALL owner=FUN_e030faa8 @ e030faa8
+  REF from=e030fb96 type=UNCONDITIONAL_CALL owner=FUN_e030fb40 @ e030fb40
+  REF from=e030fbb6 type=UNCONDITIONAL_CALL owner=FUN_e030fb40 @ e030fb40
+  REF from=e030fbdc type=UNCONDITIONAL_CALL owner=FUN_e030fb40 @ e030fb40
+  REF from=e0303ad8 type=UNCONDITIONAL_CALL owner=FUN_e0303ac8 @ e0303ac8
+  REF from=e0303aee type=UNCONDITIONAL_CALL owner=FUN_e0303ac8 @ e0303ac8
+  REF from=e030b032 type=UNCONDITIONAL_CALL owner=FUN_e030afc8 @ e030afc8
+  REF from=e030aff0 type=UNCONDITIONAL_CALL owner=FUN_e030afc8 @ e030afc8
+  REF from=e030b00c type=UNCONDITIONAL_CALL owner=FUN_e030afc8 @ e030afc8
+  REF from=e030c448 type=UNCONDITIONAL_CALL owner=FUN_e030c3f8 @ e030c3f8
+  REF from=e030cd5a type=UNCONDITIONAL_CALL owner=FUN_e030cd48 @ e030cd48
+  REF from=e030f3f0 type=UNCONDITIONAL_CALL owner=FUN_e030f390 @ e030f390
+  REF from=e030eadc type=UNCONDITIONAL_CALL owner=FUN_e030ead8 @ e030ead8
+  REF from=e030eb04 type=UNCONDITIONAL_CALL owner=FUN_e030eaf0 @ e030eaf0
+  REF from=e030eb42 type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e030eb54 type=UNCONDITIONAL_CALL owner=FUN_e030eb50 @ e030eb50
+  REF from=e0303be6 type=UNCONDITIONAL_CALL owner=FUN_e0303bd0 @ e0303bd0
+  REF from=e0303c04 type=UNCONDITIONAL_CALL owner=FUN_e0303bd0 @ e0303bd0
+  REF from=e030a544 type=UNCONDITIONAL_CALL owner=FUN_e030a530 @ e030a530
+  REF from=e0305586 type=UNCONDITIONAL_CALL owner=FUN_e0305580 @ e0305580
+  REF from=e0305596 type=UNCONDITIONAL_CALL owner=FUN_e0305580 @ e0305580
+  REF from=e03055ae type=UNCONDITIONAL_CALL owner=FUN_e0305580 @ e0305580
+  REF from=e03029f4 type=UNCONDITIONAL_CALL owner=FUN_e03029e0 @ e03029e0
+  REF from=e0302aa2 type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e0302b5c type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e0303044 type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e03057f8 type=UNCONDITIONAL_CALL owner=FUN_e03057c8 @ e03057c8
+  REF from=e030a49e type=UNCONDITIONAL_CALL owner=FUN_e030a418 @ e030a418
+  REF from=e030785c type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e030a9e4 type=UNCONDITIONAL_CALL owner=<none>
+  REF from=e030aa26 type=UNCONDITIONAL_CALL owner=FUN_e030a9f8 @ e030a9f8
+  reference_count=120 (capped)
+
+TARGET 0xE0308EB8 function=<none>
+  reference_count=0
+
+TARGET 0xE0302AA6 function=<none>
+  reference_count=0
+
+TARGET 0xE0306778 function=<none>
+  reference_count=0
+
+TARGET 0xE03067B0 function=<none>
+  reference_count=0
+
+TARGET 0xE03067E8 function=FUN_e03067e8 @ e03067e8
+  reference_count=0
+
+
+============================================================
+2. EXACT INSTRUCTION WINDOWS — REGISTRATION / QUERY / CALLBACK -> WRITER
+============================================================
+
+--- WINDOW near 0xE0308EA8 ---
+     e0308e78  movt r2,#0xe09a  owner=<none>
+     e0308e7c  movt r12,#0xe09a  owner=<none>
+     e0308e80  stm r0,{r2,r12}  owner=<none>
+     e0308e84  movw r2,#0xf010  owner=<none>
+     e0308e88  movt r2,#0xe09a  owner=<none>
+     e0308e8c  str r2,[r0,#0x8]  owner=<none>
+     e0308e8e  movw r2,#0xf164  owner=<none>
+     e0308e92  movt r2,#0xe09a  owner=<none>
+     e0308e96  str r2,[r0,#0xc]  owner=<none>
+     e0308e98  movw r2,#0xedc8  owner=<none>
+     e0308e9c  movt r2,#0xe09a  owner=<none>
+     e0308ea0  str r2,[r0,#0x10]  owner=<none>
+     e0308ea2  movw r2,#0xf178  owner=<none>
+     e0308ea6  movt r2,#0xe09a  owner=<none>
+ >>> e0308eaa  str r2,[r0,#0x14]  owner=<none>
+     e0308eac  movw r2,#0xf194  owner=<none>
+     e0308eb0  movt r2,#0xe09a  owner=<none>
+     e0308eb4  str r2,[r0,#0x18]  owner=<none>
+     e0308eb6  movs r2,#0x0  owner=<none>
+     e0308eb8  str r2,[r0,#0x1c]  owner=<none>
+     e0308eba  str r2,[r0,#0x20]  owner=<none>
+     e0308ebc  str r2,[r0,#0x24]  owner=<none>
+     e0308ebe  str r2,[r0,#0x28]  owner=<none>
+     e0308ec0  str r2,[r0,#0x2c]  owner=<none>
+     e0308ec2  str r2,[r0,#0x30]  owner=<none>
+     e0308ec4  str r2,[r0,#0x34]  owner=<none>
+     e0308ec6  str r2,[r0,#0x38]  owner=<none>
+     e0308ec8  str r1,[r0,#0x3c]  owner=<none>
+     e0308eca  bx lr  owner=<none>
+
+--- WINDOW near 0xE0302AA6 ---
+     e0302a70  bx lr  owner=FUN_e0302a58 @ e0302a58
+
+--- WINDOW near 0xE030FB92 ---
+     e030fb7a  strb r0,[r2,#0x1]  owner=FUN_e030fb40 @ e030fb40
+     e030fb7c  ldrb r0,[r4,#0x2]  owner=FUN_e030fb40 @ e030fb40
+     e030fb7e  strb r0,[r2,#0x2]  owner=FUN_e030fb40 @ e030fb40
+     e030fb80  bl 0xe0318328  owner=FUN_e030fb40 @ e030fb40
+     e030fb84  cbz r0,0xe030fb96  owner=FUN_e030fb40 @ e030fb40
+     e030fb86  ldr.w r1,[0xe030fde8]  owner=FUN_e030fb40 @ e030fb40
+     e030fb8a  movw r0,#0x225  owner=FUN_e030fb40 @ e030fb40
+     e030fb8e  mov.w r2,#0x80000000  owner=FUN_e030fb40 @ e030fb40
+ >>> e030fb92  blx 0xe02366d8  owner=FUN_e030fb40 @ e030fb40
+     e030fb96  bl 0xe0308f10  owner=FUN_e030fb40 @ e030fb40
+     e030fb9a  ldr r0,[r0,#0x30]  owner=FUN_e030fb40 @ e030fb40
+     e030fb9c  ldr r1,[r0,#0x0]  owner=FUN_e030fb40 @ e030fb40
+     e030fb9e  ldr r3,[r1,#0x24]  owner=FUN_e030fb40 @ e030fb40
+     e030fba0  add r1,sp,#0x18  owner=FUN_e030fb40 @ e030fb40
+     e030fba2  movs r2,#0x14  owner=FUN_e030fb40 @ e030fb40
+     e030fba4  blx r3  owner=FUN_e030fb40 @ e030fb40
+     e030fba6  add r0,sp,#0x18  owner=FUN_e030fb40 @ e030fb40
+     e030fba8  bl 0xe03053f8  owner=FUN_e030fb40 @ e030fb40
+     e030fbac  add r1,sp,#0x18  owner=FUN_e030fb40 @ e030fb40
+     e030fbae  movs r2,#0xf  owner=FUN_e030fb40 @ e030fb40
+     e030fbb0  mov r4,r0  owner=FUN_e030fb40 @ e030fb40
+     e030fbb2  bl 0xe03053d0  owner=FUN_e030fb40 @ e030fb40
+     e030fbb6  bl 0xe0308f10  owner=FUN_e030fb40 @ e030fb40
+     e030fbba  ldr r0,[r0,#0x30]  owner=FUN_e030fb40 @ e030fb40
+     e030fbbc  ldr r1,[r0,#0x0]  owner=FUN_e030fb40 @ e030fb40
+     e030fbbe  ldr r1,[r1,#0x18]  owner=FUN_e030fb40 @ e030fb40
+     e030fbc0  blx r1  owner=FUN_e030fb40 @ e030fb40
+     e030fbc2  mov r5,r0  owner=FUN_e030fb40 @ e030fb40
+     e030fbc4  bl 0xe030feb8  owner=FUN_e030fb40 @ e030fb40
+     e030fbc8  ldr r1,[r0,#0x0]  owner=FUN_e030fb40 @ e030fb40
+     e030fbca  ldr.w r3,[r1,#0x2c0]  owner=FUN_e030fb40 @ e030fb40
+     e030fbce  mov r1,r4  owner=FUN_e030fb40 @ e030fb40
+     e030fbd0  mov r2,r5  owner=FUN_e030fb40 @ e030fb40
+     e030fbd2  blx r3  owner=FUN_e030fb40 @ e030fb40
+     e030fbd4  add r1,sp,#0x4  owner=FUN_e030fb40 @ e030fb40
+     e030fbd6  movs r2,#0x14  owner=FUN_e030fb40 @ e030fb40
+     e030fbd8  bl 0xe0305360  owner=FUN_e030fb40 @ e030fb40
+     e030fbdc  bl 0xe0308f10  owner=FUN_e030fb40 @ e030fb40
+     e030fbe0  ldr r4,[r0,#0x30]  owner=FUN_e030fb40 @ e030fb40
+     e030fbe2  ldr r1,[r4,#0x0]  owner=FUN_e030fb40 @ e030fb40
+     e030fbe4  add r0,sp,#0x4  owner=FUN_e030fb40 @ e030fb40
+     e030fbe6  ldr r5,[r1,#0x28]  owner=FUN_e030fb40 @ e030fb40
+     e030fbe8  bl 0xe0242c5e  owner=FUN_e030fb40 @ e030fb40
+     e030fbec  movs r1,#0x0  owner=FUN_e030fb40 @ e030fb40
+     e030fbee  str r1,[sp,#0x0]  owner=FUN_e030fb40 @ e030fb40
+     e030fbf0  add r1,sp,#0x4  owner=FUN_e030fb40 @ e030fb40
+     e030fbf2  mov r2,r0  owner=FUN_e030fb40 @ e030fb40
+
+--- WINDOW near 0xE03076B0 ---
+     e030768e  movs r2,#0x0  owner=<none>
+     e0307690  str r2,[r0,#0x10]  owner=<none>
+     e0307692  str r2,[r0,#0xc]  owner=<none>
+     e0307694  ldr r0,[r4,#0x0]  owner=<none>
+     e0307696  str.w r1,[r4,#0x2f8]  owner=<none>
+     e030769a  ldr.w r1,[r0,#0x2d0]  owner=<none>
+     e030769e  mov r0,r4  owner=<none>
+     e03076a0  blx r1  owner=<none>
+     e03076a2  bl 0xe0305788  owner=<none>
+     e03076a6  bl 0xe0305708  owner=<none>
+     e03076aa  movs r0,#0x0  owner=<none>
+     e03076ac  pop {r4,r5,r6,pc}  owner=<none>
+
+--- WINDOW near 0xE03076C0 ---
+     e030769e  mov r0,r4  owner=<none>
+     e03076a0  blx r1  owner=<none>
+     e03076a2  bl 0xe0305788  owner=<none>
+     e03076a6  bl 0xe0305708  owner=<none>
+     e03076aa  movs r0,#0x0  owner=<none>
+     e03076ac  pop {r4,r5,r6,pc}  owner=<none>
+
+--- WINDOW near 0xE030F390 ---
+     e030f36a  movw r1,#0xe27c  owner=FUN_e030f330 @ e030f330
+     e030f36e  movt r3,#0xe09a  owner=FUN_e030f330 @ e030f330
+     e030f372  movt r1,#0xe09a  owner=FUN_e030f330 @ e030f330
+     e030f376  mov r0,r5  owner=FUN_e030f330 @ e030f330
+     e030f378  movs r2,#0x4  owner=FUN_e030f330 @ e030f330
+     e030f37a  blx r4  owner=FUN_e030f330 @ e030f330
+     e030f37c  add sp,#0xc  owner=FUN_e030f330 @ e030f330
+     e030f37e  pop {r4,r5,pc}  owner=FUN_e030f330 @ e030f330
+
+--- WINDOW near 0xE030F428 ---
+     e030f412  ldr r0,[sp,#0x1c]  owner=FUN_e030f390 @ e030f390
+     e030f414  movt r2,#0xc022  owner=FUN_e030f390 @ e030f390
+     e030f418  ldr r1,[r2,#0x0]  owner=FUN_e030f390 @ e030f390
+     e030f41a  cmp r0,r1  owner=FUN_e030f390 @ e030f390
+     e030f41c  it ne  owner=FUN_e030f390 @ e030f390
+     e030f41e  bl.ne 0xe093ea50  owner=FUN_e030f390 @ e030f390
+     e030f422  add sp,#0x20  owner=FUN_e030f390 @ e030f390
+     e030f424  pop {r4,r5,pc}  owner=FUN_e030f390 @ e030f390
+
+--- WINDOW near 0xE0306778 ---
+     e030675c  cmp r2,#0x1  owner=<none>
+     e030675e  bne 0xe0306768  owner=<none>
+     e0306760  mov r1,r2  owner=<none>
+     e0306762  b 0xe0306766  owner=<none>
+     e0306764  movs r1,#0x0  owner=<none>
+     e0306766  strb r1,[r0,#0xc]  owner=<none>
+     e0306768  movs r0,#0x2  owner=<none>
+     e030676a  bx lr  owner=<none>
+
+--- WINDOW near 0xE03067B0 ---
+     e0306794  movt r0,#0xc143  owner=<none>
+     e0306798  ldr r1,[r0,#0x0]  owner=<none>
+     e030679a  mov r0,r4  owner=<none>
+     e030679c  blx r2  owner=<none>
+     e030679e  strb.w r5,[r4,#0x224]  owner=<none>
+     e03067a2  bl 0xe0305708  owner=<none>
+     e03067a6  movs r0,#0x0  owner=<none>
+     e03067a8  pop {r4,r5,pc}  owner=<none>
+
+
+============================================================
+3. FOCUSED DECOMPILATION
+============================================================
+
+--- FUNCTION FUN_e03076b0 @ e03076b0 (anchor 0xE03076B0) ---
+
+void FUN_e03076b0(int *param_1)
+
+{
+  (**(code **)(*param_1 + 0x2c4))();
+  return;
+}
+
+
+
+--- FUNCTION ConStat_Reason_Inserter_Anchor @ e03076c0 (anchor 0xE03076C0) ---
+
+undefined4 ConStat_Reason_Inserter_Anchor(int *param_1,undefined4 param_2,int param_3,int param_4)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  int iVar3;
+  
+  if ((char)param_1[0x89] != '\0') {
+    uVar1 = FUN_e0308908(param_1);
+    iVar2 = FUN_e0307890(param_1,uVar1);
+    iVar3 = FUN_e03078e8(param_1,param_2);
+    if (-1 < iVar2 && -1 < iVar3) {
+      if (param_3 == 0) {
+        param_1[iVar2 * 0x10 + 0x240] = 0;
+        param_1[iVar2 * 0x10 + 0x241] = 0;
+        FUN_e0308988(param_1);
+        param_1[iVar2 * 2 + 0x6b2] = 0;
+        param_1[iVar2 * 2 + 0x6b3] = 0;
+        param_1[iVar2 * 0x10 + 0xd1] = 1;
+        (**(code **)(*param_1 + 0x2d0))(param_1);
+        if (param_4 != 0) {
+          FUN_e0305708();
+        }
+      }
+      else {
+        if (10 < (uint)param_1[iVar2 * 0x10 + 0x240]) {
+          return 3;
+        }
+        if (param_3 == 1) {
+          param_1[iVar2 * 0x10 + 0xd1] = 0;
+        }
+        else if (9 < param_3 - 1U) {
+          if (param_3 == 0xb) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x1000000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xfeffffff;
+          }
+          else if (param_3 - 0xbU < 2) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x2000000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xfdffffff;
+          }
+          else if (param_3 - 0xbU == 2) {
+            param_1[iVar2 * 2 + 0x6b2] = param_1[iVar2 * 2 + 0x6b2] | 0x800000;
+            param_1[iVar2 * 2 + 0x6b3] = param_1[iVar2 * 2 + 0x6b3] & 0xff7fffff;
+          }
+        }
+        iVar3 = param_1[iVar2 * 0x10 + 0x240];
+        param_1[iVar2 * 0x10 + 0x240] = iVar3 + 1;
+        param_1[iVar2 * 0x10 + iVar3 + 0x241] = param_3;
+        if (param_3 != 0x25) {
+          param_1[0xbe] = 0;
+        }
+        (**(code **)(*param_1 + 0x2d0))(param_1);
+        if (param_4 != 0) {
+          FUN_e0305708();
+          FUN_e0305788();
+        }
+      }
+      return 0;
+    }
+  }
+  return 3;
+}
+
+
+
+--- FUNCTION FUN_e030fb40 @ e030fb40 (anchor 0xE030FB40) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e030fb40(void)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  int *piVar4;
+  code *pcVar5;
+  undefined4 local_34;
+  undefined4 uStack_30;
+  undefined4 uStack_2c;
+  undefined4 local_28;
+  undefined4 uStack_24;
+  undefined4 local_20;
+  undefined4 uStack_1c;
+  undefined4 uStack_18;
+  undefined1 local_14;
+  undefined1 local_13;
+  undefined1 local_12;
+  int local_10;
+  
+  local_10 = _DAT_c022a43c;
+  local_34 = DAT_e09ae460;
+  uStack_30 = DAT_e09ae464;
+  uStack_2c = DAT_e09ae468;
+  local_28 = DAT_e09ae46c;
+  uStack_24 = DAT_e09ae470;
+  local_20 = DAT_e09ae474;
+  uStack_1c = DAT_e09ae478;
+  uStack_18 = DAT_e09ae47c;
+  local_14 = DAT_e09ae480;
+  local_13 = DAT_e09ae481;
+  local_12 = DAT_e09ae482;
+  iVar1 = thunk_EXT_FUN_e0238c0c();
+  if (iVar1 != 0) {
+    func_0xe02366d8(0x225,DAT_e030fde8,0x80000000);
+  }
+  iVar1 = FUN_e0308f10();
+  (**(code **)(**(int **)(iVar1 + 0x30) + 0x24))(*(int **)(iVar1 + 0x30),&local_20,0x14);
+  uVar2 = FUN_e03053f8(&local_20);
+  FUN_e03053d0(uVar2,&local_20,0xf);
+  iVar1 = FUN_e0308f10();
+  uVar3 = (**(code **)(**(int **)(iVar1 + 0x30) + 0x18))();
+  piVar4 = (int *)FUN_e030feb8();
+  uVar2 = (**(code **)(*piVar4 + 0x2c0))(piVar4,uVar2,uVar3);
+  FUN_e0305360(uVar2,&local_34,0x14);
+  iVar1 = FUN_e0308f10();
+  piVar4 = *(int **)(iVar1 + 0x30);
+  pcVar5 = *(code **)(*piVar4 + 0x28);
+  uVar2 = func_0xe0242c5e(&local_34);
+  (*pcVar5)(piVar4,&local_34,uVar2,0x14,0);
+  if (local_10 != _DAT_c022a43c) {
+    FUN_e093ea50();
+  }
+  return;
+}
+
+
+
+--- FUNCTION FUN_e030f390 @ e030f390 (anchor 0xE030F390) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e030f390(void)
+
+{
+  int iVar1;
+  int *piVar2;
+  undefined4 uVar3;
+  code *pcVar4;
+  undefined1 local_28 [4];
+  undefined4 local_24;
+  undefined4 uStack_20;
+  undefined4 uStack_1c;
+  undefined4 local_18;
+  undefined4 uStack_14;
+  int local_10;
+  
+  local_10 = _DAT_c022a43c;
+  local_24 = DAT_e09ae308;
+  uStack_20 = DAT_e09ae30c;
+  uStack_1c = DAT_e09ae310;
+  local_18 = DAT_e09ae314;
+  uStack_14 = DAT_e09ae318;
+  iVar1 = thunk_EXT_FUN_e0238c0c();
+  if (iVar1 != 0) {
+    func_0xe02366d8(0x40,"constat_fake_udw.cpp",0x80000000);
+  }
+  FUN_e0694f06(0xffffffff,&LAB_e030f78c,local_28);
+  piVar2 = (int *)FUN_e030feb8();
+  uVar3 = (**(code **)(*piVar2 + 0x29c))(piVar2,local_28[0]);
+  FUN_e0305360(uVar3,&local_24,0x14);
+  iVar1 = FUN_e0308f10();
+  piVar2 = *(int **)(iVar1 + 0x30);
+  pcVar4 = *(code **)(*piVar2 + 0x28);
+  uVar3 = func_0xe0242c5e(&local_24);
+  (*pcVar4)(piVar2,&local_24,uVar3,0x14,1);
+  if (local_10 != _DAT_c022a43c) {
+    FUN_e093ea50();
+  }
+  return;
+}
+
+
+
+--- FUNCTION FUN_e030f428 @ e030f428 (anchor 0xE030F428) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_e030f428(void)
+
+{
+  int iVar1;
+  int *piVar2;
+  undefined4 uVar3;
+  code *pcVar4;
+  undefined1 local_28 [4];
+  undefined4 local_24;
+  undefined4 uStack_20;
+  undefined4 uStack_1c;
+  undefined4 local_18;
+  undefined4 uStack_14;
+  int local_10;
+  
+  local_10 = _DAT_c022a43c;
+  local_24 = DAT_e09ae31c;
+  uStack_20 = DAT_e09ae320;
+  uStack_1c = DAT_e09ae324;
+  local_18 = DAT_e09ae328;
+  uStack_14 = DAT_e09ae32c;
+  iVar1 = thunk_EXT_FUN_e0238c0c();
+  if (iVar1 != 0) {
+    func_0xe02366d8(0x6b,"constat_fake_udw.cpp",0x80000000);
+  }
+  FUN_e0694f06(0xffffffff,&LAB_e030f78c,local_28);
+  piVar2 = (int *)FUN_e030feb8();
+  uVar3 = (**(code **)(*piVar2 + 0x2a0))(piVar2,local_28[0]);
+  FUN_e0305360(uVar3,&local_24,0x14);
+  iVar1 = FUN_e0308f10();
+  piVar2 = *(int **)(iVar1 + 0x30);
+  pcVar4 = *(code **)(*piVar2 + 0x28);
+  uVar3 = func_0xe0242c5e(&local_24);
+  (*pcVar4)(piVar2,&local_24,uVar3,0x14,1);
+  if (local_10 != _DAT_c022a43c) {
+    FUN_e093ea50();
+  }
+  return;
+}
+
+
+
+--- FUNCTION FUN_e030feb8 @ e030feb8 (anchor 0xE030FEB8) ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 FUN_e030feb8(void)
+
+{
+  return _DAT_c143e908;
+}
+
+
+
+--- FUNCTION FUN_e0308f10 @ e0308f10 (anchor 0xE0308F10) ---
+
+undefined1 * FUN_e0308f10(void)
+
+{
+  return &DAT_c1443000;
+}
+
+
+
+--- FUNCTION FUN_e03067e8 @ e03067e8 (anchor 0xE03067E8) ---
+
+void FUN_e03067e8(int *param_1,int *param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  code *pcVar4;
+  uint uVar5;
+  int *piVar6;
+  int iVar7;
+  uint uVar8;
+  int iVar9;
+  undefined1 local_2d [9];
+  
+  if (param_1 != param_2) {
+    param_1[0x88] = (int)param_2;
+    param_1[0x87] = (int)param_2;
+    iVar1 = (**(code **)(*param_2 + 0x158))(param_2,param_1 + 0x9b);
+    param_1[0x7cc] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1b8))(param_2,param_1 + 0x21c);
+    param_1[0x7cd] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x198))(param_2,param_1 + 0x22a);
+    param_1[0x7ce] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x1bc))(param_2,param_1 + 0x29d);
+    param_1[0x7f7] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 400))(param_2,param_1 + 0x612);
+    param_1[0x817] = iVar1;
+    iVar1 = (**(code **)(*param_2 + 0x174))(param_2,param_1 + 0x2dd);
+    param_1[0x804] = iVar1;
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xa4]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xa5];
+      iVar1 = (**(code **)(*param_2 + 0x15c))(param_2,iVar7,param_1 + uVar8 * 0x10 + 0xce);
+      pcVar4 = *(code **)(*param_2 + 0x1a8);
+      param_1[uVar8 + 1999] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x12e);
+      pcVar4 = *(code **)(*param_2 + 0x1ac);
+      param_1[uVar8 + 0x7d5] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 7 + 0x158);
+      pcVar4 = *(code **)(*param_2 + 0x4c);
+      param_1[uVar8 + 0x7db] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x18 + 0x182);
+      pcVar4 = *(code **)(*param_2 + 0x1a4);
+      param_1[uVar8 + 0x7e1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 9 + 0x6be);
+      pcVar4 = *(code **)(*param_2 + 0x160);
+      param_1[uVar8 + 0x82f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x10 + 0x23d);
+      pcVar4 = *(code **)(*param_2 + 0x16c);
+      param_1[uVar8 + 0x7f1] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 6 + 0x2a1);
+      pcVar4 = *(code **)(*param_2 + 0x170);
+      param_1[uVar8 + 0x7f8] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x2c5);
+      pcVar4 = *(code **)(*param_2 + 0x164);
+      param_1[uVar8 + 0x7fe] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x20 + 0x4f2);
+      pcVar4 = *(code **)(*param_2 + 0x1b4);
+      param_1[uVar8 + 0x805] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 5 + 0x5b2);
+      pcVar4 = *(code **)(*param_2 + 0x168);
+      param_1[uVar8 + 0x80b] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0xb + 0x5d0);
+      pcVar4 = *(code **)(*param_2 + 8);
+      param_1[uVar8 + 0x811] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x613);
+      pcVar4 = *(code **)(*param_2 + 0x188);
+      param_1[uVar8 + 0x818] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 0x13 + 0x61f);
+      pcVar4 = *(code **)(*param_2 + 0x48);
+      param_1[uVar8 + 0x81e] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x6eb);
+      pcVar4 = *(code **)(*param_2 + 0x178);
+      param_1[uVar8 + 0x834] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 8 + 0x708);
+      pcVar4 = *(code **)(*param_2 + 0x34);
+      param_1[uVar8 + 0x83f] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x6b2);
+      param_1[uVar8 + 0x829] = iVar1;
+    }
+    for (uVar8 = 0; uVar8 < (uint)param_1[0xaf]; uVar8 = uVar8 + 1) {
+      iVar7 = param_1[uVar8 + 0xb0];
+      iVar1 = (**(code **)(*param_2 + 0x54))(param_2,iVar7,param_1 + uVar8 * 2 + 0x212);
+      pcVar4 = *(code **)(*param_2 + 0x6c);
+      param_1[uVar8 + 0x7e7] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 2 + 0x233);
+      pcVar4 = *(code **)(*param_2 + 0x20);
+      param_1[uVar8 + 0x7ec] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 * 4 + 0x691);
+      pcVar4 = *(code **)(*param_2 + 0x58);
+      param_1[uVar8 + 0x824] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,param_1 + uVar8 + 0x703);
+      piVar6 = param_1 + uVar8 * 6 + 0x738;
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x83a] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,1,piVar6);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,2,piVar6 + 2);
+      pcVar4 = *(code **)(*param_2 + 0x60);
+      param_1[uVar8 + 0x845] = iVar1;
+      iVar1 = (*pcVar4)(param_2,iVar7,3,piVar6 + 4);
+      param_1[uVar8 + 0x845] = iVar1;
+    }
+    uVar8 = 0;
+    do {
+      iVar1 = (**(code **)(*param_2 + 0x74))(param_2,uVar8,param_1 + uVar8 * 4 + 0x756);
+      uVar5 = uVar8 + 1;
+      param_1[uVar8 + 0x84a] = iVar1;
+      uVar8 = uVar5;
+    } while (uVar5 < 0x1d);
+    iVar1 = 0x65;
+    do {
+      iVar7 = 1;
+      do {
+        iVar9 = 1;
+        do {
+          iVar2 = (**(code **)(*param_2 + 0x3c))(param_2,iVar1,iVar7,iVar9,local_2d);
+          iVar3 = iVar9 + (iVar1 * 3 + iVar7) * 0x14;
+          param_1[iVar3 + -0xd98] = iVar2;
+          iVar9 = iVar9 + 1;
+          *(undefined1 *)((int)param_1 + iVar3 + 0x9db) = local_2d[0];
+        } while (iVar9 < 0x15);
+        iVar7 = iVar7 + 1;
+      } while (iVar7 < 4);
+      iVar1 = iVar1 + 1;
+    } while (iVar1 < 0x83);
+    FUN_e0975a20((int)param_1 + 0x225,param_1 + 0x21f,0x14);
+    FUN_e0975a20((int)param_1 + 0x239,(int)param_1 + 0x887,0x14);
+    *(undefined1 *)(param_1 + 0x9a) = 0;
+  }
+  return;
+}
+
+
+
+Functions decompiled=8
+
+QUERY NOTE: E0302AA6 may be an instruction sequence without a defined function owner; see the exact window in section 2.
+
+
+============================================================
+4. INITIALIZED NON-EXECUTABLE DATA POINTER SCAN
+============================================================
+
+DATA POINTER HIT block=.romfs_objs at=e09ae4d8 value=0xE030F391 label=readiness caller FUN_e030f390 (Thumb pointer form)
+     e09ae4c0  0x20202020
+     e09ae4c4  0x20202020
+     e09ae4c8  0x20202020
+     e09ae4cc  0x20202020
+     e09ae4d0  0x20202020
+     e09ae4d4  0xE09AE570
+ >>> e09ae4d8  0xE030F391
+     e09ae4dc  0x20202020
+     e09ae4e0  0xE09AE58C
+     e09ae4e4  0xE030F429
+     e09ae4e8  0x20202020
+     e09ae4ec  0xE09AE5A8
+     e09ae4f0  0xE030F4C1
+
+DATA POINTER HIT block=.romfs_objs at=e09ae4e4 value=0xE030F429 label=readiness caller FUN_e030f428 (Thumb pointer form)
+     e09ae4cc  0x20202020
+     e09ae4d0  0x20202020
+     e09ae4d4  0xE09AE570
+     e09ae4d8  0xE030F391
+     e09ae4dc  0x20202020
+     e09ae4e0  0xE09AE58C
+ >>> e09ae4e4  0xE030F429
+     e09ae4e8  0x20202020
+     e09ae4ec  0xE09AE5A8
+     e09ae4f0  0xE030F4C1
+     e09ae4f4  0x20202020
+     e09ae4f8  0xE09AE5C0
+     e09ae4fc  0xE030F679
+
+DATA POINTER HIT block=.romfs_objs at=e09ae544 value=0xE030FB41 label=reason-ingress callback FUN_e030fb40 (Thumb pointer form)
+     e09ae52c  0xE030F9A1
+     e09ae530  0x20202020
+     e09ae534  0xE09AE658
+     e09ae538  0xE030FAA9
+     e09ae53c  0x20202020
+     e09ae540  0xE09AE674
+ >>> e09ae544  0xE030FB41
+     e09ae548  0x20202020
+     e09ae54c  0xE09AE698
+     e09ae550  0xE030FC19
+     e09ae554  0x20202020
+     e09ae558  0xE09AE6B4
+     e09ae55c  0xE030FD19
+
+DATA POINTER HIT block=.romfs_objs at=e09aecf0 value=0xE0306779 label=readiness helper A (Thumb pointer form)
+     e09aecd8  0xE0303201
+     e09aecdc  0xE0303681
+     e09aece0  0xE0306759
+     e09aece4  0xE0306729
+     e09aece8  0xE03067E9
+     e09aecec  0xE03067E1
+ >>> e09aecf0  0xE0306779
+     e09aecf4  0xE03067B1
+     e09aecf8  0xE0306CF9
+     e09aecfc  0xE0306F31
+     e09aed00  0xE0306E31
+     e09aed04  0xE03075E9
+     e09aed08  0xE0306C21
+
+DATA POINTER HIT block=.romfs_objs at=e09aecf4 value=0xE03067B1 label=readiness helper B (Thumb pointer form)
+     e09aecdc  0xE0303681
+     e09aece0  0xE0306759
+     e09aece4  0xE0306729
+     e09aece8  0xE03067E9
+     e09aecec  0xE03067E1
+     e09aecf0  0xE0306779
+ >>> e09aecf4  0xE03067B1
+     e09aecf8  0xE0306CF9
+     e09aecfc  0xE0306F31
+     e09aed00  0xE0306E31
+     e09aed04  0xE03075E9
+     e09aed08  0xE0306C21
+     e09aed0c  0xE0306CB1
+
+DATA POINTER HIT block=.romfs_objs at=e09aed14 value=0xE03076B1 label=vtable wrapper FUN_e03076b0 (Thumb pointer form)
+     e09aecfc  0xE0306F31
+     e09aed00  0xE0306E31
+     e09aed04  0xE03075E9
+     e09aed08  0xE0306C21
+     e09aed0c  0xE0306CB1
+     e09aed10  0xE0307631
+ >>> e09aed14  0xE03076B1
+     e09aed18  0xE03076C1
+     e09aed1c  0xE03077F1
+     e09aed20  0xE0307829
+     e09aed24  0xE0307911
+     e09aed28  0x20202004
+     e09aed2c  0x20202020
+
+DATA POINTER HIT block=.romfs_objs at=e09aed18 value=0xE03076C1 label=reason writer FUN_e03076c0 (Thumb pointer form)
+     e09aed00  0xE0306E31
+     e09aed04  0xE03075E9
+     e09aed08  0xE0306C21
+     e09aed0c  0xE0306CB1
+     e09aed10  0xE0307631
+     e09aed14  0xE03076B1
+ >>> e09aed18  0xE03076C1
+     e09aed1c  0xE03077F1
+     e09aed20  0xE0307829
+     e09aed24  0xE0307911
+     e09aed28  0x20202004
+     e09aed2c  0x20202020
+     e09aed30  0xE0308A71
+blocks_total=10 scanned_initialized_nonexec_blocks=6 hits=7
+
+
+============================================================
+5. GLOBAL CROSS-REFERENCES
+============================================================
+
+GLOBAL 0xC143E904
+  from=e0308c66 type=READ owner=FUN_e0308c48 @ e0308c48
+  from=e0308e38 type=PARAM owner=FUN_e0308e30 @ e0308e30
+  from=e0306798 type=READ owner=<none>
+  from=e03067c6 type=READ owner=<none>
+  from=e03067c2 type=PARAM owner=<none>
+  from=e0308cbc type=PARAM owner=<none>
+  from=e0308e58 type=DATA owner=<none>
+  from=e0308e64 type=DATA owner=<none>
+  from=e0308b7e type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308bbe type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308be6 type=DATA owner=FUN_e0308b70 @ e0308b70
+  reference_count=11
+
+GLOBAL 0xC143E908
+  from=e030fec0 type=READ owner=FUN_e030feb8 @ e030feb8
+  from=e0308c52 type=READ owner=FUN_e0308c48 @ e0308c48
+  from=e0308b7e type=WRITE owner=FUN_e0308b70 @ e0308b70
+  from=e0308be4 type=WRITE owner=FUN_e0308b70 @ e0308b70
+  reference_count=4
+
+GLOBAL 0xC143EB2C
+  reference_count=0
+
+GLOBAL 0xC144301C
+  from=e0308eb8 type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443020
+  from=e0308eba type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443028
+  from=e0308ebe type=WRITE owner=<none>
+  reference_count=1
+
+GLOBAL 0xC1443030
+  from=e0308ec2 type=WRITE owner=<none>
+  reference_count=1
+
+
+============================================================
+6. INTERPRETATION LIMITS
+============================================================
+A. A static callback-to-writer call chain does not prove that the callback ran on this printer or reveal runtime arguments.
+B. A data pointer hit establishes a stored code-pointer candidate in the imported image, not a live callback registration or provider binding.
+C. The DSID 0x12FB0 query result is not mapped to reason codes 0x12/0x13/0x14 unless an explicit consumer/store path is recovered.
+D. Keep dependency fields C144301C, C1443020, C1443028 and C1443030 separate; their service keys differ.
+E. No current account state, subscription state, active reason, live readiness value or print-block cause is inferred from static code alone.
