@@ -1,0 +1,76 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/home/mrae/proj/hp2855e-re/config/java-home
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/home/mrae/proj/hp2855e-re/config/java-home
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/home/mrae/proj/hp2855e-re/config/java-home
+Picked up JAVA_TOOL_OPTIONS: -Duser.home=/home/mrae/proj/hp2855e-re/config/java-home
+openjdk version "25.0.5.1" 2026-11-17 LTS
+OpenJDK Runtime Environment Temurin-25.0.5.1+2 (build 25.0.5.1+2-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5.1+2 (build 25.0.5.1+2-LTS, mixed mode)
+INFO  Using log config file: jar:file:/home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/mrae/proj/hp2855e-re/config/mrae-ghidra/ghidra_12.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/mrae/proj/hp2855e-re/config/mrae-ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (2292 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 118 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 118 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 117 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (5034 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/constat-status-trace/hp2855e_constat_status_trace
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/mrae/proj/hp2855e-re/tools/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /home/mrae/proj/hp2855e-re/projects/ghidra/HP_DeskJet_2855e_ConStatAudit_20261121_040104/HP_DeskJet_2855e (HeadlessAnalyzer)  
+INFO  Opening project: /home/mrae/proj/hp2855e-re/projects/ghidra/HP_DeskJet_2855e_ConStatAudit_20261121_040104/HP_DeskJet_2855e (HeadlessProject)  
+INFO  REPORT: Processing read-only project file: /hp_lbi_address_mapped.elf (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: HP2855e_ConStatStatusTrace.java '/home/mrae/proj/hp2855e-re/evidence/constat-status-trace-20261121_080202_655512/HP2855e_ConStat_Status_Trace_20261121_080202_655512.txt'  (HeadlessAnalyzer)  
+ERROR HP2855e_ConStatStatusTrace.java:223: error: incompatible types: possible lossy conversion from long to int
+        int max=beforeCount+afterCount+1;
+                                      ^
+skipping /home/mrae/proj/hp2855e-re/tools/constat-status-trace/hp2855e_constat_status_trace/HP2855e_ConStatStatusTrace.java
+ (HeadlessAnalyzer)  
+ERROR REPORT SCRIPT ERROR: HP2855e_ConStatStatusTrace.java : The class could not be found. It must be the public class of the .java file: HP2855e_ConStatStatusTrace not found by dae41f2a [1] (HeadlessAnalyzer) ghidra.app.script.GhidraScriptLoadException: The class could not be found. It must be the public class of the .java file: HP2855e_ConStatStatusTrace not found by dae41f2a [1]
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:114)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+Caused by: java.lang.ClassNotFoundException: HP2855e_ConStatStatusTrace not found by dae41f2a [1]
+	at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1591)
+	at org.apache.felix.framework.BundleWiringImpl.access$300(BundleWiringImpl.java:79)
+	at org.apache.felix.framework.BundleWiringImpl$BundleClassLoader.loadClass(BundleWiringImpl.java:1976)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at org.apache.felix.framework.Felix.loadBundleClass(Felix.java:2116)
+	at org.apache.felix.framework.BundleImpl.loadClass(BundleImpl.java:986)
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:166)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	... 9 more
+ 
