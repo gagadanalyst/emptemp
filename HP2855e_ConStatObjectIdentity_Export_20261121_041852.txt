@@ -1,0 +1,3709 @@
+HP DeskJet 2855e — bounded ConStat selected-object identity export
+Mode: READ ONLY; existing function bodies, listing, symbols, references, mapped-block metadata and TMode only.
+No undefined-byte disassembly, function/data creation, context edits, memory edits, firmware calls, or printer communication.
+Program=hp_lbi_address_mapped.elf
+Language=ARM:LE:32:v7
+ImageBase=c01e3c40
+TModeRegister=TMode
+
+================ EXISTING LISTING WINDOW: existing listing at vtable +0x2D0 target E0307910 ================
+range=e030790c..e0307a14 (inclusive)
+e0307910  push {r4,r5,r6,r7,r8,r10,r11,lr}  function=<none>
+[TMODE] e0307910
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307910..e0307910
+e0307914  sub sp,#0x4  function=<none>
+[TMODE] e0307914
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307914..e0307914
+e0307916  mov r5,r0  function=<none>
+[TMODE] e0307916
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307916..e0307916
+e0307918  ldr.w r0,[r0,#0x2f8]  function=<none>
+[TMODE] e0307918
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307918..e0307918
+e030791c  movs.w r8,r0  function=<none>
+[TMODE] e030791c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030791c..e030791c
+e0307920  it eq  function=<none>
+[TMODE] e0307920
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307920..e0307920
+e0307922  str.w.eq r0,[r5,#0x2e0]  function=<none>
+[TMODE] e0307922
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307922..e0307922
+e0307926  beq 0xe0307a0a  function=<none>
+    -> e0307a0a [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307926
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307926..e0307926
+e0307928  movs r6,#0x0  function=<none>
+[TMODE] e0307928
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307928..e0307928
+e030792a  mov r11,r6  function=<none>
+[TMODE] e030792a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030792a..e030792a
+e030792c  mov r10,r6  function=<none>
+[TMODE] e030792c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030792c..e030792c
+e030792e  str.w r6,[r5,#0x2fc]  function=<none>
+[TMODE] e030792e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030792e..e030792e
+e0307932  mov r7,r6  function=<none>
+[TMODE] e0307932
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307932..e0307932
+e0307934  b 0xe0307988  function=<none>
+    -> e0307988 [UNCONDITIONAL_JUMP, operand=0]
+[TMODE] e0307934
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307934..e0307934
+e0307936  add.w r0,r5,r7, lsl #0x2  function=<none>
+[TMODE] e0307936
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307936..e0307936
+e030793a  ldr.w r4,[r0,#0x2c0]  function=<none>
+[TMODE] e030793a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030793a..e030793a
+e030793e  mov r0,r5  function=<none>
+[TMODE] e030793e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030793e..e030793e
+e0307940  mov r1,r4  function=<none>
+[TMODE] e0307940
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307940..e0307940
+e0307942  bl 0xe0308908  function=<none>
+    -> e0308908 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0307942
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307942..e0307942
+e0307946  mov r1,r0  function=<none>
+[TMODE] e0307946
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307946..e0307946
+e0307948  mov r0,r5  function=<none>
+[TMODE] e0307948
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307948..e0307948
+e030794a  bl 0xe0307890  function=<none>
+    -> e0307890 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030794a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030794a..e030794a
+e030794e  cmp r0,#0x0  function=<none>
+[TMODE] e030794e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030794e..e030794e
+e0307950  ble 0xe0307986  function=<none>
+    -> e0307986 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307950
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307950..e0307950
+e0307952  rsb r0,r0,r0, lsl #0x3  function=<none>
+[TMODE] e0307952
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307952..e0307952
+e0307956  add.w r0,r5,r0, lsl #0x2  function=<none>
+[TMODE] e0307956
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307956..e0307956
+e030795a  ldr.w r0,[r0,#0x4c4]  function=<none>
+[TMODE] e030795a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030795a..e030795a
+e030795e  cmp r0,#0x4  function=<none>
+[TMODE] e030795e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030795e..e030795e
+e0307960  beq 0xe0307974  function=<none>
+    -> e0307974 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307960
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307960..e0307960
+e0307962  cmp r0,#0x5  function=<none>
+[TMODE] e0307962
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307962..e0307962
+e0307964  beq 0xe0307970  function=<none>
+    -> e0307970 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307964
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307964..e0307964
+e0307966  add.w r1,r5,r6, lsl #0x2  function=<none>
+[TMODE] e0307966
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307966..e0307966
+e030796a  str.w r4,[r1,#0x2e4]  function=<none>
+[TMODE] e030796a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030796a..e030796a
+e030796e  adds r6,#0x1  function=<none>
+[TMODE] e030796e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030796e..e030796e
+e0307970  cmp r0,#0x4  function=<none>
+[TMODE] e0307970
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307970..e0307970
+e0307972  bne 0xe0307986  function=<none>
+    -> e0307986 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307972
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307972..e0307972
+e0307974  ldr.w r0,[r5,#0x2f8]  function=<none>
+[TMODE] e0307974
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307974..e0307974
+e0307978  cmp r0,#0x1  function=<none>
+[TMODE] e0307978
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307978..e0307978
+e030797a  bne 0xe0307986  function=<none>
+    -> e0307986 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e030797a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030797a..e030797a
+e030797c  cmp r4,#0x0  function=<none>
+[TMODE] e030797c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030797c..e030797c
+e030797e  str.w r0,[r5,#0x2fc]  function=<none>
+[TMODE] e030797e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030797e..e030797e
+e0307982  it eq  function=<none>
+[TMODE] e0307982
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307982..e0307982
+e0307984  mov.eq r11,r0  function=<none>
+[TMODE] e0307984
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307984..e0307984
+e0307986  adds r7,#0x1  function=<none>
+[TMODE] e0307986
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307986..e0307986
+e0307988  ldr.w r0,[r5,#0x2bc]  function=<none>
+[TMODE] e0307988
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307988..e0307988
+e030798c  cmp r7,r0  function=<none>
+[TMODE] e030798c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030798c..e030798c
+e030798e  bcc 0xe0307936  function=<none>
+    -> e0307936 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e030798e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030798e..e030798e
+e0307990  subs r0,#0x2  function=<none>
+[TMODE] e0307990
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307990..e0307990
+e0307992  cmp r6,r0  function=<none>
+[TMODE] e0307992
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307992..e0307992
+e0307994  str.w r6,[r5,#0x2e0]  function=<none>
+[TMODE] e0307994
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307994..e0307994
+e0307998  bhi 0xe03079fc  function=<none>
+    -> e03079fc [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0307998
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307998..e0307998
+e030799a  cmp.w r11,#0x0  function=<none>
+[TMODE] e030799a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030799a..e030799a
+e030799e  beq 0xe03079fc  function=<none>
+    -> e03079fc [CONDITIONAL_JUMP, operand=0]
+[TMODE] e030799e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030799e..e030799e
+e03079a0  ldr r0,[r5,#0x0]  function=<none>
+[TMODE] e03079a0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079a0..e03079a0
+e03079a2  str.w r10,[r5,#0x2e0]  function=<none>
+[TMODE] e03079a2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079a2..e03079a2
+e03079a6  movs r2,#0x10  function=<none>
+[TMODE] e03079a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079a6..e03079a6
+e03079a8  ldr.w r3,[r0,#0x2c0]  function=<none>
+[TMODE] e03079a8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079a8..e03079a8
+e03079ac  mov r1,r10  function=<none>
+[TMODE] e03079ac
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ac..e03079ac
+e03079ae  mov r0,r5  function=<none>
+[TMODE] e03079ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ae..e03079ae
+e03079b0  mov r4,r10  function=<none>
+[TMODE] e03079b0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079b0..e03079b0
+e03079b2  str.w r10,[r5,#0x2f8]  function=<none>
+[TMODE] e03079b2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079b2..e03079b2
+e03079b6  blx r3  function=<none>
+[TMODE] e03079b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079b6..e03079b6
+e03079b8  b 0xe03079f4  function=<none>
+    -> e03079f4 [UNCONDITIONAL_JUMP, operand=0]
+[TMODE] e03079b8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079b8..e03079b8
+e03079ba  add.w r0,r5,r4, lsl #0x2  function=<none>
+[TMODE] e03079ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ba..e03079ba
+e03079be  ldr.w r1,[r0,#0x2c0]  function=<none>
+[TMODE] e03079be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079be..e03079be
+e03079c2  mov r0,r5  function=<none>
+[TMODE] e03079c2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079c2..e03079c2
+e03079c4  bl 0xe0308908  function=<none>
+    -> e0308908 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03079c4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079c4..e03079c4
+e03079c8  mov r1,r0  function=<none>
+[TMODE] e03079c8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079c8..e03079c8
+e03079ca  mov r0,r5  function=<none>
+[TMODE] e03079ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ca..e03079ca
+e03079cc  bl 0xe0307890  function=<none>
+    -> e0307890 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03079cc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079cc..e03079cc
+e03079d0  cmp r0,#0x0  function=<none>
+[TMODE] e03079d0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079d0..e03079d0
+e03079d2  ble 0xe03079f2  function=<none>
+    -> e03079f2 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03079d2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079d2..e03079d2
+e03079d4  rsb r1,r0,r0, lsl #0x3  function=<none>
+[TMODE] e03079d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079d4..e03079d4
+e03079d8  add.w r1,r5,r1, lsl #0x2  function=<none>
+[TMODE] e03079d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079d8..e03079d8
+e03079dc  ldr.w r1,[r1,#0x4c4]  function=<none>
+[TMODE] e03079dc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079dc..e03079dc
+e03079e0  cmp r1,#0x4  function=<none>
+[TMODE] e03079e0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079e0..e03079e0
+e03079e2  bne 0xe03079f2  function=<none>
+    -> e03079f2 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03079e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079e2..e03079e2
+e03079e4  rsb r0,r0,r0, lsl #0x2  function=<none>
+[TMODE] e03079e4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079e4..e03079e4
+e03079e8  movs r1,#0x6  function=<none>
+[TMODE] e03079e8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079e8..e03079e8
+e03079ea  add.w r0,r5,r0, lsl #0x5  function=<none>
+[TMODE] e03079ea
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ea..e03079ea
+e03079ee  str.w r1,[r0,#0x608]  function=<none>
+[TMODE] e03079ee
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079ee..e03079ee
+e03079f2  adds r4,#0x1  function=<none>
+[TMODE] e03079f2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079f2..e03079f2
+e03079f4  ldr.w r0,[r5,#0x2bc]  function=<none>
+[TMODE] e03079f4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079f4..e03079f4
+e03079f8  cmp r4,r0  function=<none>
+[TMODE] e03079f8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079f8..e03079f8
+e03079fa  bcc 0xe03079ba  function=<none>
+    -> e03079ba [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03079fa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079fa..e03079fa
+e03079fc  ldr.w r0,[r5,#0x2f8]  function=<none>
+[TMODE] e03079fc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03079fc..e03079fc
+e0307a00  uxtb.w r1,r8  function=<none>
+[TMODE] e0307a00
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a00..e0307a00
+e0307a04  subs r0,r0,r1  function=<none>
+[TMODE] e0307a04
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a04..e0307a04
+e0307a06  it ne  function=<none>
+[TMODE] e0307a06
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a06..e0307a06
+e0307a08  mov.ne r0,#0x1  function=<none>
+[TMODE] e0307a08
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a08..e0307a08
+e0307a0a  add sp,#0x4  function=<none>
+[TMODE] e0307a0a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a0a..e0307a0a
+e0307a0c  pop.w {r4,r5,r6,r7,r8,r10,r11,pc}  function=<none>
+[TMODE] e0307a0c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a0c..e0307a0c
+e0307a10  movs r0,#0x0  function=<none>
+[TMODE] e0307a10
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a10..e0307a10
+e0307a12  bx lr  function=<none>
+[TMODE] e0307a12
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0307a12..e0307a12
+instruction_count_exported=94
+
+================ FUNCTION: initializer / writer of selected-object pointer cell C143E908 ================
+requested_address=e0308b70
+[TMODE] e0308b70
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b70..e0308b70
+[SYMBOLS] e0308b70
+name=FUN_e0308b70 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] initializer / writer of selected-object pointer cell C143E908 target=e0308b70
+from=e0308c78 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+reference_count=1
+function=FUN_e0308b70 entry=e0308b70 body=e0308b70..e0308be9
+e0308b70  push {r4,r5,r6,lr}
+[TMODE] e0308b70
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b70..e0308b70
+e0308b72  mov r4,r0
+[TMODE] e0308b72
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b72..e0308b72
+e0308b74  movs r0,#0x0
+[TMODE] e0308b74
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b74..e0308b74
+e0308b76  mov r1,r0
+[TMODE] e0308b76
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b76..e0308b76
+e0308b78  adds r0,#0x1
+[TMODE] e0308b78
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b78..e0308b78
+e0308b7a  movs r2,#0x0
+[TMODE] e0308b7a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b7a..e0308b7a
+e0308b7c  cmp r0,#0x3
+[TMODE] e0308b7c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b7c..e0308b7c
+e0308b7e  str.w r2,[r4,r1,lsl #0x2]
+    -> c143e904 [WRITE, operand=1]
+    -> c143e908 [WRITE, operand=1]
+[TMODE] e0308b7e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b7e..e0308b7e
+e0308b82  bcc 0xe0308b76
+    -> e0308b76 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0308b82
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b82..e0308b82
+e0308b84  movw r6,#0x2ff0
+[TMODE] e0308b84
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b84..e0308b84
+e0308b88  movt r6,#0xc144
+[TMODE] e0308b88
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b88..e0308b88
+e0308b8c  movw r5,#0xe910
+[TMODE] e0308b8c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b8c..e0308b8c
+e0308b90  mov r0,r6
+[TMODE] e0308b90
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b90..e0308b90
+e0308b92  movt r5,#0xc143
+[TMODE] e0308b92
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b92..e0308b92
+e0308b96  bl 0xe0981052
+    -> e0981052 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308b96
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b96..e0308b96
+e0308b9a  cbz r0,0xe0308bb4
+    -> e0308bb4 [CONDITIONAL_JUMP, operand=1]
+[TMODE] e0308b9a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b9a..e0308b9a
+e0308b9c  mov r0,r5
+[TMODE] e0308b9c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b9c..e0308b9c
+e0308b9e  bl 0xe030cf48
+    -> e030cf48 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308b9e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308b9e..e0308b9e
+e0308ba2  movw r0,#0x5e8
+[TMODE] e0308ba2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308ba2..e0308ba2
+e0308ba6  movt r0,#0xc01e
+[TMODE] e0308ba6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308ba6..e0308ba6
+e0308baa  bl 0xe0981216
+    -> e0981216 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308baa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308baa..e0308baa
+e0308bae  mov r0,r6
+[TMODE] e0308bae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bae..e0308bae
+e0308bb0  bl 0xe0981116
+    -> e0981116 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308bb0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bb0..e0308bb0
+e0308bb4  movw r6,#0x2ff8
+[TMODE] e0308bb4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bb4..e0308bb4
+e0308bb8  movt r6,#0xc144
+[TMODE] e0308bb8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bb8..e0308bb8
+e0308bbc  mov r0,r6
+[TMODE] e0308bbc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bbc..e0308bbc
+e0308bbe  str r5,[r4,#0x0]
+    -> c143e904 [WRITE, operand=1]
+[TMODE] e0308bbe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bbe..e0308bbe
+e0308bc0  bl 0xe0981052
+    -> e0981052 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308bc0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bc0..e0308bc0
+e0308bc4  cbz r0,0xe0308be0
+    -> e0308be0 [CONDITIONAL_JUMP, operand=1]
+[TMODE] e0308bc4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bc4..e0308bc4
+e0308bc6  add.w r0,r5,#0x21c
+[TMODE] e0308bc6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bc6..e0308bc6
+e0308bca  bl 0xe0306240
+    -> e0306240 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308bca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bca..e0308bca
+e0308bce  movw r0,#0x5f4
+[TMODE] e0308bce
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bce..e0308bce
+e0308bd2  movt r0,#0xc01e
+[TMODE] e0308bd2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bd2..e0308bd2
+e0308bd6  bl 0xe0981216
+    -> e0981216 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308bd6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bd6..e0308bd6
+e0308bda  mov r0,r6
+[TMODE] e0308bda
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bda..e0308bda
+e0308bdc  bl 0xe0981116
+    -> e0981116 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308bdc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308bdc..e0308bdc
+e0308be0  add.w r0,r5,#0x21c
+[TMODE] e0308be0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308be0..e0308be0
+e0308be4  str r0,[r4,#0x4]
+    -> c143e908 [WRITE, operand=1]
+[TMODE] e0308be4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308be4..e0308be4
+e0308be6  mov r0,r4
+    -> c143e904 [DATA, operand=0]
+[TMODE] e0308be6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308be6..e0308be6
+e0308be8  pop {r4,r5,r6,pc}
+[TMODE] e0308be8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308be8..e0308be8
+instruction_count_exported=40
+
+================ FUNCTION: reader of selected-object pointer cell C143E908 ================
+requested_address=e0308c48
+[TMODE] e0308c48
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c48..e0308c48
+[SYMBOLS] e0308c48
+name=FUN_e0308c48 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] reader of selected-object pointer cell C143E908 target=e0308c48
+from=e0303e5e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303e58 @ e0303e58
+from=e030421c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304218 @ e0304218
+from=e0304264 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304258 @ e0304258
+from=e03042ae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03042a8 @ e03042a8
+from=e03042ce type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03042c8 @ e03042c8
+from=e03042ec type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03042e8 @ e03042e8
+from=e030438e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304388 @ e0304388
+from=e03043b4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03043a8 @ e03043a8
+from=e0304416 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304408 @ e0304408
+from=e030443e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304438 @ e0304438
+from=e030445e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304458 @ e0304458
+from=e030447e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304478 @ e0304478
+from=e030449e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304498 @ e0304498
+from=e03044be type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03044b8 @ e03044b8
+from=e03044e0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03044d8 @ e03044d8
+from=e0304586 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304580 @ e0304580
+from=e03045a6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03045a0 @ e03045a0
+from=e03045fe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03045f8 @ e03045f8
+from=e030461c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304618 @ e0304618
+from=e030938e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309388 @ e0309388
+from=e030974c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309748 @ e0309748
+from=e0309794 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309788 @ e0309788
+from=e03097de type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03097d8 @ e03097d8
+from=e03097fe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03097f8 @ e03097f8
+from=e030981c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309818 @ e0309818
+from=e03098be type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03098b8 @ e03098b8
+from=e03098e4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03098d8 @ e03098d8
+from=e0309946 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309938 @ e0309938
+from=e030996e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309968 @ e0309968
+from=e030998e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309988 @ e0309988
+from=e03099ae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03099a8 @ e03099a8
+from=e03099ce type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03099c8 @ e03099c8
+from=e03099f0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03099e8 @ e03099e8
+from=e0309a96 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309a90 @ e0309a90
+from=e0309ab6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309ab0 @ e0309ab0
+from=e0309b0e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309b08 @ e0309b08
+from=e0309b2c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309b28 @ e0309b28
+from=e0303e7e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303e78 @ e0303e78
+from=e03045c2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03045c0 @ e03045c0
+from=e03093ae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03093a8 @ e03093a8
+from=e0309ad2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309ad0 @ e0309ad0
+from=e0304768 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304784 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03047a0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03047ba type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03047d4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03047ee type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304808 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309c78 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309c94 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309cb0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309cca type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309ce4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309cfe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309d18 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303d3c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303d5e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303d7e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303d78 @ e0303d78
+from=e0303d9e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303d98 @ e0303d98
+from=e0303dbe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303db8 @ e0303db8
+from=e0303dde type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303dd8 @ e0303dd8
+from=e0303dfe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303df8 @ e0303df8
+from=e0303e1c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303e18 @ e0303e18
+from=e0303e3e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303ea4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303e98 @ e0303e98
+from=e0303ed4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303efe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303f1e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303f18 @ e0303f18
+from=e0303f3c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303f38 @ e0303f38
+from=e0303f60 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303f84 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303fa2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303fbc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303fb8 @ e0303fb8
+from=e0303fde type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0303ffe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0303ff8 @ e0303ff8
+from=e030401e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304018 @ e0304018
+from=e030403e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304038 @ e0304038
+from=e030405e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304058 @ e0304058
+from=e030407c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304078 @ e0304078
+from=e030409c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03040bc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03040dc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03040fe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030411e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304118 @ e0304118
+from=e030413c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304138 @ e0304138
+from=e030415c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304180 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03041a0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304198 @ e0304198
+from=e03041c0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03041b8 @ e03041b8
+from=e03041e0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03041d8 @ e03041d8
+from=e03041fe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03041f8 @ e03041f8
+from=e030423e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030428e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030430c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030432c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030434c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030436e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03043e6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304508 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030452e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030454a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304566 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304560 @ e0304560
+from=e03045de type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03045d8 @ e03045d8
+from=e030463e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304660 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304658 @ e0304658
+from=e0304688 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03046ae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03046ce type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03046c8 @ e03046c8
+from=e03046ee type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03046e8 @ e03046e8
+from=e030470c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304708 @ e0304708
+from=e030482c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304828 @ e0304828
+from=e030484e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030486e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304868 @ e0304868
+from=e030488a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03048a6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03048a0 @ e03048a0
+from=e03048c2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03048dc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03048d8 @ e03048d8
+from=e03048fe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030491c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304918 @ e0304918
+from=e030493c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030495e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030497c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304978 @ e0304978
+from=e03049a4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03049d0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03049f4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304a16 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304a3c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304a30 @ e0304a30
+from=e0304a68 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304a8e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304aae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304aa8 @ e0304aa8
+from=e0304ace type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304ac8 @ e0304ac8
+from=e0304af0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304ae8 @ e0304ae8
+from=e0304b14 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304b38 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304b60 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304b84 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304ba2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304bbc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304bb8 @ e0304bb8
+from=e0304bdc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304bfe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304c20 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304c18 @ e0304c18
+from=e0304c46 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304c66 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304c60 @ e0304c60
+from=e0304c86 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304c80 @ e0304c80
+from=e0304ca6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304ca0 @ e0304ca0
+from=e0304cc6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304cc0 @ e0304cc0
+from=e0304cec type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304ce0 @ e0304ce0
+from=e0304d16 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304d36 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304d30 @ e0304d30
+from=e0304d54 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304d50 @ e0304d50
+from=e0304d76 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304d96 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304d90 @ e0304d90
+from=e0304db4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0304db0 @ e0304db0
+from=e0304dd4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304df4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0304e1c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0308af4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0308b16 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0308b36 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0308b30 @ e0308b30
+from=e0308b58 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0308b50 @ e0308b50
+from=e030a44a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a418 @ e030a418
+from=e030a47e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a418 @ e030a418
+from=e030926c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030928e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03092ae type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03092a8 @ e03092a8
+from=e03092ce type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03092c8 @ e03092c8
+from=e03092ee type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03092e8 @ e03092e8
+from=e030930e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309308 @ e0309308
+from=e030932e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309328 @ e0309328
+from=e030934c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309348 @ e0309348
+from=e030936e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03093d4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03093c8 @ e03093c8
+from=e0309404 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030942e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030944e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309448 @ e0309448
+from=e030946c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309468 @ e0309468
+from=e0309490 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03094b4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03094d2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03094ec type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03094e8 @ e03094e8
+from=e030950e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030952e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309528 @ e0309528
+from=e030954e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309548 @ e0309548
+from=e030956e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309568 @ e0309568
+from=e030958e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309588 @ e0309588
+from=e03095ac type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03095a8 @ e03095a8
+from=e03095cc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03095ec type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030960c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030962e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030964e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309648 @ e0309648
+from=e030966c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309668 @ e0309668
+from=e030968c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03096b0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03096d0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03096c8 @ e03096c8
+from=e03096f0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e03096e8 @ e03096e8
+from=e0309710 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309708 @ e0309708
+from=e030972e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309728 @ e0309728
+from=e030976e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e03097be type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030983c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030985c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030987c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030989e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309916 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309a18 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309a3e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309a5a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309a76 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309a70 @ e0309a70
+from=e0309aee type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309ae8 @ e0309ae8
+from=e0309b4e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309b70 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309b68 @ e0309b68
+from=e0309b98 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309bbe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309bde type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309bd8 @ e0309bd8
+from=e0309bfe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309bf8 @ e0309bf8
+from=e0309c1c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309c18 @ e0309c18
+from=e0309d3c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309d38 @ e0309d38
+from=e0309d5e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309d7e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309d78 @ e0309d78
+from=e0309d9a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309db6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309db0 @ e0309db0
+from=e0309dd6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309dd0 @ e0309dd0
+from=e0309dfc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309df0 @ e0309df0
+from=e0309e28 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309e4e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309e6e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309e68 @ e0309e68
+from=e0309e8e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309e88 @ e0309e88
+from=e0309eb0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309ea8 @ e0309ea8
+from=e0309ed4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309ef8 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309f20 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309f44 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309f62 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309f7c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309f78 @ e0309f78
+from=e0309f9c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309fbe type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e0309fe0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0309fd8 @ e0309fd8
+from=e030a002 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a01c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a018 @ e030a018
+from=e030a03e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a05c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a058 @ e030a058
+from=e030a07c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a09e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a0bc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a0b8 @ e030a0b8
+from=e030a0e4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a110 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a134 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a15c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a186 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a1a6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a1a0 @ e030a1a0
+from=e030a1c4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a1c0 @ e030a1c0
+from=e030a1e6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a206 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a200 @ e030a200
+from=e030a224 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a220 @ e030a220
+from=e030a244 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a264 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a286 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a2a6 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a2a0 @ e030a2a0
+from=e030a2cc type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a2c0 @ e030a2c0
+from=e030a33c type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a35e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+from=e030a37e type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a378 @ e030a378
+from=e030a3a0 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030a398 @ e030a398
+reference_count=264
+function=FUN_e0308c48 entry=e0308c48 body=e0308c48..e0308c69
+e0308c48  push {r4,r5,lr}
+[TMODE] e0308c48
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c48..e0308c48
+e0308c4a  movw r5,#0xe904
+[TMODE] e0308c4a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c4a..e0308c4a
+e0308c4e  movt r5,#0xc143
+[TMODE] e0308c4e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c4e..e0308c4e
+e0308c52  ldr r4,[r5,#0x4]
+    -> c143e908 [READ, operand=1]
+[TMODE] e0308c52
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c52..e0308c52
+e0308c54  cbz r4,0xe0308c66
+    -> e0308c66 [CONDITIONAL_JUMP, operand=1]
+[TMODE] e0308c54
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c54..e0308c54
+e0308c56  ldr r0,[r4,#0x0]
+[TMODE] e0308c56
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c56..e0308c56
+e0308c58  ldr.w r1,[r0,#0x298]
+[TMODE] e0308c58
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c58..e0308c58
+e0308c5c  mov r0,r4
+[TMODE] e0308c5c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c5c..e0308c5c
+e0308c5e  blx r1
+[TMODE] e0308c5e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c5e..e0308c5e
+e0308c60  cbz r0,0xe0308c66
+    -> e0308c66 [CONDITIONAL_JUMP, operand=1]
+[TMODE] e0308c60
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c60..e0308c60
+e0308c62  mov r0,r4
+[TMODE] e0308c62
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c62..e0308c62
+e0308c64  pop {r4,r5,pc}
+[TMODE] e0308c64
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c64..e0308c64
+e0308c66  ldr r0,[r5,#0x0]
+    -> c143e904 [READ, operand=1]
+[TMODE] e0308c66
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c66..e0308c66
+e0308c68  pop {r4,r5,pc}
+[TMODE] e0308c68
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308c68..e0308c68
+instruction_count_exported=14
+
+================ FUNCTION: adjacent selected-object global setup routine ================
+requested_address=e0308e30
+[TMODE] e0308e30
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e30..e0308e30
+[SYMBOLS] e0308e30
+name=FUN_e0308e30 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] adjacent selected-object global setup routine target=e0308e30
+from=e0309204 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=<none>
+reference_count=1
+function=FUN_e0308e30 entry=e0308e30 body=e0308e30..e0308e4f
+e0308e30  push {r4,lr}
+[TMODE] e0308e30
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e30..e0308e30
+e0308e32  mov r4,r0
+[TMODE] e0308e32
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e32..e0308e32
+e0308e34  movw r0,#0xe904
+[TMODE] e0308e34
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e34..e0308e34
+e0308e38  movt r0,#0xc143
+    -> c143e904 [PARAM, operand=0]
+[TMODE] e0308e38
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e38..e0308e38
+e0308e3c  bl 0xe0308c18
+    -> e0308c18 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308e3c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e3c..e0308e3c
+e0308e40  ldr r0,[r4,#0x30]
+[TMODE] e0308e40
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e40..e0308e40
+e0308e42  bl 0xe030f330
+    -> e030f330 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308e42
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e42..e0308e42
+e0308e46  ldr r0,[r4,#0x30]
+[TMODE] e0308e46
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e46..e0308e46
+e0308e48  pop.w {r4,lr}
+[TMODE] e0308e48
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e48..e0308e48
+e0308e4c  b.w 0xe030fdb8
+    -> e030fdb8 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0308e4c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0308e4c..e0308e4c
+instruction_count_exported=10
+
+================ FUNCTION: ConStat object constructor / vtable initializer ================
+requested_address=e0306240
+[TMODE] e0306240
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306240..e0306240
+[SYMBOLS] e0306240
+name=FUN_e0306240 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] ConStat object constructor / vtable initializer target=e0306240
+from=e0308bca type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e0308b70 @ e0308b70
+reference_count=1
+function=FUN_e0306240 entry=e0306240 body=e0306240..e0306725
+e0306240  push {r4,r5,r6,r7,r11,lr}
+[TMODE] e0306240
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306240..e0306240
+e0306244  movs r1,#0x0
+[TMODE] e0306244
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306244..e0306244
+e0306246  mov r4,r0
+[TMODE] e0306246
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306246..e0306246
+e0306248  bl 0xe0302740
+    -> e0302740 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306248
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306248..e0306248
+e030624c  movw r0,#0xea54
+[TMODE] e030624c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030624c..e030624c
+e0306250  movt r0,#0xe09a
+[TMODE] e0306250
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306250..e0306250
+e0306254  movw r2,#0xed28
+[TMODE] e0306254
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306254..e0306254
+e0306258  movw r3,#0xedb4
+[TMODE] e0306258
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306258..e0306258
+e030625c  movt r2,#0xe09a
+[TMODE] e030625c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030625c..e030625c
+e0306260  movt r3,#0xe09a
+[TMODE] e0306260
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306260..e0306260
+e0306264  stm r4,{r0,r2,r3}
+    -> e09aea54 [DATA, operand=1]
+    -> e09aed28 [DATA, operand=1]
+    -> e09aedb4 [DATA, operand=1]
+[TMODE] e0306264
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306264..e0306264
+e0306268  movs r0,#0x0
+[TMODE] e0306268
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306268..e0306268
+e030626a  strb.w r0,[r4,#0x224]
+[TMODE] e030626a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030626a..e030626a
+e030626e  str.w r0,[r4,#0x21c]
+[TMODE] e030626e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030626e..e030626e
+e0306272  str.w r0,[r4,#0x220]
+[TMODE] e0306272
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306272..e0306272
+e0306276  str.w r0,[r4,#0x264]
+[TMODE] e0306276
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306276..e0306276
+e030627a  movw r0,#0xba54
+[TMODE] e030627a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030627a..e030627a
+e030627e  movt r0,#0xe09a
+[TMODE] e030627e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030627e..e030627e
+e0306282  add.w r1,r4,#0x26c
+[TMODE] e0306282
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306282..e0306282
+e0306286  add.w r2,r0,#0xcc
+[TMODE] e0306286
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306286..e0306286
+e030628a  ldr.w r3,[r0],#0x4
+    -> e09aba54 [READ, operand=1]
+    -> e09aba58 [READ, operand=1]
+    -> 20202020 [PARAM, operand=0]
+[TMODE] e030628a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030628a..e030628a
+e030628e  cmp r2,r0
+[TMODE] e030628e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030628e..e030628e
+e0306290  str.w r3,[r1],#0x4
+    -> 20202020 [DATA, operand=0]
+[TMODE] e0306290
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306290..e0306290
+e0306294  bne 0xe030628a
+    -> e030628a [CONDITIONAL_JUMP, operand=0]
+[TMODE] e0306294
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306294..e0306294
+e0306296  movw r0,#0x13c8
+[TMODE] e0306296
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306296..e0306296
+e030629a  adds r5,r4,r0
+[TMODE] e030629a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030629a..e030629a
+e030629c  movs r6,#0x0
+[TMODE] e030629c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030629c..e030629c
+e030629e  mov r1,r6
+[TMODE] e030629e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030629e..e030629e
+e03062a0  add.w r0,r4,#0x870
+[TMODE] e03062a0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062a0..e03062a0
+e03062a4  movs r2,#0x38
+[TMODE] e03062a4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062a4..e03062a4
+e03062a6  str.w r6,[r5,#0xb68]
+[TMODE] e03062a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062a6..e03062a6
+e03062aa  bl 0xe030fdf0
+    -> e030fdf0 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03062aa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062aa..e03062aa
+e03062ae  mov r1,r6
+[TMODE] e03062ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ae..e03062ae
+e03062b0  movw r0,#0x8a8
+[TMODE] e03062b0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062b0..e03062b0
+e03062b4  movs r7,#0x1
+[TMODE] e03062b4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062b4..e03062b4
+e03062b6  adds r0,r0,r4
+[TMODE] e03062b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062b6..e03062b6
+e03062b8  movs r2,#0x24
+[TMODE] e03062b8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062b8..e03062b8
+e03062ba  str.w r7,[r5,#0xb6c]
+[TMODE] e03062ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ba..e03062ba
+e03062be  bl 0xe030fdf0
+    -> e030fdf0 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03062be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062be..e03062be
+e03062c2  str.w r7,[r5,#0xb70]
+[TMODE] e03062c2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062c2..e03062c2
+e03062c6  movw r12,#0xb17c
+[TMODE] e03062c6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062c6..e03062c6
+e03062ca  movw r2,#0xa74
+[TMODE] e03062ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ca..e03062ca
+e03062ce  movt r12,#0xe09a
+[TMODE] e03062ce
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ce..e03062ce
+e03062d2  adds r2,r2,r4
+[TMODE] e03062d2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062d2..e03062d2
+e03062d4  ldm.w r12!,{r0,r1,r3}
+    -> e09ab17c [READ, operand=1]
+    -> e09ab180 [READ, operand=1]
+    -> e09ab184 [READ, operand=1]
+    -> 20202020 [PARAM, operand=1]
+[TMODE] e03062d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062d4..e03062d4
+e03062d8  stmia r2!,{r0,r1,r3}
+    -> 20202020 [DATA, operand=1]
+[TMODE] e03062d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062d8..e03062d8
+e03062da  ldr.w r0,[r12,#0x0]
+    -> e09ab188 [READ, operand=1]
+[TMODE] e03062da
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062da..e03062da
+e03062de  mov r1,r6
+[TMODE] e03062de
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062de..e03062de
+e03062e0  str r0,[r2,#0x0]
+    -> 20202020 [DATA, operand=0]
+[TMODE] e03062e0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062e0..e03062e0
+e03062e2  str.w r7,[r5,#0xc14]
+[TMODE] e03062e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062e2..e03062e2
+e03062e6  str.w r6,[r5,#0x480]
+[TMODE] e03062e6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062e6..e03062e6
+e03062ea  str.w r7,[r5,#0xc94]
+[TMODE] e03062ea
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ea..e03062ea
+e03062ee  movw r0,#0xb74
+[TMODE] e03062ee
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062ee..e03062ee
+e03062f2  movw r2,#0x854
+[TMODE] e03062f2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062f2..e03062f2
+e03062f6  adds r0,r0,r4
+[TMODE] e03062f6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062f6..e03062f6
+e03062f8  str.w r7,[r5,#0xc48]
+[TMODE] e03062f8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062f8..e03062f8
+e03062fc  bl 0xe030fdf0
+    -> e030fdf0 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03062fc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03062fc..e03062fc
+e0306300  movw r0,#0x6cc
+[TMODE] e0306300
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306300..e0306300
+e0306304  adds r0,r5,r0
+[TMODE] e0306304
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306304..e0306304
+e0306306  movs r2,#0x34
+[TMODE] e0306306
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306306..e0306306
+e0306308  mov r1,r6
+[TMODE] e0306308
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306308..e0306308
+e030630a  bl 0xe030fdf0
+    -> e030fdf0 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030630a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030630a..e030630a
+e030630e  movw r1,#0xb290
+[TMODE] e030630e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030630e..e030630e
+e0306312  movw r0,#0xb74
+[TMODE] e0306312
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306312..e0306312
+e0306316  movt r1,#0xe09a
+    -> e09ab290 [PARAM, operand=0]
+[TMODE] e0306316
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306316..e0306316
+e030631a  adds r0,r5,r0
+[TMODE] e030631a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030631a..e030631a
+e030631c  movs r2,#0x18
+[TMODE] e030631c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030631c..e030631c
+e030631e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030631e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030631e..e030631e
+e0306322  movw r1,#0xbda8
+[TMODE] e0306322
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306322..e0306322
+e0306326  movt r1,#0xe09a
+    -> e09abda8 [PARAM, operand=0]
+[TMODE] e0306326
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306326..e0306326
+e030632a  add.w r0,r4,#0x338
+[TMODE] e030632a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030632a..e030632a
+e030632e  mov.w r2,#0x180
+[TMODE] e030632e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030632e..e030632e
+e0306332  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306332
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306332..e0306332
+e0306336  movw r1,#0xb230
+[TMODE] e0306336
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306336..e0306336
+e030633a  movw r0,#0xb8c
+[TMODE] e030633a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030633a..e030633a
+e030633e  movt r1,#0xe09a
+    -> e09ab230 [PARAM, operand=0]
+[TMODE] e030633e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030633e..e030633e
+e0306342  adds r0,r5,r0
+[TMODE] e0306342
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306342..e0306342
+e0306344  movs r2,#0x18
+[TMODE] e0306344
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306344..e0306344
+e0306346  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306346
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306346..e0306346
+e030634a  movw r1,#0xb790
+[TMODE] e030634a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030634a..e030634a
+e030634e  movt r1,#0xe09a
+    -> e09ab790 [PARAM, operand=0]
+[TMODE] e030634e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030634e..e030634e
+e0306352  add.w r0,r4,#0x4b8
+[TMODE] e0306352
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306352..e0306352
+e0306356  movs r2,#0xa8
+[TMODE] e0306356
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306356..e0306356
+e0306358  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306358
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306358..e0306358
+e030635c  movw r1,#0xb218
+[TMODE] e030635c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030635c..e030635c
+e0306360  movw r0,#0xba4
+[TMODE] e0306360
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306360..e0306360
+e0306364  movt r1,#0xe09a
+    -> e09ab218 [PARAM, operand=0]
+[TMODE] e0306364
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306364..e0306364
+e0306368  adds r0,r5,r0
+[TMODE] e0306368
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306368..e0306368
+e030636a  movs r2,#0x18
+[TMODE] e030636a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030636a..e030636a
+e030636c  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030636c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030636c..e030636c
+e0306370  movw r1,#0xb838
+[TMODE] e0306370
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306370..e0306370
+e0306374  movt r1,#0xe09a
+    -> e09ab838 [PARAM, operand=0]
+[TMODE] e0306374
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306374..e0306374
+e0306378  add.w r0,r4,#0x560
+[TMODE] e0306378
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306378..e0306378
+e030637c  movs r2,#0xa8
+[TMODE] e030637c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030637c..e030637c
+e030637e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030637e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030637e..e030637e
+e0306382  movw r1,#0xb308
+[TMODE] e0306382
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306382..e0306382
+e0306386  movw r0,#0xbbc
+[TMODE] e0306386
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306386..e0306386
+e030638a  movt r1,#0xe09a
+    -> e09ab308 [PARAM, operand=0]
+[TMODE] e030638a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030638a..e030638a
+e030638e  adds r0,r5,r0
+[TMODE] e030638e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030638e..e030638e
+e0306390  movs r2,#0x18
+[TMODE] e0306390
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306390..e0306390
+e0306392  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306392
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306392..e0306392
+e0306396  movw r1,#0xc2c0
+[TMODE] e0306396
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306396..e0306396
+e030639a  movt r1,#0xe09a
+    -> e09ac2c0 [PARAM, operand=0]
+[TMODE] e030639a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030639a..e030639a
+e030639e  add.w r0,r4,#0x608
+[TMODE] e030639e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030639e..e030639e
+e03063a2  mov.w r2,#0x240
+[TMODE] e03063a2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063a2..e03063a2
+e03063a6  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03063a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063a6..e03063a6
+e03063aa  movw r1,#0xb338
+[TMODE] e03063aa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063aa..e03063aa
+e03063ae  movw r0,#0xbfc
+[TMODE] e03063ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063ae..e03063ae
+e03063b2  movt r1,#0xe09a
+    -> e09ab338 [PARAM, operand=0]
+[TMODE] e03063b2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063b2..e03063b2
+e03063b6  adds r0,r5,r0
+[TMODE] e03063b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063b6..e03063b6
+e03063b8  movs r2,#0x18
+[TMODE] e03063b8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063b8..e03063b8
+e03063ba  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03063ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063ba..e03063ba
+e03063be  movw r1,#0xbc28
+[TMODE] e03063be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063be..e03063be
+e03063c2  movw r0,#0x8f4
+[TMODE] e03063c2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063c2..e03063c2
+e03063c6  movt r1,#0xe09a
+    -> e09abc28 [PARAM, operand=0]
+[TMODE] e03063c6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063c6..e03063c6
+e03063ca  adds r0,r4,r0
+[TMODE] e03063ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063ca..e03063ca
+e03063cc  mov.w r2,#0x180
+[TMODE] e03063cc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063cc..e03063cc
+e03063d0  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03063d0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063d0..e03063d0
+e03063d4  movw r1,#0xb2c0
+[TMODE] e03063d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063d4..e03063d4
+e03063d8  movw r0,#0xc18
+[TMODE] e03063d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063d8..e03063d8
+e03063dc  movt r1,#0xe09a
+    -> e09ab2c0 [PARAM, operand=0]
+[TMODE] e03063dc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063dc..e03063dc
+e03063e0  adds r0,r5,r0
+[TMODE] e03063e0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063e0..e03063e0
+e03063e2  movs r2,#0x18
+[TMODE] e03063e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063e2..e03063e2
+e03063e4  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03063e4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063e4..e03063e4
+e03063e8  movw r1,#0xb700
+[TMODE] e03063e8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063e8..e03063e8
+e03063ec  movw r0,#0xa84
+[TMODE] e03063ec
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063ec..e03063ec
+e03063f0  movt r1,#0xe09a
+    -> e09ab700 [PARAM, operand=0]
+[TMODE] e03063f0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063f0..e03063f0
+e03063f4  adds r0,r4,r0
+[TMODE] e03063f4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063f4..e03063f4
+e03063f6  movs r2,#0x90
+[TMODE] e03063f6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063f6..e03063f6
+e03063f8  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03063f8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063f8..e03063f8
+e03063fc  movw r1,#0xb278
+[TMODE] e03063fc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03063fc..e03063fc
+e0306400  movt r1,#0xe09a
+    -> e09ab278 [PARAM, operand=0]
+[TMODE] e0306400
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306400..e0306400
+e0306404  add.w r0,r5,#0xc30
+[TMODE] e0306404
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306404..e0306404
+e0306408  movs r2,#0x18
+[TMODE] e0306408
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306408..e0306408
+e030640a  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030640a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030640a..e030640a
+e030640e  movw r1,#0xb53c
+[TMODE] e030640e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030640e..e030640e
+e0306412  movw r0,#0xb14
+[TMODE] e0306412
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306412..e0306412
+e0306416  movt r1,#0xe09a
+    -> e09ab53c [PARAM, operand=0]
+[TMODE] e0306416
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306416..e0306416
+e030641a  adds r0,r4,r0
+[TMODE] e030641a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030641a..e030641a
+e030641c  movs r2,#0x60
+[TMODE] e030641c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030641c..e030641c
+e030641e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030641e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030641e..e030641e
+e0306422  movw r1,#0xb2a8
+[TMODE] e0306422
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306422..e0306422
+e0306426  movw r0,#0xc4c
+[TMODE] e0306426
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306426..e0306426
+e030642a  movt r1,#0xe09a
+    -> e09ab2a8 [PARAM, operand=0]
+[TMODE] e030642a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030642a..e030642a
+e030642e  adds r0,r5,r0
+[TMODE] e030642e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030642e..e030642e
+e0306430  movs r2,#0x18
+[TMODE] e0306430
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306430..e0306430
+e0306432  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306432
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306432..e0306432
+e0306436  movw r1,#0xc500
+[TMODE] e0306436
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306436..e0306436
+e030643a  movt r1,#0xe09a
+    -> e09ac500 [PARAM, operand=0]
+[TMODE] e030643a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030643a..e030643a
+e030643e  mov r0,r5
+[TMODE] e030643e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030643e..e030643e
+e0306440  mov.w r2,#0x300
+[TMODE] e0306440
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306440..e0306440
+e0306444  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306444
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306444..e0306444
+e0306448  movw r1,#0xb248
+[TMODE] e0306448
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306448..e0306448
+e030644c  movw r0,#0xc64
+[TMODE] e030644c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030644c..e030644c
+e0306450  movt r1,#0xe09a
+    -> e09ab248 [PARAM, operand=0]
+[TMODE] e0306450
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306450..e0306450
+e0306454  adds r0,r5,r0
+[TMODE] e0306454
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306454..e0306454
+e0306456  movs r2,#0x18
+[TMODE] e0306456
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306456..e0306456
+e0306458  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306458
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306458..e0306458
+e030645c  movw r1,#0xb610
+[TMODE] e030645c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030645c..e030645c
+e0306460  movt r1,#0xe09a
+    -> e09ab610 [PARAM, operand=0]
+[TMODE] e0306460
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306460..e0306460
+e0306464  add.w r0,r5,#0x300
+[TMODE] e0306464
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306464..e0306464
+e0306468  movs r2,#0x78
+[TMODE] e0306468
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306468..e0306468
+e030646a  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030646a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030646a..e030646a
+e030646e  movw r1,#0xb2d8
+[TMODE] e030646e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030646e..e030646e
+e0306472  movw r0,#0xc7c
+[TMODE] e0306472
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306472..e0306472
+e0306476  movt r1,#0xe09a
+    -> e09ab2d8 [PARAM, operand=0]
+[TMODE] e0306476
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306476..e0306476
+e030647a  adds r0,r5,r0
+[TMODE] e030647a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030647a..e030647a
+e030647c  movs r2,#0x18
+[TMODE] e030647c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030647c..e030647c
+e030647e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030647e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030647e..e030647e
+e0306482  movw r1,#0xbb20
+[TMODE] e0306482
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306482..e0306482
+e0306486  movt r1,#0xe09a
+    -> e09abb20 [PARAM, operand=0]
+[TMODE] e0306486
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306486..e0306486
+e030648a  add.w r0,r5,#0x378
+[TMODE] e030648a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030648a..e030648a
+e030648e  mov.w r2,#0x108
+[TMODE] e030648e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030648e..e030648e
+e0306492  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306492
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306492..e0306492
+e0306496  movw r1,#0xb368
+[TMODE] e0306496
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306496..e0306496
+e030649a  movw r0,#0xc98
+[TMODE] e030649a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030649a..e030649a
+e030649e  movt r1,#0xe09a
+    -> e09ab368 [PARAM, operand=0]
+[TMODE] e030649e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030649e..e030649e
+e03064a2  adds r0,r5,r0
+[TMODE] e03064a2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064a2..e03064a2
+e03064a4  movs r2,#0x18
+[TMODE] e03064a4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064a4..e03064a4
+e03064a6  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03064a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064a6..e03064a6
+e03064aa  movw r1,#0xb3f4
+[TMODE] e03064aa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064aa..e03064aa
+e03064ae  movw r0,#0x484
+[TMODE] e03064ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064ae..e03064ae
+e03064b2  movt r1,#0xe09a
+    -> e09ab3f4 [PARAM, operand=0]
+[TMODE] e03064b2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064b2..e03064b2
+e03064b6  adds r0,r5,r0
+[TMODE] e03064b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064b6..e03064b6
+e03064b8  movs r2,#0x30
+[TMODE] e03064b8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064b8..e03064b8
+e03064ba  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03064ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064ba..e03064ba
+e03064be  movw r1,#0xb350
+[TMODE] e03064be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064be..e03064be
+e03064c2  movt r1,#0xe09a
+    -> e09ab350 [PARAM, operand=0]
+[TMODE] e03064c2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064c2..e03064c2
+e03064c6  add.w r0,r5,#0xcb0
+[TMODE] e03064c6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064c6..e03064c6
+e03064ca  movs r2,#0x18
+[TMODE] e03064ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064ca..e03064ca
+e03064cc  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03064cc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064cc..e03064cc
+e03064d0  movw r1,#0xbf28
+[TMODE] e03064d0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064d0..e03064d0
+e03064d4  movw r0,#0x4b4
+[TMODE] e03064d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064d4..e03064d4
+e03064d8  movt r1,#0xe09a
+    -> e09abf28 [PARAM, operand=0]
+[TMODE] e03064d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064d8..e03064d8
+e03064dc  adds r0,r5,r0
+[TMODE] e03064dc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064dc..e03064dc
+e03064de  mov.w r2,#0x1c8
+[TMODE] e03064de
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064de..e03064de
+e03064e2  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03064e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064e2..e03064e2
+e03064e6  movw r1,#0xb2f0
+[TMODE] e03064e6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064e6..e03064e6
+e03064ea  movw r0,#0xd08
+[TMODE] e03064ea
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064ea..e03064ea
+e03064ee  movt r1,#0xe09a
+    -> e09ab2f0 [PARAM, operand=0]
+[TMODE] e03064ee
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064ee..e03064ee
+e03064f2  adds r0,r5,r0
+[TMODE] e03064f2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064f2..e03064f2
+e03064f4  movs r2,#0x18
+[TMODE] e03064f4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064f4..e03064f4
+e03064f6  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03064f6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064f6..e03064f6
+e03064fa  movw r1,#0xb4dc
+[TMODE] e03064fa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064fa..e03064fa
+e03064fe  movw r0,#0x7e4
+[TMODE] e03064fe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03064fe..e03064fe
+e0306502  movt r1,#0xe09a
+    -> e09ab4dc [PARAM, operand=0]
+[TMODE] e0306502
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306502..e0306502
+e0306506  adds r0,r5,r0
+[TMODE] e0306506
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306506..e0306506
+e0306508  movs r2,#0x60
+[TMODE] e0306508
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306508..e0306508
+e030650a  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030650a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030650a..e030650a
+e030650e  movw r1,#0xb320
+[TMODE] e030650e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030650e..e030650e
+e0306512  movw r0,#0xd34
+[TMODE] e0306512
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306512..e0306512
+e0306516  movt r1,#0xe09a
+    -> e09ab320 [PARAM, operand=0]
+[TMODE] e0306516
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306516..e0306516
+e030651a  adds r0,r5,r0
+[TMODE] e030651a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030651a..e030651a
+e030651c  movs r2,#0x18
+[TMODE] e030651c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030651c..e030651c
+e030651e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030651e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030651e..e030651e
+e0306522  movw r1,#0xb994
+[TMODE] e0306522
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306522..e0306522
+e0306526  movw r0,#0x858
+[TMODE] e0306526
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306526..e0306526
+e030652a  movt r1,#0xe09a
+    -> e09ab994 [PARAM, operand=0]
+[TMODE] e030652a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030652a..e030652a
+e030652e  adds r0,r5,r0
+[TMODE] e030652e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030652e..e030652e
+e0306530  movs r2,#0xc0
+[TMODE] e0306530
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306530..e0306530
+e0306532  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306532
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306532..e0306532
+e0306536  movw r1,#0xb1a0
+[TMODE] e0306536
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306536..e0306536
+e030653a  movw r0,#0xbd4
+[TMODE] e030653a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030653a..e030653a
+e030653e  movt r1,#0xe09a
+    -> e09ab1a0 [PARAM, operand=0]
+[TMODE] e030653e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030653e..e030653e
+e0306542  adds r0,r5,r0
+[TMODE] e0306542
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306542..e0306542
+e0306544  movs r2,#0x14
+[TMODE] e0306544
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306544..e0306544
+e0306546  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306546
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306546..e0306546
+e030654a  movw r1,#0xb3cc
+[TMODE] e030654a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030654a..e030654a
+e030654e  movw r0,#0x848
+[TMODE] e030654e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030654e..e030654e
+e0306552  movt r1,#0xe09a
+    -> e09ab3cc [PARAM, operand=0]
+[TMODE] e0306552
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306552..e0306552
+e0306556  adds r0,r4,r0
+[TMODE] e0306556
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306556..e0306556
+e0306558  movs r2,#0x28
+[TMODE] e0306558
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306558..e0306558
+e030655a  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030655a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030655a..e030655a
+e030655e  movw r1,#0xb18c
+[TMODE] e030655e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030655e..e030655e
+e0306562  movw r0,#0xbe8
+[TMODE] e0306562
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306562..e0306562
+e0306566  movt r1,#0xe09a
+    -> e09ab18c [PARAM, operand=0]
+[TMODE] e0306566
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306566..e0306566
+e030656a  adds r0,r5,r0
+[TMODE] e030656a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030656a..e030656a
+e030656c  movs r2,#0x14
+[TMODE] e030656c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030656c..e030656c
+e030656e  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030656e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030656e..e030656e
+e0306572  movw r1,#0xb3a4
+[TMODE] e0306572
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306572..e0306572
+e0306576  movw r0,#0x8cc
+[TMODE] e0306576
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306576..e0306576
+e030657a  movt r1,#0xe09a
+    -> e09ab3a4 [PARAM, operand=0]
+[TMODE] e030657a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030657a..e030657a
+e030657e  adds r0,r4,r0
+[TMODE] e030657e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030657e..e030657e
+e0306580  movs r2,#0x28
+[TMODE] e0306580
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306580..e0306580
+e0306582  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306582
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306582..e0306582
+e0306586  movw r1,#0xb204
+[TMODE] e0306586
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306586..e0306586
+e030658a  movw r0,#0xcc8
+[TMODE] e030658a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030658a..e030658a
+e030658e  movt r1,#0xe09a
+    -> e09ab204 [PARAM, operand=0]
+[TMODE] e030658e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030658e..e030658e
+e0306592  adds r0,r5,r0
+[TMODE] e0306592
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306592..e0306592
+e0306594  movs r2,#0x14
+[TMODE] e0306594
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306594..e0306594
+e0306596  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306596
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306596..e0306596
+e030659a  movw r1,#0xb48c
+[TMODE] e030659a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030659a..e030659a
+e030659e  movw r0,#0x67c
+[TMODE] e030659e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030659e..e030659e
+e03065a2  movt r1,#0xe09a
+    -> e09ab48c [PARAM, operand=0]
+[TMODE] e03065a2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065a2..e03065a2
+e03065a6  adds r0,r5,r0
+[TMODE] e03065a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065a6..e03065a6
+e03065a8  movs r2,#0x14
+[TMODE] e03065a8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065a8..e03065a8
+e03065aa  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03065aa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065aa..e03065aa
+e03065ae  movw r1,#0xb260
+[TMODE] e03065ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065ae..e03065ae
+e03065b2  movw r0,#0xcdc
+[TMODE] e03065b2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065b2..e03065b2
+e03065b6  movt r1,#0xe09a
+    -> e09ab260 [PARAM, operand=0]
+[TMODE] e03065b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065b6..e03065b6
+e03065ba  adds r0,r5,r0
+[TMODE] e03065ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065ba..e03065ba
+e03065bc  movs r2,#0x18
+[TMODE] e03065bc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065bc..e03065bc
+e03065be  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03065be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065be..e03065be
+e03065c2  movw r1,#0xb424
+[TMODE] e03065c2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065c2..e03065c2
+e03065c6  movt r1,#0xe09a
+    -> e09ab424 [PARAM, operand=0]
+[TMODE] e03065c6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065c6..e03065c6
+e03065ca  add.w r0,r5,#0x700
+[TMODE] e03065ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065ca..e03065ca
+e03065ce  movs r2,#0x30
+[TMODE] e03065ce
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065ce..e03065ce
+e03065d0  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03065d0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065d0..e03065d0
+e03065d4  movw r1,#0xb1c8
+[TMODE] e03065d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065d4..e03065d4
+e03065d8  movw r0,#0xcf4
+[TMODE] e03065d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065d8..e03065d8
+e03065dc  movt r1,#0xe09a
+    -> e09ab1c8 [PARAM, operand=0]
+[TMODE] e03065dc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065dc..e03065dc
+e03065e0  adds r0,r5,r0
+[TMODE] e03065e0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065e0..e03065e0
+e03065e2  movs r2,#0x14
+[TMODE] e03065e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065e2..e03065e2
+e03065e4  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03065e4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065e4..e03065e4
+e03065e8  movw r1,#0xb8e0
+[TMODE] e03065e8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065e8..e03065e8
+e03065ec  movt r1,#0xe09a
+    -> e09ab8e0 [PARAM, operand=0]
+[TMODE] e03065ec
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065ec..e03065ec
+e03065f0  add.w r0,r5,#0x730
+[TMODE] e03065f0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065f0..e03065f0
+e03065f4  movs r2,#0xb4
+[TMODE] e03065f4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065f4..e03065f4
+e03065f6  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03065f6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065f6..e03065f6
+e03065fa  movw r1,#0xb1b4
+[TMODE] e03065fa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065fa..e03065fa
+e03065fe  movt r1,#0xe09a
+    -> e09ab1b4 [PARAM, operand=0]
+[TMODE] e03065fe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03065fe..e03065fe
+e0306602  add.w r0,r5,#0xd20
+[TMODE] e0306602
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306602..e0306602
+e0306606  movs r2,#0x14
+[TMODE] e0306606
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306606..e0306606
+e0306608  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306608
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306608..e0306608
+e030660c  movw r1,#0xb1f0
+[TMODE] e030660c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030660c..e030660c
+e0306610  movw r0,#0x844
+[TMODE] e0306610
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306610..e0306610
+e0306614  movt r1,#0xe09a
+    -> e09ab1f0 [PARAM, operand=0]
+[TMODE] e0306614
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306614..e0306614
+e0306618  adds r0,r5,r0
+[TMODE] e0306618
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306618..e0306618
+e030661a  movs r2,#0x14
+[TMODE] e030661a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030661a..e030661a
+e030661c  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030661c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030661c..e030661c
+e0306620  movw r1,#0xb1dc
+[TMODE] e0306620
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306620..e0306620
+e0306624  movw r0,#0xd4c
+[TMODE] e0306624
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306624..e0306624
+e0306628  movt r1,#0xe09a
+    -> e09ab1dc [PARAM, operand=0]
+[TMODE] e0306628
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306628..e0306628
+e030662c  adds r0,r5,r0
+[TMODE] e030662c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030662c..e030662c
+e030662e  movs r2,#0x14
+[TMODE] e030662e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030662e..e030662e
+e0306630  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306630
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306630..e0306630
+e0306634  movw r1,#0xb688
+[TMODE] e0306634
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306634..e0306634
+e0306638  movw r0,#0x918
+[TMODE] e0306638
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306638..e0306638
+e030663c  movt r1,#0xe09a
+    -> e09ab688 [PARAM, operand=0]
+[TMODE] e030663c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030663c..e030663c
+e0306640  adds r0,r5,r0
+[TMODE] e0306640
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306640..e0306640
+e0306642  movs r2,#0x78
+[TMODE] e0306642
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306642..e0306642
+e0306644  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306644
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306644..e0306644
+e0306648  movw r1,#0xb59c
+[TMODE] e0306648
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306648..e0306648
+e030664c  movt r1,#0xe09a
+    -> e09ab59c [PARAM, operand=0]
+[TMODE] e030664c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030664c..e030664c
+e0306650  add.w r0,r5,#0xd60
+[TMODE] e0306650
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306650..e0306650
+e0306654  movs r2,#0x74
+[TMODE] e0306654
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306654..e0306654
+e0306656  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306656
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306656..e0306656
+e030665a  movw r1,#0xc0f0
+[TMODE] e030665a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030665a..e030665a
+e030665e  movt r1,#0xe09a
+    -> e09ac0f0 [PARAM, operand=0]
+[TMODE] e030665e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030665e..e030665e
+e0306662  add.w r0,r5,#0x990
+[TMODE] e0306662
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306662..e0306662
+e0306666  mov.w r2,#0x1d0
+[TMODE] e0306666
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306666..e0306666
+e030666a  bl 0xe030fe08
+    -> e030fe08 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030666a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030666a..e030666a
+e030666e  movs r0,#0x65
+[TMODE] e030666e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030666e..e030666e
+e0306670  movs r1,#0x1
+[TMODE] e0306670
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306670..e0306670
+e0306672  movs r2,#0x1
+[TMODE] e0306672
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306672..e0306672
+e0306674  add.w r3,r0,r0, lsl #0x1
+[TMODE] e0306674
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306674..e0306674
+e0306678  adds r3,r1,r3
+[TMODE] e0306678
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306678..e0306678
+e030667a  movw r12,#0xc800
+[TMODE] e030667a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030667a..e030667a
+e030667e  add.w r3,r3,r3, lsl #0x2
+[TMODE] e030667e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030667e..e030667e
+e0306682  movt r12,#0xe09a
+[TMODE] e0306682
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306682..e0306682
+e0306686  add.w r3,r2,r3, lsl #0x2
+[TMODE] e0306686
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306686..e0306686
+e030668a  movw r6,#0x17c1
+[TMODE] e030668a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030668a..e030668a
+e030668e  add r12,r3
+[TMODE] e030668e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030668e..e030668e
+e0306690  sub.w r12,r12,r6
+[TMODE] e0306690
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306690..e0306690
+e0306694  movw r7,#0x28a4
+[TMODE] e0306694
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306694..e0306694
+e0306698  ldrb.w r12,[r12,#0x0]
+    -> e09ac800 [READ, operand=1]
+    -> e09ac801 [READ, operand=1]
+    -> e09ac814 [READ, operand=1]
+    -> e09ac83c [READ, operand=1]
+[TMODE] e0306698
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306698..e0306698
+e030669c  adds r7,r4,r7
+[TMODE] e030669c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030669c..e030669c
+e030669e  movw lr,#0x5f04
+[TMODE] e030669e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030669e..e030669e
+e03066a2  movw r11,#0xcf08
+[TMODE] e03066a2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066a2..e03066a2
+e03066a6  sub.w r7,r7,lr
+[TMODE] e03066a6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066a6..e03066a6
+e03066aa  movt r11,#0xe09a
+[TMODE] e03066aa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066aa..e03066aa
+e03066ae  str.w r12,[r7,r3,lsl #0x2]
+[TMODE] e03066ae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066ae..e03066ae
+e03066b2  add.w r12,r3,r11
+[TMODE] e03066b2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066b2..e03066b2
+e03066b6  movw r7,#0xdd4
+[TMODE] e03066b6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066b6..e03066b6
+e03066ba  sub.w r12,r12,r6
+[TMODE] e03066ba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066ba..e03066ba
+e03066be  adds r7,r5,r7
+[TMODE] e03066be
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066be..e03066be
+e03066c0  ldrb.w r12,[r12,#0x0]
+    -> e09acf08 [READ, operand=1]
+[TMODE] e03066c0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066c0..e03066c0
+e03066c4  adds r3,r3,r7
+[TMODE] e03066c4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066c4..e03066c4
+e03066c6  adds r2,#0x1
+[TMODE] e03066c6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066c6..e03066c6
+e03066c8  subs r3,r3,r6
+[TMODE] e03066c8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066c8..e03066c8
+e03066ca  cmp r2,#0x14
+[TMODE] e03066ca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066ca..e03066ca
+e03066cc  strb.w r12,[r3,#0x0]
+[TMODE] e03066cc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066cc..e03066cc
+e03066d0  ble 0xe0306674
+    -> e0306674 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03066d0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066d0..e03066d0
+e03066d2  adds r1,#0x1
+[TMODE] e03066d2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066d2..e03066d2
+e03066d4  cmp r1,#0x3
+[TMODE] e03066d4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066d4..e03066d4
+e03066d6  ble 0xe0306672
+    -> e0306672 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03066d6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066d6..e03066d6
+e03066d8  adds r0,#0x1
+[TMODE] e03066d8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066d8..e03066d8
+e03066da  cmp r0,#0x82
+[TMODE] e03066da
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066da..e03066da
+e03066dc  ble 0xe0306670
+    -> e0306670 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e03066dc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066dc..e03066dc
+e03066de  adr.w r6,0xe0306a78
+[TMODE] e03066de
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066de..e03066de
+e03066e2  movw r0,#0x225
+[TMODE] e03066e2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066e2..e03066e2
+e03066e6  mov r1,r6
+    -> e0306a78 [PARAM, operand=0]
+[TMODE] e03066e6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066e6..e03066e6
+e03066e8  adds r0,r4,r0
+[TMODE] e03066e8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066e8..e03066e8
+e03066ea  movs r2,#0x14
+[TMODE] e03066ea
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066ea..e03066ea
+e03066ec  bl 0xe0975a20
+    -> e0975a20 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03066ec
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066ec..e03066ec
+e03066f0  movw r0,#0x239
+[TMODE] e03066f0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066f0..e03066f0
+e03066f4  mov r1,r6
+    -> e0306a78 [PARAM, operand=0]
+[TMODE] e03066f4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066f4..e03066f4
+e03066f6  adds r0,r4,r0
+[TMODE] e03066f6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066f6..e03066f6
+e03066f8  movs r2,#0x14
+[TMODE] e03066f8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066f8..e03066f8
+e03066fa  bl 0xe0975a20
+    -> e0975a20 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e03066fa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066fa..e03066fa
+e03066fe  movw r0,#0x24d
+[TMODE] e03066fe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e03066fe..e03066fe
+e0306702  mov r1,r6
+    -> e0306a78 [PARAM, operand=0]
+[TMODE] e0306702
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306702..e0306702
+e0306704  adds r0,r4,r0
+[TMODE] e0306704
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306704..e0306704
+e0306706  movs r2,#0x14
+[TMODE] e0306706
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306706..e0306706
+e0306708  bl 0xe0975a20
+    -> e0975a20 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e0306708
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306708..e0306708
+e030670c  movs r0,#0x0
+[TMODE] e030670c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030670c..e030670c
+e030670e  strb.w r0,[r4,#0x268]
+[TMODE] e030670e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030670e..e030670e
+e0306712  adds r1,r0,r5
+[TMODE] e0306712
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306712..e0306712
+e0306714  adds r0,#0x1
+[TMODE] e0306714
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306714..e0306714
+e0306716  movs r2,#0x0
+[TMODE] e0306716
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306716..e0306716
+e0306718  cmp r0,#0x6
+[TMODE] e0306718
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306718..e0306718
+e030671a  strb.w r2,[r1,#0xb60]
+[TMODE] e030671a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030671a..e030671a
+e030671e  bcc 0xe0306712
+    -> e0306712 [CONDITIONAL_JUMP, operand=0]
+[TMODE] e030671e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030671e..e030671e
+e0306720  mov r0,r4
+[TMODE] e0306720
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306720..e0306720
+e0306722  pop.w {r4,r5,r6,r7,r11,pc}
+[TMODE] e0306722
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e0306722..e0306722
+instruction_count_exported=375
+
+================ FUNCTION: 0x00F8AE47 callback and selected-object dispatch ================
+requested_address=e030fb40
+[TMODE] e030fb40
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb40..e030fb40
+[SYMBOLS] e030fb40
+name=FUN_e030fb40 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] 0x00F8AE47 callback and selected-object dispatch target=e030fb40
+reference_count=0
+NOTE: no existing typed xref; computed/indirect references or runtime assignment may still exist.
+function=FUN_e030fb40 entry=e030fb40 body=e030fb40..e030fc11
+e030fb40  push {r4,r5,lr}
+[TMODE] e030fb40
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb40..e030fb40
+e030fb42  sub sp,#0x2c
+[TMODE] e030fb42
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb42..e030fb42
+e030fb44  movw r1,#0xa43c
+[TMODE] e030fb44
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb44..e030fb44
+e030fb48  movt r1,#0xc022
+[TMODE] e030fb48
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb48..e030fb48
+e030fb4c  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+[TMODE] e030fb4c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb4c..e030fb4c
+e030fb4e  str r0,[sp,#0x28]
+    -> Stack[-0x10] [WRITE, operand=1]
+[TMODE] e030fb4e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb4e..e030fb4e
+e030fb50  movw r4,#0xe460
+[TMODE] e030fb50
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb50..e030fb50
+e030fb54  movt r4,#0xe09a
+[TMODE] e030fb54
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb54..e030fb54
+e030fb58  add r2,sp,#0x4
+[TMODE] e030fb58
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb58..e030fb58
+e030fb5a  ldmia r4!,{r0,r1,r3}
+    -> e09ae460 [READ, operand=1]
+    -> e09ae464 [READ, operand=1]
+    -> e09ae468 [READ, operand=1]
+[TMODE] e030fb5a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb5a..e030fb5a
+e030fb5c  stmia r2!,{r0,r1,r3}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x34] [WRITE, operand=0]
+[TMODE] e030fb5c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb5c..e030fb5c
+e030fb5e  ldm.w r4,{r0,r1}
+    -> e09ae46c [READ, operand=1]
+    -> e09ae470 [READ, operand=1]
+[TMODE] e030fb5e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb5e..e030fb5e
+e030fb62  stm r2,{r0,r1}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x28] [WRITE, operand=0]
+[TMODE] e030fb62
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb62..e030fb62
+e030fb66  movw r4,#0xe474
+[TMODE] e030fb66
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb66..e030fb66
+e030fb6a  movt r4,#0xe09a
+[TMODE] e030fb6a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb6a..e030fb6a
+e030fb6e  add r2,sp,#0x18
+[TMODE] e030fb6e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb6e..e030fb6e
+e030fb70  ldmia r4!,{r0,r1,r3}
+    -> e09ae474 [READ, operand=1]
+    -> e09ae478 [READ, operand=1]
+    -> e09ae47c [READ, operand=1]
+    -> 20202020 [PARAM, operand=1]
+[TMODE] e030fb70
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb70..e030fb70
+e030fb72  stmia r2!,{r0,r1,r3}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x20] [WRITE, operand=0]
+[TMODE] e030fb72
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb72..e030fb72
+e030fb74  ldrb r0,[r4,#0x0]
+    -> e09ae480 [READ, operand=1]
+[TMODE] e030fb74
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb74..e030fb74
+e030fb76  strb r0,[r2,#0x0]
+    -> Stack[-0x14] [WRITE, operand=1]
+[TMODE] e030fb76
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb76..e030fb76
+e030fb78  ldrb r0,[r4,#0x1]
+    -> e09ae481 [READ, operand=1]
+[TMODE] e030fb78
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb78..e030fb78
+e030fb7a  strb r0,[r2,#0x1]
+    -> Stack[-0x13] [WRITE, operand=1]
+[TMODE] e030fb7a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb7a..e030fb7a
+e030fb7c  ldrb r0,[r4,#0x2]
+    -> e09ae482 [READ, operand=1]
+[TMODE] e030fb7c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb7c..e030fb7c
+e030fb7e  strb r0,[r2,#0x2]
+    -> Stack[-0x12] [WRITE, operand=1]
+[TMODE] e030fb7e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb7e..e030fb7e
+e030fb80  bl 0xe0318328
+    -> e0318328 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fb80
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb80..e030fb80
+e030fb84  cbz r0,0xe030fb96
+    -> e030fb96 [CONDITIONAL_JUMP, operand=1]
+[TMODE] e030fb84
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb84..e030fb84
+e030fb86  ldr.w r1,[0xe030fde8]
+    -> e030fde8 [READ, operand=1]
+    -> e030f774 [PARAM, operand=0]
+[TMODE] e030fb86
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb86..e030fb86
+e030fb8a  movw r0,#0x225
+[TMODE] e030fb8a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb8a..e030fb8a
+e030fb8e  mov.w r2,#0x80000000
+[TMODE] e030fb8e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb8e..e030fb8e
+e030fb92  blx 0xe02366d8
+    -> e02366d8 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fb92
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb92..e030fb92
+e030fb96  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fb96
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb96..e030fb96
+e030fb9a  ldr r0,[r0,#0x30]
+[TMODE] e030fb9a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb9a..e030fb9a
+e030fb9c  ldr r1,[r0,#0x0]
+[TMODE] e030fb9c
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb9c..e030fb9c
+e030fb9e  ldr r3,[r1,#0x24]
+[TMODE] e030fb9e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fb9e..e030fb9e
+e030fba0  add r1,sp,#0x18
+[TMODE] e030fba0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fba0..e030fba0
+e030fba2  movs r2,#0x14
+[TMODE] e030fba2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fba2..e030fba2
+e030fba4  blx r3
+[TMODE] e030fba4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fba4..e030fba4
+e030fba6  add r0,sp,#0x18
+[TMODE] e030fba6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fba6..e030fba6
+e030fba8  bl 0xe03053f8
+    -> e03053f8 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fba8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fba8..e030fba8
+e030fbac  add r1,sp,#0x18
+[TMODE] e030fbac
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbac..e030fbac
+e030fbae  movs r2,#0xf
+[TMODE] e030fbae
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbae..e030fbae
+e030fbb0  mov r4,r0
+[TMODE] e030fbb0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbb0..e030fbb0
+e030fbb2  bl 0xe03053d0
+    -> e03053d0 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbb2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbb2..e030fbb2
+e030fbb6  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbb6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbb6..e030fbb6
+e030fbba  ldr r0,[r0,#0x30]
+[TMODE] e030fbba
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbba..e030fbba
+e030fbbc  ldr r1,[r0,#0x0]
+[TMODE] e030fbbc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbbc..e030fbbc
+e030fbbe  ldr r1,[r1,#0x18]
+[TMODE] e030fbbe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbbe..e030fbbe
+e030fbc0  blx r1
+[TMODE] e030fbc0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbc0..e030fbc0
+e030fbc2  mov r5,r0
+[TMODE] e030fbc2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbc2..e030fbc2
+e030fbc4  bl 0xe030feb8
+    -> e030feb8 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbc4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbc4..e030fbc4
+e030fbc8  ldr r1,[r0,#0x0]
+[TMODE] e030fbc8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbc8..e030fbc8
+e030fbca  ldr.w r3,[r1,#0x2c0]
+[TMODE] e030fbca
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbca..e030fbca
+e030fbce  mov r1,r4
+[TMODE] e030fbce
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbce..e030fbce
+e030fbd0  mov r2,r5
+[TMODE] e030fbd0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbd0..e030fbd0
+e030fbd2  blx r3
+[TMODE] e030fbd2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbd2..e030fbd2
+e030fbd4  add r1,sp,#0x4
+[TMODE] e030fbd4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbd4..e030fbd4
+e030fbd6  movs r2,#0x14
+[TMODE] e030fbd6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbd6..e030fbd6
+e030fbd8  bl 0xe0305360
+    -> e0305360 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbd8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbd8..e030fbd8
+e030fbdc  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbdc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbdc..e030fbdc
+e030fbe0  ldr r4,[r0,#0x30]
+[TMODE] e030fbe0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbe0..e030fbe0
+e030fbe2  ldr r1,[r4,#0x0]
+[TMODE] e030fbe2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbe2..e030fbe2
+e030fbe4  add r0,sp,#0x4
+[TMODE] e030fbe4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbe4..e030fbe4
+e030fbe6  ldr r5,[r1,#0x28]
+[TMODE] e030fbe6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbe6..e030fbe6
+e030fbe8  bl 0xe0242c5e
+    -> e0242c5e [UNCONDITIONAL_CALL, operand=0]
+[TMODE] e030fbe8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbe8..e030fbe8
+e030fbec  movs r1,#0x0
+[TMODE] e030fbec
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbec..e030fbec
+e030fbee  str r1,[sp,#0x0]
+    -> Stack[-0x38] [WRITE, operand=1]
+[TMODE] e030fbee
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbee..e030fbee
+e030fbf0  add r1,sp,#0x4
+[TMODE] e030fbf0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbf0..e030fbf0
+e030fbf2  mov r2,r0
+[TMODE] e030fbf2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbf2..e030fbf2
+e030fbf4  mov r0,r4
+[TMODE] e030fbf4
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbf4..e030fbf4
+e030fbf6  movs r3,#0x14
+[TMODE] e030fbf6
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbf6..e030fbf6
+e030fbf8  blx r5
+[TMODE] e030fbf8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbf8..e030fbf8
+e030fbfa  movw r2,#0xa43c
+[TMODE] e030fbfa
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbfa..e030fbfa
+e030fbfe  ldr r0,[sp,#0x28]
+    -> Stack[-0x10] [READ, operand=1]
+[TMODE] e030fbfe
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fbfe..e030fbfe
+e030fc00  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+[TMODE] e030fc00
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc00..e030fc00
+e030fc04  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+[TMODE] e030fc04
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc04..e030fc04
+e030fc06  cmp r0,r1
+[TMODE] e030fc06
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc06..e030fc06
+e030fc08  it ne
+[TMODE] e030fc08
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc08..e030fc08
+e030fc0a  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+[TMODE] e030fc0a
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc0a..e030fc0a
+e030fc0e  add sp,#0x2c
+[TMODE] e030fc0e
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc0e..e030fc0e
+e030fc10  pop {r4,r5,pc}
+[TMODE] e030fc10
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fc10..e030fc10
+instruction_count_exported=80
+
+================ FUNCTION: global selected-object pointer getter ================
+requested_address=e030feb8
+[TMODE] e030feb8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030feb8..e030feb8
+[SYMBOLS] e030feb8
+name=FUN_e030feb8 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] global selected-object pointer getter target=e030feb8
+from=e030f470 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030f428 @ e030f428
+from=e030f808 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030fa3a type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030faf2 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030faa8 @ e030faa8
+from=e030fbc4 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030fb40 @ e030fb40
+from=e030f3d8 type=UNCONDITIONAL_CALL operand=0 isPrimary=true function=FUN_e030f390 @ e030f390
+reference_count=6
+function=FUN_e030feb8 entry=e030feb8 body=e030feb0..e030fec5
+e030feb0  bx lr
+[TMODE] e030feb0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030feb0..e030feb0
+e030feb8  movw r1,#0xe904
+[TMODE] e030feb8
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030feb8..e030feb8
+e030febc  movt r1,#0xc143
+[TMODE] e030febc
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030febc..e030febc
+e030fec0  ldr r0,[r1,#0x4]
+    -> c143e908 [READ, operand=1]
+[TMODE] e030fec0
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fec0..e030fec0
+e030fec2  b.w 0xe030feb0
+    -> e030feb0 [UNCONDITIONAL_JUMP, operand=0]
+[TMODE] e030fec2
+effective=0x1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+range=e030fec2..e030fec2
+instruction_count_exported=5
+
+================ RAM CELL: adjacent global object-manager cell C143E904 ================
+address=c143e904
+mapped=false
+NOTE: cell is outside mapped program memory; no runtime pointer value can be read from this image.
+[SYMBOLS] c143e904
+name=DAT_c143e904 type=Label source=DEFAULT
+
+[INCOMING REFERENCES] adjacent global object-manager cell C143E904 target=c143e904
+from=e0308c66 type=READ operand=1 isPrimary=true function=FUN_e0308c48 @ e0308c48
+from=e0308e38 type=PARAM operand=0 isPrimary=true function=FUN_e0308e30 @ e0308e30
+from=e0306798 type=READ operand=1 isPrimary=true function=<none>
+from=e03067c6 type=READ operand=1 isPrimary=true function=<none>
+from=e03067c2 type=PARAM operand=0 isPrimary=true function=<none>
+from=e0308cbc type=PARAM operand=0 isPrimary=true function=<none>
+from=e0308e58 type=DATA operand=0 isPrimary=true function=<none>
+from=e0308e64 type=DATA operand=0 isPrimary=true function=<none>
+from=e0308b7e type=WRITE operand=1 isPrimary=true function=FUN_e0308b70 @ e0308b70
+from=e0308bbe type=WRITE operand=1 isPrimary=true function=FUN_e0308b70 @ e0308b70
+from=e0308be6 type=DATA operand=0 isPrimary=true function=FUN_e0308b70 @ e0308b70
+reference_count=11
+
+================ RAM CELL: global selected-object pointer cell C143E908 ================
+address=c143e908
+mapped=false
+NOTE: cell is outside mapped program memory; no runtime pointer value can be read from this image.
+[SYMBOLS] c143e908
+name=DAT_c143e908 type=Label source=DEFAULT
+
+[INCOMING REFERENCES] global selected-object pointer cell C143E908 target=c143e908
+from=e030fec0 type=READ operand=1 isPrimary=true function=FUN_e030feb8 @ e030feb8
+from=e0308c52 type=READ operand=1 isPrimary=true function=FUN_e0308c48 @ e0308c48
+from=e0308b7e type=WRITE operand=1 isPrimary=false function=FUN_e0308b70 @ e0308b70
+from=e0308be4 type=WRITE operand=1 isPrimary=true function=FUN_e0308b70 @ e0308b70
+reference_count=4
+
+================ INTERPRETATION LIMITS ================
+1. A store to C143E908 from a function that also calls the ConStat constructor is a strong ownership lead, but the exact stored register value and its relationship to the constructed this pointer must be checked in the instruction sequence.
+2. C143E908 is outside mapped RAM in this ELF; no live pointer value or runtime object identity is available from this static image.
+3. The E0307910 listing is exported without creating a function; instruction boundaries are those already present in Ghidra.
+4. The callback's selected-object dispatch is not proof of Alert 66220 causation or a complete print-engine admission path.
+5. No patch, bypass, eligibility change, or device-state modification is proposed.
