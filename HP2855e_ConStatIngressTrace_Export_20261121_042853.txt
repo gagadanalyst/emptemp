@@ -1,0 +1,1965 @@
+HP DeskJet 2855e — bounded ConStat ingress callback provenance export
+Mode: READ ONLY; existing functions/listing/references/symbols plus exact raw-word scan of mapped initialized bytes.
+No undefined-byte disassembly, function/data creation, context edits, memory writes, firmware execution, or printer communication.
+Program=hp_lbi_address_mapped.elf
+Language=ARM:LE:32:v7
+ImageBase=c01e3c40
+TModeRegister=TMode
+
+================ FUNCTION: ConStat F8AE47 ingress callback ================
+requested=e030fb40
+[TMODE] e030fb40
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e030fb40
+name=FUN_e030fb40 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] ConStat F8AE47 ingress callback target=e030fb40
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+name=FUN_e030fb40 entry=e030fb40 body=e030fb40..e030fc11
+e030fb40  push {r4,r5,lr}
+e030fb42  sub sp,#0x2c
+e030fb44  movw r1,#0xa43c
+e030fb48  movt r1,#0xc022
+e030fb4c  ldr r0,[r1,#0x0]
+    -> c022a43c [READ, operand=1]
+e030fb4e  str r0,[sp,#0x28]
+    -> Stack[-0x10] [WRITE, operand=1]
+e030fb50  movw r4,#0xe460
+e030fb54  movt r4,#0xe09a
+e030fb58  add r2,sp,#0x4
+e030fb5a  ldmia r4!,{r0,r1,r3}
+    -> e09ae460 [READ, operand=1]
+    -> e09ae464 [READ, operand=1]
+    -> e09ae468 [READ, operand=1]
+e030fb5c  stmia r2!,{r0,r1,r3}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x34] [WRITE, operand=0]
+e030fb5e  ldm.w r4,{r0,r1}
+    -> e09ae46c [READ, operand=1]
+    -> e09ae470 [READ, operand=1]
+e030fb62  stm r2,{r0,r1}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x28] [WRITE, operand=0]
+e030fb66  movw r4,#0xe474
+e030fb6a  movt r4,#0xe09a
+e030fb6e  add r2,sp,#0x18
+e030fb70  ldmia r4!,{r0,r1,r3}
+    -> e09ae474 [READ, operand=1]
+    -> e09ae478 [READ, operand=1]
+    -> e09ae47c [READ, operand=1]
+    -> 20202020 [PARAM, operand=1]
+e030fb72  stmia r2!,{r0,r1,r3}
+    -> 20202020 [DATA, operand=1]
+    -> Stack[-0x20] [WRITE, operand=0]
+e030fb74  ldrb r0,[r4,#0x0]
+    -> e09ae480 [READ, operand=1]
+e030fb76  strb r0,[r2,#0x0]
+    -> Stack[-0x14] [WRITE, operand=1]
+e030fb78  ldrb r0,[r4,#0x1]
+    -> e09ae481 [READ, operand=1]
+e030fb7a  strb r0,[r2,#0x1]
+    -> Stack[-0x13] [WRITE, operand=1]
+e030fb7c  ldrb r0,[r4,#0x2]
+    -> e09ae482 [READ, operand=1]
+e030fb7e  strb r0,[r2,#0x2]
+    -> Stack[-0x12] [WRITE, operand=1]
+e030fb80  bl 0xe0318328
+    -> e0318328 [UNCONDITIONAL_CALL, operand=0]
+e030fb84  cbz r0,0xe030fb96
+    -> e030fb96 [CONDITIONAL_JUMP, operand=1]
+e030fb86  ldr.w r1,[0xe030fde8]
+    -> e030fde8 [READ, operand=1]
+    -> e030f774 [PARAM, operand=0]
+e030fb8a  movw r0,#0x225
+e030fb8e  mov.w r2,#0x80000000
+e030fb92  blx 0xe02366d8
+    -> e02366d8 [UNCONDITIONAL_CALL, operand=0]
+e030fb96  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+e030fb9a  ldr r0,[r0,#0x30]
+e030fb9c  ldr r1,[r0,#0x0]
+e030fb9e  ldr r3,[r1,#0x24]
+e030fba0  add r1,sp,#0x18
+e030fba2  movs r2,#0x14
+e030fba4  blx r3
+e030fba6  add r0,sp,#0x18
+e030fba8  bl 0xe03053f8
+    -> e03053f8 [UNCONDITIONAL_CALL, operand=0]
+e030fbac  add r1,sp,#0x18
+e030fbae  movs r2,#0xf
+e030fbb0  mov r4,r0
+e030fbb2  bl 0xe03053d0
+    -> e03053d0 [UNCONDITIONAL_CALL, operand=0]
+e030fbb6  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+e030fbba  ldr r0,[r0,#0x30]
+e030fbbc  ldr r1,[r0,#0x0]
+e030fbbe  ldr r1,[r1,#0x18]
+e030fbc0  blx r1
+e030fbc2  mov r5,r0
+e030fbc4  bl 0xe030feb8
+    -> e030feb8 [UNCONDITIONAL_CALL, operand=0]
+e030fbc8  ldr r1,[r0,#0x0]
+e030fbca  ldr.w r3,[r1,#0x2c0]
+e030fbce  mov r1,r4
+e030fbd0  mov r2,r5
+e030fbd2  blx r3
+e030fbd4  add r1,sp,#0x4
+e030fbd6  movs r2,#0x14
+e030fbd8  bl 0xe0305360
+    -> e0305360 [UNCONDITIONAL_CALL, operand=0]
+e030fbdc  bl 0xe0308f10
+    -> e0308f10 [UNCONDITIONAL_CALL, operand=0]
+e030fbe0  ldr r4,[r0,#0x30]
+e030fbe2  ldr r1,[r4,#0x0]
+e030fbe4  add r0,sp,#0x4
+e030fbe6  ldr r5,[r1,#0x28]
+e030fbe8  bl 0xe0242c5e
+    -> e0242c5e [UNCONDITIONAL_CALL, operand=0]
+e030fbec  movs r1,#0x0
+e030fbee  str r1,[sp,#0x0]
+    -> Stack[-0x38] [WRITE, operand=1]
+e030fbf0  add r1,sp,#0x4
+e030fbf2  mov r2,r0
+e030fbf4  mov r0,r4
+e030fbf6  movs r3,#0x14
+e030fbf8  blx r5
+e030fbfa  movw r2,#0xa43c
+e030fbfe  ldr r0,[sp,#0x28]
+    -> Stack[-0x10] [READ, operand=1]
+e030fc00  movt r2,#0xc022
+    -> c022a43c [PARAM, operand=0]
+e030fc04  ldr r1,[r2,#0x0]
+    -> c022a43c [READ, operand=1]
+e030fc06  cmp r0,r1
+e030fc08  it ne
+e030fc0a  bl.ne 0xe093ea50
+    -> e093ea50 [CONDITIONAL_CALL, operand=0]
+e030fc0e  add sp,#0x2c
+e030fc10  pop {r4,r5,pc}
+instruction_count_exported=80
+
+================ FUNCTION: global/service object accessor used by callback ================
+requested=e0308f10
+[TMODE] e0308f10
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e0308f10
+name=FUN_e0308f10 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] global/service object accessor used by callback target=e0308f10
+from=e0302b7c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0302b78 @ e0302b78
+from=e0303642 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0303610 @ e0303610
+from=e030571a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0305708 @ e0305708
+from=e030579a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0305788 @ e0305788
+from=e030aa4a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa40 @ e030aa40
+from=e030aa94 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa70 @ e030aa70
+from=e030aaa8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa70 @ e030aa70
+from=e030aac0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa70 @ e030aa70
+from=e030aad0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa70 @ e030aa70
+from=e030aae0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030aa70 @ e030aa70
+from=e030afa6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030af68 @ e030af68
+from=e030b0b2 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b058 @ e030b058
+from=e030b0d6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b058 @ e030b058
+from=e030b0e8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b058 @ e030b058
+from=e030b7fc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b798 @ e030b798
+from=e030b80e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b798 @ e030b798
+from=e030b92a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b93e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b954 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b964 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b978 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b994 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b9a4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b9ba type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b9ce type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b9e2 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030b9f8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba08 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba1c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba34 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba48 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba5e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba6e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030ba80 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030bb1a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b8e8 @ e030b8e8
+from=e030bc86 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030bc08 @ e030bc08
+from=e030bd00 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030bcb0 @ e030bcb0
+from=e030be8e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030beae type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bec0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bed4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bf00 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bf32 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bfc0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030bfd0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030be28 @ e030be28
+from=e030c010 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c008 @ e030c008
+from=e030c020 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c008 @ e030c008
+from=e030c032 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c008 @ e030c008
+from=e030c340 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c2f8 @ e030c2f8
+from=e030c3ce type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c358 @ e030c358
+from=e030c7a6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c7c0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c7de type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c7f4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c80a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c820 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c838 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c852 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c864 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c87e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c898 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c8b2 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c8cc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c8e4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c798 @ e030c798
+from=e030c9ae type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c970 @ e030c970
+from=e030c9fe type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c9c8 @ e030c9c8
+from=e030cc0e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cbd0 @ e030cbd0
+from=e030cd30 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cd18 @ e030cd18
+from=e030cd88 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cd78 @ e030cd78
+from=e030dc64 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030dbd8 @ e030dbd8
+from=e030df4a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030de58 @ e030de58
+from=e030df5a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030de58 @ e030de58
+from=e030df6a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030de58 @ e030de58
+from=e030e0c8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030dfe0 @ e030dfe0
+from=e030e0f0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030dfe0 @ e030dfe0
+from=e030e104 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030dfe0 @ e030dfe0
+from=e030eb2c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030eb28 @ e030eb28
+from=e030f488 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f428 @ e030f428
+from=e030f7c6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030f7de type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030f7ec type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030f7fa type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030f824 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030f84c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f7a0 @ e030f7a0
+from=e030fa0c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fa2c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fa52 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fa70 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fae4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030faa8 @ e030faa8
+from=e030fb0a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030faa8 @ e030faa8
+from=e030fb96 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030fb40 @ e030fb40
+from=e030fbb6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030fb40 @ e030fb40
+from=e030fbdc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030fb40 @ e030fb40
+from=e0303ad8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0303ac8 @ e0303ac8
+from=e0303aee type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0303ac8 @ e0303ac8
+from=e030b032 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030afc8 @ e030afc8
+from=e030aff0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030afc8 @ e030afc8
+from=e030b00c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030afc8 @ e030afc8
+from=e030c448 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c3f8 @ e030c3f8
+from=e030cd5a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cd48 @ e030cd48
+from=e030f3f0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f390 @ e030f390
+from=e030eadc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030ead8 @ e030ead8
+from=e030eb04 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030eaf0 @ e030eaf0
+from=e030eb42 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030eb54 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030eb50 @ e030eb50
+from=e0303be6 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0303bd0 @ e0303bd0
+from=e0303c04 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0303bd0 @ e0303bd0
+from=e030a544 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030a530 @ e030a530
+from=e0305586 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0305580 @ e0305580
+from=e0305596 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0305580 @ e0305580
+from=e03055ae type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e0305580 @ e0305580
+from=e03029f4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e03029e0 @ e03029e0
+from=e0302aa2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e0302b5c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e0303044 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e03057f8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e03057c8 @ e03057c8
+from=e030a49e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030a418 @ e030a418
+from=e030785c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030a9e4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030aa26 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030a9f8 @ e030a9f8
+from=e030ab2c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ab42 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ab6a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ab7a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ab8e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030abae type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030abb6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ac86 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030aca4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030acb4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030acdc type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030acec type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ad30 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ad4c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ae46 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b188 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b19e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b1b0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b1c2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b1d4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b1e6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b1f8 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b240 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b252 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b262 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b274 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b314 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b328 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b340 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b524 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b478 @ e030b478
+from=e030b54e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b478 @ e030b478
+from=e030b578 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b478 @ e030b478
+from=e030b59a type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b478 @ e030b478
+from=e030b5b0 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b478 @ e030b478
+from=e030a988 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b450 @ e030b450
+from=e030a99c type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030b450 @ e030b450
+from=e030b642 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b652 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b66c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b6f6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b768 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b780 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b84e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b88c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030b8aa type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030bbca type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030bd80 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030be0e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c0be type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c0ce type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c0f2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c10a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c176 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c120 @ e030c120
+from=e030c1de type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c1f6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c218 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c28a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c2dc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c2a0 @ e030c2a0
+from=e030c59e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c5d0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c60c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c67c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c690 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030c6fc type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c6a8 @ e030c6a8
+from=e030c722 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030c6a8 @ e030c6a8
+from=e030c77c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ca48 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ca70 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030ca68 @ e030ca68
+from=e030cabe type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cab0 @ e030cab0
+from=e030cafa type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cad8 @ e030cad8
+from=e030cb50 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030cad8 @ e030cad8
+from=e030cc56 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030cc80 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ccf2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030cdd6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030ce3a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d1c4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d238 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d250 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d324 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d34c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d364 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d37c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d47c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d4a8 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d4c4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d4dc type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d4f4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d50c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d526 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d540 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d55e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d5ac type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d5c6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d5de type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d5fa type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d61c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d67e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d6a0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d6c4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d6f0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d71c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d748 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d774 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d7a0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d812 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d836 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d85a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d87e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d89c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d8b4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d8d8 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d8fc type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d920 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d944 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d976 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d9a6 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030d9e2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030da0c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030da30 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030db1c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030db82 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030db92 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030dbba type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e29a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e2ba type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e2d0 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e2fc type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e318 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e36c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e37c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e3b2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e3ca type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e4b8 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e52c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e56e type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e7c4 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e876 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e88a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e8a2 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e902 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e91a type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e97c type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e9ae type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+from=e030e9be type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+reference_count=265
+name=FUN_e0308f10 entry=e0308f10 body=e0308f10..e0308f19
+e0308f10  movw r0,#0x3000
+e0308f14  movt r0,#0xc144
+e0308f18  bx lr
+instruction_count_exported=3
+
+================ FUNCTION: service-key setter for F8AE47 dependency field ================
+requested=e0308d90
+[TMODE] e0308d90
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e0308d90
+<none>
+
+[INCOMING REFERENCES] service-key setter for F8AE47 dependency field target=e0308d90
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+function=<no existing function; no function created>
+
+================ FUNCTION: callback record parser/converter helper ================
+requested=e03053f8
+[TMODE] e03053f8
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e03053f8
+name=FUN_e03053f8 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] callback record parser/converter helper target=e03053f8
+from=e030fa1e type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fba8 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030fb40 @ e030fb40
+reference_count=2
+name=FUN_e03053f8 entry=e03053f8 body=e03053f8..e030544b
+e03053f8  push {r4,r5,r6,r7,r10,lr}
+e03053fc  sub sp,#0x4
+e03053fe  mov r4,r0
+e0305400  bl 0xe0242c5e
+    -> e0242c5e [UNCONDITIONAL_CALL, operand=0]
+e0305404  mov r10,r0
+e0305406  movs r7,#0x0
+e0305408  movw r5,#0x9aa8
+e030540c  movt r5,#0xe09a
+e0305410  lsls r6,r7,#0x3
+e0305412  adds r0,r5,r6
+e0305414  ldr r1,[r0,#0x4]
+    -> e09a9aac [READ, operand=1]
+    -> e09a9af0 [PARAM, operand=0]
+    -> e09a9ab4 [READ, operand=1]
+    -> e09a9af8 [PARAM, operand=0]
+e0305416  mov r2,r10
+e0305418  mov r0,r4
+e030541a  bl 0xe0981cd6
+    -> e0981cd6 [UNCONDITIONAL_CALL, operand=0]
+e030541e  cbnz r0,0xe0305424
+    -> e0305424 [CONDITIONAL_JUMP, operand=1]
+e0305420  ldr r0,[r5,r6]
+    -> e09a9aa8 [READ, operand=1]
+e0305422  b 0xe0305446
+    -> e0305446 [UNCONDITIONAL_JUMP, operand=0]
+e0305424  adds r7,#0x1
+e0305426  cmp r7,#0x9
+e0305428  bcc 0xe0305408
+    -> e0305408 [CONDITIONAL_JUMP, operand=0]
+e030542a  movs r0,#0x0
+e030542c  mov r1,sp
+e030542e  str r0,[sp,#0x0]
+    -> Stack[-0x1c] [WRITE, operand=1]
+e0305430  mov r0,r4
+e0305432  movs r2,#0xa
+e0305434  bl 0xe0984048
+    -> e0984048 [UNCONDITIONAL_CALL, operand=0]
+e0305438  ldr r1,[sp,#0x0]
+    -> Stack[-0x1c] [READ, operand=1]
+e030543a  cmp r1,r4
+e030543c  it ne
+e030543e  cmp.ne r0,#0x1d
+e0305440  it cs
+e0305442  mov.cs.w r0,#0xffffffff
+e0305446  add sp,#0x4
+e0305448  pop.w {r4,r5,r6,r7,r10,pc}
+instruction_count_exported=34
+
+================ FUNCTION: callback parsed-record adapter helper ================
+requested=e03053d0
+[TMODE] e03053d0
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e03053d0
+name=FUN_e03053d0 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] callback parsed-record adapter helper target=e03053d0
+from=e030deb4 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030de58 @ e030de58
+from=e030fa28 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030f9a0 @ e030f9a0
+from=e030fbb2 type=UNCONDITIONAL_CALL operand=0 primary=true function=FUN_e030fb40 @ e030fb40
+from=e030af40 type=UNCONDITIONAL_CALL operand=0 primary=true function=<none>
+reference_count=4
+name=FUN_e03053d0 entry=e03053d0 body=e03053d0..e03053f3
+e03053d0  push {r4,r5,lr}
+e03053d2  mov r4,r1
+e03053d4  mov r5,r2
+e03053d6  bl 0xe03053a8
+    -> e03053a8 [UNCONDITIONAL_CALL, operand=0]
+e03053da  movs r1,r0
+e03053dc  itt eq
+e03053de  mov.eq r0,#0x0
+e03053e0  pop.eq {r4,r5,pc}
+e03053e2  mov r2,r5
+e03053e4  mov r0,r4
+e03053e6  bl 0xe0975a20
+    -> e0975a20 [UNCONDITIONAL_CALL, operand=0]
+e03053ea  cmp r0,#0x0
+e03053ec  ite hi
+e03053ee  mov.hi r0,#0x1
+e03053f0  mov.ls r0,#0x0
+e03053f2  pop {r4,r5,pc}
+instruction_count_exported=16
+
+================ FUNCTION: selected ConStat virtual wrapper ================
+requested=e03076b0
+[TMODE] e03076b0
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e03076b0
+name=FUN_e03076b0 type=Function source=DEFAULT
+
+[INCOMING REFERENCES] selected ConStat virtual wrapper target=e03076b0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+name=FUN_e03076b0 entry=e03076b0 body=e03076b0..e03076bd
+e03076b0  push {r4,lr}
+e03076b2  ldr r3,[r0,#0x0]
+e03076b4  ldr.w r4,[r3,#0x2c4]
+e03076b8  movs r3,#0x1
+e03076ba  blx r4
+e03076bc  pop {r4,pc}
+instruction_count_exported=6
+
+================ FUNCTION: ConStat reason insertion/removal implementation ================
+requested=e03076c0
+[TMODE] e03076c0
+effective=1
+stored=RegisterValue(TMode): mask=0x8000000000000000 value=0x8000000000000000
+[SYMBOLS] address=e03076c0
+name=ConStat_Reason_Inserter_Anchor type=Function source=USER_DEFINED
+
+[INCOMING REFERENCES] ConStat reason insertion/removal implementation target=e03076c0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+name=ConStat_Reason_Inserter_Anchor entry=e03076c0 body=e03076c0..e03077ed
+e03076c0  push {r4,r5,r6,r7,r10,r11,lr}
+e03076c4  mov r5,r0
+e03076c6  mov r7,r1
+e03076c8  mov r6,r2
+e03076ca  mov r10,r3
+e03076cc  ldrb.w r0,[r0,#0x224]
+e03076d0  cmp r0,#0x0
+e03076d2  beq.w 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e03076d6  mov r0,r5
+e03076d8  bl 0xe0308908
+    -> e0308908 [UNCONDITIONAL_CALL, operand=0]
+e03076dc  mov r1,r0
+e03076de  mov r0,r5
+e03076e0  bl 0xe0307890
+    -> e0307890 [UNCONDITIONAL_CALL, operand=0]
+e03076e4  mov r4,r0
+e03076e6  mov r1,r7
+e03076e8  mov r0,r5
+e03076ea  bl 0xe03078e8
+    -> e03078e8 [UNCONDITIONAL_CALL, operand=0]
+e03076ee  cmp r4,#0x0
+e03076f0  it ge
+e03076f2  cmp.ge r0,#0x0
+e03076f4  blt 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e03076f6  movw r0,#0x8f4
+e03076fa  adds r0,r5,r0
+e03076fc  lsl.w r11,r4,#0x6
+e0307700  add.w r2,r11,r0
+e0307704  movw r7,#0x1ac8
+e0307708  cbnz r6,0xe0307740
+    -> e0307740 [CONDITIONAL_JUMP, operand=1]
+e030770a  str r6,[r2,#0xc]
+e030770c  mov r0,r5
+e030770e  str r6,[r2,#0x10]
+e0307710  bl 0xe0308988
+    -> e0308988 [UNCONDITIONAL_CALL, operand=0]
+e0307714  adds r0,r5,r7
+e0307716  str.w r6,[r0,r4,lsl #0x3]
+e030771a  add.w r0,r0,r4, lsl #0x3
+e030771e  str r6,[r0,#0x4]
+e0307720  add.w r0,r11,r5
+e0307724  movs r1,#0x1
+e0307726  str.w r1,[r0,#0x344]
+e030772a  ldr r0,[r5,#0x0]
+e030772c  ldr.w r1,[r0,#0x2d0]
+e0307730  mov r0,r5
+e0307732  blx r1
+e0307734  cmp.w r10,#0x0
+e0307738  it ne
+e030773a  bl.ne 0xe0305708
+    -> e0305708 [CONDITIONAL_CALL, operand=0]
+e030773e  b 0xe03077e2
+    -> e03077e2 [UNCONDITIONAL_JUMP, operand=0]
+e0307740  ldr r0,[r2,#0xc]
+e0307742  cmp r0,#0xb
+e0307744  bcs 0xe03077e8
+    -> e03077e8 [CONDITIONAL_JUMP, operand=0]
+e0307746  subs r0,r6,#0x1
+e0307748  beq 0xe03077aa
+    -> e03077aa [CONDITIONAL_JUMP, operand=0]
+e030774a  subs r0,#0xa
+e030774c  bcc 0xe03077b4
+    -> e03077b4 [CONDITIONAL_JUMP, operand=0]
+e030774e  beq 0xe030778e
+    -> e030778e [CONDITIONAL_JUMP, operand=0]
+e0307750  cmp r0,#0x2
+e0307752  bcc 0xe0307772
+    -> e0307772 [CONDITIONAL_JUMP, operand=0]
+e0307754  bne 0xe03077b4
+    -> e03077b4 [CONDITIONAL_JUMP, operand=0]
+e0307756  adds r0,r5,r7
+e0307758  ldr.w r3,[r0,r4,lsl #0x3]
+e030775c  orr r3,r3,#0x800000
+e0307760  str.w r3,[r0,r4,lsl #0x3]
+e0307764  add.w r0,r0,r4, lsl #0x3
+e0307768  ldr r3,[r0,#0x4]
+e030776a  bic r3,r3,#0x800000
+e030776e  str r3,[r0,#0x4]
+e0307770  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e0307772  adds r0,r5,r7
+e0307774  ldr.w r3,[r0,r4,lsl #0x3]
+e0307778  orr r3,r3,#0x2000000
+e030777c  str.w r3,[r0,r4,lsl #0x3]
+e0307780  add.w r0,r0,r4, lsl #0x3
+e0307784  ldr r3,[r0,#0x4]
+e0307786  bic r3,r3,#0x2000000
+e030778a  str r3,[r0,#0x4]
+e030778c  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e030778e  adds r0,r5,r7
+e0307790  ldr.w r3,[r0,r4,lsl #0x3]
+e0307794  orr r3,r3,#0x1000000
+e0307798  str.w r3,[r0,r4,lsl #0x3]
+e030779c  add.w r0,r0,r4, lsl #0x3
+e03077a0  ldr r3,[r0,#0x4]
+e03077a2  bic r3,r3,#0x1000000
+e03077a6  str r3,[r0,#0x4]
+e03077a8  b 0xe03077b4
+    -> e03077b4 [UNCONDITIONAL_JUMP, operand=0]
+e03077aa  add.w r0,r11,r5
+e03077ae  movs r1,#0x0
+e03077b0  str.w r1,[r0,#0x344]
+e03077b4  ldr r0,[r2,#0xc]
+e03077b6  adds r1,r0,#0x1
+e03077b8  str r1,[r2,#0xc]
+e03077ba  add.w r0,r2,r0, lsl #0x2
+e03077be  cmp r6,#0x25
+e03077c0  str r6,[r0,#0x10]
+e03077c2  itt ne
+e03077c4  mov.ne r0,#0x0
+e03077c6  str.w.ne r0,[r5,#0x2f8]
+e03077ca  ldr r0,[r5,#0x0]
+e03077cc  ldr.w r1,[r0,#0x2d0]
+e03077d0  mov r0,r5
+e03077d2  blx r1
+e03077d4  cmp.w r10,#0x0
+e03077d8  beq 0xe03077e2
+    -> e03077e2 [CONDITIONAL_JUMP, operand=0]
+e03077da  bl 0xe0305708
+    -> e0305708 [UNCONDITIONAL_CALL, operand=0]
+e03077de  bl 0xe0305788
+    -> e0305788 [UNCONDITIONAL_CALL, operand=0]
+e03077e2  movs r0,#0x0
+e03077e4  pop.w {r4,r5,r6,r7,r10,r11,pc}
+e03077e8  movs r0,#0x3
+e03077ea  pop.w {r4,r5,r6,r7,r10,r11,pc}
+instruction_count_exported=108
+
+[INCOMING REFERENCES] callback even entry E030FB40 target=e030fb40
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+
+[INCOMING REFERENCES] callback Thumb pointer E030FB41 target=e030fb41
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+
+================ SERVICE/GLOBAL CELL: PINK/service root C1443000 ================
+address=c1443000 mapped=false
+NOTE: outside mapped ELF memory; static image has no live RAM value here.
+[SYMBOLS] address=c1443000
+name=DAT_c1443000 type=Label source=DEFAULT
+
+[INCOMING REFERENCES] PINK/service root C1443000 target=c1443000
+from=e0308e80 type=WRITE operand=0 primary=true function=<none>
+from=e030925c type=DATA operand=0 primary=true function=<none>
+reference_count=2
+
+================ SERVICE/GLOBAL CELL: F8AE47 dependency pointer cell C1443030 ================
+address=c1443030 mapped=false
+NOTE: outside mapped ELF memory; static image has no live RAM value here.
+[SYMBOLS] address=c1443030
+name=DAT_c1443030 type=Label source=DEFAULT
+
+[INCOMING REFERENCES] F8AE47 dependency pointer cell C1443030 target=c1443030
+from=e0308ec2 type=WRITE operand=1 primary=true function=<none>
+reference_count=1
+
+================ EXACT ALIGNED LITTLE-ENDIAN WORD SCAN ================
+Scans only already-mapped, initialized memory bytes; no decoding or memory-map changes.
+HIT label=service key 00F8AE47 address=e09a4f44 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09a4f44
+    e09a4f34  0x20202020  bytes=20 20 20 20
+    e09a4f38  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a4f3c  0x20202020  bytes=20 20 20 20
+    e09a4f40  0x20202020  bytes=20 20 20 20
+    e09a4f44  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09a4f44 target=e09a4f44
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09a4f48  0x00202001  bytes=01 20 20 00
+    e09a4f4c  0x20202020  bytes=20 20 20 20
+    e09a4f50  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a4f54  0x20202020  bytes=20 20 20 20
+    e09a4f58  0x00000020  bytes=20 00 00 00
+    e09a4f5c  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e09a7eb0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09a7eb0
+    e09a7ea0  0x20202020  bytes=20 20 20 20
+    e09a7ea4  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a7ea8  0x20000000  bytes=00 00 00 20
+    e09a7eac  0x20202000  bytes=00 20 20 20
+    e09a7eb0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09a7eb0 target=e09a7eb0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09a7eb4  0x00202001  bytes=01 20 20 00
+    e09a7eb8  0x20202020  bytes=20 20 20 20
+    e09a7ebc  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a7ec0  0x20000000  bytes=00 00 00 20
+    e09a7ec4  0x20202000  bytes=00 20 20 20
+    e09a7ec8  0x00010DA0  bytes=A0 0D 01 00
+HIT label=service key 00F8AE47 address=e09a8f50 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09a8f50
+    e09a8f40  0x20202020  bytes=20 20 20 20
+    e09a8f44  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a8f48  0x20000000  bytes=00 00 00 20
+    e09a8f4c  0x20202000  bytes=00 20 20 20
+    e09a8f50  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09a8f50 target=e09a8f50
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09a8f54  0x00202001  bytes=01 20 20 00
+    e09a8f58  0x20202020  bytes=20 20 20 20
+    e09a8f5c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09a8f60  0x20000000  bytes=00 00 00 20
+    e09a8f64  0x20202000  bytes=00 20 20 20
+    e09a8f68  0x00014DC4  bytes=C4 4D 01 00
+HIT label=Thumb callback pointer E030FB41 address=e09ae544 block=.romfs_objs value=0xE030FB41 bytes=41 FB 30 E0
+  neighborhood block=.romfs_objs at=e09ae544
+    e09ae534  0xE09AE658  bytes=58 E6 9A E0
+    e09ae538  0xE030FAA9  bytes=A9 FA 30 E0
+    e09ae53c  0x20202020  bytes=20 20 20 20
+    e09ae540  0xE09AE674  bytes=74 E6 9A E0
+    e09ae544  0xE030FB41  bytes=41 FB 30 E0  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09ae544 target=e09ae544
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09ae548  0x20202020  bytes=20 20 20 20
+    e09ae54c  0xE09AE698  bytes=98 E6 9A E0
+    e09ae550  0xE030FC19  bytes=19 FC 30 E0
+    e09ae554  0x20202020  bytes=20 20 20 20
+    e09ae558  0xE09AE6B4  bytes=B4 E6 9A E0
+    e09ae55c  0xE030FD19  bytes=19 FD 30 E0
+HIT label=service key 00F8AE47 address=e09b3ac0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09b3ac0
+    e09b3ab0  0x20202020  bytes=20 20 20 20
+    e09b3ab4  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b3ab8  0x20202020  bytes=20 20 20 20
+    e09b3abc  0x20202020  bytes=20 20 20 20
+    e09b3ac0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09b3ac0 target=e09b3ac0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09b3ac4  0x20202001  bytes=01 20 20 20
+    e09b3ac8  0x20202020  bytes=20 20 20 20
+    e09b3acc  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b3ad0  0x5F666564  bytes=64 65 66 5F
+    e09b3ad4  0x00746F6E  bytes=6E 6F 74 00
+    e09b3ad8  0xE031E791  bytes=91 E7 31 E0
+HIT label=service key 00F8AE47 address=e09b4080 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09b4080
+    e09b4070  0x20202020  bytes=20 20 20 20
+    e09b4074  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b4078  0x20202020  bytes=20 20 20 20
+    e09b407c  0x20202020  bytes=20 20 20 20
+    e09b4080  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09b4080 target=e09b4080
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09b4084  0x20202001  bytes=01 20 20 20
+    e09b4088  0x20202020  bytes=20 20 20 20
+    e09b408c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b4090  0x20202020  bytes=20 20 20 20
+    e09b4094  0x20202020  bytes=20 20 20 20
+    e09b4098  0x002D13F4  bytes=F4 13 2D 00
+HIT label=service key 00F8AE47 address=e09b9ad4 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09b9ad4
+    e09b9ac4  0x20202020  bytes=20 20 20 20
+    e09b9ac8  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b9acc  0x20202020  bytes=20 20 20 20
+    e09b9ad0  0x20202020  bytes=20 20 20 20
+    e09b9ad4  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09b9ad4 target=e09b9ad4
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09b9ad8  0x20202001  bytes=01 20 20 20
+    e09b9adc  0x20202020  bytes=20 20 20 20
+    e09b9ae0  0xFFFFFFFF  bytes=FF FF FF FF
+    e09b9ae4  0x20202020  bytes=20 20 20 20
+    e09b9ae8  0x20202020  bytes=20 20 20 20
+    e09b9aec  0x00010EBE  bytes=BE 0E 01 00
+HIT label=service key 00F8AE47 address=e09ba6d8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09ba6d8
+    e09ba6c8  0x20202020  bytes=20 20 20 20
+    e09ba6cc  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ba6d0  0x20202020  bytes=20 20 20 20
+    e09ba6d4  0x20202020  bytes=20 20 20 20
+    e09ba6d8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09ba6d8 target=e09ba6d8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09ba6dc  0x20202001  bytes=01 20 20 20
+    e09ba6e0  0x20202020  bytes=20 20 20 20
+    e09ba6e4  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ba6e8  0x20202020  bytes=20 20 20 20
+    e09ba6ec  0x20202020  bytes=20 20 20 20
+    e09ba6f0  0x009EA2DA  bytes=DA A2 9E 00
+HIT label=service key 00F8AE47 address=e09c2850 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09c2850
+    e09c2840  0x00000000  bytes=00 00 00 00
+    e09c2844  0xFFFFFFFF  bytes=FF FF FF FF
+    e09c2848  0x00000000  bytes=00 00 00 00
+    e09c284c  0x00000000  bytes=00 00 00 00
+    e09c2850  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09c2850 target=e09c2850
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09c2854  0x00000001  bytes=01 00 00 00
+    e09c2858  0x00000000  bytes=00 00 00 00
+    e09c285c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09c2860  0x00000000  bytes=00 00 00 00
+    e09c2864  0x00000000  bytes=00 00 00 00
+    e09c2868  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e09c3524 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09c3524
+    e09c3514  0x00000000  bytes=00 00 00 00
+    e09c3518  0xFFFFFFFF  bytes=FF FF FF FF
+    e09c351c  0x00000000  bytes=00 00 00 00
+    e09c3520  0x00000000  bytes=00 00 00 00
+    e09c3524  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09c3524 target=e09c3524
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09c3528  0x00000001  bytes=01 00 00 00
+    e09c352c  0x00000000  bytes=00 00 00 00
+    e09c3530  0xFFFFFFFF  bytes=FF FF FF FF
+    e09c3534  0x00000000  bytes=00 00 00 00
+    e09c3538  0x00000000  bytes=00 00 00 00
+    e09c353c  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e09cacf8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09cacf8
+    e09cace8  0x00000000  bytes=00 00 00 00
+    e09cacec  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cacf0  0x00000000  bytes=00 00 00 00
+    e09cacf4  0x00000000  bytes=00 00 00 00
+    e09cacf8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09cacf8 target=e09cacf8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09cacfc  0x00000001  bytes=01 00 00 00
+    e09cad00  0x00000000  bytes=00 00 00 00
+    e09cad04  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cad08  0x00000000  bytes=00 00 00 00
+    e09cad0c  0x00000000  bytes=00 00 00 00
+    e09cad10  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e09cb35c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09cb35c
+    e09cb34c  0x00000000  bytes=00 00 00 00
+    e09cb350  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cb354  0x00000000  bytes=00 00 00 00
+    e09cb358  0x00000000  bytes=00 00 00 00
+    e09cb35c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09cb35c target=e09cb35c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09cb360  0x00000001  bytes=01 00 00 00
+    e09cb364  0x00000000  bytes=00 00 00 00
+    e09cb368  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cb36c  0x746E6F66  bytes=66 6F 6E 74
+    e09cb370  0x676E655F  bytes=5F 65 6E 67
+    e09cb374  0x00656E69  bytes=69 6E 65 00
+HIT label=service key 00F8AE47 address=e09cfcec block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09cfcec
+    e09cfcdc  0x00000000  bytes=00 00 00 00
+    e09cfce0  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cfce4  0x00000000  bytes=00 00 00 00
+    e09cfce8  0x00000000  bytes=00 00 00 00
+    e09cfcec  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09cfcec target=e09cfcec
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09cfcf0  0x00000001  bytes=01 00 00 00
+    e09cfcf4  0x00000000  bytes=00 00 00 00
+    e09cfcf8  0xFFFFFFFF  bytes=FF FF FF FF
+    e09cfcfc  0x70616568  bytes=68 65 61 70
+    e09cfd00  0x72676D5F  bytes=5F 6D 67 72
+    e09cfd04  0x00000000  bytes=00 00 00 00
+HIT label=service key 00F8AE47 address=e09dd70c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09dd70c
+    e09dd6fc  0x00000000  bytes=00 00 00 00
+    e09dd700  0xFFFFFFFF  bytes=FF FF FF FF
+    e09dd704  0x00000000  bytes=00 00 00 00
+    e09dd708  0x00000000  bytes=00 00 00 00
+    e09dd70c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09dd70c target=e09dd70c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09dd710  0x00000001  bytes=01 00 00 00
+    e09dd714  0x00000000  bytes=00 00 00 00
+    e09dd718  0xFFFFFFFF  bytes=FF FF FF FF
+    e09dd71c  0x00000000  bytes=00 00 00 00
+    e09dd720  0x00000000  bytes=00 00 00 00
+    e09dd724  0x00A993DE  bytes=DE 93 A9 00
+HIT label=service key 00F8AE47 address=e09df288 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09df288
+    e09df278  0x00000000  bytes=00 00 00 00
+    e09df27c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09df280  0x00000000  bytes=00 00 00 00
+    e09df284  0x00000000  bytes=00 00 00 00
+    e09df288  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09df288 target=e09df288
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09df28c  0x00000001  bytes=01 00 00 00
+    e09df290  0x00000000  bytes=00 00 00 00
+    e09df294  0xFFFFFFFF  bytes=FF FF FF FF
+    e09df298  0x00000000  bytes=00 00 00 00
+    e09df29c  0x000009F0  bytes=F0 09 00 00
+    e09df2a0  0x00F14AFF  bytes=FF 4A F1 00
+HIT label=service key 00F8AE47 address=e09ee04c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09ee04c
+    e09ee03c  0x00000000  bytes=00 00 00 00
+    e09ee040  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ee044  0x00000000  bytes=00 00 00 00
+    e09ee048  0x00000000  bytes=00 00 00 00
+    e09ee04c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09ee04c target=e09ee04c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09ee050  0x00000001  bytes=01 00 00 00
+    e09ee054  0x00000000  bytes=00 00 00 00
+    e09ee058  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ee05c  0x00000000  bytes=00 00 00 00
+    e09ee060  0x00000000  bytes=00 00 00 00
+    e09ee064  0x00010D95  bytes=95 0D 01 00
+HIT label=service key 00F8AE47 address=e09ef778 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09ef778
+    e09ef768  0x00000000  bytes=00 00 00 00
+    e09ef76c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ef770  0x00000000  bytes=00 00 00 00
+    e09ef774  0x00000000  bytes=00 00 00 00
+    e09ef778  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09ef778 target=e09ef778
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09ef77c  0x00000001  bytes=01 00 00 00
+    e09ef780  0x00000000  bytes=00 00 00 00
+    e09ef784  0xFFFFFFFF  bytes=FF FF FF FF
+    e09ef788  0x00000000  bytes=00 00 00 00
+    e09ef78c  0x00000000  bytes=00 00 00 00
+    e09ef790  0x00011E6A  bytes=6A 1E 01 00
+HIT label=service key 00F8AE47 address=e09efe10 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09efe10
+    e09efe00  0x00000000  bytes=00 00 00 00
+    e09efe04  0xFFFFFFFF  bytes=FF FF FF FF
+    e09efe08  0x00000000  bytes=00 00 00 00
+    e09efe0c  0x00000000  bytes=00 00 00 00
+    e09efe10  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09efe10 target=e09efe10
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09efe14  0x00000001  bytes=01 00 00 00
+    e09efe18  0x00000000  bytes=00 00 00 00
+    e09efe1c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09efe20  0x00000000  bytes=00 00 00 00
+    e09efe24  0x00000000  bytes=00 00 00 00
+    e09efe28  0x00010F10  bytes=10 0F 01 00
+HIT label=service key 00F8AE47 address=e09f19d8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09f19d8
+    e09f19c8  0x00000001  bytes=01 00 00 00
+    e09f19cc  0xFFFFFFFF  bytes=FF FF FF FF
+    e09f19d0  0x00000000  bytes=00 00 00 00
+    e09f19d4  0x00000000  bytes=00 00 00 00
+    e09f19d8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09f19d8 target=e09f19d8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09f19dc  0x00000001  bytes=01 00 00 00
+    e09f19e0  0x00000000  bytes=00 00 00 00
+    e09f19e4  0xFFFFFFFF  bytes=FF FF FF FF
+    e09f19e8  0x00000000  bytes=00 00 00 00
+    e09f19ec  0x00000000  bytes=00 00 00 00
+    e09f19f0  0x00A2326A  bytes=6A 32 A2 00
+HIT label=service key 00F8AE47 address=e09f1d48 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e09f1d48
+    e09f1d38  0x00000003  bytes=03 00 00 00
+    e09f1d3c  0xFFFFFFFF  bytes=FF FF FF FF
+    e09f1d40  0x00000000  bytes=00 00 00 00
+    e09f1d44  0x00000000  bytes=00 00 00 00
+    e09f1d48  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e09f1d48 target=e09f1d48
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e09f1d4c  0x00000001  bytes=01 00 00 00
+    e09f1d50  0x00000000  bytes=00 00 00 00
+    e09f1d54  0xFFFFFFFF  bytes=FF FF FF FF
+    e09f1d58  0x00000000  bytes=00 00 00 00
+    e09f1d5c  0x00000000  bytes=00 00 00 00
+    e09f1d60  0x00FA4D73  bytes=73 4D FA 00
+HIT label=service key 00F8AE47 address=e0a99500 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0a99500
+    e0a994f0  0x00000000  bytes=00 00 00 00
+    e0a994f4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a994f8  0x00000000  bytes=00 00 00 00
+    e0a994fc  0x00000000  bytes=00 00 00 00
+    e0a99500  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0a99500 target=e0a99500
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0a99504  0x00000001  bytes=01 00 00 00
+    e0a99508  0x00000000  bytes=00 00 00 00
+    e0a9950c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a99510  0x00000000  bytes=00 00 00 00
+    e0a99514  0x00000000  bytes=00 00 00 00
+    e0a99518  0x00010D74  bytes=74 0D 01 00
+HIT label=service key 00F8AE47 address=e0a99c74 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0a99c74
+    e0a99c64  0x00000000  bytes=00 00 00 00
+    e0a99c68  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a99c6c  0x00000000  bytes=00 00 00 00
+    e0a99c70  0x00000000  bytes=00 00 00 00
+    e0a99c74  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0a99c74 target=e0a99c74
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0a99c78  0x00000001  bytes=01 00 00 00
+    e0a99c7c  0x00000000  bytes=00 00 00 00
+    e0a99c80  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a99c84  0x00000000  bytes=00 00 00 00
+    e0a99c88  0x00000000  bytes=00 00 00 00
+    e0a99c8c  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0a9a85c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0a9a85c
+    e0a9a84c  0x00000000  bytes=00 00 00 00
+    e0a9a850  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9a854  0x00000000  bytes=00 00 00 00
+    e0a9a858  0x00000000  bytes=00 00 00 00
+    e0a9a85c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0a9a85c target=e0a9a85c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0a9a860  0x00000001  bytes=01 00 00 00
+    e0a9a864  0x00000000  bytes=00 00 00 00
+    e0a9a868  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9a86c  0x00000000  bytes=00 00 00 00
+    e0a9a870  0x00000000  bytes=00 00 00 00
+    e0a9a874  0x0089BD80  bytes=80 BD 89 00
+HIT label=service key 00F8AE47 address=e0a9e798 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0a9e798
+    e0a9e788  0x00000000  bytes=00 00 00 00
+    e0a9e78c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9e790  0x00000000  bytes=00 00 00 00
+    e0a9e794  0x00000000  bytes=00 00 00 00
+    e0a9e798  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0a9e798 target=e0a9e798
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0a9e79c  0x00000001  bytes=01 00 00 00
+    e0a9e7a0  0x00000000  bytes=00 00 00 00
+    e0a9e7a4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9e7a8  0x0078646C  bytes=6C 64 78 00
+    e0a9e7ac  0x69726973  bytes=73 69 72 69
+    e0a9e7b0  0x6E497375  bytes=75 73 49 6E
+HIT label=service key 00F8AE47 address=e0a9ee50 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0a9ee50
+    e0a9ee40  0x00000000  bytes=00 00 00 00
+    e0a9ee44  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9ee48  0x00000000  bytes=00 00 00 00
+    e0a9ee4c  0x00000000  bytes=00 00 00 00
+    e0a9ee50  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0a9ee50 target=e0a9ee50
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0a9ee54  0x00000001  bytes=01 00 00 00
+    e0a9ee58  0x00000000  bytes=00 00 00 00
+    e0a9ee5c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0a9ee60  0x00000000  bytes=00 00 00 00
+    e0a9ee64  0x00000000  bytes=00 00 00 00
+    e0a9ee68  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b1de0c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b1de0c
+    e0b1ddfc  0x00000000  bytes=00 00 00 00
+    e0b1de00  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b1de04  0x00000000  bytes=00 00 00 00
+    e0b1de08  0x00000000  bytes=00 00 00 00
+    e0b1de0c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b1de0c target=e0b1de0c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b1de10  0x00000001  bytes=01 00 00 00
+    e0b1de14  0x00000000  bytes=00 00 00 00
+    e0b1de18  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b1de1c  0x00000000  bytes=00 00 00 00
+    e0b1de20  0x00000000  bytes=00 00 00 00
+    e0b1de24  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b24ea0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b24ea0
+    e0b24e90  0x00000000  bytes=00 00 00 00
+    e0b24e94  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b24e98  0x00000000  bytes=00 00 00 00
+    e0b24e9c  0x00000000  bytes=00 00 00 00
+    e0b24ea0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b24ea0 target=e0b24ea0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b24ea4  0x00000001  bytes=01 00 00 00
+    e0b24ea8  0x00000000  bytes=00 00 00 00
+    e0b24eac  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b24eb0  0x6772656D  bytes=6D 65 72 67
+    e0b24eb4  0x74756F65  bytes=65 6F 75 74
+    e0b24eb8  0x00000000  bytes=00 00 00 00
+HIT label=service key 00F8AE47 address=e0b252a4 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b252a4
+    e0b25294  0x00000000  bytes=00 00 00 00
+    e0b25298  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b2529c  0x00000000  bytes=00 00 00 00
+    e0b252a0  0x00000000  bytes=00 00 00 00
+    e0b252a4  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b252a4 target=e0b252a4
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b252a8  0x00000001  bytes=01 00 00 00
+    e0b252ac  0x00000000  bytes=00 00 00 00
+    e0b252b0  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b252b4  0x5F67666D  bytes=6D 66 67 5F
+    e0b252b8  0x6F666E69  bytes=69 6E 66 6F
+    e0b252bc  0x00000000  bytes=00 00 00 00
+HIT label=service key 00F8AE47 address=e0b25eb8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b25eb8
+    e0b25ea8  0x00000000  bytes=00 00 00 00
+    e0b25eac  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b25eb0  0x00000000  bytes=00 00 00 00
+    e0b25eb4  0x00000000  bytes=00 00 00 00
+    e0b25eb8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b25eb8 target=e0b25eb8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b25ebc  0x00000001  bytes=01 00 00 00
+    e0b25ec0  0x00000000  bytes=00 00 00 00
+    e0b25ec4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b25ec8  0x00000000  bytes=00 00 00 00
+    e0b25ecc  0x00000000  bytes=00 00 00 00
+    e0b25ed0  0x00A9EC35  bytes=35 EC A9 00
+HIT label=service key 00F8AE47 address=e0b32960 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b32960
+    e0b32950  0x00000000  bytes=00 00 00 00
+    e0b32954  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b32958  0x00000000  bytes=00 00 00 00
+    e0b3295c  0x00000000  bytes=00 00 00 00
+    e0b32960  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b32960 target=e0b32960
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b32964  0x00000001  bytes=01 00 00 00
+    e0b32968  0x00000000  bytes=00 00 00 00
+    e0b3296c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b32970  0x00000000  bytes=00 00 00 00
+    e0b32974  0x00000000  bytes=00 00 00 00
+    e0b32978  0x00010FE7  bytes=E7 0F 01 00
+HIT label=service key 00F8AE47 address=e0b3383c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b3383c
+    e0b3382c  0x00000000  bytes=00 00 00 00
+    e0b33830  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b33834  0x00000000  bytes=00 00 00 00
+    e0b33838  0x00000000  bytes=00 00 00 00
+    e0b3383c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b3383c target=e0b3383c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b33840  0x00000001  bytes=01 00 00 00
+    e0b33844  0x00000000  bytes=00 00 00 00
+    e0b33848  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b3384c  0x645F6570  bytes=70 65 5F 64
+    e0b33850  0x74696769  bytes=69 67 69 74
+    e0b33854  0x735F6C61  bytes=61 6C 5F 73
+HIT label=service key 00F8AE47 address=e0b38710 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b38710
+    e0b38700  0x00000000  bytes=00 00 00 00
+    e0b38704  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b38708  0x00000000  bytes=00 00 00 00
+    e0b3870c  0x00000000  bytes=00 00 00 00
+    e0b38710  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b38710 target=e0b38710
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b38714  0x00000001  bytes=01 00 00 00
+    e0b38718  0x00000000  bytes=00 00 00 00
+    e0b3871c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b38720  0x735F6570  bytes=70 65 5F 73
+    e0b38724  0x755F6D68  bytes=68 6D 5F 75
+    e0b38728  0x006C6974  bytes=74 69 6C 00
+HIT label=service key 00F8AE47 address=e0b38e0c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b38e0c
+    e0b38dfc  0x00000000  bytes=00 00 00 00
+    e0b38e00  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b38e04  0x00000000  bytes=00 00 00 00
+    e0b38e08  0x00000000  bytes=00 00 00 00
+    e0b38e0c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b38e0c target=e0b38e0c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b38e10  0x00000001  bytes=01 00 00 00
+    e0b38e14  0x00000000  bytes=00 00 00 00
+    e0b38e18  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b38e1c  0x00000000  bytes=00 00 00 00
+    e0b38e20  0x00000000  bytes=00 00 00 00
+    e0b38e24  0x00EEB9E2  bytes=E2 B9 EE 00
+HIT label=service key 00F8AE47 address=e0b4ab58 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b4ab58
+    e0b4ab48  0x00000000  bytes=00 00 00 00
+    e0b4ab4c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b4ab50  0x00000000  bytes=00 00 00 00
+    e0b4ab54  0x00000000  bytes=00 00 00 00
+    e0b4ab58  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b4ab58 target=e0b4ab58
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b4ab5c  0x00000001  bytes=01 00 00 00
+    e0b4ab60  0x00000000  bytes=00 00 00 00
+    e0b4ab64  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b4ab68  0x00000000  bytes=00 00 00 00
+    e0b4ab6c  0x00000000  bytes=00 00 00 00
+    e0b4ab70  0x00010F1D  bytes=1D 0F 01 00
+HIT label=service key 00F8AE47 address=e0b4cea8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b4cea8
+    e0b4ce98  0x00000000  bytes=00 00 00 00
+    e0b4ce9c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b4cea0  0x00000000  bytes=00 00 00 00
+    e0b4cea4  0x00000000  bytes=00 00 00 00
+    e0b4cea8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b4cea8 target=e0b4cea8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b4ceac  0x00000001  bytes=01 00 00 00
+    e0b4ceb0  0x00000000  bytes=00 00 00 00
+    e0b4ceb4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b4ceb8  0x00000000  bytes=00 00 00 00
+    e0b4cebc  0x00000000  bytes=00 00 00 00
+    e0b4cec0  0x00098118  bytes=18 81 09 00
+HIT label=service key 00F8AE47 address=e0b514c0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b514c0
+    e0b514b0  0x00000000  bytes=00 00 00 00
+    e0b514b4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b514b8  0x00000000  bytes=00 00 00 00
+    e0b514bc  0x00000000  bytes=00 00 00 00
+    e0b514c0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b514c0 target=e0b514c0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b514c4  0x00000001  bytes=01 00 00 00
+    e0b514c8  0x00000000  bytes=00 00 00 00
+    e0b514cc  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b514d0  0x00000000  bytes=00 00 00 00
+    e0b514d4  0x00000000  bytes=00 00 00 00
+    e0b514d8  0x00010DC1  bytes=C1 0D 01 00
+HIT label=service key 00F8AE47 address=e0b583b8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b583b8
+    e0b583a8  0x00000000  bytes=00 00 00 00
+    e0b583ac  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b583b0  0x00000000  bytes=00 00 00 00
+    e0b583b4  0x00000000  bytes=00 00 00 00
+    e0b583b8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b583b8 target=e0b583b8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b583bc  0x00000001  bytes=01 00 00 00
+    e0b583c0  0x00000000  bytes=00 00 00 00
+    e0b583c4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b583c8  0x00000000  bytes=00 00 00 00
+    e0b583cc  0x00000000  bytes=00 00 00 00
+    e0b583d0  0x0006A784  bytes=84 A7 06 00
+HIT label=service key 00F8AE47 address=e0b5b02c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5b02c
+    e0b5b01c  0x00000000  bytes=00 00 00 00
+    e0b5b020  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5b024  0x00000000  bytes=00 00 00 00
+    e0b5b028  0x00000000  bytes=00 00 00 00
+    e0b5b02c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5b02c target=e0b5b02c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5b030  0x00000001  bytes=01 00 00 00
+    e0b5b034  0x00000000  bytes=00 00 00 00
+    e0b5b038  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5b03c  0x00000000  bytes=00 00 00 00
+    e0b5b040  0x00000000  bytes=00 00 00 00
+    e0b5b044  0x000A701E  bytes=1E 70 0A 00
+HIT label=service key 00F8AE47 address=e0b5bb90 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5bb90
+    e0b5bb80  0x00000000  bytes=00 00 00 00
+    e0b5bb84  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5bb88  0x00000000  bytes=00 00 00 00
+    e0b5bb8c  0x00000000  bytes=00 00 00 00
+    e0b5bb90  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5bb90 target=e0b5bb90
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5bb94  0x00000001  bytes=01 00 00 00
+    e0b5bb98  0x00000000  bytes=00 00 00 00
+    e0b5bb9c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5bba0  0x00000000  bytes=00 00 00 00
+    e0b5bba4  0x00000000  bytes=00 00 00 00
+    e0b5bba8  0x009EA2DA  bytes=DA A2 9E 00
+HIT label=service key 00F8AE47 address=e0b5bf6c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5bf6c
+    e0b5bf5c  0x00000000  bytes=00 00 00 00
+    e0b5bf60  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5bf64  0x00000000  bytes=00 00 00 00
+    e0b5bf68  0x00000000  bytes=00 00 00 00
+    e0b5bf6c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5bf6c target=e0b5bf6c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5bf70  0x00000001  bytes=01 00 00 00
+    e0b5bf74  0x00000000  bytes=00 00 00 00
+    e0b5bf78  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5bf7c  0x00000000  bytes=00 00 00 00
+    e0b5bf80  0x00000000  bytes=00 00 00 00
+    e0b5bf84  0x00641629  bytes=29 16 64 00
+HIT label=service key 00F8AE47 address=e0b5ca0c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5ca0c
+    e0b5c9fc  0x00000000  bytes=00 00 00 00
+    e0b5ca00  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5ca04  0x00000000  bytes=00 00 00 00
+    e0b5ca08  0x00000000  bytes=00 00 00 00
+    e0b5ca0c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5ca0c target=e0b5ca0c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5ca10  0x00000001  bytes=01 00 00 00
+    e0b5ca14  0x00000000  bytes=00 00 00 00
+    e0b5ca18  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5ca1c  0x74736172  bytes=72 61 73 74
+    e0b5ca20  0x735F7265  bytes=65 72 5F 73
+    e0b5ca24  0x65726F74  bytes=74 6F 72 65
+HIT label=service key 00F8AE47 address=e0b5cf04 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5cf04
+    e0b5cef4  0x00000000  bytes=00 00 00 00
+    e0b5cef8  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5cefc  0x00000000  bytes=00 00 00 00
+    e0b5cf00  0x00000000  bytes=00 00 00 00
+    e0b5cf04  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5cf04 target=e0b5cf04
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5cf08  0x00000001  bytes=01 00 00 00
+    e0b5cf0c  0x00000000  bytes=00 00 00 00
+    e0b5cf10  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5cf14  0x00000000  bytes=00 00 00 00
+    e0b5cf18  0x00000000  bytes=00 00 00 00
+    e0b5cf1c  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b5d298 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5d298
+    e0b5d288  0x00000000  bytes=00 00 00 00
+    e0b5d28c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5d290  0x00000000  bytes=00 00 00 00
+    e0b5d294  0x00000000  bytes=00 00 00 00
+    e0b5d298  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5d298 target=e0b5d298
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5d29c  0x00000001  bytes=01 00 00 00
+    e0b5d2a0  0x00000000  bytes=00 00 00 00
+    e0b5d2a4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5d2a8  0x00000000  bytes=00 00 00 00
+    e0b5d2ac  0x00000000  bytes=00 00 00 00
+    e0b5d2b0  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b5da4c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5da4c
+    e0b5da3c  0x00000000  bytes=00 00 00 00
+    e0b5da40  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5da44  0x00000000  bytes=00 00 00 00
+    e0b5da48  0x00000000  bytes=00 00 00 00
+    e0b5da4c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5da4c target=e0b5da4c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5da50  0x00000001  bytes=01 00 00 00
+    e0b5da54  0x00000000  bytes=00 00 00 00
+    e0b5da58  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5da5c  0x00000000  bytes=00 00 00 00
+    e0b5da60  0x00000000  bytes=00 00 00 00
+    e0b5da64  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b5f664 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b5f664
+    e0b5f654  0x00000002  bytes=02 00 00 00
+    e0b5f658  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5f65c  0x00000000  bytes=00 00 00 00
+    e0b5f660  0x00000000  bytes=00 00 00 00
+    e0b5f664  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b5f664 target=e0b5f664
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b5f668  0x00000001  bytes=01 00 00 00
+    e0b5f66c  0x00000000  bytes=00 00 00 00
+    e0b5f670  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b5f674  0x00000000  bytes=00 00 00 00
+    e0b5f678  0x00000000  bytes=00 00 00 00
+    e0b5f67c  0x00AC6739  bytes=39 67 AC 00
+HIT label=service key 00F8AE47 address=e0b62264 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b62264
+    e0b62254  0x00000000  bytes=00 00 00 00
+    e0b62258  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b6225c  0x00000000  bytes=00 00 00 00
+    e0b62260  0x00000000  bytes=00 00 00 00
+    e0b62264  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b62264 target=e0b62264
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b62268  0x00000001  bytes=01 00 00 00
+    e0b6226c  0x00000000  bytes=00 00 00 00
+    e0b62270  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b62274  0x00000000  bytes=00 00 00 00
+    e0b62278  0x00000000  bytes=00 00 00 00
+    e0b6227c  0x00F5F710  bytes=10 F7 F5 00
+HIT label=service key 00F8AE47 address=e0b795b4 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b795b4
+    e0b795a4  0x00000000  bytes=00 00 00 00
+    e0b795a8  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b795ac  0x00000000  bytes=00 00 00 00
+    e0b795b0  0x00000000  bytes=00 00 00 00
+    e0b795b4  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b795b4 target=e0b795b4
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b795b8  0x00000001  bytes=01 00 00 00
+    e0b795bc  0x00000000  bytes=00 00 00 00
+    e0b795c0  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b795c4  0x00000000  bytes=00 00 00 00
+    e0b795c8  0x00000000  bytes=00 00 00 00
+    e0b795cc  0x00BC395B  bytes=5B 39 BC 00
+HIT label=service key 00F8AE47 address=e0b79cd8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b79cd8
+    e0b79cc8  0x00000000  bytes=00 00 00 00
+    e0b79ccc  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b79cd0  0x00000000  bytes=00 00 00 00
+    e0b79cd4  0x00000000  bytes=00 00 00 00
+    e0b79cd8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b79cd8 target=e0b79cd8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b79cdc  0x00000001  bytes=01 00 00 00
+    e0b79ce0  0x00000000  bytes=00 00 00 00
+    e0b79ce4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b79ce8  0x6F696473  bytes=73 64 69 6F
+    e0b79cec  0x00000000  bytes=00 00 00 00
+    e0b79cf0  0xE0B79CF4  bytes=F4 9C B7 E0
+HIT label=service key 00F8AE47 address=e0b803f4 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b803f4
+    e0b803e4  0x00000000  bytes=00 00 00 00
+    e0b803e8  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b803ec  0x00000000  bytes=00 00 00 00
+    e0b803f0  0x00000000  bytes=00 00 00 00
+    e0b803f4  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b803f4 target=e0b803f4
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b803f8  0x00000001  bytes=01 00 00 00
+    e0b803fc  0x00000000  bytes=00 00 00 00
+    e0b80400  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b80404  0x735F6D73  bytes=73 6D 5F 73
+    e0b80408  0x69747465  bytes=65 74 74 69
+    e0b8040c  0x0073676E  bytes=6E 67 73 00
+HIT label=service key 00F8AE47 address=e0b80814 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b80814
+    e0b80804  0x00000001  bytes=01 00 00 00
+    e0b80808  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b8080c  0x00000000  bytes=00 00 00 00
+    e0b80810  0x00000000  bytes=00 00 00 00
+    e0b80814  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b80814 target=e0b80814
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b80818  0x00000001  bytes=01 00 00 00
+    e0b8081c  0x00000000  bytes=00 00 00 00
+    e0b80820  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b80824  0x72676D73  bytes=73 6D 67 72
+    e0b80828  0x696E695F  bytes=5F 69 6E 69
+    e0b8082c  0x00000074  bytes=74 00 00 00
+HIT label=service key 00F8AE47 address=e0b810a8 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b810a8
+    e0b81098  0x00000000  bytes=00 00 00 00
+    e0b8109c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b810a0  0x00000000  bytes=00 00 00 00
+    e0b810a4  0x00000000  bytes=00 00 00 00
+    e0b810a8  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b810a8 target=e0b810a8
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b810ac  0x00000001  bytes=01 00 00 00
+    e0b810b0  0x00000000  bytes=00 00 00 00
+    e0b810b4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b810b8  0x00000000  bytes=00 00 00 00
+    e0b810bc  0x00000000  bytes=00 00 00 00
+    e0b810c0  0x00010D96  bytes=96 0D 01 00
+HIT label=service key 00F8AE47 address=e0b8324c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b8324c
+    e0b8323c  0x00000000  bytes=00 00 00 00
+    e0b83240  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b83244  0x00000000  bytes=00 00 00 00
+    e0b83248  0x00000000  bytes=00 00 00 00
+    e0b8324c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b8324c target=e0b8324c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b83250  0x00000001  bytes=01 00 00 00
+    e0b83254  0x00000000  bytes=00 00 00 00
+    e0b83258  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b8325c  0x00000000  bytes=00 00 00 00
+    e0b83260  0x00000000  bytes=00 00 00 00
+    e0b83264  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b91ed4 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b91ed4
+    e0b91ec4  0x00000000  bytes=00 00 00 00
+    e0b91ec8  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b91ecc  0x00000000  bytes=00 00 00 00
+    e0b91ed0  0x00000000  bytes=00 00 00 00
+    e0b91ed4  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b91ed4 target=e0b91ed4
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b91ed8  0x00000001  bytes=01 00 00 00
+    e0b91edc  0x00000000  bytes=00 00 00 00
+    e0b91ee0  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b91ee4  0x00000000  bytes=00 00 00 00
+    e0b91ee8  0x00000000  bytes=00 00 00 00
+    e0b91eec  0x0058F38A  bytes=8A F3 58 00
+HIT label=service key 00F8AE47 address=e0b9419c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b9419c
+    e0b9418c  0x00000000  bytes=00 00 00 00
+    e0b94190  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b94194  0x00000000  bytes=00 00 00 00
+    e0b94198  0x00000000  bytes=00 00 00 00
+    e0b9419c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b9419c target=e0b9419c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b941a0  0x00000001  bytes=01 00 00 00
+    e0b941a4  0x00000000  bytes=00 00 00 00
+    e0b941a8  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b941ac  0x00000000  bytes=00 00 00 00
+    e0b941b0  0x00000000  bytes=00 00 00 00
+    e0b941b4  0x002D13F4  bytes=F4 13 2D 00
+HIT label=service key 00F8AE47 address=e0b96d90 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b96d90
+    e0b96d80  0x00000000  bytes=00 00 00 00
+    e0b96d84  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b96d88  0x00000000  bytes=00 00 00 00
+    e0b96d8c  0x00000000  bytes=00 00 00 00
+    e0b96d90  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b96d90 target=e0b96d90
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b96d94  0x00000001  bytes=01 00 00 00
+    e0b96d98  0x00000000  bytes=00 00 00 00
+    e0b96d9c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b96da0  0x00000000  bytes=00 00 00 00
+    e0b96da4  0x00000000  bytes=00 00 00 00
+    e0b96da8  0x0006A784  bytes=84 A7 06 00
+HIT label=service key 00F8AE47 address=e0b982f0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b982f0
+    e0b982e0  0x00000000  bytes=00 00 00 00
+    e0b982e4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b982e8  0x00000000  bytes=00 00 00 00
+    e0b982ec  0x0000009F  bytes=9F 00 00 00
+    e0b982f0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b982f0 target=e0b982f0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b982f4  0x00000001  bytes=01 00 00 00
+    e0b982f8  0x00000000  bytes=00 00 00 00
+    e0b982fc  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b98300  0x00776475  bytes=75 64 77 00
+    e0b98304  0x00000000  bytes=00 00 00 00
+    e0b98308  0x00000000  bytes=00 00 00 00
+HIT label=service key 00F8AE47 address=e0b984b0 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b984b0
+    e0b984a0  0x00000000  bytes=00 00 00 00
+    e0b984a4  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b984a8  0x00000000  bytes=00 00 00 00
+    e0b984ac  0x00000000  bytes=00 00 00 00
+    e0b984b0  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b984b0 target=e0b984b0
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b984b4  0x00000001  bytes=01 00 00 00
+    e0b984b8  0x00000000  bytes=00 00 00 00
+    e0b984bc  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b984c0  0x00000000  bytes=00 00 00 00
+    e0b984c4  0x00000000  bytes=00 00 00 00
+    e0b984c8  0x00DEED54  bytes=54 ED DE 00
+HIT label=service key 00F8AE47 address=e0b9c028 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0b9c028
+    e0b9c018  0x00000001  bytes=01 00 00 00
+    e0b9c01c  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b9c020  0x00000000  bytes=00 00 00 00
+    e0b9c024  0x00000000  bytes=00 00 00 00
+    e0b9c028  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0b9c028 target=e0b9c028
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0b9c02c  0x00000001  bytes=01 00 00 00
+    e0b9c030  0x00000000  bytes=00 00 00 00
+    e0b9c034  0xFFFFFFFF  bytes=FF FF FF FF
+    e0b9c038  0x00000000  bytes=00 00 00 00
+    e0b9c03c  0x00000000  bytes=00 00 00 00
+    e0b9c040  0x00A88686  bytes=86 86 A8 00
+HIT label=service key 00F8AE47 address=e0bab04c block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0bab04c
+    e0bab03c  0x00000000  bytes=00 00 00 00
+    e0bab040  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bab044  0x00000000  bytes=00 00 00 00
+    e0bab048  0x00000000  bytes=00 00 00 00
+    e0bab04c  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0bab04c target=e0bab04c
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0bab050  0x00000001  bytes=01 00 00 00
+    e0bab054  0x00000000  bytes=00 00 00 00
+    e0bab058  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bab05c  0x00000000  bytes=00 00 00 00
+    e0bab060  0x00000000  bytes=00 00 00 00
+    e0bab064  0x001F5913  bytes=13 59 1F 00
+HIT label=service key 00F8AE47 address=e0bac684 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0bac684
+    e0bac674  0x00000000  bytes=00 00 00 00
+    e0bac678  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bac67c  0x00000000  bytes=00 00 00 00
+    e0bac680  0x00000000  bytes=00 00 00 00
+    e0bac684  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0bac684 target=e0bac684
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0bac688  0x00000001  bytes=01 00 00 00
+    e0bac68c  0x00000000  bytes=00 00 00 00
+    e0bac690  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bac694  0x00000000  bytes=00 00 00 00
+    e0bac698  0x00000000  bytes=00 00 00 00
+    e0bac69c  0x00EBA550  bytes=50 A5 EB 00
+HIT label=service key 00F8AE47 address=e0bb0284 block=.romfs_objs value=0x00F8AE47 bytes=47 AE F8 00
+  neighborhood block=.romfs_objs at=e0bb0284
+    e0bb0274  0x00000000  bytes=00 00 00 00
+    e0bb0278  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bb027c  0x00000000  bytes=00 00 00 00
+    e0bb0280  0x00000000  bytes=00 00 00 00
+    e0bb0284  0x00F8AE47  bytes=47 AE F8 00  <HIT>
+      defined_data=undefined length=1
+
+[INCOMING REFERENCES] pointer/key storage location e0bb0284 target=e0bb0284
+reference_count=0
+NOTE: no typed xrefs; computed/indirect dispatch or raw table entries may still exist.
+    e0bb0288  0x00000001  bytes=01 00 00 00
+    e0bb028c  0x00000000  bytes=00 00 00 00
+    e0bb0290  0xFFFFFFFF  bytes=FF FF FF FF
+    e0bb0294  0x6B726F77  bytes=77 6F 72 6B
+    e0bb0298  0x73617420  bytes=20 74 61 73
+    e0bb029c  0x0000006B  bytes=6B 00 00 00
+TOTAL label=Thumb callback pointer E030FB41 count=1 detailed_hits=1
+TOTAL label=even callback address E030FB40 count=0 detailed_hits=0
+TOTAL label=service key 00F8AE47 count=60 detailed_hits=60
+
+================ EXISTING-INSTRUCTION IMMEDIATE CANDIDATES ================
+Searches rendered existing instruction text only; not a disassembly pass.
+CANDIDATE e01e2590  movw r2,#0xfb40 function=FUN_e01e2570 @ e01e2570
+CANDIDATE e01e25cc  movw r2,#0xfb40 function=FUN_e01e2570 @ e01e2570
+CANDIDATE e0251448  movw r2,#0xae47 function=<none>
+CANDIDATE e02532c8  movw r2,#0xae47 function=<none>
+CANDIDATE e027faf6  beq 0xe027fb40 function=<none>
+CANDIDATE e02fb3dc  cbz r0,0xe02fb412 function=FUN_e02fb3d0 @ e02fb3d0
+CANDIDATE e02fb3ec  bge 0xe02fb408 function=FUN_e02fb3d0 @ e02fb3d0
+CANDIDATE e02fb406  b 0xe02fb41c function=FUN_e02fb3d0 @ e02fb3d0
+CANDIDATE e02fb410  b 0xe02fb41c function=FUN_e02fb3d0 @ e02fb3d0
+CANDIDATE e02fdff0  movw r2,#0xae47 function=<none>
+CANDIDATE e031265e  movw r0,#0xae47 function=FUN_e0312658 @ e0312658
+CANDIDATE e0315cf0  movw r2,#0xae47 function=<none>
+CANDIDATE e0316680  movw r2,#0xae47 function=<none>
+CANDIDATE e0352930  movw r2,#0xae47 function=<none>
+CANDIDATE e035630e  movw r5,#0xae47 function=<none>
+CANDIDATE e0363af4  movw r5,#0xae47 function=<none>
+CANDIDATE e03bfb76  blt 0xe03bfb40 function=FUN_e03bf9e0 @ e03bf9e0
+CANDIDATE e03c47c8  movw r2,#0xae47 function=<none>
+CANDIDATE e03c5ef0  movw r2,#0xae47 function=<none>
+CANDIDATE e03df540  movw r2,#0xae47 function=<none>
+CANDIDATE e03e1188  movw r2,#0xae47 function=<none>
+CANDIDATE e044b148  movw r2,#0xae47 function=<none>
+CANDIDATE e046fb16  bne 0xe046fb40 function=FUN_e046fb00 @ e046fb00
+CANDIDATE e049aec0  movw r2,#0xae47 function=<none>
+CANDIDATE e04fe1b6  bl 0xe04fb406 function=<none>
+CANDIDATE e05135d2  movw r2,#0xae47 function=<none>
+CANDIDATE e051541a  movw r2,#0xae47 function=<none>
+CANDIDATE e051625a  movw r2,#0xae47 function=<none>
+CANDIDATE e0529a38  movw r2,#0xae47 function=<none>
+CANDIDATE e052fc22  movw r2,#0xae47 function=<none>
+CANDIDATE e054a200  movw r2,#0xae47 function=<none>
+CANDIDATE e054ef92  movw r2,#0xae47 function=<none>
+CANDIDATE e055d638  movw r2,#0xae47 function=<none>
+CANDIDATE e055fc80  movw r0,#0xae47 function=<none>
+CANDIDATE e05a0788  bl 0xe059fb40 function=FUN_e05a0778 @ e05a0778
+CANDIDATE e05a0a14  bl 0xe059fb40 function=FUN_e05a0a08 @ e05a0a08
+CANDIDATE e05a0a70  bl 0xe059fb40 function=FUN_e05a0a08 @ e05a0a08
+CANDIDATE e05d677e  movt r6,#0xfb41 function=FUN_e05d6620 @ e05d6620
+CANDIDATE e05fb1c6  adr.w r4,0xe05fb408 function=FUN_e05fb04c @ e05fb04c
+CANDIDATE e05fb1ca  adr.w r0,0xe05fb410 function=FUN_e05fb04c @ e05fb04c
+CANDIDATE e05fb1d8  adr.w r0,0xe05fb414 function=FUN_e05fb04c @ e05fb04c
+CANDIDATE e05fb1e8  adr.w r0,0xe05fb418 function=FUN_e05fb04c @ e05fb04c
+CANDIDATE e061c59c  movt r1,#0xfb41 function=FUN_e061c524 @ e061c524
+CANDIDATE e065fb3a  cbnz r0,0xe065fb40 function=<none>
+CANDIDATE e066f00e  bl 0xe066fb40 function=FUN_e066eea8 @ e066eea8
+CANDIDATE e066f546  bl 0xe066fb40 function=FUN_e066f34e @ e066f34e
+CANDIDATE e066f5b6  bl 0xe066fb40 function=FUN_e066f34e @ e066f34e
+CANDIDATE e066fc90  bl 0xe066fb40 function=FUN_e066fc32 @ e066fc32
+CANDIDATE e066fcdc  bl 0xe066fb40 function=FUN_e066fca2 @ e066fca2
+CANDIDATE e0682118  movw r0,#0xfb40 function=FUN_e06820f2 @ e06820f2
+CANDIDATE e068218a  movw r1,#0xfb40 function=FUN_e0682178 @ e0682178
+CANDIDATE e06821be  movw r1,#0xfb40 function=FUN_e0682aaa @ e0682aaa
+CANDIDATE e06821f4  movw r4,#0xfb40 function=FUN_e06821f0 @ e06821f0
+CANDIDATE e068221e  movw r3,#0xfb40 function=FUN_e0682216 @ e0682216
+CANDIDATE e068226e  movw r3,#0xfb40 function=FUN_e0682266 @ e0682266
+CANDIDATE e0682292  movw r0,#0xfb40 function=FUN_e0682284 @ e0682284
+CANDIDATE e06822b4  movw r1,#0xfb40 function=FUN_e06822a4 @ e06822a4
+CANDIDATE e06823a6  movw r10,#0xfb40 function=FUN_e068239e @ e068239e
+CANDIDATE e0682456  movw r2,#0xfb40 function=FUN_e0682442 @ e0682442
+CANDIDATE e068251c  movw r6,#0xfb40 function=FUN_e0682502 @ e0682502
+CANDIDATE e0682558  movw r3,#0xfb40 function=FUN_e0682502 @ e0682502
+CANDIDATE e06825ac  movw r3,#0xfb40 function=FUN_e06825ac @ e06825ac
+CANDIDATE e06825fe  movw r2,#0xfb40 function=FUN_e06825fe @ e06825fe
+CANDIDATE e068262c  movw r5,#0xfb40 function=FUN_e0682626 @ e0682626
+CANDIDATE e06a33b0  movw r2,#0xae47 function=<none>
+CANDIDATE e06a87b0  movw r0,#0xae47 function=<none>
+CANDIDATE e06a8d30  movw r2,#0xae47 function=<none>
+CANDIDATE e06cfb30  cbnz r0,0xe06cfb40 function=FUN_e06cfac2 @ e06cfac2
+CANDIDATE e06f78d6  bl 0xe06fb40e function=FUN_e06f7626 @ e06f7626
+CANDIDATE e0724288  movw r2,#0xae47 function=<none>
+CANDIDATE e0725030  movw r2,#0xae47 function=<none>
+CANDIDATE e072bce6  bl 0xe072fb40 function=FUN_e072bcc0 @ e072bcc0
+CANDIDATE e072fc5c  bl 0xe072fb40 function=FUN_e072fc38 @ e072fc38
+CANDIDATE e0730a4e  bl 0xe072fb40 function=FUN_e07309b8 @ e07309b8
+CANDIDATE e0730a66  bl 0xe072fb40 function=FUN_e07309b8 @ e07309b8
+CANDIDATE e0730a7c  bl 0xe072fb40 function=FUN_e07309b8 @ e07309b8
+CANDIDATE e0730a92  bl 0xe072fb40 function=FUN_e07309b8 @ e07309b8
+CANDIDATE e0730bec  bl 0xe072fb40 function=FUN_e0730ba8 @ e0730ba8
+CANDIDATE e0730c1a  bl 0xe072fb40 function=FUN_e0730ba8 @ e0730ba8
+CANDIDATE e0730c48  bl 0xe072fb40 function=FUN_e0730ba8 @ e0730ba8
+CANDIDATE e07312b4  bl 0xe072fb40 function=FUN_e0731260 @ e0731260
+CANDIDATE e073173e  bl 0xe072fb40 function=FUN_e07316d8 @ e07316d8
+CANDIDATE e073175e  bl 0xe072fb40 function=FUN_e07316d8 @ e07316d8
+CANDIDATE e073185a  bl 0xe072fb40 function=FUN_e0731780 @ e0731780
+CANDIDATE e0731864  bl 0xe072fb40 function=FUN_e0731780 @ e0731780
+CANDIDATE e0739ec6  bl 0xe072fb40 function=FUN_e0739ea0 @ e0739ea0
+CANDIDATE e073a072  bl 0xe072fb40 function=<none>
+CANDIDATE e073a5ac  bl 0xe072fb40 function=FUN_e073a698 @ e073a698
+CANDIDATE e073a5da  bl 0xe072fb40 function=FUN_e073a698 @ e073a698
+CANDIDATE e073b6e8  bl 0xe072fb40 function=FUN_e073b6a8 @ e073b6a8
+CANDIDATE e074cc58  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074ccb2  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074cd0c  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074cd66  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074ce14  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074cec2  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074cf70  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074cfca  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e074d024  bl 0xe072fb40 function=FUN_e074b508 @ e074b508
+CANDIDATE e07536e6  movw r0,#0xae47 function=FUN_e07536e0 @ e07536e0
+CANDIDATE e07651c8  movw r2,#0xae47 function=<none>
+CANDIDATE e0788fb8  movw r2,#0xae47 function=<none>
+CANDIDATE e078dc28  movw r2,#0xae47 function=<none>
+CANDIDATE e0793740  movw r2,#0xae47 function=<none>
+CANDIDATE e07a1c48  movw r2,#0xae47 function=<none>
+CANDIDATE e07b58fc  movw r5,#0xae47 function=<none>
+CANDIDATE e07bcf24  movw r2,#0xae47 function=<none>
+CANDIDATE e07c5dee  bl 0xe07bfb40 function=FUN_e07c5d70 @ e07c5d70
+CANDIDATE e07f5768  movw r0,#0xae47 function=<none>
+CANDIDATE e07fb400  beq 0xe07fb418 function=FUN_e07fb3f0 @ e07fb3f0
+CANDIDATE e07fd990  movw r2,#0xae47 function=<none>
+CANDIDATE e0835970  movw r2,#0xae47 function=<none>
+CANDIDATE e0838272  movw r2,#0xae47 function=<none>
+CANDIDATE e083df80  movw r0,#0xae47 function=<none>
+CANDIDATE e083eb86  movw r3,#0xfb40 function=<none>
+CANDIDATE e083ec2c  movw r3,#0xfb40 function=FUN_e083ec10 @ e083ec10
+CANDIDATE e08b0f78  movw r2,#0xae47 function=<none>
+CANDIDATE e08f02d2  movw r2,#0xae47 function=<none>
+CANDIDATE e08f8ec0  movw r2,#0xae47 function=<none>
+CANDIDATE e08fb2f6  bne.w 0xe08fb40a function=<none>
+CANDIDATE e08fb306  b 0xe08fb412 function=<none>
+CANDIDATE e08fb352  bne 0xe08fb406 function=<none>
+CANDIDATE e08fb3ac  bne 0xe08fb406 function=<none>
+CANDIDATE e090fb28  bne 0xe090fb40 function=FUN_e090fac0 @ e090fac0
+CANDIDATE e090fb38  b 0xe090fb40 function=FUN_e090fac0 @ e090fac0
+immediate_candidate_instruction_count=125 emitted=125
+
+================ INTERPRETATION LIMITS ================
+1. The callback's static path can be reconstructed, but a provider's runtime pointer/vtable is not available if C1443030 is unmapped RAM.
+2. A raw E030FB41 word identifies a pointer-table candidate, not by itself the table owner or proof of runtime registration.
+3. A matching service key or +0x18/+0x24 method shape does not identify a concrete provider or establish returned business meaning.
+4. No static result proves that Alert 66220 caused a ConStat reason, or that ConStat is the only print-admission gate.
+5. No patch, lock bypass, account/eligibility change, or device-state modification is proposed.
